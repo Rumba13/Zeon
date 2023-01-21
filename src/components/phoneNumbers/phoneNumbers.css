@@ -1,0 +1,13 @@
+.phone-numbers-wrapper {
+    overflow-x: scroll;
+    display: flex;
+    grid-area: phoneNumbers;
+    align-self: center;
+}
+
+.phone-numbers-wrapper > .phone-number {
+   margin: 7px;
+}
+.phone-numbers-wrapper::-webkit-scrollbar { 
+    display: none;
+ }

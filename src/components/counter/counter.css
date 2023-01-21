@@ -1,0 +1,14 @@
+.count__number {
+    color: white;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px; /* exact like height */
+}
+
+

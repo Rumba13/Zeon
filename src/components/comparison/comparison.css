@@ -1,0 +1,11 @@
+.comparison {
+    grid-area: comparison;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+span.comparison__text{
+    margin: 5px;
+    text-align: center;
+}

@@ -1,0 +1,7 @@
+.logo {
+    grid-area: logo;
+    display: grid;
+    align-self: center;
+    margin: 6px;
+    margin-right: 10px;
+}

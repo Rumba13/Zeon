@@ -1,0 +1,7 @@
+.phone-number__number {
+    white-space: nowrap;
+}
+
+.phone-number {
+    color: black;
+}

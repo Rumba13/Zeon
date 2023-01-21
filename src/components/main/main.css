@@ -5,7 +5,9 @@ main {
     grid-template-areas:
     "aside content";
 
-    max-width: 1120px;
     border: 1px solid #000;
+    max-width: 1120px;
     margin: 0 auto;
+    min-height: 100%;
+    grid: 1 1 auto;
 }
