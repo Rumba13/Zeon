@@ -9,12 +9,12 @@ import PhoneNumbers from "../phoneNumbers/phoneNumbers"
 export default function Header() {
     return <header>
         <div className="header-container">
-            <PhoneNumbers/>
-           <Logo />
-        <Timetable />
-        <Searchfield /> 
-        <Comparison/>
-        <Cart/>
+            <PhoneNumbers />
+            <Logo />
+            <Timetable />
+            <Searchfield />
+            <Comparison />
+            <Cart />
         </div>
     </header>
 }

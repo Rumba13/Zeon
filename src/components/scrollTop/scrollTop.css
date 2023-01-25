@@ -1,0 +1,19 @@
+.scroll-top {
+grid-area: scrollTop;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+font-size: 17px;
+margin-bottom: 32px;
+border-bottom: 1px solid var(--border-color);
+
+}
+
+.scroll-top__icon {
+/* background: ; */
+}
+
+.scroll-top__text {
+   color: var(--footer-text-color);
+}

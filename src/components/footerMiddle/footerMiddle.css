@@ -1,0 +1,29 @@
+.footer-middle {
+    grid-area: middle;
+    display: flex;
+    align-items: center;
+    color: var(--footer-text-color);
+    font-size: 13px;
+    border-top: 1px solid var(--border-color) ;
+    margin-top: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer-middle__copyright {
+    display: inline-block;
+    border-right: 1px solid var(--border-color);
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.footer-middle__copyright {
+
+}
+
+.footer-middle__rules {
+    color: var(--footer-text-color)
+}
+
+.footer-middle > * {
+    margin: 8px;
+}

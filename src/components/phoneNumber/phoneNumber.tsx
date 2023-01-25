@@ -1,3 +1,4 @@
+import IconText from "../iconText/iconText"
 import "./phoneNumber.css"
 
 type PropsType = {
@@ -6,8 +7,5 @@ type PropsType = {
 }
 
 export default function PhoneNumber({ icon, number }: PropsType) {
-    return <a className="phone-number" href={`tel:${number}`}>
-        <img src={icon} alt="" className="phone-number__icon" />
-        <span className="phone-number__number">{number}</span>
-    </a>
+    return <IconText className="phone-number" icon={icon}  text={number} link={`tel:${number}`} />
 }

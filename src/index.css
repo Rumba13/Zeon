@@ -13,6 +13,10 @@ body, html, #root {
 
 :root {
   --secondary-color:rgb(99, 206, 99);
+  --third-color: #2e3038;
+  --content-max-width: 1120px;
+  --footer-text-color: #959699;
+  --border-color:#43454c;
 }
 
 * {
@@ -35,12 +39,6 @@ body, html, #root {
 a:focus,a:active {
   outline: none;
 }
-
-
-nav,footer,header,aside {
-  display: block;
-}
-
 
 html,body {
   height: 100%;
@@ -69,4 +67,30 @@ img {vertical-align: top;}
 h1,h2,h3,h4,h5,h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+.list-wrapper > .title {
+  font-size: 23px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.list {
+
+}
+
+.list-item {
+}
+
+.list-item__link {
+    color: var(--footer-text-color);
+    font-size: 17px;
+    border-bottom: 1px solid var(--footer-text-color);
+    line-height: 2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

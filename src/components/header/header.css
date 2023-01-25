@@ -10,8 +10,9 @@ header {
     grid-template-areas: 
     "logo timetable phoneNumbers phoneNumbers phoneNumbers"
     "logo search search comparison cart";
-    max-width: 1120px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     height: 100%;
     grid-gap: 5px;
+    padding-bottom: 13px;
 }
