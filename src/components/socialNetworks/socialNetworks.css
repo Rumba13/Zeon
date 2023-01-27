@@ -1,0 +1,16 @@
+.social-networks__title {
+    color: var(--social-networks-text-color);
+    margin-bottom: 5px;
+}
+
+.social-networks {
+    display: flex;
+}
+
+.social-networks-wrapper {
+    margin-top: 28px;
+}
+
+.social-networks > div:nth-child(1) {
+    margin-left: 0px;
+    }
