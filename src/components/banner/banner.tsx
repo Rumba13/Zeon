@@ -1,5 +1,8 @@
 import "./banner.css";
+import bannerRepair from "../../images/banner-repair.jpg"
 
 export default function Banner() {
-    return <div className="banner"></div>
+    return <a href="https://www.777555.by/service/" className="banner">
+        <img src={bannerRepair} alt="" />
+    </a>
 }

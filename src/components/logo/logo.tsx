@@ -1,5 +1,5 @@
-import  darkLogo from "../../darkLogo.svg"
-import whiteLogo from "../../whiteLogo.svg"
+import  darkLogo from "../../images/darkLogo.svg"
+import whiteLogo from "../../images/whiteLogo.svg"
 
 import "./logo.css"
 
