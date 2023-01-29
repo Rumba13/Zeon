@@ -1,11 +1,23 @@
-import IconText from "../textWithIcon/textWithIcon"
 import "./phoneNumber.css"
 
 type PropsType = {
-    icon?: string,
-    number: string
+    number: string,
+    child?:any
 }
 
-export default function PhoneNumber({ icon, number }: PropsType) {
-    return <IconText className="phone-number" icon={icon}  text={number} link={`tel:${number}`} />
+export default function PhoneNumber({  child,number }: PropsType) {
+    return <a href={`tel:${number}`} className="phone-number">
+        {child}
+        <span className="phone-number__text">{convertPhoneNumber(number)}</span>
+    </a>
+}
+
+function convertPhoneNumber(number: string) {
+    let template = "+xxx (xx) x-xxx-xxx"
+
+    for (let i = 0; template.includes('x'); i++) {
+        template = template.replace('x', number[i])
+    }
+    
+    return template;
 }

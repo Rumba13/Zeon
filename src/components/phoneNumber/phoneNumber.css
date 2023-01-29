@@ -1,7 +1,14 @@
 .phone-number > span {
     white-space: nowrap;
+    align-self: center;
 }
 
 .phone-number {
+    display: flex;
     color: black;
+}
+
+.phone-number .icon {
+    width: 25px;
+    height: 20px;
 }

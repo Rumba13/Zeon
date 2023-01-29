@@ -11,3 +11,24 @@
 .phone-numbers-wrapper::-webkit-scrollbar { 
     display: none;
  }
+
+ .phone-numbers-wrapper  .icon {
+    margin-right: 5px;
+ }
+
+ .phone-numbers-wrapper > a:nth-child(1) > .icon {
+    width: 22px;
+    height: 19px;
+}
+.phone-numbers-wrapper > a:nth-child(2) > .icon {
+    width: 10px;
+    height: 16px;
+}
+.phone-numbers-wrapper > a:nth-child(3) > .icon {
+    width: 18px;
+    height: 18px;
+}
+.phone-numbers-wrapper > a:nth-child(4) > .icon {
+    width: 15px;
+    height: 15px;
+}

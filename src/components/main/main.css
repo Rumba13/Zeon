@@ -9,4 +9,5 @@ main {
     margin: 0 auto;
     min-height: 100%;
     grid: 1 1 auto;
+    margin-top: 10px;
 }
