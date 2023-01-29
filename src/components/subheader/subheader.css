@@ -1,0 +1,28 @@
+.sub-header-menu-wrapper {
+    background-color: var(--third-color);
+}
+
+.sub-header-menu {
+    height: 36px;
+    display: flex;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.sub-header-menu-item-wrapper {
+    padding: 12px;
+}
+
+.sub-header-menu-item-wrapper > .item__text {
+    color: var(--footer-text-color);
+    font-size: 14px;
+}
+
+.sub-header-menu-wrapper > ul > li:nth-child(9) {
+    display: flex;
+    justify-self: end;
+}
+
+.sub-header-menu {
+    display: flex;
+}

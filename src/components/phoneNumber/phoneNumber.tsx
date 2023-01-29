@@ -1,4 +1,4 @@
-import IconText from "../iconText/iconText"
+import IconText from "../textWithIcon/textWithIcon"
 import "./phoneNumber.css"
 
 type PropsType = {

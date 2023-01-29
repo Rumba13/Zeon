@@ -1,0 +1,14 @@
+.user-menu__items {
+    display: none;
+}
+
+.user-menu__title {
+    color: var(--footer-text-color);
+}
+
+.user-menu {
+   align-self: center;
+   flex-grow: 1;
+   text-align: end;
+   margin-right: 6px;
+}

@@ -1,4 +1,4 @@
-import IconText from "../iconText/iconText";
+import IconText from "../textWithIcon/textWithIcon";
 import "./contacts.css"
 import verifiedWithVisa from "../../verifiedByVisa.png"
 import visa from "../../visa.png"
@@ -23,7 +23,6 @@ export default function Contacts() {
             <img className="pay-logos__visa" alt="" src={visa} />
             <img className="pay-logos__alpha-bank-logo" alt="" src={alphaBankLogo} />
             <img className="pay-logos__pay-logo" alt="" src={payLogo} />
-
         </div>
     </div>
 }

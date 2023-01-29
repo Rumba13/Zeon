@@ -1,10 +1,10 @@
 header {
     grid-area: header;
     border-bottom: 1px solid #000;
-    max-height: 120px;
 }
 
 .header-container {
+    max-height: 120px;
     display: grid;
     grid-template: 1fr 1fr / 1fr 2fr 2fr 1fr 1fr;
     grid-template-areas: 
