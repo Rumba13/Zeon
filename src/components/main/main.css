@@ -1,11 +1,10 @@
 main {
     grid-area: main;
     display: grid;
-    grid-template: 1fr 1fr / 2fr 7.5fr;
+    grid-template: 1fr 1fr / 300px 7.5fr;
     grid-template-areas:
     "aside content";
 
-    border: 1px solid #000;
     max-width: 1120px;
     margin: 0 auto;
     min-height: 100%;

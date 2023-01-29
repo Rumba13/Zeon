@@ -1,0 +1,31 @@
+.reviews-wrapper {
+margin-top: 20px;
+padding: 15px;
+border: 1px solid var(--low-border-color);
+border-radius: 10px;
+padding-top: 25px;
+}
+
+.reviews__title {
+font-size: 18px;
+font-weight: 800;
+margin-bottom: 14px;
+}
+
+.reviews__review-part {
+line-height: 1.4;
+border-bottom: 1px solid var(--low-border-color);
+padding-bottom: 10px;
+margin-bottom: 10px;
+}
+
+.reviews__make-review-btn {
+    color: orange;
+    margin: 4px;
+}
+
+.reviews__all-reviews {
+    color: green;
+    margin: 4px;
+
+}

@@ -1,11 +1,11 @@
 import IconText from "../textWithIcon/textWithIcon";
 import "./contacts.css"
-import verifiedWithVisa from "../../verifiedByVisa.png"
-import visa from "../../visa.png"
-import payLogo from "../../payLogo.png"
-import masterCardIdCheck from "../../masterCardIdCheck.png"
-import masterCart from "../../masterCart.svg"
-import alphaBankLogo from "../../alphaBankLogo.svg"
+import verifiedWithVisa from "../../images/verifiedByVisa.png"
+import visa from "../../images/visa.png"
+import payLogo from "../../images/payLogo.png"
+import masterCardIdCheck from "../../images/masterCardIdCheck.png"
+import masterCart from "../../images/masterCart.svg"
+import alphaBankLogo from "../../images/alphaBankLogo.svg"
 
 
 export default function Contacts() {

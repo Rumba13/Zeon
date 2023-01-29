@@ -1,0 +1,13 @@
+.social-network-wrapper {
+width: 28px;
+height: 28px;
+background: var(--social-networks-background-color);
+margin: 5px;
+display: flex;justify-content: center;align-items: center;
+}
+
+
+
+.social-network-link {
+    
+}

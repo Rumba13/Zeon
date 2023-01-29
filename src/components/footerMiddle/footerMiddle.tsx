@@ -1,5 +1,5 @@
 import "./footerMiddle.css";
-import yandexLogo from "../../yandexMarketLogo.png";
+import yandexLogo from "../../images/yandexMarketLogo.png";
 
 
 export default function FooterMiddle() {

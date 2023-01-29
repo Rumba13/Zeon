@@ -17,6 +17,9 @@ body, html, #root {
   --content-max-width: 1120px;
   --footer-text-color: #959699;
   --border-color:#43454c;
+  --low-border-color:#ededec;
+  --social-networks-text-color: rgba(46,48,56,0.6);
+  --social-networks-background-color:#f1f1f1;
 }
 
 * {
