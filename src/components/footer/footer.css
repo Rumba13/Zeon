@@ -1,8 +1,9 @@
 footer {
     background: var(--third-color);
 }
-footer > .logo {
+.footer-wrapper > .logo {
     grid-area: logo;
+    align-self: start ;
 }
 
 .footer-wrapper {
@@ -20,3 +21,4 @@ footer > .logo {
     max-width: var(--content-max-width);
     padding-bottom: 50px;
 } 
+

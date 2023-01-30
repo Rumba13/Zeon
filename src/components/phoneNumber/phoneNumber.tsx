@@ -12,7 +12,7 @@ export default function PhoneNumber({  child,number }: PropsType) {
     </a>
 }
 
-function convertPhoneNumber(number: string) {
+export function convertPhoneNumber(number: string) {
     let template = "+xxx (xx) x-xxx-xxx"
 
     for (let i = 0; template.includes('x'); i++) {

@@ -1,4 +1,4 @@
-.social-network-wrapper {
+.social-network {
 width: 28px;
 height: 28px;
 background: var(--social-networks-background-color);
@@ -8,6 +8,5 @@ display: flex;justify-content: center;align-items: center;
 
 
 
-.social-network-link {
-    
-}
+
+
