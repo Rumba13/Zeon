@@ -1,10 +1,10 @@
-.time-table {
+.time-table-wrapper {
     grid-area: timetable;
     align-self: center;
     display: flex;
     height: 25px;
 }
-.time-table-text-wrapper {
+.time-table {
     background-color: var(--third-background-color);
     position: relative;
     padding: 3px;
@@ -13,7 +13,7 @@
     height: 100%;
 }
 
-.time-table-text-wrapper::after {
+.time-table::after {
     content: ''; 
     position: absolute; 
     right: -7px;

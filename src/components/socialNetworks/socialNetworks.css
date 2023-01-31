@@ -3,43 +3,45 @@
     margin-bottom: 5px;
 }
 
-.social-networks {
+.social-networks-list {
     display: flex;
 }
 
-.social-networks-wrapper {
+.social-networks {
     margin-top: 28px;
 }
 
-.social-networks > div:nth-child(1) {
+.social-networks > .social-networks-list > a:first-child {
     margin-left: 0px;
-    }
+}
 
-    .social-network > .icon {
-        width: 17px;
-        height: 17px;
-    }
+.social-network>.icon {
+    width: 17px;
+    height: 17px;
+}
 
 
-    div.social-networks-wrapper a:nth-child(1) > .icon {
+div.social-networks-list a:nth-child(1)>.icon {
     width: 8px;
     height: 14px;
-   }
-   div.social-networks-wrapper a:nth-child(2) > .icon{
+}
+
+div.social-networks-list a:nth-child(2)>.icon {
     width: 16px;
     height: 10px;
-   }
-   div.social-networks-wrapper a:nth-child(3) > .icon{
+}
+
+div.social-networks-list a:nth-child(3)>.icon {
     width: 16px;
     height: 16px;
-   }
-   div.social-networks-wrapper a:nth-child(4) > .icon {
+}
+
+div.social-networks-list a:nth-child(4)>.icon {
     width: 10px;
     height: 16px;
-   }
-   div.social-networks-wrapper a:nth-child(5) > .icon {
+}
+
+div.social-networks-list a:nth-child(5)>.icon {
     width: 16px;
     height: 12px;
-   }
-
-  
+}

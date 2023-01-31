@@ -8,15 +8,15 @@ import ScrollTop from "../scrollTop/scrollTop"
 import "./footer.css"
 
 export default function Footer() {
-    return <footer>
-        <div className="footer-wrapper">
+    return <div className="footer-wrapper">
+        <footer className="footer">
             <ScrollTop />
-            <Logo color="white" />
+            <Logo color="White" />
             <AboutCompany />
             <MagazineInformation />
             <Contacts />
-            <FooterMiddle/>
+            <FooterMiddle />
             <Disclaimer />
-        </div>
-    </footer>
+        </footer>
+    </div>
 }   

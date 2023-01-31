@@ -6,5 +6,5 @@ type PropsType = {
 
 
 export default function Counter({count}:PropsType) {
-   return <span className="count__number">{count}</span>
+   return <span className="counter">{count}</span>
 }

@@ -1,4 +1,4 @@
-header {
+.header {
     grid-area: header;
     box-shadow: rgb(0 0 0 / 20%) 0px 6px 4px -4px;
     outline: rgb(0, 0, 0) none 0px;

@@ -1,15 +1,15 @@
 
-.search {
+.search-wrapper {
    grid-area: search;
 }
 
-.search-wrapper {
+.search {
    position: relative;
    display: inline-block;
    width: 100%;
 }
 
-.search__field {
+.search__form {
     border: 3px solid var(--secondary-color);
     padding: 14px;
       width: 100%;
@@ -17,7 +17,7 @@
    font-size: 16px;
  }
 
- .search__field:focus {
+ .search__form:focus {
     border: 3px solid var(--secondary-color);
  }
 

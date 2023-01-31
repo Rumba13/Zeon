@@ -1,20 +1,18 @@
 import "./singleNews.css";
 
 type PropsType = {
-    title:string,
-    text:string,
-    link:string
+    title: string,
+    text: string,
+    link: string
 }
 
-const MAX_LENGTH_OF_STRING = 95
+const MAX_LENGTH_OF_STRING = 95;
 
-export default function SingleNews({title,text,link}: PropsType) {
+export default function SingleNews({ title, text, link }: PropsType) {
 
-
-    if(text.length > MAX_LENGTH_OF_STRING) {
+    if (text.length > MAX_LENGTH_OF_STRING) {
         text = text.slice(0, MAX_LENGTH_OF_STRING);
     }
-
 
     return <div className="single-news">
         <h2 className="single-news__title">{title}</h2>

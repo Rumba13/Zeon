@@ -6,7 +6,5 @@ type PropsType = {
 }
 
 export default function SocialNetwork({link, icon}:PropsType) {
-    return <a href={link} className="social-network">
-            {icon}
-    </a>
+    return <a href={link} className="social-network">{icon} </a>
 }

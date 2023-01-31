@@ -1,26 +1,11 @@
 import "./icon.css";
 
-export type SpriteType = {
-    xOffset?: number,
-    yOffset: number
-}
 
 
 type PropsType = {
-    icon?: string,
-    sprite?: SpriteType
+    icon: string
 }
 
-export default function Icon({ icon, sprite }: PropsType) {
-
-    if (sprite) {
-        return <div style={{
-            backgroundPositionX: sprite.xOffset ?? 0,
-            backgroundPositionY: sprite.yOffset
-        }}
-            className="icon"></div>
-    } else {
+export default function Icon({ icon }: PropsType) {
         return <img src={icon} className="icon"></img>
-    }
-
 }

@@ -1,12 +1,12 @@
-footer {
+.footer-wrapper {
     background: var(--third-color);
 }
-.footer-wrapper > .logo {
+.footer > .logo {
     grid-area: logo;
-    align-self: start ;
+    align-self: start;
 }
 
-.footer-wrapper {
+.footer {
     display: grid;
     grid-area: footer;
     grid-template: 92px 2.5fr 80px 1fr / 1fr 1fr 1fr 1fr;

@@ -1,11 +1,13 @@
-import Icon from "../icon/icon";
+import Sprite from "../sprite/sprite";
 import "./timetable.css";
 
 export default function Timetable() {
-    return <div className="time-table">
-        <div className="time-table-text-wrapper">
-        <Icon sprite={{xOffset:0, yOffset:-245}}/>
-        Пн-сб: 10 - 19, Вс: 10 - 17
+    return <div className="time-table-wrapper">
+        <div className="time-table">
+            <Sprite yOffset={-245} />
+            <span className="time-table__text">
+                Пн-сб: 10 - 19, Вс: 10 - 17
+            </span>
         </div>
     </div>
 }

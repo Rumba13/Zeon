@@ -1,13 +1,14 @@
+import React from "react"
 import "./phoneNumber.css"
 
 type PropsType = {
     number: string,
-    child?:any
+    childBefore?:React.ReactNode
 }
 
-export default function PhoneNumber({  child,number }: PropsType) {
+export default function PhoneNumber({  childBefore,number }: PropsType) {
     return <a href={`tel:${number}`} className="phone-number">
-        {child}
+        {childBefore}
         <span className="phone-number__text">{convertPhoneNumber(number)}</span>
     </a>
 }

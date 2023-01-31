@@ -1,9 +1,8 @@
+import "./logo.css"
 import  darkLogo from "../../images/darkLogo.svg"
 import whiteLogo from "../../images/whiteLogo.svg"
 
-import "./logo.css"
-
-export type LogoColors = "white" | "dark";
+export type LogoColors = "White" | "Dark";
 
 type PropsType = {
     color?: LogoColors,
@@ -11,15 +10,15 @@ type PropsType = {
 
 function getLogo(color: LogoColors):string {
     switch (color) {
-        case "dark":
+        case "Dark":
             return darkLogo
-        case "white":
+        case "White":
             return whiteLogo
     }
 }
 
-export default function Logo({ color = "dark" }: PropsType) {
+export default function Logo({ color = "Dark" }: PropsType) {
     return <div className="logo">
-        <img src={getLogo(color)} alt="" />
+        <img src={getLogo(color)} alt="Zыon" />
     </div>
 }
