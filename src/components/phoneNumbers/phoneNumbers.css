@@ -12,23 +12,23 @@
     display: none;
  }
 
- .phone-numbers-wrapper  .icon {
+ .phone-numbers-wrapper  .sprite {
     margin-right: 5px;
  }
 
- .phone-numbers-wrapper > a:nth-child(1) > .icon {
+ .phone-numbers-wrapper > a:nth-child(1) > .sprite {
     width: 22px;
     height: 19px;
 }
-.phone-numbers-wrapper > a:nth-child(2) > .icon {
+.phone-numbers-wrapper > a:nth-child(2) > .sprite {
     width: 10px;
     height: 16px;
 }
-.phone-numbers-wrapper > a:nth-child(3) > .icon {
+.phone-numbers-wrapper > a:nth-child(3) > .sprite {
     width: 18px;
     height: 18px;
 }
-.phone-numbers-wrapper > a:nth-child(4) > .icon {
+.phone-numbers-wrapper > a:nth-child(4) > .sprite {
     width: 15px;
     height: 15px;
 }

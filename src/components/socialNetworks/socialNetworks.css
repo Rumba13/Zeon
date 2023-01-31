@@ -15,33 +15,33 @@
     margin-left: 0px;
 }
 
-.social-network>.icon {
+.social-network>.sprite {
     width: 17px;
     height: 17px;
 }
 
 
-div.social-networks-list a:nth-child(1)>.icon {
+div.social-networks-list a:nth-child(1)>.sprite {
     width: 8px;
     height: 14px;
 }
 
-div.social-networks-list a:nth-child(2)>.icon {
+div.social-networks-list a:nth-child(2)>.sprite {
     width: 16px;
     height: 10px;
 }
 
-div.social-networks-list a:nth-child(3)>.icon {
+div.social-networks-list a:nth-child(3)>.sprite {
     width: 16px;
     height: 16px;
 }
 
-div.social-networks-list a:nth-child(4)>.icon {
+div.social-networks-list a:nth-child(4)>.sprite {
     width: 10px;
     height: 16px;
 }
 
-div.social-networks-list a:nth-child(5)>.icon {
+div.social-networks-list a:nth-child(5)>.sprite {
     width: 16px;
     height: 12px;
 }
