@@ -10,8 +10,12 @@ border-bottom: 1px solid var(--border-color);
 
 }
 
-.scroll-top__icon {
-/* background: ; */
+.scroll-top .sprite {
+   width: 15px;
+   height: 17px;
+   margin-right: 8px;
+   align-self: center;
+   margin-bottom: -5px;
 }
 
 .scroll-top__text {
