@@ -21,7 +21,7 @@
     border: 3px solid var(--secondary-color);
  }
 
- img.search__icon {
+.search .icon {
     height: 17px;
     width: 17px;
     position: absolute;
