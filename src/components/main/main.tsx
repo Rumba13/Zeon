@@ -3,7 +3,7 @@ import Content from "../content/content";
 import "./main.css"
 
 export default function Main() {
-    return <main>
+    return <main className="main">
         <Aside/>
         <Content/>
     </main>

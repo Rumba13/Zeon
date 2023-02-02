@@ -12,12 +12,12 @@ body, html, #root {
 }
 
 :root {
-  --secondary-color:rgb(99, 206, 99);
+  --secondary-color:#53b220;
   --third-color: #2e3038;
   --content-max-width: 1120px;
   --footer-text-color: #959699;
   --border-color:#43454c;
-  --low-border-color:#ededec;
+  --low-border-color:#ededec; /*TODO: rename to weak  */
   --social-networks-text-color: rgba(46,48,56,0.6);
   --social-networks-background-color:#f1f1f1;
   --third-background-color:#efefef;

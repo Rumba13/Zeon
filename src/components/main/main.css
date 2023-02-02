@@ -1,13 +1,11 @@
-main {
+.main {
     grid-area: main;
     display: grid;
-    grid-template: 1fr 1fr / 300px 7.5fr;
+    grid-template: 1fr / 300px 1fr;
     grid-template-areas:
     "aside content";
 
     max-width: 1120px;
     margin: 0 auto;
-    min-height: 100%;
-    grid: 1 1 auto;
     margin-top: 10px;
 }
