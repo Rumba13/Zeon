@@ -10,6 +10,7 @@ type PropsType = {
 type CurrentUlType = HTMLElement | undefined;
 
 class ListController {
+
     constructor() { }
 
     public isCurrentUlOpen(currentUl: CurrentUlType = this.currentUl) {
@@ -18,8 +19,11 @@ class ListController {
     public closeAllCurrentUlChildsUl(currentUl: CurrentUlType = this.currentUl) {
         if (!currentUl) return;
         Array.from(currentUl.children).forEach(li => {
+
             const childUl = li.querySelector("ul");
-            if (childUl) this.closeCurrentUl(childUl);
+                
+                if (childUl) this.closeCurrentUl(childUl);
+
         })
     }
     public toggleCurrentUlOpenState(currentUl: CurrentUlType = this.currentUl) {
@@ -33,6 +37,13 @@ class ListController {
     }
     public setCurrentUl(currentUl: CurrentUlType = this.currentUl) {
         this.currentUl = currentUl;
+    }
+    public closeOtherUlOnCurrentLevel(currentUl: CurrentUlType = this.currentUl) {
+        const parent = currentUl?.parentElement?.parentElement
+
+        if (parent) {
+            this.closeAllCurrentUlChildsUl(parent)
+        }
     }
     private currentUl?: CurrentUlType;
 }
@@ -53,6 +64,7 @@ function onClickHandler(e: React.MouseEvent<HTMLElement, MouseEvent>, catalogIte
         listController.closeCurrentUl();
     }
     else {
+        listController.closeOtherUlOnCurrentLevel()
         listController.openCurrentUl();
     }
 }
