@@ -1,9 +1,10 @@
+import { log } from "console";
 import React from "react";
 import Sprite from "../sprite/sprite";
 import "./catalogItem.css";
 
 type PropsType = {
-    text: string,
+    title: string,
     children?: React.ReactNode
 }
 
@@ -14,7 +15,7 @@ class ListController {
     constructor() { }
 
     public isCurrentUlOpen(currentUl: CurrentUlType = this.currentUl) {
-        return currentUl?.classList.contains("list-open");
+        return currentUl?.parentElement?.classList.contains("list-open");
     }
     public closeAllCurrentUlChildsUl(currentUl: CurrentUlType = this.currentUl) {
         if (!currentUl) return;
@@ -27,19 +28,19 @@ class ListController {
         })
     }
     public toggleCurrentUlOpenState(currentUl: CurrentUlType = this.currentUl) {
-        currentUl?.classList.toggle("list-open");
+        currentUl?.parentElement?.classList.toggle("list-open");
     }
     public closeCurrentUl(currentUl: CurrentUlType = this.currentUl) {
-        currentUl?.classList.remove("list-open");
+        currentUl?.parentElement?.classList.remove("list-open");
     }
     public openCurrentUl(currentUl: CurrentUlType = this.currentUl) {
-        currentUl?.classList.add("list-open");
+        currentUl?.parentElement?.classList.add("list-open");
     }
     public setCurrentUl(currentUl: CurrentUlType = this.currentUl) {
         this.currentUl = currentUl;
     }
     public closeOtherUlOnCurrentLevel(currentUl: CurrentUlType = this.currentUl) {
-        const parent = currentUl?.parentElement?.parentElement
+        const parent = currentUl?.parentElement?.parentElement;
 
         if (parent) {
             this.closeAllCurrentUlChildsUl(parent)
@@ -69,12 +70,13 @@ function onClickHandler(e: React.MouseEvent<HTMLElement, MouseEvent>, catalogIte
     }
 }
 
-export default function CatalogItem({ text, children }: PropsType) {
+export default function CatalogItem({ title, children }: PropsType) {
     const catalogItemsRef = React.createRef<HTMLUListElement>();
+
 
     return <li onClick={(e) => onClickHandler(e, catalogItemsRef)} className="catalog-item-wrapper">
         <div className="catalog-item">
-            <span className="catalog-item__text">{text}</span>
+            <span className="catalog-item__text">{title}</span>
             <Sprite yOffset={null} />
         </div>
         <ul ref={catalogItemsRef} className="catalog-items">
