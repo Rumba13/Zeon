@@ -3,11 +3,10 @@
   width: 100%;
   display: grid;
   grid-template: 160px auto 1fr / 1fr;
-  grid-template-areas: 
-  "header"
-  "main"
-  "footer"
+  grid-template-areas:
+    "header"
+    "main"
+    "footer"
   ;
+  font-family: "PT Sans", sans-serif;
 }
-
-

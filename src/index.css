@@ -49,7 +49,7 @@ html,body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-size: 13px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .list-wrapper > .title {
-  font-size: 23px;
+  font-size: 21px;
   color: white;
   font-weight: 600;
   margin-bottom: 10px;
@@ -84,7 +84,8 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
-.list-item {
+.list-item > a {
+  font-size: 15px;
 }
 
 .list-item__link {
@@ -93,7 +94,7 @@ h1,h2,h3,h4,h5,h6 {
     border-bottom: 1px solid var(--footer-text-color);
     line-height: 2;
 }
-
+/* TODO:fix list */
 img {
   max-width: 100%;
   height: auto;

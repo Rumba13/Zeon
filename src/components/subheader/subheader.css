@@ -11,7 +11,7 @@
 
 .sub-header-menu-item > .item__text {
     color: var(--footer-text-color);
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .sub-header-menu-wrapper > .sub-header-menu > li:last-child {

@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     color: var(--footer-text-color);
-    font-size: 13px;
+    font-size: 11px;
     border-top: 1px solid var(--border-color) ;
     border-bottom: 1px solid var(--border-color);
     margin-top: 20px;

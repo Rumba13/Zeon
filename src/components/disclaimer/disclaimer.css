@@ -3,4 +3,5 @@
     color: var(--footer-text-color);
     line-height: 1.42;
     padding-top: 17px;
+    font-size: 13px;
 }
