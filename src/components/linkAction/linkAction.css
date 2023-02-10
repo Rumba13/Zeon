@@ -1,0 +1,20 @@
+.link-action {
+    display: flex;
+    justify-content: center;
+}
+
+.link-action__text {
+    margin: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--weak-text-color);
+    transition: all 0.4s;
+}
+.link-action__text:hover {
+    color: var(--secondary-color);
+}
+
+.link-action>.sprite {
+    width: 25px;
+}

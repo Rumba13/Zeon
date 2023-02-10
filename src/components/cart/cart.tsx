@@ -1,11 +1,6 @@
-import Counter from "../counter/counter";
-import Sprite from "../sprite/sprite";
+import LinkAction from "../linkAction/linkAction";
 import "./cart.css";
 
 export default function Cart() {
-    return <div className="cart">
-        <Sprite yOffset={-998} />
-        <span className="cart__text">Корзина</span>
-        <Counter count={0} />
-    </div>
+    return <LinkAction className="cart" text="Корзина" href="##" spriteYOffSet={-998}/>
 }

@@ -18,11 +18,21 @@
     justify-content: end;
     position: relative;
     align-items: center;
-    flex-grow: 1;
     padding-right: 20px;
     margin-right: 6px;
     text-align: end;
+
+    padding-left: 15px;
 }
+
+.user-menu:hover {
+    background-color: var(--sub-header-item-hover-color);
+}
+.user-menu:hover > .user-menu__title {
+    color: white;
+    
+}
+
 
 .open-list-icon {
     position: absolute;

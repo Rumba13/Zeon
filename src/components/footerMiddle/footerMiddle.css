@@ -17,7 +17,11 @@
 }
 
 .footer-middle__rules {
-    color: var(--footer-text-color)
+    color: var(--footer-text-color);
+    transition: all 0.4s;
+}
+.footer-middle__rules:hover {
+    color: white;
 }
 
 .footer-middle > * {

@@ -7,3 +7,8 @@
     margin: 5px;
     background: var(--social-networks-background-color);
 }
+
+.social-network:hover{
+    background: var(--secondary-color);
+}
+

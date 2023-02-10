@@ -1,14 +1,6 @@
 .cart {
     grid-area: cart;
-    display: flex;
     align-self: center;
-    justify-content: center;
-}
-span.cart__text {
-    margin: 5px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
 }
 
 .cart > .sprite {

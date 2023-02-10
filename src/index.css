@@ -21,6 +21,10 @@ body, html, #root {
   --social-networks-text-color: rgba(46,48,56,0.6);
   --social-networks-background-color:#f1f1f1;
   --third-background-color:#efefef;
+  --sub-header-item-hover-color: #ffffff0d;
+  --weak-text-color:#3a3a3a;
+  --active-color:#ecad26;
+  --search-form-focus-color:#c8c8c5;
 }
 
 * {
@@ -87,12 +91,17 @@ h1,h2,h3,h4,h5,h6 {
 .list-item > a {
   font-size: 15px;
 }
+.list-item__link:hover {
+  border-bottom: 1px solid transparent;
+
+}
 
 .list-item__link {
     color: var(--footer-text-color);
     font-size: 17px;
     border-bottom: 1px solid var(--footer-text-color);
     line-height: 2;
+    transition: all 0.4s;
 }
 /* TODO:fix list */
 img {

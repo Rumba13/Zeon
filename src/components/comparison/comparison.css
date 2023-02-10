@@ -1,14 +1,4 @@
-.comparison {
+.link-action {
     grid-area: comparison;
-    display: flex;
     align-self: center;
-    justify-content: center;
 }
-
-span.comparison__text{
-    margin: 5px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-}
-/* TODO: SEparate at components */

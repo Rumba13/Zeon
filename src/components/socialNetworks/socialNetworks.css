@@ -11,7 +11,7 @@
     margin-top: 28px;
 }
 
-.social-networks > .social-networks-list > a:first-child {
+.social-networks>.social-networks-list>a:first-child {
     margin-left: 0px;
 }
 
@@ -20,6 +20,9 @@
     height: 17px;
 }
 
+.social-networks-list>a {
+   transition: all 0.4s;
+}
 
 div.social-networks-list a:nth-child(1)>.sprite {
     width: 8px;
@@ -44,4 +47,29 @@ div.social-networks-list a:nth-child(4)>.sprite {
 div.social-networks-list a:nth-child(5)>.sprite {
     width: 16px;
     height: 12px;
+}
+
+
+.social-network:hover>div {
+    color: white;
+}
+
+div.social-networks-list a:nth-child(1):hover>.sprite {
+    background-position-y: -332px !important;
+}
+
+div.social-networks-list a:nth-child(2):hover>.sprite {
+    background-position-y: -66px !important;
+}
+
+div.social-networks-list a:nth-child(3):hover>.sprite {
+    background-position-y: -518px !important;
+}
+
+div.social-networks-list a:nth-child(4):hover>.sprite {
+    background-position-y: -566px !important;
+}
+
+div.social-networks-list a:nth-child(5):hover>.sprite {
+    background-position-y: -184px !important;
 }

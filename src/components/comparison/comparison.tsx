@@ -1,9 +1,6 @@
-import  Counter  from "../../components/counter/counter"
+import LinkAction from "../linkAction/linkAction"
 import "./comparison.css"
 
 export default function Comparison() {
-    return <div className="comparison">
-        <span className="comparison__text">В сравнении</span>
-      <Counter count={0}/>
-    </div>
+    return <LinkAction className="comparison" href="##" text="В сравнении" spriteYOffSet={null}/>
 }

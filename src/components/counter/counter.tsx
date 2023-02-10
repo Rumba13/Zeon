@@ -1,7 +1,7 @@
 import "./counter.css"
 
 type PropsType = {
-    count:number
+    count?:number
 }
 
 
