@@ -1,4 +1,4 @@
-import "./header.css"
+import "./header.scss"
 import Logo from "../logo/logo"
 import Timetable from "../timetable/timetable"
 import SearchForm from "../searchForm/searchForm"

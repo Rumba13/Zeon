@@ -3,7 +3,7 @@ import Catalog from "../catalog/catalog"
 import ReviewsWidget from "../reviewsWidget/reviewsWidget"
 import SocialNetworks from "../socialNetworks/socialNetworks"
 import SingleNews from "../singleNews/singleNews"
-import "./aside.css"
+import "./aside.scss"
 
 export default function Aside() {
     return <aside className="aside">

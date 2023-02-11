@@ -10,9 +10,10 @@
     font-weight: 600;
     color: var(--weak-text-color);
     transition: all 0.4s;
-}
-.link-action__text:hover {
-    color: var(--secondary-color);
+
+    &:hover {
+        color: var(--secondary-color);
+    }
 }
 
 .link-action>.sprite {

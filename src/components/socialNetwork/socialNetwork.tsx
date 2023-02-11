@@ -1,4 +1,4 @@
-import "./socialNetwork.css";
+import "./socialNetwork.scss";
 
 type PropsType = {
     link:string,

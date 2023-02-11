@@ -1,6 +1,6 @@
 import Icon from "../icon/icon";
 import searchIcon from "../../images/search.png";
-import "./searchForm.css";
+import "./searchForm.scss";
 
 
 export default function searchForm() {

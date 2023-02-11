@@ -1,4 +1,4 @@
-import "./logo.css"
+import "./logo.scss"
 import  darkLogo from "../../images/darkLogo.svg"
 import whiteLogo from "../../images/whiteLogo.svg"
 

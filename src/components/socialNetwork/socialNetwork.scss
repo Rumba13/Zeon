@@ -6,9 +6,9 @@
     height: 28px;
     margin: 5px;
     background: var(--social-networks-background-color);
-}
 
-.social-network:hover{
-    background: var(--secondary-color);
+    &:hover{
+        background: var(--secondary-color);
+    }
 }
 

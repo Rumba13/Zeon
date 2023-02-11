@@ -1,4 +1,4 @@
-import "./counter.css"
+import "./counter.scss"
 
 type PropsType = {
     count?:number

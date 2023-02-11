@@ -1,5 +1,5 @@
 import CatalogItem from "../catalogItem/catalogItem";
-import "./catalog.css";
+import "./catalog.scss";
 
 
 type ListItemType = {

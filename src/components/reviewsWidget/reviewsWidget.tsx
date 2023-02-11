@@ -1,5 +1,5 @@
 import Sprite from "../sprite/sprite";
-import "./reviewsWidget.css";
+import "./reviewsWidget.scss";
 
 export default function ReviewsWidget() { //TODO:separate to components
     return <div className="reviews">

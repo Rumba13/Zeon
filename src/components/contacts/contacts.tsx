@@ -1,4 +1,4 @@
-import "./contacts.css"
+import "./contacts.scss"
 import verifiedWithVisa from "../../images/verifiedByVisa.png"
 import visa from "../../images/visa.png"
 import payLogo from "../../images/payLogo.png"

@@ -1,0 +1,7 @@
+.catalog {
+    margin-bottom: 30px;
+
+    &>.catalog-item-wrapper:last-child {
+        border-bottom: 1px solid var(--weak-border-color);
+    }
+}

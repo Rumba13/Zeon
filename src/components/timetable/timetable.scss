@@ -1,0 +1,36 @@
+.time-table-wrapper {
+    grid-area: timetable;
+    align-self: center;
+    display: flex;
+    height: 25px;
+}
+.time-table {
+    background-color: var(--third-background-color);
+    position: relative;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    & .sprite {
+        width: 13px;
+        margin-left: 8px;
+        margin-right: 5px;
+        align-self: center;
+        height: 13px;
+    }
+    
+    &::after {
+        content: ''; 
+        position: absolute; 
+        right: -7px;
+        top: 0px; 
+        
+        border-style: solid;
+        border-width: 12.5px 0 12.5px 7px;
+        border-color: transparent transparent transparent var(--third-background-color);
+    }
+}
+
+
+

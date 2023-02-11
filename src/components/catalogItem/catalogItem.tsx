@@ -1,7 +1,7 @@
 import { log } from "console";
 import React from "react";
 import Sprite from "../sprite/sprite";
-import "./catalogItem.css";
+import "./catalogItem.scss";
 
 type PropsType = {
     title: string,

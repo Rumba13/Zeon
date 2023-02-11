@@ -1,0 +1,39 @@
+.scroll-top {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   font-size: 14px;
+   border-bottom: 1px solid var(--border-color);
+   height: 100%;
+   max-width: var(--content-max-width);
+   margin: 0 auto;
+
+   & .sprite {
+      width: 15px;
+      height: 17px;
+      margin-right: 8px;
+      align-self: center;
+      margin-bottom: -5px;
+   }
+}
+
+.scroll-top-wrapper {
+   margin-bottom: 32px;
+   grid-area: scrollTop;
+   transition: all 0.4s;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+
+   &:hover>.scroll-top {
+      border-bottom: 0px;
+   }
+
+   &:hover {
+      background-color: var(--background-color-hover);
+      border-bottom: 1px solid var(--border-color);
+   }
+}
+
+.scroll-top__text {
+   color: var(--footer-text-color);
+}

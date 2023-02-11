@@ -1,0 +1,14 @@
+.contacts-field {
+    display: flex;
+    align-items: center;
+
+    & .sprite {
+        width: 15px;
+        height: 18px;
+        margin-right: 10px;
+    }
+}
+
+.contacts-field__text {
+    color: var(--footer-text-color);
+}

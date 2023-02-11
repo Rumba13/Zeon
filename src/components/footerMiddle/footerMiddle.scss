@@ -4,7 +4,7 @@
     align-items: center;
     color: var(--footer-text-color);
     font-size: 11px;
-    border-top: 1px solid var(--border-color) ;
+    border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     margin-top: 20px;
 }
@@ -19,11 +19,12 @@
 .footer-middle__rules {
     color: var(--footer-text-color);
     transition: all 0.4s;
-}
-.footer-middle__rules:hover {
-    color: white;
+
+    &:hover {
+        color: white;
+    }
 }
 
-.footer-middle > * {
+.footer-middle>* {
     margin: 8px;
 }

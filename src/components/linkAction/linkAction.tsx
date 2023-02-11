@@ -1,6 +1,6 @@
 import Counter from "../counter/counter";
 import Sprite from "../sprite/sprite";
-import "./linkAction.css";
+import "./linkAction.scss";
 
 type PropsType = {
     spriteYOffSet: number | null,

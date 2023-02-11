@@ -1,5 +1,5 @@
 import PhoneNumber from "../phoneNumber/phoneNumber";
-import "./phoneNumbers.css";
+import "./phoneNumbers.scss";
 import Sprite from "../sprite/sprite";
 
 export default function PhoneNumbers() {

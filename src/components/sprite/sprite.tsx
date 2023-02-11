@@ -1,4 +1,4 @@
-import "./sprite.css";
+import "./sprite.scss";
 
 type PropsType = {
     yOffset:number | null,

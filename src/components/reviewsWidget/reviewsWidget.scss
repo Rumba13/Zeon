@@ -1,7 +1,7 @@
 .reviews {
     margin-top: 20px;
     padding: 30px;
-    border: 1px solid var(--low-border-color);
+    border: 1px solid var(--weak-border-color);
     border-radius: 10px;
     padding-top: 25px;
     display: flex;
@@ -16,7 +16,7 @@
 
 .reviews__review-part {
     line-height: 1.4;
-    border-bottom: 1px solid var(--low-border-color);
+    border-bottom: 1px solid var(--weak-border-color);
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -45,7 +45,7 @@
 .make-review-btn {
     display: flex;
     align-items: center;
-    border-right: 1px solid var(--low-border-color);
+    border-right: 1px solid var(--weak-border-color);
     padding-right: 5px;
     margin-right: 5px;
 }

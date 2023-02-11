@@ -1,0 +1,21 @@
+.phone-number {
+    display: flex;
+    color: black;
+
+    & > .phone-number__text {
+        white-space: nowrap;
+        align-self: center;
+        transition: all 0.4s; 
+    }
+
+    & .sprite {
+        width: 25px;
+        height: 20px;
+    }
+    
+   &:hover > .phone-number__text {
+        color: var(--secondary-color);
+    }
+}
+
+

@@ -1,6 +1,6 @@
 import UserMenu from "../userMenu/userMenu";
 import saleIcon from "../../images/sale.png"
-import "./subheader.css";
+import "./subheader.scss";
 import Icon from "../icon/icon";
 
 export default function Subheader() {

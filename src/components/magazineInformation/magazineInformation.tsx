@@ -1,4 +1,4 @@
-import "./magazineInformation.css";
+import "./magazineInformation.scss";
 
 export default function MagazineInformation() {
     return <div className="magazineInformation list-wrapper">

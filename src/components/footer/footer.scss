@@ -1,0 +1,27 @@
+.footer-wrapper {
+    background: var(--third-color);
+
+    &>.scroll-top-wrapper {
+        height: 62px;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-area: footer;
+    grid-template: 2.5fr 80px 1fr / 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "logo aboutCompany magazineInformation contacts"
+        "middle middle middle middle"
+        "disclaimer disclaimer disclaimer disclaimer";
+    grid-gap: 5px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--content-max-width);
+    padding-bottom: 50px;
+
+    &>.logo {
+        grid-area: logo;
+        align-self: start;
+    }
+}

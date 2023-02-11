@@ -1,4 +1,4 @@
-import "./singleNews.css";
+import "./singleNews.scss";
 
 type PropsType = {
     title: string,

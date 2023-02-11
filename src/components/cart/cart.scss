@@ -1,8 +1,9 @@
 .cart {
     grid-area: cart;
     align-self: center;
-}
 
-.cart > .sprite {
-    width: 25px;
+    & > .sprite {
+
+        width: 25px;
+    }
 }

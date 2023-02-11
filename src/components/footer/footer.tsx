@@ -5,12 +5,12 @@ import FooterMiddle from "../footerMiddle/footerMiddle"
 import Logo from "../logo/logo"
 import MagazineInformation from "../magazineInformation/magazineInformation"
 import ScrollTop from "../scrollTop/scrollTop"
-import "./footer.css"
+import "./footer.scss"
 
 export default function Footer() {
     return <div className="footer-wrapper">
-        <footer className="footer">
             <ScrollTop />
+        <footer className="footer">
             <Logo color="White" />
             <AboutCompany />
             <MagazineInformation />

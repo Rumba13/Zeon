@@ -1,5 +1,5 @@
 import Sprite from "../sprite/sprite";
-import "./timetable.css";
+import "./timetable.scss";
 
 export default function Timetable() {
     return <div className="time-table-wrapper">

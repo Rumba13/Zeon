@@ -1,4 +1,4 @@
-import "./aboutCompany.css"
+import "./aboutCompany.scss"
 
 export default function AboutCompany() {
     return <div className="aboutCompany list-wrapper">

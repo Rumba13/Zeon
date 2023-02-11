@@ -1,4 +1,4 @@
-import "./footerMiddle.css";
+import "./footerMiddle.scss";
 import yandexLogo from "../../images/yandexMarketLogo.png";
 
 

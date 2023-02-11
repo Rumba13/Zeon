@@ -1,4 +1,4 @@
-import "./banner.css";
+import "./banner.scss";
 import bannerRepair from "../../images/banner-repair.jpg"
 
 export default function Banner() {

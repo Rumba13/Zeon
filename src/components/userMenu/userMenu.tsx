@@ -1,5 +1,5 @@
 import Sprite from "../sprite/sprite";
-import "./userMenu.css";
+import "./userMenu.scss";
 
 export default function UserMenu() {
     return <div className="user-menu">

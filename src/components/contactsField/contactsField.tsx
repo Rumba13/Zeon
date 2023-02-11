@@ -1,5 +1,5 @@
 import Sprite from "../sprite/sprite";
-import "./contactsField.css";
+import "./contactsField.scss";
 
 type PropsType = {
     text:any,

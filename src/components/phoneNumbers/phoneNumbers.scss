@@ -1,0 +1,39 @@
+.phone-numbers-wrapper {
+    overflow-x: scroll;
+    display: flex;
+    grid-area: phoneNumbers;
+    align-self: center;
+
+
+    &>.phone-number {
+        margin: 7px;
+    }
+    
+    & .sprite {
+        margin-right: 5px;
+    }
+
+    &>a:nth-child(1)>.sprite {
+        width: 22px;
+        height: 19px;
+    }
+
+    &>a:nth-child(2)>.sprite {
+        width: 10px;
+        height: 16px;
+    }
+
+    &>a:nth-child(3)>.sprite {
+        width: 18px;
+        height: 18px;
+    }
+
+    &>a:nth-child(4)>.sprite {
+        width: 15px;
+        height: 15px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

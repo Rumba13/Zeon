@@ -1,0 +1,47 @@
+.contacts-wrapper {
+    grid-area: contacts;
+
+    &>.contacts {
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+        margin-bottom: 20px;
+
+        &>.text-with-icon {
+            color: var(--footer-text-color);
+            font-size: 20px;
+        }
+    }
+
+    &.list-wrapper>h2 {
+        font-size: 19px;
+    }
+}
+
+.pay-logos {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    &>img {
+        width: auto;
+    }
+}
+
+.pay-logos__master-cart {
+    height: 50px;
+}
+
+.pay-logos__pay-logo {
+    max-width: 40%;
+    align-self: center;
+}
+
+.pay-logos__alpha-bank-logo {
+    max-width: 40%;
+}
+
+.contacts-field__text {
+    font-size: 15px;
+}

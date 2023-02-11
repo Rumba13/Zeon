@@ -1,5 +1,5 @@
 import React from "react"
-import "./phoneNumber.css"
+import "./phoneNumber.scss"
 
 type PropsType = {
     number: string,
