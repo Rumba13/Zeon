@@ -1,0 +1,25 @@
+.product-selection {
+    border: 1px solid var(--weak-border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.product-selection__title {
+    text-align: center;
+    color:var(--weak-text-color);
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.4s;
+    
+    &:hover {
+        color: var(--secondary-color);
+    }
+}
+.product-selection-image-wrapper {
+
+}
+.image-wrapper__image {
+    width: 100%;
+}

@@ -1,8 +1,12 @@
 import "./banner.scss";
-import bannerRepair from "../../images/banner-repair.jpg"
 
-export default function Banner() {
-    return <a href="https://www.777555.by/service/" className="banner">
-        <img src={bannerRepair} alt="" />
+type PropsType = {
+    imageSrc:any,
+    href: string,
+}
+
+export default function Banner({imageSrc,href}:PropsType) {
+    return <a href={href} className="banner">
+        <img src={imageSrc} alt="" />
     </a>
 }

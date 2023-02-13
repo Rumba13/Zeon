@@ -1,7 +1,35 @@
+import Banner from "../banner/banner"
 import "./content.scss"
+import autoZeonBanner from "../../images/avtoZeonBanner.jpg"
+import BannerSlider from "../bannerSlider/bannerSlider"
+import ProductSelection from "../productSelection/productSelection"
+import heatingImage from "../../images/heating.png"
+import holtImage from "../../images/holt.png"
+import Product, { ProductType } from "../product/product"
 
-export default function Content() {
+type PropsType = {}
+
+const products: ProductType[] = [
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "dakdjsid jaildjiadjaisdjai jdiaida diadiaiddj iadjada" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+    { href: "##", previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+
+]
+
+export default function Content({ }: PropsType) {
     return <div className="content">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro facilis laborum ipsam veniam, quos voluptatibus recusandae ipsum veritatis exercitationem et dolor, nemo unde molestiae laboriosam! Deserunt, rerum deleniti assumenda similique illo voluptatem sequi dignissimos, praesentium placeat blanditiis laborum provident molestias. Soluta aspernatur provident voluptatum, repellendus atque animi cum, nemo, illo quod blanditiis obcaecati unde aperiam rerum sunt? Necessitatibus quisquam aperiam itaque ea, exercitationem error deleniti eligendi amet voluptates quidem alias ex officiis ullam! Molestiae blanditiis eveniet facilis atque, deserunt unde harum ea neque aperiam, optio aliquam? Ratione ipsam tempora pariatur id exercitationem aliquid placeat in, vitae nulla sequi ducimus dolores.   
+        <Banner imageSrc={autoZeonBanner} href={"https://avtozeon.by/"} />
+        <BannerSlider />
+        <ProductSelection href="#" title="Техника Holt" imageSrc={holtImage} />
+        <ProductSelection href="#" title="Обогреватели" imageSrc={heatingImage} />
+
+        <div className="products">{products.map(product => <Product {...product} />)}</div>
     </div>
 }   
