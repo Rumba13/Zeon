@@ -22,7 +22,7 @@ export default function ProductPage() {
             <ManufacturerInfo manufacturer="gayPornProduction" batchNumber="1231321" guaranteeInMonths={-1}/>
             <Rating/>
             <Delivery/>
-            <ProductInCredit/>
+            <ProductInCredit monthCreditValue={15.50}/>
             <ProductPrices price={20.10} cartPrice={19.50}/>
             <ProductCartOffer/>
             <ProductAddToCart/>

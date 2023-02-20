@@ -1,0 +1,19 @@
+.product-in-credit {
+    background: var(--social-networks-background-color);
+    border-left: 6px solid var(--secondary-color);
+    padding: 12px;
+    padding-left: 16px;
+    margin: 15px 0 ;
+}
+.product-in-credit-text {
+    font-weight: 750;
+    font-size: 14px;
+
+    & .credit-text__link {
+        color: var(--secondary-color);
+        transition: all 0.4s;
+        &:hover {
+            color: var(--active-color);
+        }
+    }
+}
