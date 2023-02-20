@@ -23,7 +23,6 @@
             opacity: 1;
             transform: translateY(19px);
             box-shadow: 0 10px 25px -3px rgb(0 0 0 / 20%);
-
         }
 
     }
@@ -79,6 +78,6 @@
 
 .product__price-hint {
     font-size: 11px;
-    color: var(--social-networks-text-color);
+    color: var(--inactive-text-color);
     margin-bottom: 13px;
 }

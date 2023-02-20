@@ -1,0 +1,9 @@
+.product-page {
+    display: flex;
+    & .product-sliders {
+        width: 53.6%;
+    }
+    & .product-information {
+        width: 46.4%;
+    }
+}

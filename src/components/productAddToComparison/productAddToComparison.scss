@@ -1,0 +1,14 @@
+.comparison-button {
+    border: 1px solid var(--weak-border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    
+    & .comparison-button__text {
+        text-align: center;
+    }
+    &:hover {
+        border-color: var(--active-color);
+    }
+}

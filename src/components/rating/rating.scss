@@ -1,0 +1,64 @@
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating__title {
+    font-size: 11px;
+    color: var(--inactive-text-color);
+    margin-right: 10px;
+}
+
+.rating-widget {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+
+    & .plus,
+    .minus {
+        width: 20px;
+        height: 24px;
+        background: var(--rating-btns-background-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.4s;
+
+        &:hover {
+            color: var(--active-color);
+            background-color: var(--rating-active-background-color);
+        }
+    }
+
+    & .minus {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    & .plus {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    & .rating-widget__rating {
+        min-width: 14px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.rating-stars {
+    width: 82px;
+    height: 20px;
+    margin-left: 15px;
+
+    & .rating-stars-active {
+        --active-stars-procent: 0%;
+
+        height: 100%;
+        width: var(--active-stars-procent);
+        background: url("../../images/star.png") left bottom;
+    }
+}
