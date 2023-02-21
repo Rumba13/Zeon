@@ -5,8 +5,6 @@ type PropsType = {
 
 }
 
-
-
 export default function Rating({ }: PropsType) {
     const activeStarsRef = React.createRef<HTMLDivElement>();
     const starsCounter = React.createRef<HTMLDivElement>();
@@ -25,6 +23,7 @@ export default function Rating({ }: PropsType) {
             if (starsCounter.current) starsCounter.current.textContent = count.toString()
         }
     }
+    
     return <div className="rating">
         <span className="rating__title">Рейтинг:</span>
 
