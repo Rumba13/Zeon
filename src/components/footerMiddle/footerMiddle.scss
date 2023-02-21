@@ -2,7 +2,7 @@
     grid-area: middle;
     display: flex;
     align-items: center;
-    color: var(--footer-text-color);
+    color: var(--text-color);
     font-size: 11px;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
@@ -17,7 +17,7 @@
 }
 
 .footer-middle__rules {
-    color: var(--footer-text-color);
+    color: var(--text-color);
     transition: all 0.4s;
 
     &:hover {

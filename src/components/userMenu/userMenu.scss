@@ -17,7 +17,7 @@
     }
 
     &:hover {
-        background-color: var(--sub-header-item-hover-color);
+        background-color: var(---background-color-hover);
     }
 
     &:hover>.user-menu__title {
@@ -30,7 +30,7 @@
 }
 
 .user-menu__title {
-    color: var(--footer-text-color);
+    color: var(--text-color);
 }
 
 .open-list-icon {
@@ -38,5 +38,5 @@
     right: 10px;
     top: 16px;
     border: 4px solid transparent;
-    border-top: 4px solid var(--footer-text-color);
+    border-top: 4px solid var(--text-color);
 }

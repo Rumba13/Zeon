@@ -5,7 +5,7 @@
     height: 25px;
 }
 .time-table {
-    background-color: var(--third-background-color);
+    background-color: var(--weak-third-color);
     position: relative;
     padding: 3px;
     display: flex;
@@ -28,7 +28,7 @@
         
         border-style: solid;
         border-width: 12.5px 0 12.5px 7px;
-        border-color: transparent transparent transparent var(--third-background-color);
+        border-color: transparent transparent transparent var(--weak-third-color);
     }
 }
 

@@ -5,7 +5,7 @@
 
 .rating__title {
     font-size: 11px;
-    color: var(--inactive-text-color);
+    color: var(--inactive-color);
     margin-right: 10px;
 }
 
@@ -26,7 +26,7 @@
 
         &:hover {
             color: var(--active-color);
-            background-color: var(--rating-active-background-color);
+            background-color: var(--weak-third-color);
         }
     }
 

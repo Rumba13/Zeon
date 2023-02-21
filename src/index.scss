@@ -12,22 +12,17 @@ body, html, #root {
 }
 
 :root {
+  --content-max-width: 1120px;
   --secondary-color:#53b220;
   --third-color: #2e3038;
-  --content-max-width: 1120px;
-  --footer-text-color: #959699;
+  --weak-third-color:#f1f1f1;
   --border-color:#43454c;
   --weak-border-color:#ededec;
-  --inactive-text-color: rgba(46,48,56,0.6);
-  --social-networks-background-color:#f1f1f1;
-  --third-background-color:#efefef;
-  --sub-header-item-hover-color: #ffffff0d;
-  --weak-text-color:#3a3a3a;
   --active-color:#ecad26;
-  --search-form-focus-color:#c8c8c5;
-  --background-color-hover: rgba(255, 255, 255, 0.05);
-  --rating-btns-background-color: #e7e7e7;
-  --rating-active-background-color:#d8d8d8;
+  --inactive-color: #2e303899;
+  --text-color: #959699;
+  --weak-text-color:#3a3a3a;
+  --background-color-hover: #ffffff0d;
 }
 
 * {
@@ -95,9 +90,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .list-item__link {
-    color: var(--footer-text-color);
+    color: var(--text-color);
     font-size: 17px;
-    border-bottom: 1px solid var(--footer-text-color);
+    border-bottom: 1px solid var(--text-color);
     line-height: 2;
     transition: all 0.4s;
 }

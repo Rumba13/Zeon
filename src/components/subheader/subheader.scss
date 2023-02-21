@@ -17,7 +17,7 @@
     transition: all 0.4s;
 
     &>.item__text {
-        color: var(--footer-text-color);
+        color: var(--text-color);
         font-size: 13px;
     }
     & ._with-icon .icon {
@@ -35,7 +35,7 @@
         padding: 10px;
     }
     &:hover {
-        background-color: var(--sub-header-item-hover-color);
+        background-color: var(---background-color-hover);
     }
 
     &:hover>.item__text {
