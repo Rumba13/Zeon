@@ -2,9 +2,18 @@
     margin-top: 15px;
 
     & .tabs-titles {
-        & .opened {
-            font-weight: 700;
-            background-color: white !important;
+       
+        & .tab__title {
+            transition: all 0.4s;
+            &.opened {
+                font-weight: 700;
+                background-color: white !important;
+                color: black !important;
+            }
+
+            &:hover {
+                color:var(--secondary-color)
+            }
         }
     }
 

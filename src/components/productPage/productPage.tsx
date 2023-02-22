@@ -10,6 +10,7 @@ import ProductCartOffer from "../productCartOffer/productCartOffer";
 import ProductAddToCart from "../productAddToCart/productAddToCart";
 import ProductAddToComparison from "../productAddToComparison/productAddToComparison";
 import SubProductSlider from "../subProductSlider/subProductSlider";
+import ProductTabs from "../productTabs/productTabs";
 
 export default function ProductPage() {
     return <div className="product-page">
@@ -28,5 +29,6 @@ export default function ProductPage() {
             <ProductAddToCart/>
             <ProductAddToComparison/>
         </div>
+        <ProductTabs/>
     </div>
 }

@@ -4,15 +4,16 @@ import "./tabs.scss";
 
 type PropsType = {
     tabs: TabType[],
-    className: string
+    className: string,
+    children?: ReactNode
 }
 
 export type TabType = {
-    title: string,
+    title: ReactNode,
     content: ReactNode
 }
 
-export default function Tabs({ tabs, className }: PropsType) {
+export default function Tabs({ tabs, className, children }: PropsType) {
     const tabsTitlesRef = React.createRef<HTMLDivElement>();
     const tabsContentRef = React.createRef<HTMLDivElement>();
 
@@ -42,6 +43,12 @@ export default function Tabs({ tabs, className }: PropsType) {
             tabClassName += " " + className;
         }
         return tabClassName;
+    }
+
+    setTimeout(() => tabClickHandler(0), 0); //open first tab
+
+    if (children) {
+        console.log(children)
     }
 
     return <div className={getTabClassName()}>
