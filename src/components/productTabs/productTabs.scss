@@ -11,12 +11,16 @@
             border-radius: 2px;
             padding: 15px 25px;
             background-color: var(--weak-third-color);
-            color: var(--text-color);
+            color: var(--product-tabs-text-color);
             font-weight: 700;
 
             & .icon {
                 height: 12px;
                 margin-right: 4px;
+            }
+
+            &:hover {
+                color: var(--hover-weak-text-color);
             }
         }
 
@@ -24,6 +28,10 @@
             border-color: var(--secondary-color) var(--weak-tab-border-color) white var(--weak-tab-border-color);
             background-color: white;
             color: var(--weak-text-color);
+
+            &:hover {
+                color: var(--weak-text-color);
+            }
         }
     }
 
