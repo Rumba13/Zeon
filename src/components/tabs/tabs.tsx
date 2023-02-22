@@ -1,21 +1,62 @@
-import TabItem from "../tabItem/tabItem";
-import TabTitle from "../tabTitle/tabTitle";
+import React from "react";
+import { ReactNode } from "react";
 import "./tabs.scss";
 
 type PropsType = {
-    items: TabsItem[]
+    tabs: TabType[],
+    className: string,
+    children?: ReactNode
 }
 
-type TabsItem = {
-    title: string,
-    text: string
+export type TabType = {
+    title: ReactNode,
+    content: ReactNode
 }
 
-export default function Tabs({ items }: PropsType) {
-    return <div className="tabs">
-        <div className="tabs-titles">
-            {items.map(tab => <TabTitle title={tab.title}/>)}
+export default function Tabs({ tabs, className, children }: PropsType) {
+    const tabsTitlesRef = React.createRef<HTMLDivElement>();
+    const tabsContentRef = React.createRef<HTMLDivElement>();
+
+    function tabClickHandler(index: number) {
+        if (!tabsTitlesRef.current || !tabsContentRef.current) return;
+
+        const tabsTitles = Array.from(tabsTitlesRef.current.children);
+        const tabsContent = Array.from(tabsContentRef.current.children)
+
+        removeOpenedClasses(tabsTitles)
+        removeOpenedClasses(tabsContent)
+
+        addOpenedClass(tabsTitles[index])
+        addOpenedClass(tabsContent[index])
+
+        function addOpenedClass(element: Element) {
+            element.classList.add("opened");
+        }
+        function removeOpenedClasses(elements: Element[]) {
+            elements.forEach(element => element.classList.remove("opened"))
+        }
+    }
+
+    function getTabClassName() {
+        let tabClassName = "tabs";
+        if (className) {
+            tabClassName += " " + className;
+        }
+        return tabClassName;
+    }
+
+    setTimeout(() => tabClickHandler(0), 0); //open first tab
+
+    if (children) {
+        console.log(children)
+    }
+
+    return <div className={getTabClassName()}>
+        <div ref={tabsTitlesRef} className="tabs-titles">
+            {tabs.map((tab, index) => <span onClick={() => tabClickHandler(index)} className="tab__title">{tab.title}</span>)}
         </div>
-        {items.map(tab => <TabItem text={tab.text} />)}
+        <div ref={tabsContentRef} className="tabs-content">
+            {tabs.map(tab => <span className="tab__content">{tab.content}</span>)}
+        </div>
     </div>
 }

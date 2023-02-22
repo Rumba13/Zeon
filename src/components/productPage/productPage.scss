@@ -1,9 +1,18 @@
 .product-page {
-    display: flex;
+    display: grid;
+    grid-template: auto auto 100% / 53.6% 46.4%;
+    grid-template-areas: "sliders product-information"
+                         "tabs tabs";
+
     & .product-sliders {
-        width: 53.6%;
+        grid-area: sliders;
     }
+
     & .product-information {
-        width: 46.4%;
+        grid-area: product-information;
+    }
+    & .tabs {
+        grid-area: tabs;
+        margin-top: 20px;
     }
 }

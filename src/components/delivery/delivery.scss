@@ -1,0 +1,41 @@
+.delivery-tabs {
+    margin-top: 15px;
+
+    & .tabs-titles {
+       
+        & .tab__title {
+            transition: all 0.4s;
+            &.opened {
+                font-weight: 700;
+                background-color: white !important;
+                color: black !important;
+            }
+
+            &:hover {
+                color:var(--secondary-color)
+            }
+        }
+    }
+
+    & .tabs-content {
+        & .tab__content {
+            &.opened {
+                animation: animateContentAppear 0.4s;
+            }
+            & .highlight {
+                color: var(--secondary-color);
+            }
+            line-height: 2;
+            font-size: 12px;
+        }
+    }
+}
+
+@keyframes animateContentAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

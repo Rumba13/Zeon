@@ -1,0 +1,33 @@
+.tabs {
+    border: 1px solid var(--weak-border-color);
+    border-radius: 3px;
+
+    & .tabs-titles {
+        display: flex;
+
+        & .tab__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.4;
+            color: var(--weak-text-color);
+            background: var(--weak-border-color);
+        }
+
+        & .opened {}
+    }
+
+    & .tabs-content {
+        padding: 20px;
+        & .tab__content {
+            display: none;
+            
+            &.opened {
+                display: block;
+            }
+        }
+    }
+}

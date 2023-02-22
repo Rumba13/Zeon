@@ -1,9 +1,10 @@
+import { ReactNode } from "react";
 import "./tabTitle.scss";
 
 type PropsType = {
-title:string
+    children:ReactNode
 }
 
-export default function TabTitle({title}:PropsType) {
-    return <div className="tab-title">{title}</div>
+export default function TabTitle({children}:PropsType) {
+    return <div className="tab-title">{children}</div>
 }
