@@ -1,11 +1,18 @@
 .product-tabs {
     border: none;
 
+   
     & .tabs-titles {
         display: inline-flex;
+        flex-grow: 1;
 
         & .tab__title {
+            max-width: 100%;
+            min-width: fit-content;
+            overflow: hidden;
             display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0px 5px -1px 0px;
             border: 1px solid var(--weak-tab-border-color);
             border-radius: 2px;
@@ -14,14 +21,13 @@
             color: var(--product-tabs-text-color);
             font-weight: 700;
 
-            & .icon {
-                height: 12px;
-                margin-right: 4px;
-            }
-
             &:hover {
                 color: var(--hover-weak-text-color);
             }
+        }
+        & .icon {
+            height: 12px;
+            margin-right: 4px;
         }
 
         & .opened {
@@ -44,3 +50,4 @@
         }
     }
 }
+

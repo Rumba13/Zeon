@@ -11,12 +11,19 @@ import ProductAddToCart from "../productAddToCart/productAddToCart";
 import ProductAddToComparison from "../productAddToComparison/productAddToComparison";
 import SubProductSlider from "../subProductSlider/subProductSlider";
 import ProductTabs from "../productTabs/productTabs";
+import sliderImage1 from "../../images/sliderImage1.jpg"
+import sliderImage2 from "../../images/sliderImage2.jpg"
+import sliderImage3 from "../../images/sliderImage3.jpg"
+import sliderImage4 from "../../images/sliderImage4.jpg"
+
+const sliderItems = [sliderImage1,sliderImage2,sliderImage3,sliderImage4]
+
 
 export default function ProductPage() {
     return <div className="product-page">
         <div className="product-sliders">
         <MainProductSlider/>
-        <SubProductSlider/>
+        <SubProductSlider sliderItems={sliderItems}/>
         </div>
         <div className="product-information">
             <ProductTitle title={"lersion"} code={12}/>
