@@ -73,7 +73,6 @@ function onClickHandler(e: React.MouseEvent<HTMLElement, MouseEvent>, catalogIte
 export default function CatalogItem({ title, children }: PropsType) {
     const catalogItemsRef = React.createRef<HTMLUListElement>();
 
-
     return <li onClick={(e) => onClickHandler(e, catalogItemsRef)} className="catalog-item-wrapper">
         <div className="catalog-item">
             <span className="catalog-item__text">{title}</span>
