@@ -1,0 +1,16 @@
+.unavailable-to-order {
+    border: 1px solid var(--weak-border-color);
+    padding: 20px;
+    border-radius: 3px;
+    & .unavailable-to-order__title {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    & .unavailable-to-order__message {
+        font-size: 16px;
+        line-height: 1.42;
+        font-family: "PT Sans",sans-serif;
+    }
+}

@@ -15,6 +15,7 @@ import sliderImage1 from "../../images/sliderImage1.jpg"
 import sliderImage2 from "../../images/sliderImage2.jpg"
 import sliderImage3 from "../../images/sliderImage3.jpg"
 import sliderImage4 from "../../images/sliderImage4.jpg"
+import UnavailableToOrder from "../unavailableToOrder/unavailableToOrder";
 
 const sliderItems = [sliderImage1,sliderImage2,sliderImage3,sliderImage4]
 
