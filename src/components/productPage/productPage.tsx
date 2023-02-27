@@ -16,9 +16,11 @@ import sliderImage2 from "../../images/sliderImage2.jpg"
 import sliderImage3 from "../../images/sliderImage3.jpg"
 import sliderImage4 from "../../images/sliderImage4.jpg"
 import UnavailableToOrder from "../unavailableToOrder/unavailableToOrder";
+import ProductImporter from "../productImporter/productImporter";
 
 const sliderItems = [sliderImage1,sliderImage2,sliderImage3,sliderImage4]
 
+const testImporterText = "Импортер на территорию Республики Беларусь: ООО «Зеон плюс», Республика Беларусь, Гомель, ул. Советская 39, оф. 14; ооо «успех про» 220100 рб г. минск ул. богдановича 143"
 
 export default function ProductPage() {
     return <div className="product-page">
@@ -36,7 +38,9 @@ export default function ProductPage() {
             <ProductCartOffer/>
             <ProductAddToCart/>
             <ProductAddToComparison/>
+            
         </div>
         <ProductTabs/>
+        <ProductImporter text={testImporterText}/>
     </div>
 }
