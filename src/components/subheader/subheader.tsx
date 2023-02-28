@@ -1,7 +1,7 @@
 import UserMenu from "../userMenu/userMenu";
-import saleIcon from "../../images/sale.png"
 import "./subheader.scss";
 import Icon from "../icon/icon";
+import { ICONS } from "../../images/images";
 
 export default function Subheader() {
     return <div className="sub-header-menu-wrapper">
@@ -9,7 +9,7 @@ export default function Subheader() {
             <li className="sub-header-menu-item">
                 <a href="##" className="item__text _with-icon">
                     Акция
-                <Icon icon={saleIcon}/>
+                <Icon icon={ICONS.sale}/>
                 </a>
             </li>
             <li className="sub-header-menu-item">

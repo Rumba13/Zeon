@@ -1,7 +1,6 @@
 import "./logo.scss"
-import darkLogo from "../../images/darkLogo.svg"
-import whiteLogo from "../../images/whiteLogo.svg"
 import { Link } from "react-router-dom";
+import { ICONS } from "../../images/images";
 export type LogoColors = "White" | "Dark";
 
 type PropsType = {
@@ -11,9 +10,9 @@ type PropsType = {
 function getLogo(color: LogoColors): string {
     switch (color) {
         case "Dark":
-            return darkLogo
+            return ICONS.darkLogo
         case "White":
-            return whiteLogo
+            return ICONS.whiteLogo
     }
 }
 

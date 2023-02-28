@@ -1,7 +1,7 @@
 import Banner from "../banner/banner";
-import testImage from "../../images/bannerSliderTest.jpg"
 import "./bannerSlider.scss";
+import { ICONS } from "../../images/images";
 
 export default function BannerSlider() {
-    return <img src={testImage} alt="" className="banner-slider" />
+    return <img src={ICONS.testImage} alt="" className="banner-slider" />
 }

@@ -1,5 +1,5 @@
 import "./footerMiddle.scss";
-import yandexLogo from "../../images/yandexMarketLogo.png";
+import { ICONS } from "../../images/images";
 
 
 export default function FooterMiddle() {
@@ -7,7 +7,7 @@ export default function FooterMiddle() {
         <span className="footer-middle__copyright">© 2023 ООО «Зеон плюс»</span>
         <a href="##" className="footer-middle__rules">Правила обработки персональных данных</a>
         <a href="https://market.yandex.by/shop/259201/reviews/add" className="href">
-            <img src={yandexLogo} alt="yandex" />
+            <img src={ICONS.yandexLogo} alt="yandex" />
         </a>
     </div>
 }

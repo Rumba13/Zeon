@@ -14,15 +14,15 @@
             justify-content: center;
             align-items: center;
             margin: 0px 5px -1px 0px;
-            border: 1px solid var(--weak-tab-border-color);
+            border: 1px solid var(--light-border-color);
             border-radius: 2px;
             padding: 15px 25px;
-            background-color: var(--weak-third-color);
-            color: var(--product-tabs-text-color);
+            background-color: var(--light-third-color);
+            color: var(--light-text-color);
             font-weight: 700;
 
             &:hover {
-                color: var(--hover-weak-text-color);
+                color: var(--text-color);
             }
         }
         & .icon {
@@ -31,18 +31,18 @@
         }
 
         & .opened {
-            border-color: var(--secondary-color) var(--weak-tab-border-color) white var(--weak-tab-border-color);
+            border-color: var(--secondary-color) var(--light-border-color) white var(--light-border-color);
             background-color: white;
-            color: var(--weak-text-color);
+            color: var(--dark-text-color);
 
             &:hover {
-                color: var(--weak-text-color);
+                color: var(--dark-text-color);
             }
         }
     }
 
     & .tabs-content {
-        border: 1px solid var(--weak-tab-border-color);
+        border: 1px solid var(--light-border-color);
 
         & .tab__content {
 

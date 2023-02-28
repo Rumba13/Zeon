@@ -13,8 +13,8 @@
         line-height: 14px;
         /*exact like height*/
         font-size: 9px;
-        background: var(--weak-border-color);
-        color: var(--weak-text-color);
+        background: var(--primary-color);
+        color: var(--dark-text-color);
 
         &:hover ~ .cart-offer__text {
             color: var(--secondary-color);
@@ -25,7 +25,7 @@
 
     & .cart-offer__text {
         font-size: 15px;
-        border-bottom: 1px dashed var(--weak-border-color);
+        border-bottom: 1px dashed var(--primary-color);
         line-height: 1.4;
     }
 

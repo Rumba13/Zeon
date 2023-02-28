@@ -1,22 +1,21 @@
 import Icon from "../icon/icon";
 import Tabs, { TabType } from "../tabs/tabs";
 import "./productTabs.scss";
-import reviewsIcon from "../../images/reviews-icon.png"
-import characterIcon from "../../images/characterIcon.png"
 import TabTitle from "../tabTitle/tabTitle";
 import TabTitles from "../tabTitles/tabTitles";
+import { ICONS } from "../../images/images";
 
 const tabs: TabType[] = [
     {
         title: <>
-            <Icon icon={characterIcon} />
+            <Icon icon={ICONS.characteristic} />
             Характеристики
         </>,
         content: "gays"
     },
     {
         title: <>
-        <Icon icon={reviewsIcon} />
+        <Icon icon={ICONS.reviews} />
             Отзывы (0)
         </>,
         content: "lers"

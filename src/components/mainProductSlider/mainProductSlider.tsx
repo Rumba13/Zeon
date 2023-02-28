@@ -1,9 +1,6 @@
 import React from "react";
+import { ICONS } from "../../images/images";
 import "./mainProductSlider.scss";
-import sliderImage1 from "../../images/sliderImage1.jpg"
-import sliderImage2 from "../../images/sliderImage2.jpg"
-import sliderImage3 from "../../images/sliderImage3.jpg"
-import sliderImage4 from "../../images/sliderImage4.jpg"
 
 type PropsType = {
 
@@ -24,16 +21,16 @@ export default function MainProductSlider() {
 
     return <div ref={slickSliderRef} className="main-product-slider">
         <div className="slider__item">
-            <img src={sliderImage1} alt="" />
+            <img src={ICONS.slider1} alt="" />
         </div>
         <div className="slider__item">
-            <img src={sliderImage2} alt="" />
+            <img src={ICONS.slider2} alt="" />
         </div>
         <div className="slider__item">
-            <img src={sliderImage3} alt="" />
+            <img src={ICONS.slider3} alt="" />
         </div>
         <div className="slider__item">
-            <img src={sliderImage4} alt="" />
+            <img src={ICONS.slider4} alt="" />
         </div>
     </div>
 }
