@@ -3,14 +3,14 @@
     color: black;
 
     & > .phone-number__text {
-        white-space: nowrap;
         align-self: center;
+        white-space: nowrap;
         transition: all 0.4s; 
     }
 
     & .sprite {
-        width: 25px;
         height: 20px;
+        width: 25px;
     }
     
    &:hover > .phone-number__text {

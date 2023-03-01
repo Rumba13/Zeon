@@ -1,5 +1,5 @@
-import UserMenu from "../userMenu/userMenu";
 import "./subheader.scss";
+import UserMenu from "../userMenu/userMenu";
 import Icon from "../icon/icon";
 import { ICONS } from "../../images/images";
 

@@ -1,19 +1,19 @@
 .contacts-wrapper {
     grid-area: contacts;
 
-    &>.contacts {
+    & > .contacts {
         display: flex;
         flex-direction: column;
-        line-height: 2;
         margin-bottom: 20px;
+        line-height: 2;
 
-        &>.text-with-icon {
-            color: var(--text-color);
+        & > .text-with-icon {
             font-size: 20px;
+            color: var(--text-color);
         }
     }
 
-    &.list-wrapper>h2 {
+    &.list-wrapper > h2 {
         font-size: 19px;
     }
 }
@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     gap: 5px;
 
-    &>img {
+    & > img {
         width: auto;
     }
 }
@@ -34,8 +34,8 @@
 }
 
 .pay-logos__pay-logo {
-    max-width: 40%;
     align-self: center;
+    max-width: 40%;
 }
 
 .pay-logos__alpha-bank-logo {

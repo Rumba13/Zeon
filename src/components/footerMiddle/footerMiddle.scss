@@ -1,19 +1,19 @@
 .footer-middle {
-    grid-area: middle;
     display: flex;
     align-items: center;
-    color: var(--text-color);
+    margin-top: 20px;
     font-size: 11px;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    margin-top: 20px;
+    color: var(--text-color);
+    grid-area: middle;
 }
 
 .footer-middle__copyright {
     display: inline-block;
-    border-right: 1px solid var(--border-color);
     padding-right: 20px;
     margin-right: 20px;
+    border-right: 1px solid var(--border-color);
 }
 
 .footer-middle__rules {
@@ -25,6 +25,6 @@
     }
 }
 
-.footer-middle>* {
+.footer-middle > * {
     margin: 8px;
 }

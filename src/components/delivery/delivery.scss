@@ -5,10 +5,11 @@
        
         & .tab__title {
             transition: all 0.4s;
+
             &.opened {
                 font-weight: 700;
-                background-color: white !important;
                 color: black !important;
+                background-color: white !important;
             }
 
             &:hover {
@@ -18,15 +19,19 @@
     }
 
     & .tabs-content {
+
         & .tab__content {
+
             &.opened {
                 animation: animateContentAppear 0.4s;
             }
+            
             & .highlight {
                 color: var(--secondary-color);
             }
-            line-height: 2;
+
             font-size: 12px;
+            line-height: 2;
         }
     }
 }

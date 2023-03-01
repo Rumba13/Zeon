@@ -1,4 +1,4 @@
-import MainProductSlider from "../mainProductSlider/mainProductSlider";
+import MainProductSlider from "../sliders/mainProductSlider/mainProductSlider";
 import ProductTitle from "../productTitle/productTitle";
 import "./productPage.scss";
 import ManufacturerInfo from "../manufacturerInfo/manufacturerInfo"
@@ -9,13 +9,8 @@ import ProductPrices from "../productPrices/productPrices";
 import ProductCartOffer from "../productCartOffer/productCartOffer";
 import ProductAddToCart from "../productAddToCart/productAddToCart";
 import ProductAddToComparison from "../productAddToComparison/productAddToComparison";
-import SubProductSlider from "../subProductSlider/subProductSlider";
+import SubProductSlider from "../sliders/subProductSlider/subProductSlider";
 import ProductTabs from "../productTabs/productTabs";
-import sliderImage1 from "../../images/sliderImage1.jpg"
-import sliderImage2 from "../../images/sliderImage2.jpg"
-import sliderImage3 from "../../images/sliderImage3.jpg"
-import sliderImage4 from "../../images/sliderImage4.jpg"
-import UnavailableToOrder from "../unavailableToOrder/unavailableToOrder";
 import ProductImporter from "../productImporter/productImporter";
 import { ICONS } from "../../images/images";
 
@@ -26,7 +21,7 @@ const testImporterText = "Импортер на территорию Респу�
 export default function ProductPage() {
     return <div className="product-page">
         <div className="product-sliders">
-            <MainProductSlider />
+            <MainProductSlider sliderItems={sliderItems}/>
             <SubProductSlider sliderItems={sliderItems} />
         </div>
         <div className="product-information">
@@ -39,7 +34,6 @@ export default function ProductPage() {
             <ProductCartOffer />
             <ProductAddToCart />
             <ProductAddToComparison />
-
         </div>
         <ProductTabs />
         <ProductImporter text={testImporterText} />

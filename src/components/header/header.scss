@@ -2,19 +2,19 @@
     grid-area: header;
     box-shadow: rgb(0 0 0 / 20%) 0px 6px 4px -4px;
     outline: rgb(0, 0, 0) none 0px;
-    
 }
 
 .header-container {
-    max-height: 120px;
     display: grid;
+    grid-gap: 5px;
     grid-template: 1fr 1fr / 1fr 2fr 2fr 1fr 1fr;
     grid-template-areas: 
     "logo timetable phoneNumbers phoneNumbers phoneNumbers"
     "logo search search comparison cart";
+
+    height: 100%;
+    max-height: 120px;
     max-width: var(--content-max-width);
     margin: 0 auto;
-    height: 100%;
-    grid-gap: 5px;
     padding-bottom: 13px;
 }

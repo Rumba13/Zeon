@@ -1,16 +1,16 @@
 .product-selection {
-    border: 1px solid var(--primary-color);
     display: flex;
     flex-direction: column;
     padding: 5px;
+    border: 1px solid var(--primary-color);
 }
 
 .product-selection__title {
-    text-align: center;
-    color:var(--dark-text-color);
     margin-bottom: 6px;
     font-size: 15px;
     font-weight: 700;
+    text-align: center;
+    color: var(--dark-text-color);
     transition: all 0.4s;
 
     &:hover {

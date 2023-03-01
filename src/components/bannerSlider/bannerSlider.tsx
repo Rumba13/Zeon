@@ -1,4 +1,3 @@
-import Banner from "../banner/banner";
 import "./bannerSlider.scss";
 import { ICONS } from "../../images/images";
 

@@ -1,19 +1,20 @@
 .catalog-item-wrapper {
-    border: 1px solid var(--primary-color);
-    border-bottom: 0px;
     display: flex;
     flex-direction: column;
-    &.list-open {
-        background: var(--secondary-color);
-        color: white;
+    border: 1px solid var(--primary-color);
+    border-bottom: 0;
 
-        &>.catalog-items {
+    &.list-open {
+        color: white;
+        background: var(--secondary-color);
+
+        & > .catalog-items {
             max-height: 1500px !important;
             /* "100%" TODO: Adaptive height*/
         }
     }
 
-    &>.catalog-items {
+    & > .catalog-items {
         transition: all 2s ease 0s;
     }
 
@@ -25,49 +26,49 @@
     align-items: baseline;
     box-sizing: border-box;
     padding: 18px;
+    border: 0 !important;
     transition: all 0.4s;
-    border: none !important;
 
     &:hover {
-        background: var(--secondary-color);
         color: white;
+        background-color: var(--secondary-color);
     }
 
     & .sprite {
+        display: flex;
+        align-self: center;
         width: 4px;
         height: 7px;
-        align-self: center;
         background-position-y: -31px;
-        display: flex;
     }
 }
 
 .catalog-item__text {
-    font-size: 14px;
-    margin-left: 14px;
     display: flex;
+    margin-left: 14px;
+    font-size: 14px;
 }
 
 .catalog-items {
-    max-height: 0px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-self: end;
+    max-height: 0px;
+    overflow: hidden;
 }
 
 /*.catalog-item-wrapper list level 2 */
 
 .catalog-item-wrapper {
-    & .catalog-item-wrapper {
 
-        background: var(--third-color);
+    & .catalog-item-wrapper {
         color: white;
+        background: var(--third-color);
     }
 
     & .catalog-item-wrapper .catalog-item:hover {
-        background: var(--border-color);
         color: white;
+        background: var(--border-color);
     }
 
     & .catalog-item-wrapper .sprite {
@@ -81,7 +82,6 @@
     & .catalog-item {
         border-bottom: 1px solid #42444c;
     }
-
 }
 
 /*.catalog-item-wrapper list level 3 */
@@ -89,14 +89,14 @@
 .catalog-item-wrapper .catalog-item-wrapper {
 
     & .catalog-item-wrapper {
+        color: black; //TODO add scss default text color variable
         background: white;
-        color: black;
     }
 
     & .catalog-item-wrapper .sprite {
-        background-image: none;
         align-self: center;
         justify-self: center;
+        background-image: none;
     }
 
     & .catalog-item-wrapper .catalog-item__text {
@@ -104,8 +104,7 @@
     }
 
     & .catalog-item-wrapper .catalog-item:hover {
-        background: var(--active-color);
         color: white;
+        background: var(--active-color);
     }
-
 }

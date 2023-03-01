@@ -1,11 +1,12 @@
 .unavailable-to-order {
-    border: 1px solid var(--primary-color);
     padding: 20px;
+    border: 1px solid var(--primary-color);
     border-radius: 3px;
+
     & .unavailable-to-order__title {
+        margin-bottom: 30px;
         font-size: 30px;
         font-weight: 700;
-        margin-bottom: 30px;
     }
 
     & .unavailable-to-order__message {

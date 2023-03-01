@@ -1,13 +1,9 @@
 .counter {
-    color: white;
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: block;
     width: 25px;
     height: 25px;
-    text-align: center;
-    line-height: 25px; /* exact like height */
     font-weight: 800;
+    line-height: 25px; /* exact like height */
+    text-align: center;
+    color: white;
+    background-color: var(--secondary-color);
 }

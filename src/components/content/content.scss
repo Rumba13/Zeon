@@ -1,19 +1,18 @@
 .content {
     display: grid;
-    grid-area: content;
     grid-template: auto auto auto 1fr / 1fr 1fr 1fr;
     grid-template-areas:
-        "full-width-banner full-width-banner full-width-banner"
-        "banner-slider banner-slider top-product-selection"
-        "banner-slider banner-slider bottom-product-selection"
-        "products products products";
-
+    "full-width-banner full-width-banner full-width-banner"
+    "banner-slider banner-slider top-product-selection"
+    "banner-slider banner-slider bottom-product-selection"
+    "products products products";
+    
+    grid-area: content;
     margin-left: 20px;
 
     & .banner:first-child {
-        grid-area: full-width-banner;
-
         margin-bottom: 25px;
+        grid-area: full-width-banner;
     }
 
     & .banner-slider {
@@ -29,10 +28,10 @@
 
     & .products {
         display: flex;
-        grid-area: products;
-        flex-wrap: wrap;
         margin-top: 20px;
-    margin-bottom: 28px;
+        margin-bottom: 28px;
+        flex-wrap: wrap;
+        grid-area: products;
 
     }
 }

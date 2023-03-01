@@ -1,12 +1,12 @@
 .main {
-    grid-area: main;
     display: grid;
+    grid-area: main;
     grid-template: 35px 1fr / 300px 1fr;
     grid-template-areas:
     "bread-crumbs bread-crumbs"
     "aside content";
+    width: 100%;
     max-width: 1120px;
     margin: 0 auto;
     margin-top: 10px;
-    width: 100%;
 }

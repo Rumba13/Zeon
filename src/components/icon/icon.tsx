@@ -1,7 +1,5 @@
 import "./icon.scss";
 
-
-
 type PropsType = {
     icon: string
 }

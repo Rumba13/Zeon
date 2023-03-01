@@ -1,6 +1,6 @@
+import "./productTabs.scss";
 import Icon from "../icon/icon";
 import Tabs, { TabType } from "../tabs/tabs";
-import "./productTabs.scss";
 import TabTitle from "../tabTitle/tabTitle";
 import TabTitles from "../tabTitles/tabTitles";
 import { ICONS } from "../../images/images";

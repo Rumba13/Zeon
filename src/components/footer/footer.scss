@@ -1,7 +1,7 @@
 .footer-wrapper {
     background: var(--third-color);
 
-    &>.scroll-top-wrapper {
+    & > .scroll-top-wrapper {
         height: 62px;
     }
 }
@@ -9,19 +9,20 @@
 .footer {
     display: grid;
     grid-area: footer;
+    grid-gap: 5px;
     grid-template: 2.5fr 80px 1fr / 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        "logo aboutCompany magazineInformation contacts"
-        "middle middle middle middle"
-        "disclaimer disclaimer disclaimer disclaimer";
-    grid-gap: 5px;
+    "logo aboutCompany magazineInformation contacts"
+    "middle middle middle middle"
+    "disclaimer disclaimer disclaimer disclaimer";
+    
     margin: 0 auto;
+    padding-bottom: 50px;
     width: 100%;
     max-width: var(--content-max-width);
-    padding-bottom: 50px;
 
-    &>.logo {
-        grid-area: logo;
+    & > .logo {
         align-self: start;
+        grid-area: logo;
     }
 }

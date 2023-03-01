@@ -5,7 +5,6 @@ type PropsType = {
 }
 
 export default function Sprite({ yOffset }: PropsType) {
-
     if(yOffset === null) {
        return <div className="sprite"></div>
     }

@@ -7,13 +7,12 @@
 
         & .tab__title {
             width: 100%;
-            text-align: center;
             font-size: 14px;
             line-height: 1.4;
+            text-align: center;
             color: var(--dark-text-color);
             background: var(--primary-color);
         }
-
     }
 
     & .tabs-content {

@@ -8,16 +8,15 @@
     margin-top: 20px;
     transition: all 0.4s;
 
-
     & .sprite {
-        width: 20px;
         height: 20px;
+        width: 20px;
         margin-right: 7px;
     }
 
     & .cart-button__text {
-        color: white;
         font-weight: 700;
+        color: white;
     }
 
     &:hover {

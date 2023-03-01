@@ -1,6 +1,7 @@
 import BuyButton from "../buyButton/buyButton";
 import { Link } from "react-router-dom";
 import "./product.scss";
+
 type PropsType = ProductType
 
 export type ProductType = {

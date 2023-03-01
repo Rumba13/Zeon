@@ -9,13 +9,13 @@ html,
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   border: 0;
 }
 
@@ -97,10 +97,10 @@ h6 {
 }
 
 .list-wrapper>.title {
-  font-size: 21px;
-  color: white;
-  font-weight: 600;
   margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: 600;
+  color: white;
 }
 
 .list-item>a {
@@ -112,10 +112,10 @@ h6 {
 }
 
 .list-item__link {
-  color: var(--text-color);
   font-size: 17px;
-  border-bottom: 1px solid var(--text-color);
   line-height: 2;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
   transition: all 0.4s;
 }
 

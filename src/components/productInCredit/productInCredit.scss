@@ -1,17 +1,18 @@
 .product-in-credit {
-    background: var(--light-third-color);
-    border-left: 6px solid var(--secondary-color);
+    margin: 15px 0;
     padding: 12px;
     padding-left: 16px;
-    margin: 15px 0 ;
+    border-left: 6px solid var(--secondary-color);
+    background: var(--light-third-color);
 }
 .product-in-credit-text {
-    font-weight: 750;
     font-size: 14px;
+    font-weight: 750;
 
     & .credit-text__link {
         color: var(--secondary-color);
         transition: all 0.4s;
+        
         &:hover {
             color: var(--active-color);
         }

@@ -1,57 +1,57 @@
 .social-networks__title {
-    color: var(--inactive-color);
     margin-bottom: 5px;
+    color: var(--inactive-color);
 }
 
 .social-networks-list {
     display: flex;
 
-    &>a {
+    & > a {
         transition: all 0.4s;
     }
 
-    & a:nth-child(1)>.sprite {
-        width: 8px;
+    & a:nth-child(1) > .sprite {
         height: 14px;
+        width: 8px;
     }
 
-    & a:nth-child(2)>.sprite {
-        width: 16px;
+    & a:nth-child(2) > .sprite {
         height: 10px;
-    }
-
-    & a:nth-child(3)>.sprite {
         width: 16px;
-        height: 16px;
     }
 
-    & a:nth-child(4)>.sprite {
+    & a:nth-child(3) > .sprite {
+        height: 16px;
+        width: 16px;
+    }
+
+    & a:nth-child(4) > .sprite {
+        height: 16px;
         width: 10px;
-        height: 16px;
     }
 
-    & a:nth-child(5)>.sprite {
-        width: 16px;
+    & a:nth-child(5) > .sprite {
         height: 12px;
+        width: 16px;
     }
 
-    & a:nth-child(1):hover>.sprite {
+    & a:nth-child(1):hover > .sprite {
         background-position-y: -332px !important;
     }
 
-    & a:nth-child(2):hover>.sprite {
+    & a:nth-child(2):hover > .sprite {
         background-position-y: -66px !important;
     }
 
-    & a:nth-child(3):hover>.sprite {
+    & a:nth-child(3):hover > .sprite {
         background-position-y: -518px !important;
     }
 
-    & a:nth-child(4):hover>.sprite {
+    & a:nth-child(4):hover > .sprite {
         background-position-y: -566px !important;
     }
 
-    & a:nth-child(5):hover>.sprite {
+    & a:nth-child(5):hover > .sprite {
         background-position-y: -184px !important;
     }
 }
@@ -59,19 +59,18 @@
 .social-networks {
     margin-top: 28px;
 
-    &>.social-networks-list>a:first-child {
+    & > .social-networks-list>a:first-child {
         margin-left: 0px;
     }
-
 }
 
 .social-network {
-    &>.sprite {
-        width: 17px;
+    & > .sprite {
         height: 17px;
+        width: 17px;
     }
 
-    &:hover>div {
+    &:hover > div {
         color: white;
     }
 }

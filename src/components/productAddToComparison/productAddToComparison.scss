@@ -1,8 +1,8 @@
 .comparison-button {
-    border: 1px solid var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--primary-color);
     transition: all 0.4s;
     
     & .comparison-button__text {

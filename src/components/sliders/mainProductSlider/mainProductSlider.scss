@@ -1,5 +1,7 @@
-.sub-product-slider {
-    margin: 15px;
+.main-product-slider {
+    height: 410px;
+    margin: 0 15px 15px 15px;
+    border: 1px solid var(--primary-color);
 
     &:hover .slick-arrow {
         opacity: 1;
@@ -10,21 +12,11 @@
     }
 
     & .slider__item {
-        padding: 10px;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid var(--primary-color);
-        margin-right: 12px;
-
-        &>img {
-
-        }
-
-        &:hover {
-            border-color: var(--active-color);
-        }
+        width: 100%;
+        padding: 20px;
     }
 
     & .slick-track {
@@ -40,25 +32,21 @@
         width: 100%;
     }
 
-    & .slick-current {
-        border-color: var(--active-color);
-    }
-
     & .slick-arrow {
-        transition: opacity 0.4s;
-        opacity: 0;
-        font-size: 0;
         position: absolute;
         top: 50%;
         z-index: 10;
-        background-image: url("../../images/sprite.png");
+        font-size: 0;
         background-color: transparent;
-
+        background-image: url("../../../images/sprite.png");
+        opacity: 0;
+        transition: opacity 0.4s;
+        
         &.slick-prev {
             left: 15px;
-            background-position: 0 -823px;
-            width: 10px;
             height: 16px;
+            width: 10px;
+            background-position: 0 -823px;
 
             &:hover {
                 background-position: 0 -615px;
@@ -67,9 +55,9 @@
 
         &.slick-next {
             right: 15px;
-            background-position: 0 -797px;
             width: 10px;
             height: 16px;
+            background-position: 0 -797px;
 
             &:hover {
                 background-position: 0 -745px;
@@ -77,4 +65,10 @@
         }
 
     }
+
+}
+
+//slick slider flexbox fix
+* {
+    min-width: 0;
 }

@@ -1,8 +1,8 @@
+import "./aside.scss"
 import Banner from "../banner/banner"
 import Catalog from "../catalog/catalog"
 import SocialNetworks from "../socialNetworks/socialNetworks"
 import SingleNews from "../singleNews/singleNews"
-import "./aside.scss"
 import SingleReview from "../singleReview/singleReview"
 import { ICONS } from "../../images/images"
 
