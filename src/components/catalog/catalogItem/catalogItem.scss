@@ -1,23 +1,20 @@
 .catalog-item-wrapper {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--primary-color);
-    border-bottom: 0;
 
     &.list-open {
         color: white;
         background: var(--secondary-color);
 
-        & > .catalog-items {
+        &>.catalog-items {
             max-height: 1500px !important;
             /* "100%" TODO: Adaptive height*/
         }
     }
 
-    & > .catalog-items {
+    &>.catalog-items {
         transition: all 2s ease 0s;
     }
-
 }
 
 .catalog-item {
@@ -26,7 +23,6 @@
     align-items: baseline;
     box-sizing: border-box;
     padding: 18px;
-    border: 0 !important;
     transition: all 0.4s;
 
     &:hover {
@@ -62,6 +58,7 @@
 .catalog-item-wrapper {
 
     & .catalog-item-wrapper {
+        border-bottom: 1px solid var(--border-color);
         color: white;
         background: var(--third-color);
     }
@@ -79,9 +76,7 @@
         margin-left: 25px;
     }
 
-    & .catalog-item {
-        border-bottom: 1px solid #42444c;
-    }
+    & .catalog-item {}
 }
 
 /*.catalog-item-wrapper list level 3 */
@@ -89,6 +84,7 @@
 .catalog-item-wrapper .catalog-item-wrapper {
 
     & .catalog-item-wrapper {
+        border: none;
         color: black; //TODO add scss default text color variable
         background: white;
     }

@@ -1,6 +1,5 @@
-import CatalogItem from "../catalogItem/catalogItem";
+import CatalogItem from "./catalogItem/catalogItem";
 import "./catalog.scss";
-
 
 type ListItemType = {
     title: string,

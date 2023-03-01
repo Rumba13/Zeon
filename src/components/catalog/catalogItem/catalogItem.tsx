@@ -1,5 +1,5 @@
 import React from "react";
-import Sprite from "../sprite/sprite";
+import Sprite from "../../sprite/sprite";
 import "./catalogItem.scss";
 
 type PropsType = {
