@@ -20,6 +20,8 @@
         box-shadow: 0 10px 25px -3px rgb(0 0 0 / 20%);
 
         & .buy-button-wrapper {
+        pointer-events: all;
+
             opacity: 1;
             transform: translateY(19px);
             box-shadow: 0 10px 25px -3px rgb(0 0 0 / 20%);
@@ -41,6 +43,7 @@
         background-color: white;
         opacity: 0;
         transition: all 0.4s;
+        pointer-events: none;
         
         & .buy-button {
             height: 100%;
