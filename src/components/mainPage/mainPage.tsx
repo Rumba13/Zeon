@@ -1,8 +1,8 @@
+import "./mainPage.scss";
 import Banner from "../banner/banner";
 import BannerSlider from "../bannerSlider/bannerSlider";
 import Product, { ProductType } from "../product/product";
 import ProductSelection from "../productSelection/productSelection";
-import "./mainPage.css";
 import { ICONS } from "../../images/images";
 
 const products: ProductType[] = [

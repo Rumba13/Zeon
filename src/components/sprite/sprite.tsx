@@ -1,14 +1,9 @@
 import "./sprite.scss";
 
 type PropsType = {
-    yOffset:number | null,
+    yOffset: number | null,
 }
 
 export default function Sprite({ yOffset }: PropsType) {
-    if(yOffset === null) {
-       return <div className="sprite"></div>
-    }
-    else {
-        return <div style={{backgroundPositionY: yOffset}} className="sprite"></div>
-    }
+    return <div style={{ backgroundPositionY: yOffset ? yOffset : undefined }} className="sprite"></div>
 }
