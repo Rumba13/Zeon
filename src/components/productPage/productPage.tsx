@@ -1,6 +1,6 @@
+import "./productPage.scss";
 import MainProductSlider from "../sliders/mainProductSlider/mainProductSlider";
 import ProductTitle from "../productTitle/productTitle";
-import "./productPage.scss";
 import ManufacturerInfo from "../manufacturerInfo/manufacturerInfo"
 import Rating from "../rating/rating";
 import Delivery from "../delivery/delivery";
