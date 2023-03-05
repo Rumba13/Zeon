@@ -1,6 +1,8 @@
 .catalog-item-wrapper {
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--primary-color);
+    border-bottom: 0;
 
     &.list-open {
         color: white;
@@ -53,6 +55,7 @@
 .catalog-item-wrapper {
 
     & .catalog-item-wrapper {
+        border: 0;
         border-bottom: 1px solid var(--border-color);
         color: white;
         background: var(--third-color);
@@ -80,6 +83,7 @@
 
     & .catalog-item-wrapper {
         border: none;
+        border-bottom: 1px solid var(--primary-color);
         color: black; //TODO add scss default text color variable
         background: white;
     }

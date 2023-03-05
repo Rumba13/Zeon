@@ -13,7 +13,7 @@ export default function CatalogItem({ children: _children }: PropsType) {
 
     let children = undefined;
 
-    if (Array.isArray(_children)) {
+    if (Array.isArray(_children)) { //TODO relocate logic to hook
         var title = _children[0];
         children = _children.slice(1);
     }
