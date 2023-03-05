@@ -12,7 +12,7 @@ export default function Subheader() {
                 <Icon icon={ICONS.sale}/>
                 </a>
             </li>
-            <li className="sub-header-menu-item">
+            <li className="sub-header-menu-item">{/* //TODO separate to components */}
                 <a href="##" className="item__text">
                     Новости
                 </a>
