@@ -1,4 +1,4 @@
-import PhoneNumber from "../phoneNumber/phoneNumber";
+import PhoneNumber from "./phoneNumber/phoneNumber";
 import "./phoneNumbers.scss";
 import Sprite from "../sprite/sprite";
 

@@ -1,0 +1,8 @@
+.shopping-cart {
+    grid-area: cart;
+    align-self: center;
+
+    & > .sprite {
+        width: 25px;
+    }
+}

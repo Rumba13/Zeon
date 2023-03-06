@@ -1,5 +1,5 @@
 import "./socialNetworks.scss";
-import SocialNetwork from "../socialNetwork/socialNetwork";
+import SocialNetwork from "./socialNetwork/socialNetwork";
 import Sprite from "../sprite/sprite";
 
 export default function SocialNetworks() {

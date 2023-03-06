@@ -1,7 +1,8 @@
 import Aside from "../aside/aside";
-import BreadCrumb from "../breadCrumb/breadCrumb";
-import BreadCrumbs from "../breadCrumbs/breadCrumbs";
+
 import Content from "../content/content";
+import BreadCrumb from "./breadCrumb/breadCrumb";
+import BreadCrumbs from "./breadCrumbs/breadCrumbs";
 import "./main.scss"
 
 export default function Main() {

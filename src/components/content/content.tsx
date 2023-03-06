@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router"
-import MainPage from "../mainPage/mainPage"
+import MainPage from "../defaultPage/defaultPage"
 import Page404 from "../page404/page404"
 import ProductPage from "../productPage/productPage"
 import "./content.scss"

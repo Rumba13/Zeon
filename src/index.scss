@@ -119,13 +119,47 @@ h6 {
   transition: all 0.4s;
 }
 
+.link-action {
+  display: flex;
+  justify-content: center;
+}
+
+.link-action__text {
+  margin: 5px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-text-color);
+  transition: all 0.4s;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
+
+.link-action>.sprite {
+  width: 25px;
+}
+
+.counter {
+  width: 25px;
+  height: 25px;
+  font-weight: 800;
+  line-height: 25px;
+  /* exact like height */
+  text-align: center;
+  color: white;
+  background-color: var(--secondary-color);
+}
+
 /* TODO:fix list */
 img {
   max-width: 100%;
   height: auto;
 }
 
-html { //default text styles
+html {
+  //default text styles
   line-height: var(--default-text-line-height);
   font-size: var(--default-text-size);
   color: var(--default-text-color);
@@ -149,7 +183,7 @@ html { //default text styles
   --transparent-black: rgba(255, 255, 255, 0.051);
   --granite-grey: #2e3038;
   --dark-slate-grey: #2e303899;
-  
+
   --irish-green: #53b220;
   --saturated-yellow: #ecad26;
 
@@ -166,11 +200,11 @@ html { //default text styles
   --border-color: var(--slate-grey);
   --light-border-color: var(--gainsborough-color);
   --background-hover-color: var(--transparent-black);
-  
+
   --active-color: var(--saturated-yellow);
   --inactive-color: var(--dark-slate-grey);
-  
+
   //Unique colors
 
-  --user-menu-item-color: rgba(255,255,255,0.4);
+  --user-menu-item-color: rgba(255, 255, 255, 0.4);
 }

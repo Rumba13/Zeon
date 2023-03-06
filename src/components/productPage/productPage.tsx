@@ -1,17 +1,17 @@
 import "./productPage.scss";
-import MainProductSlider from "../sliders/mainProductSlider/mainProductSlider";
-import ProductTitle from "../productTitle/productTitle";
-import ManufacturerInfo from "../manufacturerInfo/manufacturerInfo"
-import Rating from "../rating/rating";
-import Delivery from "../delivery/delivery";
-import ProductInCredit from "../productInCredit/productInCredit";
-import ProductPrices from "../productPrices/productPrices";
-import ProductCartOffer from "../productCartOffer/productCartOffer";
-import ProductAddToCart from "../productAddToCart/productAddToCart";
-import ProductAddToComparison from "../productAddToComparison/productAddToComparison";
-import SubProductSlider from "../sliders/subProductSlider/subProductSlider";
-import ProductTabs from "../productTabs/productTabs";
-import ProductImporter from "../productImporter/productImporter";
+import MainProductSlider from "./mainProductSlider/mainProductSlider";
+import ProductTitle from "./productTitle/productTitle";
+import ManufacturerInfo from "./manufacturerInfo/manufacturerInfo"
+import Rating from "./rating/rating";
+import Delivery from "./delivery/delivery";
+import ProductInCredit from "./productInCredit/productInCredit";
+import ProductPrices from "./productPrices/productPrices";
+import ProductCartOffer from "./productCartOffer/productCartOffer";
+import ProductAddToCart from "./productAddToCart/productAddToCart";
+import ProductAddToComparison from "./productAddToComparison/productAddToComparison";
+import SubProductSlider from "./subProductSlider/subProductSlider";
+import ProductTabs from "./productTabs/productTabs";
+import ProductImporter from "./productImporter/productImporter";
 import { ICONS } from "../../images/images";
 
 const sliderItems = [ICONS.slider1, ICONS.slider2, ICONS.slider3, ICONS.slider4]
