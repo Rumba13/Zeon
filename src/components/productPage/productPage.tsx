@@ -4,15 +4,15 @@ import ProductTitle from "./productTitle/productTitle";
 import ManufacturerInfo from "./manufacturerInfo/manufacturerInfo"
 import Rating from "./rating/rating";
 import Delivery from "./delivery/delivery";
-import ProductInCredit from "./productInCredit/productInCredit";
 import ProductPrices from "./productPrices/productPrices";
 import ProductCartOffer from "./productCartOffer/productCartOffer";
 import ProductAddToCart from "./productAddToCart/productAddToCart";
-import ProductAddToComparison from "./productAddToComparison/productAddToComparison";
+import AddProductToComparison from "./addProductToComparison/addProductToComparison";
 import SubProductSlider from "./subProductSlider/subProductSlider";
 import ProductTabs from "./productTabs/productTabs";
 import ProductImporter from "./productImporter/productImporter";
 import { ICONS } from "../../images/images";
+import ProductOnCredit from "./productOnCredit/productInCredit";
 
 const sliderItems = [ICONS.slider1, ICONS.slider2, ICONS.slider3, ICONS.slider4]
 
@@ -29,11 +29,11 @@ export default function ProductPage() {
             <ManufacturerInfo manufacturer="gayPornProduction" batchNumber="1231321" guaranteeInMonths={-1} />
             <Rating />
             <Delivery />
-            <ProductInCredit monthCreditValue={15.50} />
+            <ProductOnCredit monthCreditValue={15.50} />
             <ProductPrices price={20.10} cartPrice={19.50} />
             <ProductCartOffer />
             <ProductAddToCart />
-            <ProductAddToComparison />
+            <AddProductToComparison />
         </div>
         <ProductTabs />
         <ProductImporter text={testImporterText} />

@@ -1,8 +1,8 @@
 .delivery-tabs {
     margin-top: 15px;
 
-    & .tabs-titles {
-       
+    & .tab-list {
+       display: inline-flex;
         & .tab__title {
             transition: all 0.4s;
 
@@ -18,9 +18,9 @@
         }
     }
 
-    & .tabs-content {
+    & .tab-panels {
 
-        & .tab__content {
+        & .tab__panel {
 
             &.opened {
                 animation: animateContentAppear 0.4s;

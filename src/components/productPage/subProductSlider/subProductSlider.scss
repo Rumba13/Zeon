@@ -47,7 +47,7 @@
         opacity: 0;
         font-size: 0;
         background-color: transparent;
-        background-image: url("../../../images/sprite.png"); //TODO in separated class sprite
+        background-image: url("../../../images/sprite.png");
         transition: opacity 0.4s;
 
         &.slick-prev {

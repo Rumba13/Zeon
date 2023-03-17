@@ -1,0 +1,1823 @@
+diff --git a/src/components/#template/template.tsx b/src/components/#template/template.tsx
+index 74392e6..043a64a 100644
+--- a/src/components/#template/template.tsx
++++ b/src/components/#template/template.tsx
+@@ -1,5 +1,5 @@
+ import "./template.scss";
+ 
+ export default function Template() {
+-    return;
++    
+ }
+\ No newline at end of file
+diff --git a/src/components/advertisingBanner/advertisingBanner.tsx b/src/components/advertisingBanner/advertisingBanner.tsx
+index 39ad0e6..f4c413e 100644
+--- a/src/components/advertisingBanner/advertisingBanner.tsx
++++ b/src/components/advertisingBanner/advertisingBanner.tsx
+@@ -1,12 +1,12 @@
+ import "./advertisingBanner.scss";
+ 
+ type PropsType = {
+-    imageSrc:any,
++    img: string,
+     href: string,
+ }
+ 
+-export default function AdvertisingBanner({imageSrc,href}:PropsType) {
++export default function AdvertisingBanner({ img, href }: PropsType) {
+     return <a href={href} className="advertising-banner">
+-        <img src={imageSrc} alt="" />
++        <img src={img} alt="" />
+     </a>
+ }
+\ No newline at end of file
+diff --git a/src/components/advertisingSlider/advertisingSlider.tsx b/src/components/advertisingSlider/advertisingSlider.tsx
+index 560a8f9..e97a7ff 100644
+--- a/src/components/advertisingSlider/advertisingSlider.tsx
++++ b/src/components/advertisingSlider/advertisingSlider.tsx
+@@ -1,6 +1,6 @@
+ import "./advertisingSlider.scss";
+-import { ICONS } from "../../images/images";
+ import { useSlickSlider } from "../../hooks/useSlickSlider";
++import { ICONS } from "../../images/images";
+ 
+ export default function AdvertisingSlider() {
+     const { renderSliderItems } = useSlickSlider(".advertising-slider", {
+@@ -13,5 +13,7 @@ export default function AdvertisingSlider() {
+         autoplaySpeed: 3000
+     })
+ 
+-    return <div className="advertising-slider">{renderSliderItems([ICONS.slider1, ICONS.slider2, ICONS.slider3, ICONS.slider4])}</div>
++    return <div className="advertising-slider">
++        {renderSliderItems([ICONS.slider1, ICONS.slider2, ICONS.slider3, ICONS.slider4])}
++    </div>
+ }
+\ No newline at end of file
+diff --git a/src/components/aside/aside.tsx b/src/components/aside/aside.tsx
+index a030fac..d54360b 100644
+--- a/src/components/aside/aside.tsx
++++ b/src/components/aside/aside.tsx
+@@ -1,5 +1,5 @@
+ import "./aside.scss"
+-import Banner from "../banner/banner"
++import AdvertisingBanner from "../advertisingBanner/advertisingBanner"
+ import Catalog from "../catalog/catalog"
+ import SocialNetworks from "../socialNetworks/socialNetworks"
+ import SingleNews from "../singleNews/singleNews"
+@@ -9,8 +9,8 @@ import { ICONS } from "../../images/images"
+ export default function Aside() {
+     return <aside className="aside">
+        <Catalog/>
+-       <Banner href="https://www.777555.by/service/" imageSrc={ICONS.repair}/>
+-       <SingleNews text="╨Ш╨╜╤Б╨┐╨╡╨║╤Ж╨╕╤П ╨Ь╨╕╨╜╨╕╤Б╤В╨╡╤А╤Б╤В╨▓╨░ ╨┐╨╛ ╨╜╨░╨╗╨╛╨│╨░╨╝ ╨╕ ╤Б╨▒╨╛╤А╨░╨╝ ╨а╨╡╤Б╨┐╤Г╨▒╨╗╨╕╨║╨╕ ╨С╨╡╨╗╨░╤А╤Г╤Б╤М ╨┐╨╛ ╨У╨╛╨╝╨╡╨╗╤М╤Б╨║╨╛╨╣ ╨╛╨▒╨╗╨░╤Б╤В╨╕ ╨╜╨░╨┐╨╛╨╝╨╕╨╜╨░╨╡╤В, ╤З╤В╨╛ ╤Б╤А╨╛╨║ ╨┐╤А╨╡╨┤╤Б╤В╨░╨▓╨╗╨╡╨╜╨╕╤П ╨╜╨░╨╗╨╛╨│╨╛╨▓╨╛╨╣ ╨┤╨╡╨║╨╗╨░╤А╨░╤Ж╨╕╨╕ (╤А╨░╤Б╤З╨╡╤В╨░) ╨┐╨╛ ╨┐╨╛╨┤╨╛╤Е╨╛╨┤╨╜╨╛╨╝╤Г ╨╜╨░╨╗╨╛╨│╤Г ╤Б ╤Д╨╕╨╖╨╕╤З╨╡╤Б╨║╨╕╤Е ╨╗╨╕╤Ж, ╨┐╨╛ ╨┤╨╛╤Е╨╛╨┤╨░╨╝, ╨┐╨╛╨╗╤Г╤З╨╡╨╜╨╜╤Л╨╝ ╨╖╨░ 2022 ╨│╨╛╨┤, ╤Б 1 ╤П╨╜╨▓╨░╤А╤П ╨┐╨╛ 31 ╨╝╨░╤А╤В╨░ 2023 ╨│╨╛╨┤╨░." title="╨Э╨Р╨Ы╨Ю╨У╨Ю╨Т╨л╨Х ╨Ю╨а╨У╨Р╨Э╨л ╨Э╨Р╨Я╨Ю╨Ь╨Ш╨Э╨Р╨о╨в!" link="https://www.777555.by/news/174/"/>
++       <AdvertisingBanner href="https://www.777555.by/service/" img={ICONS.repair}/>
++       <SingleNews />
+        <SocialNetworks/>
+        <SingleReview/>
+     </aside>
+diff --git a/src/components/catalog/catalog.tsx b/src/components/catalog/catalog.tsx
+index aee79c1..d9d15ab 100644
+--- a/src/components/catalog/catalog.tsx
++++ b/src/components/catalog/catalog.tsx
+@@ -2,7 +2,7 @@ import "./catalog.scss";
+ import CatalogItem from "./catalogItem/catalogItem";
+ import Title from "./catalogTitle/catalogTitle";
+ 
+-export default function Catalog(/*{ listItems }: PropsType*/) {
++export default function Catalog() {
+     return <ul className="catalog">
+         <CatalogItem>
+             <Title>╨Ъ╨╛╨╝╨┐╤М╤О╤В╨╡╤А╤Л ╨╕ ╤Б╨╡╤В╨╕</Title>
+diff --git a/src/components/catalog/catalogItem/catalogItem.scss b/src/components/catalog/catalogItem/catalogItem.scss
+index d5179db..d4d27fb 100644
+--- a/src/components/catalog/catalogItem/catalogItem.scss
++++ b/src/components/catalog/catalogItem/catalogItem.scss
+@@ -84,7 +84,7 @@
+     & .catalog-item-wrapper {
+         border: none;
+         border-bottom: 1px solid var(--primary-color);
+-        color: black; //TODO add scss default text color variable
++        color: var(--default-text-color);
+         background: white;
+     }
+ 
+diff --git a/src/components/catalog/catalogItem/catalogItem.tsx b/src/components/catalog/catalogItem/catalogItem.tsx
+index 8a56ce4..36b845b 100644
+--- a/src/components/catalog/catalogItem/catalogItem.tsx
++++ b/src/components/catalog/catalogItem/catalogItem.tsx
+@@ -7,20 +7,10 @@ type PropsType = {
+     children: ReactNode | ReactNode[]
+ }
+ 
+-export default function CatalogItem({ children: _children }: PropsType) {
++export default function CatalogItem({ children }: PropsType) {
+     const catalogItemsRef = useRef(null);
+-    const { catalogLiOnClick } = useCatalog(catalogItemsRef);
++    const { catalogLiOnClick, renderChildrens,title } = useCatalog(catalogItemsRef, children);
+ 
+-    let children = undefined;
+-
+-    if (Array.isArray(_children)) { //TODO relocate logic to hook
+-        var title = _children[0];
+-        children = _children.slice(1);
+-    }
+-    else {
+-        var title = _children;
+-        children = null;
+-    }
+ 
+     return <li onClick={catalogLiOnClick} className="catalog-item-wrapper">
+         <div className="catalog-item">
+@@ -28,7 +18,7 @@ export default function CatalogItem({ children: _children }: PropsType) {
+             <Sprite yOffset={null} />
+         </div>
+         <ul ref={catalogItemsRef} className="catalog-items">
+-            {children}
++            {renderChildrens()}
+         </ul>
+     </li>
+ }
+\ No newline at end of file
+diff --git a/src/components/catalog/useCatalog.tsx b/src/components/catalog/useCatalog.tsx
+index a103f65..159e86d 100644
+--- a/src/components/catalog/useCatalog.tsx
++++ b/src/components/catalog/useCatalog.tsx
+@@ -1,12 +1,14 @@
++import { ReactNode } from "react";
+ 
+ type UlType = HTMLElement | undefined;
+ 
+-class ListController { //TODO hook
+-
++class ListController {
+     constructor() { }
+ 
+     public closeUlChilds(ul: UlType = this.currentUl) {
+-        if (!ul) return null;
++        if (!ul) {
++            return null;
++        }
+ 
+         Array.from(ul.children).forEach(li => {
+ 
+@@ -30,17 +32,23 @@ class ListController { //TODO hook
+             return null;
+         }
+         if (!ul.style.height || ul.style.height === "0px") {
+-            ul.style.height = `${ul.scrollHeight}px`
++            ul.style.height = `${ul.scrollHeight}px`;
+         } else {
+             ul.style.height = `${ul.scrollHeight}px`;
+-            window.getComputedStyle(ul, null).getPropertyValue("height");
++
++             /*
++                The expression is wrapped by function to prevent EsLint's error no-useless-constructor
++                The expression forces browser to apply height
++            */
++            (() => ul.clientHeight)();
++           
+             ul.style.height = "0px";
+         }
+     }
+     public isUlClosed(ul: UlType = this.currentUl) {
+         return ul && (!ul.style.height || ul.style.height === "0px")
+     }
+-    public setCurrentUl(ul: UlType = this.currentUl) { //legacy
++    public setCurrentUl(ul: UlType = this.currentUl) {
+         this.currentUl = ul;
+     }
+     public endUlAnimationCreator(ul: HTMLElement) {
+@@ -57,7 +65,7 @@ class ListController { //TODO hook
+ 
+ const listController = new ListController();
+ 
+-export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>) {
++export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>, children:ReactNode | ReactNode[]) {
+ 
+     function catalogLiOnClickCreator(catalogItemsRef: React.RefObject<HTMLUListElement>) {
+         return (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+@@ -83,5 +91,18 @@ export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>) {
+         }
+     }
+ 
+-    return { catalogLiOnClick: catalogLiOnClickCreator(catalogItemsRef) }
++    if (Array.isArray(children)) { 
++        var title = children[0];
++        children = children.slice(1);
++    }
++    else {
++        var title = children;
++        children = null;
++    }
++
++    function renderChildrens() {
++        return children
++    }
++
++    return { catalogLiOnClick: catalogLiOnClickCreator(catalogItemsRef), title, renderChildrens }
+ }
+diff --git a/src/components/content/content.tsx b/src/components/content/content.tsx
+index bccf9b5..b81ea46 100644
+--- a/src/components/content/content.tsx
++++ b/src/components/content/content.tsx
+@@ -1,13 +1,10 @@
+-import { Route, Routes } from "react-router"
++import "./content.scss"
+ import MainPage from "../defaultPage/defaultPage"
+-import Page404 from "../page404/page404"
+ import ProductPage from "../productPage/productPage"
+-import "./content.scss"
+-
+-type PropsType = {}
+-
++import Page404 from "../page404/page404"
++import { Route, Routes } from "react-router"
+ 
+-export default function Content({ }: PropsType) {
++export default function Content() {
+     return <Routes>
+         <Route path="/" element={<MainPage />} />
+         <Route path="/product/*" element={<ProductPage />} />
+diff --git a/src/components/defaultPage/defaultPage.tsx b/src/components/defaultPage/defaultPage.tsx
+index daaca92..172d4fc 100644
+--- a/src/components/defaultPage/defaultPage.tsx
++++ b/src/components/defaultPage/defaultPage.tsx
+@@ -5,7 +5,7 @@ import Product, { ProductType } from "../product/product";
+ import ProductSelection from "../productSelection/productSelection";
+ import { ICONS } from "../../images/images";
+ 
+-const products: ProductType[] = [
++const testProducts: ProductType[] = [
+     { id: 1, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "dakdjsid jaildjiadjaisdjai jdiaida diadiaiddj iadjada" },
+     { id: 2, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+     { id: 3, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+@@ -15,7 +15,7 @@ const products: ProductType[] = [
+     { id: 7, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+     { id: 8, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+     { id: 9, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
+-    { id: 10, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
++    { id: 10, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" }
+ ]
+ 
+ export default function MainPage() {
+@@ -24,6 +24,6 @@ export default function MainPage() {
+         <BannerSlider />
+         <ProductSelection href="#" title="╨в╨╡╤Е╨╜╨╕╨║╨░ Holt" imageSrc={ICONS.holt} />
+         <ProductSelection href="#" title="╨Ю╨▒╨╛╨│╤А╨╡╨▓╨░╤В╨╡╨╗╨╕" imageSrc={ICONS.heating} />
+-        <div className="products">{products.map(product => <Product {...product} />)}</div>
++        <div className="products">{testProducts.map(product => <Product {...product} />)}</div>
+     </div>
+ }
+\ No newline at end of file
+diff --git a/src/components/footer/aboutCompany/aboutCompany.scss b/src/components/footer/aboutCompany/aboutCompany.scss
+index afbc257..f7728e2 100644
+--- a/src/components/footer/aboutCompany/aboutCompany.scss
++++ b/src/components/footer/aboutCompany/aboutCompany.scss
+@@ -1,7 +1,7 @@
+-.aboutCompany {
+-    grid-area: aboutCompany;
+-}
++.about-company {
++    grid-area: about-company;
+ 
+-.list-wrapper > .title {
+-    font-size: 30px;
++    &>.list-wrapper>.title {
++        font-size: 30px;
++    }
+ }
+\ No newline at end of file
+diff --git a/src/components/footer/aboutCompany/aboutCompany.tsx b/src/components/footer/aboutCompany/aboutCompany.tsx
+index 9951ecc..a551001 100644
+--- a/src/components/footer/aboutCompany/aboutCompany.tsx
++++ b/src/components/footer/aboutCompany/aboutCompany.tsx
+@@ -1,23 +1,23 @@
++import ListItem from "../../listItem/listItem"
+ import "./aboutCompany.scss"
+ 
+-export default function AboutCompany() {
+-    return <div className="aboutCompany list-wrapper">
++export default function AboutCompany() { //TODO separate list component
++    return <div className="about-company list-wrapper">
+         <h2 className="title">╨Ъ╨╛╨╝╨┐╨░╨╜╨╕╤П</h2>
+ 
+-        <ul className="aboutCompany-list list">
+-            <li className="list-item"><a className="list-item__link" href="##">╨Э╨╛╨▓╨╛╤Б╤В╨╕</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨а╨░╤Б╤Б╤А╨╛╤З╨║╨░</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ъ╨░╨║ ╨║╤Г╨┐╨╕╤В╤М</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ф╨╛╤Б╤В╨░╨▓╨║╨░</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ъ╨╛╨╜╤В╨░╨║╤В╤Л</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ъ╨╗╤Г╨▒╨╜╨░╤П ╨Ъ╨░╤А╤В╨░</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ф╨╛╨│╨╛╨▓╨╛╤А</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ъ╨░╨║ ╨║╤Г╨┐╨╕╤В╤М</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨У╨░╤А╨░╨╜╤В╨╕╤П</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ю ╨╜╨░╤Б</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨г╤Б╨╗╤Г╨│╨╕</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨б╤В╤А╨░╤Е╨╛╨▓╨░╨╜╨╕╨╡</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Я╨╛╨┤╨░╤А╨╛╤З╨╜╤Л╨╡ ╤Б╨╡╤А╤В╨╕╤Д╨╕╨║╨░╤В╤Л</a> </li>
++        <ul className="about-company-list list">
++            <ListItem children="╨Э╨╛╨▓╨╛╤Б╤В╨╕"/>
++            <ListItem children="╨а╨░╤Б╤Б╤А╨╛╤З╨║╨░"/>
++            <ListItem children="╨Ъ╨░╨║ ╨║╤Г╨┐╨╕╤В╤М"/>
++            <ListItem children="╨Ф╨╛╤Б╤В╨░╨▓╨║╨░"/>
++            <ListItem children="╨Ъ╨╛╨╜╤В╨░╨║╤В╤Л"/>
++            <ListItem children="╨Ъ╨╗╤Г╨▒╨╜╨░╤П ╨Ъ╨░╤А╤В╨░"/>
++            <ListItem children="╨Ъ╨░╨║ ╨║╤Г╨┐╨╕╤В╤М"/>
++            <ListItem children="╨У╨░╤А╨░╨╜╤В╨╕╤П"/>
++            <ListItem children="╨Ю ╨╜╨░╤Б"/>
++            <ListItem children="╨г╤Б╨╗╤Г╨│╨╕"/>
++            <ListItem children="╨б╤В╤А╨░╤Е╨╛╨▓╨░╨╜╨╕╨╡"/>
++            <ListItem children="╨Я╨╛╨┤╨░╤А╨╛╤З╨╜╤Л╨╡ ╤Б╨╡╤А╤В╨╕╤Д╨╕╨║╨░╤В╤Л"/>
+         </ul>
+     </div>
+ }
+\ No newline at end of file
+diff --git a/src/components/footer/contacts/contacts.scss b/src/components/footer/contacts/contacts.scss
+deleted file mode 100644
+index ac732b1..0000000
+--- a/src/components/footer/contacts/contacts.scss
++++ /dev/null
+@@ -1,47 +0,0 @@
+-.contacts-wrapper {
+-    grid-area: contacts;
+-
+-    & > .contacts {
+-        display: flex;
+-        flex-direction: column;
+-        margin-bottom: 20px;
+-        line-height: 2;
+-
+-        & > .text-with-icon {
+-            font-size: 20px;
+-            color: var(--text-color);
+-        }
+-    }
+-
+-    &.list-wrapper > h2 {
+-        font-size: 19px;
+-    }
+-}
+-
+-.pay-logos {
+-    display: flex;
+-    align-items: flex-start;
+-    flex-wrap: wrap;
+-    gap: 5px;
+-
+-    & > img {
+-        width: auto;
+-    }
+-}
+-
+-.pay-logos__master-cart {
+-    height: 50px;
+-}
+-
+-.pay-logos__pay-logo {
+-    align-self: center;
+-    max-width: 40%;
+-}
+-
+-.pay-logos__alpha-bank-logo {
+-    max-width: 40%;
+-}
+-
+-.contacts-field__text {
+-    font-size: 15px;
+-}
+\ No newline at end of file
+diff --git a/src/components/footer/contacts/contacts.tsx b/src/components/footer/contacts/contacts.tsx
+deleted file mode 100644
+index 3bb0853..0000000
+--- a/src/components/footer/contacts/contacts.tsx
++++ /dev/null
+@@ -1,24 +0,0 @@
+-import { ICONS } from "../../../images/images"
+-import { convertPhoneNumber } from "../../phoneNumbers/phoneNumber/phoneNumber"
+-import "./contacts.scss"
+-import ContactsField from "./contactsField/contactsField"
+-
+-
+-export default function Contacts() {
+-    return <div className="contacts-wrapper list-wrapper">
+-        <h2 className="title">╨Ъ╨╛╨╜╤В╨░╨║╤В╨╜╨░╤П ╨╕╨╜╤Д╨╛╤А╨╝╨░╤Ж╨╕╤П</h2>
+-        <div className="contacts">
+-            <ContactsField spriteYOffset={-224} text={convertPhoneNumber("375447300500")} link="tel:375447300500" />
+-            <ContactsField spriteYOffset={-204} text="corp@zeon.by" link="mailto:corp@zeon.by" />
+-            <ContactsField spriteYOffset={-693} text="╨С╨╡╨╗╨░╤А╤Г╤Б╤М, ╨У╨╛╨╝╨╡╨╗╤М, ╤Г╨╗. ╨б╨╛╨▓╨╡╤В╤Б╨║╨░╤П 39, ╨╛╤Д.14" />
+-        </div>
+-        <div className="pay-logos">
+-            <img className="pay-logos__master-card-id-check" src={ICONS.masterCardIdCheck} />
+-            <img className="pay-logos__master-cart" src={ICONS.masterCard} />
+-            <img className="pay-logos__verified-with-visa" src={ICONS.visaVerified} />
+-            <img className="pay-logos__visa" src={ICONS.visa} />
+-            <img className="pay-logos__alpha-bank-logo" src={ICONS.alphaBank} />
+-            <img className="pay-logos__pay-logo" src={ICONS.pay} />
+-        </div>
+-    </div>
+-}
+\ No newline at end of file
+diff --git a/src/components/footer/contacts/contactsField/contactsField.scss b/src/components/footer/contacts/contactsField/contactsField.scss
+deleted file mode 100644
+index b4de606..0000000
+--- a/src/components/footer/contacts/contactsField/contactsField.scss
++++ /dev/null
+@@ -1,14 +0,0 @@
+-.contacts-field {
+-    display: flex;
+-    align-items: center;
+-
+-    & .sprite {
+-        margin-right: 10px;
+-        width: 15px;
+-        height: 18px;
+-    }
+-}
+-
+-.contacts-field__text {
+-    color: var(--text-color);
+-}
+\ No newline at end of file
+diff --git a/src/components/footer/contacts/contactsField/contactsField.tsx b/src/components/footer/contacts/contactsField/contactsField.tsx
+deleted file mode 100644
+index 5f26a11..0000000
+--- a/src/components/footer/contacts/contactsField/contactsField.tsx
++++ /dev/null
+@@ -1,15 +0,0 @@
+-import Sprite from "../../../sprite/sprite";
+-import "./contactsField.scss";
+-
+-type PropsType = {
+-    text:any,
+-    link?:string,
+-    spriteYOffset:number
+-}
+-
+-export default function ContactsField({text,link,spriteYOffset}:PropsType) {
+-    return <a href={link} className="contacts-field">
+-    <Sprite yOffset={ spriteYOffset}/>
+-    <span className="contacts-field__text">{text}</span>
+-</a>
+-}
+\ No newline at end of file
+diff --git a/src/components/footer/footer.scss b/src/components/footer/footer.scss
+index 0865ba4..a03e73a 100644
+--- a/src/components/footer/footer.scss
++++ b/src/components/footer/footer.scss
+@@ -1,7 +1,7 @@
+ .footer-wrapper {
+     background: var(--third-color);
+ 
+-    & > .scroll-top-wrapper {
++    & > .scroll-up-wrapper {
+         height: 62px;
+     }
+ }
+@@ -12,8 +12,8 @@
+     grid-gap: 5px;
+     grid-template: 2.5fr 80px 1fr / 1fr 1fr 1fr 1fr;
+     grid-template-areas:
+-    "logo aboutCompany magazineInformation contacts"
+-    "middle middle middle middle"
++    "logo about-company about-store contacts-us"
++    "copyright-and-rules copyright-and-rules copyright-and-rules copyright-and-rules"
+     "disclaimer disclaimer disclaimer disclaimer";
+     
+     margin: 0 auto;
+diff --git a/src/components/footer/footer.tsx b/src/components/footer/footer.tsx
+index d06a5a7..0c38031 100644
+--- a/src/components/footer/footer.tsx
++++ b/src/components/footer/footer.tsx
+@@ -1,21 +1,21 @@
+-import AboutCompany from "./aboutCompany/aboutCompany"
+-import Contacts from "./contacts/contacts"
+-import Disclaimer from "./disclaimer/disclaimer"
+-import FooterMiddle from "./footerMiddle/footerMiddle"
+-import Logo from "../logo/logo"
+-import MagazineInformation from "./magazineInformation/magazineInformation"
+-import ScrollTop from "../scrollTop/scrollTop"
+-import "./footer.scss"
++import "./footer.scss";
++import ScrollUp from "../scrollUp/scrollUp";
++import Logo from "../logo/logo";
++import AboutCompany from "./aboutCompany/aboutCompany";
++import AboutStore from "./aboutStore/aboutStore";
++import ContactUs from "./contactUs/contactUs";
++import CopyrightAndRules from "./copyrightAndRules/copyrightAndRules";
++import Disclaimer from "./disclaimer/disclaimer";
+ 
+ export default function Footer() {
+     return <div className="footer-wrapper">
+-            <ScrollTop />
++            <ScrollUp />
+         <footer className="footer">
+-            <Logo color="White" />
++            <Logo color="white" />
+             <AboutCompany />
+-            <MagazineInformation />
+-            <Contacts />
+-            <FooterMiddle />
++            <AboutStore />
++            <ContactUs />
++            <CopyrightAndRules />
+             <Disclaimer />
+         </footer>
+     </div>
+diff --git a/src/components/footer/footerMiddle/footerMiddle.scss b/src/components/footer/footerMiddle/footerMiddle.scss
+deleted file mode 100644
+index f0dd20d..0000000
+--- a/src/components/footer/footerMiddle/footerMiddle.scss
++++ /dev/null
+@@ -1,30 +0,0 @@
+-.footer-middle {
+-    display: flex;
+-    align-items: center;
+-    margin-top: 20px;
+-    font-size: 11px;
+-    border-top: 1px solid var(--border-color);
+-    border-bottom: 1px solid var(--border-color);
+-    color: var(--text-color);
+-    grid-area: middle;
+-}
+-
+-.footer-middle__copyright {
+-    display: inline-block;
+-    padding-right: 20px;
+-    margin-right: 20px;
+-    border-right: 1px solid var(--border-color);
+-}
+-
+-.footer-middle__rules {
+-    color: var(--text-color);
+-    transition: all 0.4s;
+-
+-    &:hover {
+-        color: white;
+-    }
+-}
+-
+-.footer-middle > * {
+-    margin: 8px;
+-}
+\ No newline at end of file
+diff --git a/src/components/footer/footerMiddle/footerMiddle.tsx b/src/components/footer/footerMiddle/footerMiddle.tsx
+deleted file mode 100644
+index 2a55906..0000000
+--- a/src/components/footer/footerMiddle/footerMiddle.tsx
++++ /dev/null
+@@ -1,13 +0,0 @@
+-import "./footerMiddle.scss";
+-import { ICONS } from "../../../images/images";
+-
+-
+-export default function FooterMiddle() {
+-    return <div className="footer-middle">
+-        <span className="footer-middle__copyright">┬й 2023 ╨Ю╨Ю╨Ю ┬л╨Ч╨╡╨╛╨╜ ╨┐╨╗╤О╤Б┬╗</span>
+-        <a href="##" className="footer-middle__rules">╨Я╤А╨░╨▓╨╕╨╗╨░ ╨╛╨▒╤А╨░╨▒╨╛╤В╨║╨╕ ╨┐╨╡╤А╤Б╨╛╨╜╨░╨╗╤М╨╜╤Л╤Е ╨┤╨░╨╜╨╜╤Л╤Е</a>
+-        <a href="https://market.yandex.by/shop/259201/reviews/add" className="href">
+-            <img src={ICONS.yandexLogo} alt="yandex" />
+-        </a>
+-    </div>
+-}
+\ No newline at end of file
+diff --git a/src/components/footer/magazineInformation/magazineInformation.scss b/src/components/footer/magazineInformation/magazineInformation.scss
+deleted file mode 100644
+index 8ed0cbe..0000000
+--- a/src/components/footer/magazineInformation/magazineInformation.scss
++++ /dev/null
+@@ -1,3 +0,0 @@
+-.magazineInformation {
+-    grid-area: magazineInformation;
+-}
+\ No newline at end of file
+diff --git a/src/components/footer/magazineInformation/magazineInformation.tsx b/src/components/footer/magazineInformation/magazineInformation.tsx
+deleted file mode 100644
+index ab73367..0000000
+--- a/src/components/footer/magazineInformation/magazineInformation.tsx
++++ /dev/null
+@@ -1,20 +0,0 @@
+-import "./magazineInformation.scss";
+-
+-export default function MagazineInformation() {
+-    return <div className="magazineInformation list-wrapper">
+-        <h2 className="title">╨Ш╨╜╤В╨╡╤А╨╜╨╡╤В-╨╝╨░╨│╨░╨╖╨╕╨╜</h2>
+-        <ul className="magazineInformation-list list">
+-            <li className="list-item"><a className="list-item__link" href="##">╨в╨╡╨╗╨╡╨▓╨╕╨╖╨╛╤А╤Л</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Э╨╛╤Г╤В╨▒╤Г╨║╨╕</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ь╨╛╨▒╨╕╨╗╤М╨╜╤Л╨╡ ╤В╨╡╨╗╨╡╤Д╨╛╨╜╤Л</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Я╤Л╨╗╨╡╤Б╨╛╤Б╤Л</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨е╨╛╨╗╨╛╨┤╨╕╨╗╤М╨╜╨╕╨║╨╕</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨б╨║╨╛╨▓╨╛╤А╨╛╨┤╤Л</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ф╨╡╤В╤Б╨║╨╕╨╡ ╨║╨╛╨╗╤П╤Б╨║╨╕</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨б╤В╨╕╤А╨░╨╗╤М╨╜╤Л╨╡ ╨╝╨░╤И╨╕╨╜╤Л</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨д╨╕╨╗╤М╤В╤А╤Л ╨┤╨╗╤П ╨▓╨╛╨┤╤Л</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨г╤Ж╨╡╨╜╨║╨░</a> </li>
+-            <li className="list-item"><a className="list-item__link" href="##">╨Ъ╨░╤А╤В╨░ ╤Б╨░╨╣╤В╨░</a> </li>
+-        </ul>
+-    </div>
+-}
+\ No newline at end of file
+diff --git a/src/components/header/cart/cart.scss b/src/components/header/cart/cart.scss
+deleted file mode 100644
+index 6f630f1..0000000
+--- a/src/components/header/cart/cart.scss
++++ /dev/null
+@@ -1,8 +0,0 @@
+-.cart {
+-    grid-area: cart;
+-    align-self: center;
+-
+-    & > .sprite {
+-        width: 25px;
+-    }
+-}
+diff --git a/src/components/header/cart/cart.tsx b/src/components/header/cart/cart.tsx
+deleted file mode 100644
+index 1975520..0000000
+--- a/src/components/header/cart/cart.tsx
++++ /dev/null
+@@ -1,10 +0,0 @@
+-import Sprite from "../../sprite/sprite";
+-import "./cart.scss";
+-
+-export default function Cart() {
+-    return <div className="cart link-action">
+-        <Sprite yOffset={-998} />
+-        <a href="##" className="link-action__text">╨Ъ╨╛╤А╨╖╨╕╨╜╨░</a>
+-        <span className="counter">{0}</span>
+-    </div>
+-}
+\ No newline at end of file
+diff --git a/src/components/header/comparison/comparison.scss b/src/components/header/comparison/comparison.scss
+deleted file mode 100644
+index e36e141..0000000
+--- a/src/components/header/comparison/comparison.scss
++++ /dev/null
+@@ -1,5 +0,0 @@
+-.link-action {
+-    align-self: center;
+-    grid-area: comparison;
+-}
+-
+diff --git a/src/components/header/comparison/comparison.tsx b/src/components/header/comparison/comparison.tsx
+deleted file mode 100644
+index 22e87a0..0000000
+--- a/src/components/header/comparison/comparison.tsx
++++ /dev/null
+@@ -1,8 +0,0 @@
+-import "./comparison.scss"
+-
+-export default function Comparison() {
+-    return <div className="comparison link-action">
+-        <a href="##" className="link-action__text">╨Т ╤Б╤А╨░╨▓╨╜╨╡╨╜╨╕╨╕</a>
+-        <span className="counter">{0}</span>
+-    </div>
+-}
+\ No newline at end of file
+diff --git a/src/components/header/header.scss b/src/components/header/header.scss
+index e7dcab1..d43a02b 100644
+--- a/src/components/header/header.scss
++++ b/src/components/header/header.scss
+@@ -1,10 +1,10 @@
+-.header {
++.header-wrapper {
+     grid-area: header;
+     box-shadow: rgb(0 0 0 / 20%) 0px 6px 4px -4px;
+     outline: rgb(0, 0, 0) none 0px;
+ }
+ 
+-.header-container {
++.header {
+     display: grid;
+     grid-gap: 5px;
+     grid-template: 1fr 1fr / 1fr 2fr 2fr 1fr 1fr;
+diff --git a/src/components/header/header.tsx b/src/components/header/header.tsx
+index 10a1bd2..d782375 100644
+--- a/src/components/header/header.tsx
++++ b/src/components/header/header.tsx
+@@ -1,22 +1,22 @@
+ import "./header.scss"
+ import Logo from "../logo/logo"
+-import Timetable from "./timetable/timetable"
+ import SearchForm from "./searchForm/searchForm"
+-import Comparison from "./comparison/comparison"
+-import Cart from "./cart/cart"
++import ProductComparison from "./productComparison/productComparison"
++import ProductCart from "./productCart/productCart"
+ import PhoneNumbers from "../phoneNumbers/phoneNumbers"
+-import Subheader from "./subHeader/subHeader"
++import SubHeader from "./subHeader/subHeader"
++import TimeTable from "./timeTable/timeTable"
+ 
+ export default function Header() {
+-    return <header className="header">
+-        <Subheader />
+-        <div className="header-container">
++    return <header className="header-wrapper">
++        <SubHeader />
++        <div className="header">
+             <PhoneNumbers />
+             <Logo />
+-            <Timetable />
++            <TimeTable />
+             <SearchForm />
+-            <Comparison />
+-            <Cart />
++            <ProductComparison />
++            <ProductCart />
+         </div>
+     </header>
+ }
+diff --git a/src/components/header/searchForm/searchForm.tsx b/src/components/header/searchForm/searchForm.tsx
+index 927e4b4..89ccd25 100644
+--- a/src/components/header/searchForm/searchForm.tsx
++++ b/src/components/header/searchForm/searchForm.tsx
+@@ -9,6 +9,5 @@ export default function searchForm() {
+             <input  className="search__form" placeholder="╨Я╨╛╨╕╤Б╨║ ╨┐╨╛ ╨║╨░╤В╨░╨╗╨╛╨│╤Г" type="text" />
+             <Icon icon={ICONS.search}/>
+         </div>
+-            
+     </div>
+ }
+\ No newline at end of file
+diff --git a/src/components/header/subHeader/subHeader.scss b/src/components/header/subHeader/subHeader.scss
+index 9774900..0f48ffd 100644
+--- a/src/components/header/subHeader/subHeader.scss
++++ b/src/components/header/subHeader/subHeader.scss
+@@ -1,9 +1,5 @@
+ .sub-header-menu-wrapper {
+     background-color: var(--third-color);
+-
+-    & > ul > div { // TODO ??????
+-        margin-left: auto;
+-    }
+ }
+ 
+ .sub-header-menu {
+@@ -11,29 +7,35 @@
+     height: 36px;
+     max-width: var(--content-max-width);
+     margin: 0 auto;
++
++    & > .user-menu {
++        margin-left: auto;
++    }
+ }
+ 
+ .sub-header-menu-item {
+     transition: all 0.4s;
+ 
+-    & > .item__text {
++    &>.item__text {
+         font-size: 13px;
+         color: var(--text-color);
+     }
+-    & ._with-icon .icon {
++
++    &.-with-icon .icon {
+         align-self: center;
+         height: 30px;
+         width: 30px;
+         background: no-repeat;
+     }
+ 
+-    & > .item__text {
++    &>.item__text {
+         display: flex;
+         align-items: flex-end;
+         height: 100%;
+         width: 100%;
+         padding: 10px;
+     }
++
+     &:hover {
+         background-color: var(---background-hover-color);
+     }
+diff --git a/src/components/header/subHeader/subHeader.tsx b/src/components/header/subHeader/subHeader.tsx
+index 79a6078..59e798d 100644
+--- a/src/components/header/subHeader/subHeader.tsx
++++ b/src/components/header/subHeader/subHeader.tsx
+@@ -1,52 +1,23 @@
+ import "./subHeader.scss";
+ import UserMenu from "../../userMenu/userMenu";
+ import Icon from "../../icon/icon";
++import SubHeaderItem from "./subHeaderItem/subHeaderItem";
+ import { ICONS } from "../../../images/images";
+ 
+ export default function SubHeader() {
+     return <div className="sub-header-menu-wrapper">
+         <ul className="sub-header-menu">
+-            <li className="sub-header-menu-item">
+-                <a href="##" className="item__text _with-icon">
+-                    ╨Р╨║╤Ж╨╕╤П
+-                <Icon icon={ICONS.sale}/>
+-                </a>
+-            </li>
+-            <li className="sub-header-menu-item">{/* //TODO separate to components */}
+-                <a href="##" className="item__text">
+-                    ╨Э╨╛╨▓╨╛╤Б╤В╨╕
+-                </a>
+-            </li>
+-            <li className="sub-header-menu-item">
+-                <a href="##" className="item__text">
+-                    ╨а╨░╤Б╤Б╤А╨╛╤З╨║╨░
+-                </a>
+-            </li>
+-            <li className="sub-header-menu-item">
+-                <a href="##" className="item__text">
+-                    ╨Ъ╨░╨║ ╨║╤Г╨┐╨╕╤В╤М
+-                </a>
+-            </li>
+-            <li className="sub-header-menu-item">
+-                <a href="##" className="item__text">
+-                    ╨Ф╨╛╤Б╤В╨░╨▓╨║╨░
+-                </a>
+-            </li>
+-            <li className="sub-header-menu-item">
+-                <a href="##" className="item__text">
+-                    ╨Ъ╨╛╨╜╤В╨░╨║╤В╤Л
+-                </a>
+-            </li>
+-            <li className="sub-header-menu-item">
+-                <a href="##" className="item__text">
+-                    ╨Ъ╨╗╤Г╨▒╨╜╨░╤П ╨Ъ╨░╤А╤В╨░
+-                </a>
+-            </li>
+-            <li className="sub-header-menu-item">
+-                <a href="##" className="item__text">
+-                    ╨г╤Б╨╗╤Г╨│╨╕
+-                </a>
+-            </li>
++            <SubHeaderItem link="##" className="-with-icon">
++                ╨Р╨║╤Ж╨╕╤П
++                <Icon icon={ICONS.sale} />
++            </SubHeaderItem>
++            <SubHeaderItem link="##">╨Э╨╛╨▓╨╛╤Б╤В╨╕</SubHeaderItem>
++            <SubHeaderItem link="##">╨а╨░╤Б╤Б╤А╨╛╤З╨║╨░</SubHeaderItem>
++            <SubHeaderItem link="##">╨Ъ╨░╨║ ╨║╤Г╨┐╨╕╤В╤М</SubHeaderItem>
++            <SubHeaderItem link="##">╨Ф╨╛╤Б╤В╨░╨▓╨║╨░</SubHeaderItem>
++            <SubHeaderItem link="##">╨Ъ╨╛╨╜╤В╨░╨║╤В╤Л</SubHeaderItem>
++            <SubHeaderItem link="##">╨Ъ╨╗╤Г╨▒╨╜╨░╤П ╨Ъ╨░╤А╤В╨░</SubHeaderItem>
++            <SubHeaderItem link="##">╨г╤Б╨╗╤Г╨│╨╕</SubHeaderItem>
+             <UserMenu />
+         </ul>
+     </div>
+diff --git a/src/components/header/timetable/timetable.tsx b/src/components/header/timetable/timetable.tsx
+index a11133d..bf83fb7 100644
+--- a/src/components/header/timetable/timetable.tsx
++++ b/src/components/header/timetable/timetable.tsx
+@@ -1,13 +1,11 @@
+ import Sprite from "../../sprite/sprite";
+-import "./timetable.scss";
++import "./timeTable.scss";
+ 
+-export default function Timetable() {
++export default function TimeTable() {
+     return <div className="time-table-wrapper">
+         <div className="time-table">
+             <Sprite yOffset={-245} />
+-            <span className="time-table__text">
+-                ╨Я╨╜-╤Б╨▒: 10 - 19, ╨Т╤Б: 10 - 17
+-            </span>
++            <span className="time-table__text">╨Я╨╜-╤Б╨▒: 10 - 19, ╨Т╤Б: 10 - 17</span>
+         </div>
+     </div>
+ }
+\ No newline at end of file
+diff --git a/src/components/logo/logo.tsx b/src/components/logo/logo.tsx
+index e9e7c31..5990006 100644
+--- a/src/components/logo/logo.tsx
++++ b/src/components/logo/logo.tsx
+@@ -1,7 +1,7 @@
+ import "./logo.scss"
+ import { Link } from "react-router-dom";
+ import { ICONS } from "../../images/images";
+-export type LogoColors = "White" | "Dark";
++export type LogoColors = "white" | "dark";
+ 
+ type PropsType = {
+     color?: LogoColors,
+@@ -9,14 +9,14 @@ type PropsType = {
+ 
+ function getLogo(color: LogoColors): string {
+     switch (color) {
+-        case "Dark":
++        case "dark":
+             return ICONS.darkLogo
+-        case "White":
++        case "white":
+             return ICONS.whiteLogo
+     }
+ }
+ 
+-export default function Logo({ color = "Dark" }: PropsType) {
++export default function Logo({ color = "dark" }: PropsType) {
+     return <div className="logo">
+         <Link to="/">
+             <img src={getLogo(color)} alt="Z╤Лon" />
+diff --git a/src/components/main/main.tsx b/src/components/main/main.tsx
+index 740f77e..9b9a85f 100644
+--- a/src/components/main/main.tsx
++++ b/src/components/main/main.tsx
+@@ -1,9 +1,8 @@
++import "./main.scss"
+ import Aside from "../aside/aside";
+-
+ import Content from "../content/content";
+ import BreadCrumb from "./breadCrumb/breadCrumb";
+ import BreadCrumbs from "./breadCrumbs/breadCrumbs";
+-import "./main.scss"
+ 
+ export default function Main() {
+     return <main className="main">
+@@ -14,6 +13,7 @@ export default function Main() {
+             <BreadCrumb key="TEST_KEY╨С╨╗╨╛╨║╨╕ ╨┐╨╕╤В╨░╨╜╨╕╤П" to="">╨С╨╗╨╛╨║╨╕ ╨┐╨╕╤В╨░╨╜╨╕╤П</BreadCrumb>
+             <BreadCrumb key="TEST_KEY╨С╨╗╨╛╨║ ╨┐╨╕╤В╨░╨╜╨╕╤П be quiet!" to="">╨С╨╗╨╛╨║ ╨┐╨╕╤В╨░╨╜╨╕╤П be quiet! Pure Power 11 700W CM BN299</BreadCrumb>
+         </BreadCrumbs>
++        
+         <Aside />
+         <Content />
+     </main>
+diff --git a/src/components/productPage/delivery/delivery.scss b/src/components/productPage/delivery/delivery.scss
+index f445ccc..3d6a640 100644
+--- a/src/components/productPage/delivery/delivery.scss
++++ b/src/components/productPage/delivery/delivery.scss
+@@ -1,8 +1,8 @@
+ .delivery-tabs {
+     margin-top: 15px;
+ 
+-    & .tabs-titles {
+-       
++    & .tab-list {
++       display: inline-flex;
+         & .tab__title {
+             transition: all 0.4s;
+ 
+@@ -18,9 +18,9 @@
+         }
+     }
+ 
+-    & .tabs-content {
++    & .tab-panels {
+ 
+-        & .tab__content {
++        & .tab__panel {
+ 
+             &.opened {
+                 animation: animateContentAppear 0.4s;
+diff --git a/src/components/productPage/productAddToComparison/productAddToComparison.scss b/src/components/productPage/productAddToComparison/productAddToComparison.scss
+deleted file mode 100644
+index ee9786b..0000000
+--- a/src/components/productPage/productAddToComparison/productAddToComparison.scss
++++ /dev/null
+@@ -1,14 +0,0 @@
+-.comparison-button {
+-    display: flex;
+-    justify-content: center;
+-    align-items: center;
+-    border: 1px solid var(--primary-color);
+-    transition: all 0.4s;
+-    
+-    & .comparison-button__text {
+-        text-align: center;
+-    }
+-    &:hover {
+-        border-color: var(--active-color);
+-    }
+-}
+\ No newline at end of file
+diff --git a/src/components/productPage/productAddToComparison/productAddToComparison.tsx b/src/components/productPage/productAddToComparison/productAddToComparison.tsx
+deleted file mode 100644
+index 83e7cd3..0000000
+--- a/src/components/productPage/productAddToComparison/productAddToComparison.tsx
++++ /dev/null
+@@ -1,8 +0,0 @@
+-import Button from "../button/button";
+-import "./productAddToComparison.scss";
+-
+-export default function ProductAddToComparison() {
+-    return <Button className="comparison-button">
+-        <span className="comparison-button__text">╨Ф╨╛╨▒╨░╨▓╨╕╤В╤М ╨║ ╤Б╤А╨░╨▓╨╜╨╡╨╜╨╕╤О</span>
+-    </Button> 
+-}
+\ No newline at end of file
+diff --git a/src/components/productPage/productInCredit/productInCredit.scss b/src/components/productPage/productInCredit/productInCredit.scss
+deleted file mode 100644
+index 23501b4..0000000
+--- a/src/components/productPage/productInCredit/productInCredit.scss
++++ /dev/null
+@@ -1,20 +0,0 @@
+-.product-in-credit {
+-    margin: 15px 0;
+-    padding: 12px;
+-    padding-left: 16px;
+-    border-left: 6px solid var(--secondary-color);
+-    background: var(--light-third-color);
+-}
+-.product-in-credit-text {
+-    font-size: 14px;
+-    font-weight: 750;
+-
+-    & .credit-text__link {
+-        color: var(--secondary-color);
+-        transition: all 0.4s;
+-        
+-        &:hover {
+-            color: var(--active-color);
+-        }
+-    }
+-}
+\ No newline at end of file
+diff --git a/src/components/productPage/productInCredit/productInCredit.tsx b/src/components/productPage/productInCredit/productInCredit.tsx
+deleted file mode 100644
+index 46317ec..0000000
+--- a/src/components/productPage/productInCredit/productInCredit.tsx
++++ /dev/null
+@@ -1,19 +0,0 @@
+-import "./productInCredit.scss";
+-
+-type PropsType = {
+-    monthCreditValue?: number
+-}
+-
+-function formatCredit(monthCreditValue: number) {
+-    return `${monthCreditValue.toFixed(2)} ╤А╤Г╨▒/╨╝╨╡╤Б`;
+-}
+-
+-export default function ProductInCredit({ monthCreditValue }: PropsType) {
+-    if (!monthCreditValue) return <></>;
+-
+-    return <div className="product-in-credit">
+-        <span className="product-in-credit-text">
+-            ╨Т ╨║╤А╨╡╨┤╨╕╤В ╨╛╤В <a href="##" className="credit-text__link">{formatCredit(monthCreditValue)}</a>
+-        </span>
+-    </div>
+-}
+\ No newline at end of file
+diff --git a/src/components/productPage/productPage.tsx b/src/components/productPage/productPage.tsx
+index 393e433..ac5976f 100644
+--- a/src/components/productPage/productPage.tsx
++++ b/src/components/productPage/productPage.tsx
+@@ -4,15 +4,15 @@ import ProductTitle from "./productTitle/productTitle";
+ import ManufacturerInfo from "./manufacturerInfo/manufacturerInfo"
+ import Rating from "./rating/rating";
+ import Delivery from "./delivery/delivery";
+-import ProductInCredit from "./productInCredit/productInCredit";
+ import ProductPrices from "./productPrices/productPrices";
+ import ProductCartOffer from "./productCartOffer/productCartOffer";
+ import ProductAddToCart from "./productAddToCart/productAddToCart";
+-import ProductAddToComparison from "./productAddToComparison/productAddToComparison";
++import AddProductToComparison from "./addProductToComparison/addProductToComparison";
+ import SubProductSlider from "./subProductSlider/subProductSlider";
+ import ProductTabs from "./productTabs/productTabs";
+ import ProductImporter from "./productImporter/productImporter";
+ import { ICONS } from "../../images/images";
++import ProductOnCredit from "./productOnCredit/productInCredit";
+ 
+ const sliderItems = [ICONS.slider1, ICONS.slider2, ICONS.slider3, ICONS.slider4]
+ 
+@@ -29,11 +29,11 @@ export default function ProductPage() {
+             <ManufacturerInfo manufacturer="gayPornProduction" batchNumber="1231321" guaranteeInMonths={-1} />
+             <Rating />
+             <Delivery />
+-            <ProductInCredit monthCreditValue={15.50} />
++            <ProductOnCredit monthCreditValue={15.50} />
+             <ProductPrices price={20.10} cartPrice={19.50} />
+             <ProductCartOffer />
+             <ProductAddToCart />
+-            <ProductAddToComparison />
++            <AddProductToComparison />
+         </div>
+         <ProductTabs />
+         <ProductImporter text={testImporterText} />
+diff --git a/src/components/productPage/productTabs/productTabs.scss b/src/components/productPage/productTabs/productTabs.scss
+index 8d2a33c..9e110ff 100644
+--- a/src/components/productPage/productTabs/productTabs.scss
++++ b/src/components/productPage/productTabs/productTabs.scss
+@@ -1,8 +1,8 @@
+ .product-tabs {
+     border: 0;
+ 
+-    & .tabs-titles {
+-        display: inline-flex;
++    & .tab-list {
++        display: inline-flex !important;
+         flex-grow: 1;
+ 
+         & .tab__title {
+@@ -32,9 +32,9 @@
+         }
+ 
+         & .opened {
+-            border-color: var(--secondary-color) var(--light-border-color) white var(--light-border-color); //TODO add scss variable for some strange "white"
++            border-color: var(--secondary-color) var(--light-border-color) var(--high-opacity-color) var(--light-border-color);
+             color: var(--dark-text-color);
+-            background-color: white;
++            background-color: var(--high-opacity-color);
+ 
+             &:hover {
+                 color: var(--dark-text-color);
+@@ -42,10 +42,10 @@
+         }
+     }
+ 
+-    & .tabs-content {
++    & .tab-panels {
+         border: 1px solid var(--light-border-color);
+ 
+-        // & .tab__content {
++        // & .tab__panel {
+ 
+         //     &.opened {}
+         // }
+diff --git a/src/components/productPage/productTabs/productTabs.tsx b/src/components/productPage/productTabs/productTabs.tsx
+index 40c0ba0..57060af 100644
+--- a/src/components/productPage/productTabs/productTabs.tsx
++++ b/src/components/productPage/productTabs/productTabs.tsx
+@@ -4,6 +4,8 @@ import Tabs, { TabType } from "../../tabs/tabs";
+ import TabTitle from "../../tabs/tabTitle/tabTitle";
+ import TabTitles from "../../tabs/tabTitles/tabTitles";
+ import { ICONS } from "../../../images/images";
++import TabContents from "../../tabs/tabContents/tabContents";
++import TabContent from "../../tabs/tabContent/tabContent";
+ 
+ const tabs: TabType[] = [
+     {
+@@ -15,7 +17,7 @@ const tabs: TabType[] = [
+     },
+     {
+         title: <>
+-        <Icon icon={ICONS.reviews} />
++            <Icon icon={ICONS.reviews} />
+             ╨Ю╤В╨╖╤Л╨▓╤Л (0)
+         </>,
+         content: "lers"
+@@ -23,14 +25,20 @@ const tabs: TabType[] = [
+ ]
+ 
+ export default function ProductTabs() {
+-    return <Tabs className="product-tabs" tabs={tabs}>
+-        <TabTitles>
+-            <TabTitle>Lers</TabTitle>
+-            <TabTitle>Gays</TabTitle>
++    return <Tabs tabs={tabs} className="product-tabs">
++        {/* <TabTitles>
++            <TabTitle>
++                <Icon icon={ICONS.characteristic} />
++                ╨е╨░╤А╨░╨║╤В╨╡╤А╨╕╤Б╤В╨╕╨║╨╕
++            </TabTitle>
++            <TabTitle>
++                <Icon icon={ICONS.reviews} />
++                ╨Ю╤В╨╖╤Л╨▓╤Л (0)
++            </TabTitle>
+         </TabTitles>
+-        {/* <TabContents>
+-            <TabContent>ldasd</TabContent>
+-            <TabContent>ldasd</TabContent>
++        <TabContents>
++            <TabContent>gays</TabContent>
++            <TabContent>lers</TabContent>
+         </TabContents> */}
+     </Tabs>
+ }
+\ No newline at end of file
+diff --git a/src/components/productPage/subProductSlider/subProductSlider.scss b/src/components/productPage/subProductSlider/subProductSlider.scss
+index 433ee7a..5a0abba 100644
+--- a/src/components/productPage/subProductSlider/subProductSlider.scss
++++ b/src/components/productPage/subProductSlider/subProductSlider.scss
+@@ -47,7 +47,7 @@
+         opacity: 0;
+         font-size: 0;
+         background-color: transparent;
+-        background-image: url("../../../images/sprite.png"); //TODO in separated class sprite
++        background-image: url("../../../images/sprite.png");
+         transition: opacity 0.4s;
+ 
+         &.slick-prev {
+diff --git a/src/components/scrollTop/scrollTop.scss b/src/components/scrollTop/scrollTop.scss
+deleted file mode 100644
+index e38f665..0000000
+--- a/src/components/scrollTop/scrollTop.scss
++++ /dev/null
+@@ -1,40 +0,0 @@
+-.scroll-top {
+-   display: flex;
+-   justify-content: center;
+-   align-items: center;
+-   flex-direction: row;
+-   
+-   height: 100%;
+-   max-width: var(--content-max-width);
+-   margin: 0 auto;
+-   font-size: 14px;
+-   border-bottom: 1px solid var(--border-color);
+-
+-   & .sprite {
+-      align-self: center;
+-      height: 17px;
+-      width: 15px;
+-      margin-right: 8px;
+-      margin-bottom: -5px;
+-   }
+-}
+-
+-.scroll-top-wrapper {
+-   grid-area: scrollTop;
+-   margin-bottom: 32px;
+-   border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+-   transition: all 0.4s;
+-
+-   &:hover > .scroll-top {
+-      border-bottom: 0px;
+-   }
+-
+-   &:hover {
+-      border-bottom: 1px solid var(--border-color);
+-      background-color: var(--background-hover-color);
+-   }
+-}
+-
+-.scroll-top__text {
+-   color: var(--text-color);
+-}
+\ No newline at end of file
+diff --git a/src/components/scrollTop/scrollTop.tsx b/src/components/scrollTop/scrollTop.tsx
+deleted file mode 100644
+index eefc4a6..0000000
+--- a/src/components/scrollTop/scrollTop.tsx
++++ /dev/null
+@@ -1,18 +0,0 @@
+-import "./scrollTop.scss"
+-import Sprite from "../sprite/sprite"
+-
+-export default function ScrollTop() {
+-
+-    function onClickCreator() {
+-        return () => {
+-            window.scroll({top: 0, left: 0, behavior: 'smooth' });
+-        }
+-    }
+-
+-    return <div onClick={onClickCreator()} className="scroll-top-wrapper">
+-        <div className="scroll-top">
+-            <Sprite yOffset={-377} />
+-            <span className="scroll-top__text">╨Я╨╛╨┤╨╜╤П╤В╤М╤Б╤П ╨╜╨░ ╨▓╨▓╨╡╤А╤Е ╤Б╨░╨╣╤В╨░</span>
+-        </div>
+-    </div>
+-}
+\ No newline at end of file
+diff --git a/src/components/singleNews/singleNews.tsx b/src/components/singleNews/singleNews.tsx
+index 90dd803..0ae9765 100644
+--- a/src/components/singleNews/singleNews.tsx
++++ b/src/components/singleNews/singleNews.tsx
+@@ -1,14 +1,21 @@
+ import "./singleNews.scss";
+ 
+ type PropsType = {
+-    title: string,
+-    text: string,
+-    link: string
++    title?: string,
++    text?: string,
++    link?: string
+ }
+ 
+ const MAX_LENGTH_OF_STRING = 95;
+ 
+-export default function SingleNews({ title, text, link }: PropsType) {
++
++const testText = "╨Ш╨╜╤Б╨┐╨╡╨║╤Ж╨╕╤П ╨Ь╨╕╨╜╨╕╤Б╤В╨╡╤А╤Б╤В╨▓╨░ ╨┐╨╛ ╨╜╨░╨╗╨╛╨│╨░╨╝ ╨╕ ╤Б╨▒╨╛╤А╨░╨╝ ╨а╨╡╤Б╨┐╤Г╨▒╨╗╨╕╨║╨╕ ╨С╨╡╨╗╨░╤А╤Г╤Б╤М ╨┐╨╛ ╨У╨╛╨╝╨╡╨╗╤М╤Б╨║╨╛╨╣ ╨╛╨▒╨╗╨░╤Б╤В╨╕ ╨╜╨░╨┐╨╛╨╝╨╕╨╜╨░╨╡╤В, ╤З╤В╨╛ ╤Б╤А╨╛╨║ ╨┐╤А╨╡╨┤╤Б╤В╨░╨▓╨╗╨╡╨╜╨╕╤П ╨╜╨░╨╗╨╛╨│╨╛╨▓╨╛╨╣ ╨┤╨╡╨║╨╗╨░╤А╨░╤Ж╨╕╨╕ (╤А╨░╤Б╤З╨╡╤В╨░) ╨┐╨╛ ╨┐╨╛╨┤╨╛╤Е╨╛╨┤╨╜╨╛╨╝╤Г ╨╜╨░╨╗╨╛╨│╤Г ╤Б ╤Д╨╕╨╖╨╕╤З╨╡╤Б╨║╨╕╤Е ╨╗╨╕╤Ж, ╨┐╨╛ ╨┤╨╛╤Е╨╛╨┤╨░╨╝, ╨┐╨╛╨╗╤Г╤З╨╡╨╜╨╜╤Л╨╝ ╨╖╨░ 2022 ╨│╨╛╨┤, ╤Б 1 ╤П╨╜╨▓╨░╤А╤П ╨┐╨╛ 31 ╨╝╨░╤А╤В╨░ 2023 ╨│╨╛╨┤╨░.",
++    testLink = "https://www.777555.by/news/174/",
++    testTitle = "╨Э╨Р╨Ы╨Ю╨У╨Ю╨Т╨л╨Х ╨Ю╨а╨У╨Р╨Э╨л ╨Э╨Р╨Я╨Ю╨Ь╨Ш╨Э╨Р╨о╨в!"
++
++
++
++export default function SingleNews({ title = testTitle, link = testLink, text = testText }: PropsType) {
+ 
+     if (text.length > MAX_LENGTH_OF_STRING) {
+         text = text.slice(0, MAX_LENGTH_OF_STRING);
+diff --git a/src/components/singleReview/singleReview.scss b/src/components/singleReview/singleReview.scss
+index 7017377..2026248 100644
+--- a/src/components/singleReview/singleReview.scss
++++ b/src/components/singleReview/singleReview.scss
+@@ -1,4 +1,4 @@
+-.reviews {
++.single-review {
+     display: flex;
+     flex-direction: column;
+     margin-top: 20px;
+@@ -6,51 +6,25 @@
+     padding-top: 25px;
+     border: 1px solid var(--primary-color);
+     border-radius: 10px;
+-}
+ 
+-.reviews__title {
+-    margin-bottom: 14px;
+-    font-size: 17px;
+-    font-weight: 700;
++    & .single-review__title {
++        margin-bottom: 14px;
++        font-size: 17px;
++        font-weight: 700;
++    } 
+ }
+ 
+-.reviews__review-part {
++.single-review__part {
+     margin-bottom: 10px;
+     padding-bottom: 10px;
+     border-bottom: 1px solid var(--primary-color);
+     line-height: 1.4;
+ }
+-.review-btn {
++.single-review-activity {
+     margin: 4px;
+     white-space: nowrap;
+ }
+-
+-.make-review-btn__text {
+-    color: orange;
+-}
+-
+-.all-reviews-btn__text {
+-    color: green;
+-    transition: all 0.4s;
+-}
+-.all-reviews-btn__text:hover {
+-    color: orange;
+-}
+-
+-.make-review-btn .sprite {
+-    width: 23px;
+-    height: 16px;
+-}
+-
+-.make-review-btn {
+-    display: flex;
+-    align-items: center;
+-    margin-right: 5px;
+-    padding-right: 5px;
+-    border-right: 1px solid var(--primary-color);
+-}
+-
+-.reviews-buttons {
++.single-review-activities {
+     display: flex;
+     align-items: center;
+ }
+\ No newline at end of file
+diff --git a/src/components/singleReview/singleReview.tsx b/src/components/singleReview/singleReview.tsx
+index 7d79c12..81c9324 100644
+--- a/src/components/singleReview/singleReview.tsx
++++ b/src/components/singleReview/singleReview.tsx
+@@ -1,18 +1,14 @@
+-import Sprite from "../sprite/sprite";
+ import "./singleReview.scss";
++import AllReviews from "./allReviews/allReviews";
++import LeaveReviewButton from "./leaveReview/leaveReview";
+ 
+-export default function SingleReview() { //TODO:separate to components
+-    return <div className="reviews">
+-        <h2 className="reviews__title">╨Ю╤В╨╖╤Л╨▓╤Л ╨╛ ╨╝╨░╨│╨░╨╖╨╕╨╜╨╡:</h2>
+-        <div className="reviews__review-part">╨Ю╤В╨╗╨╕╤З╨╜╤Л╨╣ ╨╝╨░╨│╨░╨╖╨╕╨╜, ╨┐╤А╨╡╨║╤А╨░╤Б╨╜╤Л╨╣ ╤Б╨╡╤А╨▓╨╕╤Б. ╨Ю╤З╨╡╨╜╤М ╨┐╤А╨╕╨▓╨╡╤В╨╗╨╕╨▓╤Л╨╣ ╨┐╨╡╤А╤Б╨╛╨╜╨░╨╗ - ╨▓╤Б╨╡╨│╨┤╨░ ╨▓╤Б╨╡ ╤А╨░╤Б╤Б╨║╨░╨╢╤Г╤В ╨╕ ╨┐╨╛╨║╨░╨╢╤Г╤В. ╨Ю╨│╤А╨╛╨╝╨╜╨╛╨╡ ╤Б╨┐╨░╤Б╨╕╨▒╨╛ ╨╛╨┐╨╡╤А╨░╤В╨╛╤А╤Г ╨Ш╨│╨╛╤А╤О! ╨Ю╤З╨╡╨╜╤М ╨│╤А╨░╨╝╨╛╤В╨╜╨╛ ╨┐╤А╨╛╨║╨╛╨╜╤Б╤Г╨╗╤М╤В╨╕╤А╨╛╨▓╨░╨╗, ╨╜╨░╤Е╨╛╨┤╨╕╤В ╨┐╤А╨░╨▓╨╕╨╗╤М╨╜╤Л╨╣ ╨┐╨╛╨┤╤Е╨╛╨┤ ╨║ ╨║╨╗╨╕╨╡╨╜╤В╤Г. ╨Ю╤В╨╗╨╕╤З╨╜╨╛ ╤А╨░╨╖╨▒╨╕╤А╨░╨╡╤В╤Б╤П ╨▓ ╤В╨╛╨▓╨░╤А╨╡! ╨б ╨Т╨░╨╝╨╕ ╨┐╤А╨╕╤П╤В╨╜╨╛ ╤А╨░╨▒╨╛╤В╨░╤В╤М!</div>
+-        <div className="reviews-buttons">
+-            <div className="make-review-btn review-btn">
+-                <Sprite yOffset={-494} />
+-                <span className="make-review-btn__text">╨Ю╤Б╤В╨░╨▓╨╕╤В╤М ╨╛╤В╨╖╤Л╨▓</span>
+-            </div>
+-            <div className="all-reviews-btn review-btn">
+-                <span className="all-reviews-btn__text">╨Т╤Б╨╡ ╨╛╤В╨╖╤Л╨▓╤Л</span>
+-            </div>
++export default function SingleReview() {
++    return <div className="single-review">
++        <h2 className="single-review__title">╨Ю╤В╨╖╤Л╨▓╤Л ╨╛ ╨╝╨░╨│╨░╨╖╨╕╨╜╨╡:</h2>
++        <div className="single-review__part">╨Ю╤В╨╗╨╕╤З╨╜╤Л╨╣ ╨╝╨░╨│╨░╨╖╨╕╨╜, ╨┐╤А╨╡╨║╤А╨░╤Б╨╜╤Л╨╣ ╤Б╨╡╤А╨▓╨╕╤Б. ╨Ю╤З╨╡╨╜╤М ╨┐╤А╨╕╨▓╨╡╤В╨╗╨╕╨▓╤Л╨╣ ╨┐╨╡╤А╤Б╨╛╨╜╨░╨╗ - ╨▓╤Б╨╡╨│╨┤╨░ ╨▓╤Б╨╡ ╤А╨░╤Б╤Б╨║╨░╨╢╤Г╤В ╨╕ ╨┐╨╛╨║╨░╨╢╤Г╤В. ╨Ю╨│╤А╨╛╨╝╨╜╨╛╨╡ ╤Б╨┐╨░╤Б╨╕╨▒╨╛ ╨╛╨┐╨╡╤А╨░╤В╨╛╤А╤Г ╨Ш╨│╨╛╤А╤О! ╨Ю╤З╨╡╨╜╤М ╨│╤А╨░╨╝╨╛╤В╨╜╨╛ ╨┐╤А╨╛╨║╨╛╨╜╤Б╤Г╨╗╤М╤В╨╕╤А╨╛╨▓╨░╨╗, ╨╜╨░╤Е╨╛╨┤╨╕╤В ╨┐╤А╨░╨▓╨╕╨╗╤М╨╜╤Л╨╣ ╨┐╨╛╨┤╤Е╨╛╨┤ ╨║ ╨║╨╗╨╕╨╡╨╜╤В╤Г. ╨Ю╤В╨╗╨╕╤З╨╜╨╛ ╤А╨░╨╖╨▒╨╕╤А╨░╨╡╤В╤Б╤П ╨▓ ╤В╨╛╨▓╨░╤А╨╡! ╨б ╨Т╨░╨╝╨╕ ╨┐╤А╨╕╤П╤В╨╜╨╛ ╤А╨░╨▒╨╛╤В╨░╤В╤М!</div>
++        <div className="single-review-buttons">
++            <LeaveReviewButton/>
++            <AllReviews/>
+         </div>
+     </div>
+ }
+\ No newline at end of file
+diff --git a/src/components/socialNetworks/socialNetwork/socialNetwork.tsx b/src/components/socialNetworks/socialNetwork/socialNetwork.tsx
+index 615ddb4..ae79236 100644
+--- a/src/components/socialNetworks/socialNetwork/socialNetwork.tsx
++++ b/src/components/socialNetworks/socialNetwork/socialNetwork.tsx
+@@ -2,7 +2,7 @@ import "./socialNetwork.scss";
+ 
+ type PropsType = {
+     link:string,
+-    icon:any
++    icon:React.ReactNode
+ }
+ 
+ export default function SocialNetwork({link, icon}:PropsType) {
+diff --git a/src/components/socialNetworks/socialNetworks.scss b/src/components/socialNetworks/socialNetworks.scss
+index 8db51ed..9e60e34 100644
+--- a/src/components/socialNetworks/socialNetworks.scss
++++ b/src/components/socialNetworks/socialNetworks.scss
+@@ -1,57 +1,52 @@
+-.social-networks__title {
+-    margin-bottom: 5px;
+-    color: var(--inactive-color);
+-}
+-
+ .social-networks-list {
+     display: flex;
+ 
+-    & > a {
++    &>a {
+         transition: all 0.4s;
+     }
+ 
+-    & a:nth-child(1) > .sprite {
++    & a:nth-child(1)>.sprite {
+         height: 14px;
+         width: 8px;
+     }
+ 
+-    & a:nth-child(2) > .sprite {
++    & a:nth-child(2)>.sprite {
+         height: 10px;
+         width: 16px;
+     }
+ 
+-    & a:nth-child(3) > .sprite {
++    & a:nth-child(3)>.sprite {
+         height: 16px;
+         width: 16px;
+     }
+ 
+-    & a:nth-child(4) > .sprite {
++    & a:nth-child(4)>.sprite {
+         height: 16px;
+         width: 10px;
+     }
+ 
+-    & a:nth-child(5) > .sprite {
++    & a:nth-child(5)>.sprite {
+         height: 12px;
+         width: 16px;
+     }
+ 
+-    & a:nth-child(1):hover > .sprite {
++    & a:nth-child(1):hover>.sprite {
+         background-position-y: -332px !important;
+     }
+ 
+-    & a:nth-child(2):hover > .sprite {
++    & a:nth-child(2):hover>.sprite {
+         background-position-y: -66px !important;
+     }
+ 
+-    & a:nth-child(3):hover > .sprite {
++    & a:nth-child(3):hover>.sprite {
+         background-position-y: -518px !important;
+     }
+ 
+-    & a:nth-child(4):hover > .sprite {
++    & a:nth-child(4):hover>.sprite {
+         background-position-y: -566px !important;
+     }
+ 
+-    & a:nth-child(5):hover > .sprite {
++    & a:nth-child(5):hover>.sprite {
+         background-position-y: -184px !important;
+     }
+ }
+@@ -59,18 +54,23 @@
+ .social-networks {
+     margin-top: 28px;
+ 
+-    & > .social-networks-list>a:first-child {
+-        margin-left: 0px;
++    .social-networks__title {
++        margin-bottom: 5px;
++        color: var(--inactive-color);
+     }
+-}
+ 
+-.social-network {
+-    & > .sprite {
+-        height: 17px;
+-        width: 17px;
++    &>.social-networks-list>a:first-child {
++        margin-left: 0px;
+     }
+ 
+-    &:hover > div {
+-        color: white;
++    .social-network {
++        &>.sprite {
++            height: 17px;
++            width: 17px;
++        }
++
++        &:hover>div {
++            color: white;
++        }
+     }
+ }
+\ No newline at end of file
+diff --git a/src/components/socialNetworks/socialNetworks.tsx b/src/components/socialNetworks/socialNetworks.tsx
+index 35dbb4c..2b7a02c 100644
+--- a/src/components/socialNetworks/socialNetworks.tsx
++++ b/src/components/socialNetworks/socialNetworks.tsx
+@@ -13,7 +13,4 @@ export default function SocialNetworks() {
+             <SocialNetwork link="https://www.youtube.com/channel/UCaozapn6TjrSjtue6Xs0xxg" icon={<Sprite yOffset={-144}/>}  />
+         </div>
+     </div>
+-
+-
+-
+ }
+\ No newline at end of file
+diff --git a/src/components/tabs/tabItem/tabItem.scss b/src/components/tabs/tabItem/tabItem.scss
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/src/components/tabs/tabItem/tabItem.tsx b/src/components/tabs/tabItem/tabItem.tsx
+deleted file mode 100644
+index 4a9a6ea..0000000
+--- a/src/components/tabs/tabItem/tabItem.tsx
++++ /dev/null
+@@ -1,9 +0,0 @@
+-import "./tabItem.scss";
+-
+-type PropsType = {
+-    text: string
+-}
+-
+-export default function TabItem({ text }: PropsType) {
+-    return <div className="tab-item">{text}</div>
+-}
+\ No newline at end of file
+diff --git a/src/components/tabs/tabTitles/tabTitles.tsx b/src/components/tabs/tabTitles/tabTitles.tsx
+index 4f7d28d..21e07d2 100644
+--- a/src/components/tabs/tabTitles/tabTitles.tsx
++++ b/src/components/tabs/tabTitles/tabTitles.tsx
+@@ -6,5 +6,5 @@ type PropsType = {
+ }
+ 
+ export default function tabTitles({children}:PropsType) {
+-    return <div className="tab-titles">{children}</div>
++    return <div className="tab-list">{children}</div>
+ }
+\ No newline at end of file
+diff --git a/src/components/tabs/tabs.scss b/src/components/tabs/tabs.scss
+index b4186b1..7f30085 100644
+--- a/src/components/tabs/tabs.scss
++++ b/src/components/tabs/tabs.scss
+@@ -2,9 +2,7 @@
+     border: 1px solid var(--primary-color);
+     border-radius: 3px;
+ 
+-    & .tabs-titles {
+-        display: flex;
+-
++    & .tab-list {
+         & .tab__title {
+             width: 100%;
+             font-size: 14px;
+@@ -15,11 +13,10 @@
+         }
+     }
+ 
+-    & .tabs-content {
++    & .tab-panels {
+         padding: 20px;
+-        & .tab__content {
++        & .tab__panel {
+             display: none;
+-            
+             &.opened {
+                 display: block;
+             }
+diff --git a/src/components/tabs/tabs.tsx b/src/components/tabs/tabs.tsx
+index 613a263..ae49f4d 100644
+--- a/src/components/tabs/tabs.tsx
++++ b/src/components/tabs/tabs.tsx
+@@ -1,6 +1,7 @@
+-import React from "react";
++import React, { useEffect } from "react";
+ import { ReactNode } from "react";
+ import "./tabs.scss";
++import useTabs from "./useTabs";
+ 
+ type PropsType = {
+     tabs: TabType[],
+@@ -13,50 +14,22 @@ export type TabType = {
+     content: ReactNode
+ }
+ 
+-export default function Tabs({ tabs, className, children }: PropsType) {
+-    const tabsTitlesRef = React.createRef<HTMLDivElement>();
+-    const tabsContentRef = React.createRef<HTMLDivElement>();
++export default function Tabs({ tabs, className }: PropsType) {
++    const tabsListRef = React.createRef<HTMLDivElement>();
++    const tabsPanelsRef = React.createRef<HTMLDivElement>();
+ 
+-    function tabClickHandler(index: number) {
+-        if (!tabsTitlesRef.current || !tabsContentRef.current) return;
++    const { openTabByIndex } = useTabs(tabsListRef, tabsPanelsRef);
+ 
+-        const tabsTitles = Array.from(tabsTitlesRef.current.children);
+-        const tabsContent = Array.from(tabsContentRef.current.children)
++    useEffect(() => {
++        openTabByIndex(0);
++    }, [])
+ 
+-        removeOpenedClasses(tabsTitles)
+-        removeOpenedClasses(tabsContent)
+-
+-        addOpenedClass(tabsTitles[index])
+-        addOpenedClass(tabsContent[index])
+-
+-        function addOpenedClass(element: Element) {
+-            element.classList.add("opened");
+-        }
+-        function removeOpenedClasses(elements: Element[]) {
+-            elements.forEach(element => element.classList.remove("opened"))
+-        }
+-    }
+-
+-    function getTabClassName() {
+-        let tabClassName = "tabs";
+-        if (className) {
+-            tabClassName += " " + className;
+-        }
+-        return tabClassName;
+-    }
+-
+-    setTimeout(() => tabClickHandler(0), 0); //open first tab
+-
+-    if (children) {
+-        console.log(children)
+-    }
+-
+-    return <div className={getTabClassName()}>
+-        <div ref={tabsTitlesRef} className="tabs-titles">
+-            {tabs.map((tab, index) => <span onClick={() => tabClickHandler(index)} className="tab__title">{tab.title}</span>)}
++    return <div className={`tabs ${className}`}>
++        <div ref={tabsListRef} className="tab-list">
++            {tabs.map((tab, index) => <span onClick={() => openTabByIndex(index)} className="tab__title">{tab.title}</span>)}
+         </div>
+-        <div ref={tabsContentRef} className="tabs-content">
+-            {tabs.map(tab => <span className="tab__content">{tab.content}</span>)}
++        <div ref={tabsPanelsRef} className="tab-panels">
++            {tabs.map(tab => <span className="tab__panel">{tab.content}</span>)}
+         </div>
+     </div>
+ }
+\ No newline at end of file
+diff --git a/src/components/userMenu/useUserMenu.ts b/src/components/userMenu/useUserMenu.ts
+index 6ba0bc6..f993b3f 100644
+--- a/src/components/userMenu/useUserMenu.ts
++++ b/src/components/userMenu/useUserMenu.ts
+@@ -11,13 +11,10 @@ const userMenuController = new UserMenuController();
+ 
+ export function useUserMenu(userMenuRef: React.RefObject<HTMLElement>) {
+ 
+-    function onClickCreator() {
+-        return (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
++    function toggleUserMenu() {
+             if (!userMenuRef.current) return;
+-
+             userMenuController.toggleTitleOpened(<HTMLElement>userMenuRef.current)
+-        }
+     }
+ 
+-    return { onClickCreator }
++    return { toggleUserMenu }
+ }
+\ No newline at end of file
+diff --git a/src/components/userMenu/userMenu.scss b/src/components/userMenu/userMenu.scss
+index 55d3ab4..1d8b2e6 100644
+--- a/src/components/userMenu/userMenu.scss
++++ b/src/components/userMenu/userMenu.scss
+@@ -26,7 +26,7 @@
+         color: white;
+     }
+ 
+-    & .user-menu-items {
++    & .user-menu-actions {
+         position: absolute;
+         top: 35px;
+         right: -1px;
+@@ -35,7 +35,7 @@
+         color: white;
+         background: var(--third-color);
+ 
+-        & a.user-menu__item {
++        & a.user-menu__action {
+             text-align: right;
+             display: block;
+             height: 36px;
+@@ -64,7 +64,7 @@
+     &.opened {
+         background-color: var(--transparent-black);
+ 
+-        & .user-menu-items {
++        & .user-menu-actions {
+             display: block;
+         }
+ 
+diff --git a/src/components/userMenu/userMenu.tsx b/src/components/userMenu/userMenu.tsx
+index a6fedee..2f94a02 100644
+--- a/src/components/userMenu/userMenu.tsx
++++ b/src/components/userMenu/userMenu.tsx
+@@ -4,15 +4,15 @@ import { useUserMenu } from "./useUserMenu";
+ import { useRef } from "react";
+ 
+ export default function UserMenu() {
+-    const userMenuRef = useRef(null)
+-    const { onClickCreator } = useUserMenu(userMenuRef);
++    const userMenuRef = useRef(null);
++    const { toggleUserMenu } = useUserMenu(userMenuRef);
+ 
+-    return <div onClick={onClickCreator()} ref={userMenuRef} className="user-menu">
++    return <div onClick={toggleUserMenu} ref={userMenuRef} className="user-menu">
+         <Sprite yOffset={-849} />
+         <a className="user-menu__title">╨Т╨╛╨╣╤В╨╕ ╨╜╨░ ╤Б╨░╨╣╤В</a>
+-        <ul className="user-menu-items">
+-                <a className="user-menu__item" href="https://colorscheme.ru/color-names.html">╨Т╨╛╨╣╤В╨╕ ╨▓ ╨║╨░╨▒╨╕╨╜╨╡╤В</a>
+-               <a className="user-menu__item"href="##">╨Ч╨░╤А╨╡╨│╨╕╤Б╤В╤А╨╕╤А╨╛╨▓╨░╤В╤М╤Б╤П</a>
++        <ul className="user-menu-actions">
++            <a className="user-menu__action" href="https://colorscheme.ru/color-names.html">╨Т╨╛╨╣╤В╨╕ ╨▓ ╨║╨░╨▒╨╕╨╜╨╡╤В</a>
++            <a className="user-menu__action" href="##">╨Ч╨░╤А╨╡╨│╨╕╤Б╤В╤А╨╕╤А╨╛╨▓╨░╤В╤М╤Б╤П</a>
+         </ul>
+         <div className="open-list-icon"></div>
+     </div>
+diff --git a/src/index.scss b/src/index.scss
+index 5357b54..c081373 100644
+--- a/src/index.scss
++++ b/src/index.scss
+@@ -96,29 +96,6 @@ h6 {
+   font-weight: 400;
+ }
+ 
+-.list-wrapper>.title {
+-  margin-bottom: 10px;
+-  font-size: 21px;
+-  font-weight: 600;
+-  color: white;
+-}
+-
+-.list-item>a {
+-  font-size: 15px;
+-}
+-
+-.list-item__link:hover {
+-  border-bottom: 1px solid transparent;
+-}
+-
+-.list-item__link {
+-  font-size: 17px;
+-  line-height: 2;
+-  border-bottom: 1px solid var(--text-color);
+-  color: var(--text-color);
+-  transition: all 0.4s;
+-}
+-
+ .link-action {
+   display: flex;
+   justify-content: center;
+@@ -145,14 +122,12 @@ h6 {
+   width: 25px;
+   height: 25px;
+   font-weight: 800;
+-  line-height: 25px;
+-  /* exact like height */
++  line-height: 25px; /* exact like height */
+   text-align: center;
+   color: white;
+   background-color: var(--secondary-color);
+ }
+ 
+-/* TODO:fix list */
+ img {
+   max-width: 100%;
+   height: auto;
+@@ -172,6 +147,7 @@ html {
+   --default-text-line-height: 1.42;
+ 
+   //Named Colors
++  --white: #ffffff;
+   --smoky-white: #f1f1f1;
+   --weak-smoky-white: #ededec;
+   --gainsborough-color: #dddddd;
+@@ -200,11 +176,12 @@ html {
+   --border-color: var(--slate-grey);
+   --light-border-color: var(--gainsborough-color);
+   --background-hover-color: var(--transparent-black);
++  --high-opacity-color: var(--white);
+ 
+   --active-color: var(--saturated-yellow);
+   --inactive-color: var(--dark-slate-grey);
+ 
+   //Unique colors
+ 
+-  --user-menu-item-color: rgba(255, 255, 255, 0.4);
++  --user-menu-item-color: #ffffff66;
+ }
+\ No newline at end of file

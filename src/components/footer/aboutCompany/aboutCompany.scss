@@ -1,7 +1,7 @@
-.aboutCompany {
-    grid-area: aboutCompany;
-}
+.about-company {
+    grid-area: about-company;
 
-.list-wrapper > .title {
-    font-size: 30px;
+    &>.list-wrapper>.title {
+        font-size: 30px;
+    }
 }

@@ -1,18 +1,14 @@
-import Sprite from "../sprite/sprite";
+import AllReview from "./allReviews/allReviews";
+import LeaveReview from "./leaveReview/leaveReview";
 import "./singleReview.scss";
 
-export default function SingleReview() { //TODO:separate to components
-    return <div className="reviews">
-        <h2 className="reviews__title">Отзывы о магазине:</h2>
-        <div className="reviews__review-part">Отличный магазин, прекрасный сервис. Очень приветливый персонал - всегда все расскажут и покажут. Огромное спасибо оператору Игорю! Очень грамотно проконсультировал, находит правильный подход к клиенту. Отлично разбирается в товаре! С Вами приятно работать!</div>
-        <div className="reviews-buttons">
-            <div className="make-review-btn review-btn">
-                <Sprite yOffset={-494} />
-                <span className="make-review-btn__text">Оставить отзыв</span>
-            </div>
-            <div className="all-reviews-btn review-btn">
-                <span className="all-reviews-btn__text">Все отзывы</span>
-            </div>
+export default function SingleReview() { 
+    return <div className="single-review">
+        <h2 className="single-review__title">Отзывы о магазине:</h2>
+        <div className="single-review__part">Отличный магазин, прекрасный сервис. Очень приветливый персонал - всегда все расскажут и покажут. Огромное спасибо оператору Игорю! Очень грамотно проконсультировал, находит правильный подход к клиенту. Отлично разбирается в товаре! С Вами приятно работать!</div>
+        <div className="single-review-activities">
+            <LeaveReview/>
+            <AllReview/>
         </div>
     </div>
 }

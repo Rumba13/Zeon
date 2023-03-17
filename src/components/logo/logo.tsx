@@ -1,6 +1,7 @@
 import "./logo.scss"
 import { Link } from "react-router-dom";
 import { ICONS } from "../../images/images";
+
 export type LogoColors = "White" | "Dark";
 
 type PropsType = {

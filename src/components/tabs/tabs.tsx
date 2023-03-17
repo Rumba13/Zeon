@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ReactNode } from "react";
 import "./tabs.scss";
+import useTabs from "./useTabs";
 
 type PropsType = {
     tabs: TabType[],
@@ -13,50 +14,22 @@ export type TabType = {
     content: ReactNode
 }
 
-export default function Tabs({ tabs, className, children }: PropsType) {
-    const tabsTitlesRef = React.createRef<HTMLDivElement>();
-    const tabsContentRef = React.createRef<HTMLDivElement>();
+export default function Tabs({ tabs, className }: PropsType) {
+    const tabsListRef = React.createRef<HTMLDivElement>();
+    const tabsPanelsRef = React.createRef<HTMLDivElement>();
 
-    function tabClickHandler(index: number) {
-        if (!tabsTitlesRef.current || !tabsContentRef.current) return;
+    const { openTabByIndex } = useTabs(tabsListRef, tabsPanelsRef);
 
-        const tabsTitles = Array.from(tabsTitlesRef.current.children);
-        const tabsContent = Array.from(tabsContentRef.current.children)
+    useEffect(() => {
+        openTabByIndex(0);
+    }, [])
 
-        removeOpenedClasses(tabsTitles)
-        removeOpenedClasses(tabsContent)
-
-        addOpenedClass(tabsTitles[index])
-        addOpenedClass(tabsContent[index])
-
-        function addOpenedClass(element: Element) {
-            element.classList.add("opened");
-        }
-        function removeOpenedClasses(elements: Element[]) {
-            elements.forEach(element => element.classList.remove("opened"))
-        }
-    }
-
-    function getTabClassName() {
-        let tabClassName = "tabs";
-        if (className) {
-            tabClassName += " " + className;
-        }
-        return tabClassName;
-    }
-
-    setTimeout(() => tabClickHandler(0), 0); //open first tab
-
-    if (children) {
-        console.log(children)
-    }
-
-    return <div className={getTabClassName()}>
-        <div ref={tabsTitlesRef} className="tabs-titles">
-            {tabs.map((tab, index) => <span onClick={() => tabClickHandler(index)} className="tab__title">{tab.title}</span>)}
+    return <div className={`tabs ${className}`}>
+        <div ref={tabsListRef} className="tab-list">
+            {tabs.map((tab, index) => <span onClick={() => openTabByIndex(index)} className="tab__title">{tab.title}</span>)}
         </div>
-        <div ref={tabsContentRef} className="tabs-content">
-            {tabs.map(tab => <span className="tab__content">{tab.content}</span>)}
+        <div ref={tabsPanelsRef} className="tab-panels">
+            {tabs.map(tab => <span className="tab__panel">{tab.content}</span>)}
         </div>
     </div>
 }

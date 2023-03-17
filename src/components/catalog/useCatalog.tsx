@@ -1,12 +1,14 @@
+import { ReactNode } from "react";
 
 type UlType = HTMLElement | undefined;
 
-class ListController { //TODO hook
-
+class ListController {
     constructor() { }
 
     public closeUlChilds(ul: UlType = this.currentUl) {
-        if (!ul) return null;
+        if (!ul) {
+            return null;
+        }
 
         Array.from(ul.children).forEach(li => {
 
@@ -30,17 +32,23 @@ class ListController { //TODO hook
             return null;
         }
         if (!ul.style.height || ul.style.height === "0px") {
-            ul.style.height = `${ul.scrollHeight}px`
+            ul.style.height = `${ul.scrollHeight}px`;
         } else {
             ul.style.height = `${ul.scrollHeight}px`;
-            window.getComputedStyle(ul, null).getPropertyValue("height");
+
+             /*
+                The expression is wrapped by function to prevent EsLint's error no-useless-constructor
+                The expression forces browser to apply height
+            */
+            (() => ul.clientHeight)();
+
             ul.style.height = "0px";
         }
     }
     public isUlClosed(ul: UlType = this.currentUl) {
         return ul && (!ul.style.height || ul.style.height === "0px")
     }
-    public setCurrentUl(ul: UlType = this.currentUl) { //legacy
+    public setCurrentUl(ul: UlType = this.currentUl) {
         this.currentUl = ul;
     }
     public endUlAnimationCreator(ul: HTMLElement) {
@@ -57,7 +65,7 @@ class ListController { //TODO hook
 
 const listController = new ListController();
 
-export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>) {
+export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>, children:ReactNode | ReactNode[]) {
 
     function catalogLiOnClickCreator(catalogItemsRef: React.RefObject<HTMLUListElement>) {
         return (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
@@ -83,5 +91,18 @@ export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>) {
         }
     }
 
-    return { catalogLiOnClick: catalogLiOnClickCreator(catalogItemsRef) }
+    if (Array.isArray(children)) {
+        var title = children[0];
+        children = children.slice(1);
+    }
+    else {
+        var title = children;
+        children = null;
+    }
+
+    function renderChildrens() {
+        return children
+    }
+
+    return { catalogLiOnClick: catalogLiOnClickCreator(catalogItemsRef), title, renderChildrens }
 }

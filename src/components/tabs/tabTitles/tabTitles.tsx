@@ -6,5 +6,5 @@ type PropsType = {
 }
 
 export default function tabTitles({children}:PropsType) {
-    return <div className="tab-titles">{children}</div>
+    return <div className="tab-list">{children}</div>
 }

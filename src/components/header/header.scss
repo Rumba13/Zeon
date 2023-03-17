@@ -1,10 +1,10 @@
-.header {
+.header-wrapper {
     grid-area: header;
     box-shadow: rgb(0 0 0 / 20%) 0px 6px 4px -4px;
     outline: rgb(0, 0, 0) none 0px;
 }
 
-.header-container {
+.header {
     display: grid;
     grid-gap: 5px;
     grid-template: 1fr 1fr / 1fr 2fr 2fr 1fr 1fr;

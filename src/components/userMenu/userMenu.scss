@@ -26,7 +26,7 @@
         color: white;
     }
 
-    & .user-menu-items {
+    & .user-menu-actions {
         position: absolute;
         top: 35px;
         right: -1px;
@@ -35,7 +35,7 @@
         color: white;
         background: var(--third-color);
 
-        & a.user-menu__item {
+        & a.user-menu__action {
             text-align: right;
             display: block;
             height: 36px;
@@ -64,7 +64,7 @@
     &.opened {
         background-color: var(--transparent-black);
 
-        & .user-menu-items {
+        & .user-menu-actions {
             display: block;
         }
 

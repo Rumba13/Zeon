@@ -1,9 +1,5 @@
 .sub-header-menu-wrapper {
     background-color: var(--third-color);
-
-    & > ul > div { // TODO ??????
-        margin-left: auto;
-    }
 }
 
 .sub-header-menu {
@@ -11,29 +7,35 @@
     height: 36px;
     max-width: var(--content-max-width);
     margin: 0 auto;
+
+    & > .user-menu {
+        margin-left: auto;
+    }
 }
 
 .sub-header-menu-item {
     transition: all 0.4s;
 
-    & > .item__text {
+    &>.item__text {
         font-size: 13px;
         color: var(--text-color);
     }
-    & ._with-icon .icon {
+
+    &.-with-icon .icon {
         align-self: center;
         height: 30px;
         width: 30px;
         background: no-repeat;
     }
 
-    & > .item__text {
+    &>.item__text {
         display: flex;
         align-items: flex-end;
         height: 100%;
         width: 100%;
         padding: 10px;
     }
+
     &:hover {
         background-color: var(---background-hover-color);
     }

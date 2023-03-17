@@ -1,0 +1,10 @@
+diff a/src/components/productPage/productTabs/productTabs.tsx b/src/components/productPage/productTabs/productTabs.tsx	(rejected hunks)
+@@ -15,7 +17,7 @@ const tabs: TabType[] = [
+     },
+     {
+         title: <>
+-        <Icon icon={ICONS.reviews} />
++            <Icon icon={ICONS.reviews} />
+             ╨Ю╤В╨╖╤Л╨▓╤Л (0)
+         </>,
+         content: "lers"

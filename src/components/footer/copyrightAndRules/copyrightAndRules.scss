@@ -1,4 +1,4 @@
-.footer-middle {
+.copyright-and-rules {
     display: flex;
     align-items: center;
     margin-top: 20px;
@@ -6,17 +6,17 @@
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     color: var(--text-color);
-    grid-area: middle;
+    grid-area: copyright-and-rules;
 }
 
-.footer-middle__copyright {
+.copyright-and-rules__copyright {
     display: inline-block;
     padding-right: 20px;
     margin-right: 20px;
     border-right: 1px solid var(--border-color);
 }
 
-.footer-middle__rules {
+.copyright-and-rules__rules {
     color: var(--text-color);
     transition: all 0.4s;
 
@@ -25,6 +25,6 @@
     }
 }
 
-.footer-middle > * {
+.copyright-and-rules > * {
     margin: 8px;
 }

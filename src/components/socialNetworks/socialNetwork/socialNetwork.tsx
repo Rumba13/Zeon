@@ -2,7 +2,7 @@ import "./socialNetwork.scss";
 
 type PropsType = {
     link:string,
-    icon:any
+    icon:React.ReactNode
 }
 
 export default function SocialNetwork({link, icon}:PropsType) {

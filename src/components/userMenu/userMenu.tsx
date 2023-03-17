@@ -5,14 +5,14 @@ import { useRef } from "react";
 
 export default function UserMenu() {
     const userMenuRef = useRef(null)
-    const { onClickCreator } = useUserMenu(userMenuRef);
+    const { toggleUserMenu } = useUserMenu(userMenuRef);
 
-    return <div onClick={onClickCreator()} ref={userMenuRef} className="user-menu">
+    return <div onClick={toggleUserMenu} ref={userMenuRef} className="user-menu">
         <Sprite yOffset={-849} />
         <a className="user-menu__title">Войти на сайт</a>
-        <ul className="user-menu-items">
-                <a className="user-menu__item" href="https://colorscheme.ru/color-names.html">Войти в кабинет</a>
-               <a className="user-menu__item"href="##">Зарегистрироваться</a>
+        <ul className="user-menu-actions">
+            <a className="user-menu__action" href="https://colorscheme.ru/color-names.html">Войти в кабинет</a>
+            <a className="user-menu__action" href="##">Зарегистрироваться</a>
         </ul>
         <div className="open-list-icon"></div>
     </div>

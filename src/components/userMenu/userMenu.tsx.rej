@@ -1,0 +1,23 @@
+diff a/src/components/userMenu/userMenu.tsx b/src/components/userMenu/userMenu.tsx	(rejected hunks)
+@@ -4,15 +4,15 @@ import { useUserMenu } from "./useUserMenu";
+ import { useRef } from "react";
+ 
+ export default function UserMenu() {
+-    const userMenuRef = useRef(null)
+-    const { onClickCreator } = useUserMenu(userMenuRef);
++    const userMenuRef = useRef(null);
++    const { toggleUserMenu } = useUserMenu(userMenuRef);
+ 
+-    return <div onClick={onClickCreator()} ref={userMenuRef} className="user-menu">
++    return <div onClick={toggleUserMenu} ref={userMenuRef} className="user-menu">
+         <Sprite yOffset={-849} />
+         <a className="user-menu__title">╨Т╨╛╨╣╤В╨╕ ╨╜╨░ ╤Б╨░╨╣╤В</a>
+-        <ul className="user-menu-items">
+-                <a className="user-menu__item" href="https://colorscheme.ru/color-names.html">╨Т╨╛╨╣╤В╨╕ ╨▓ ╨║╨░╨▒╨╕╨╜╨╡╤В</a>
+-               <a className="user-menu__item"href="##">╨Ч╨░╤А╨╡╨│╨╕╤Б╤В╤А╨╕╤А╨╛╨▓╨░╤В╤М╤Б╤П</a>
++        <ul className="user-menu-actions">
++            <a className="user-menu__action" href="https://colorscheme.ru/color-names.html">╨Т╨╛╨╣╤В╨╕ ╨▓ ╨║╨░╨▒╨╕╨╜╨╡╤В</a>
++            <a className="user-menu__action" href="##">╨Ч╨░╤А╨╡╨│╨╕╤Б╤В╤А╨╕╤А╨╛╨▓╨░╤В╤М╤Б╤П</a>
+         </ul>
+         <div className="open-list-icon"></div>
+     </div>

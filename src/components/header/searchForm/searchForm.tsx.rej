@@ -1,0 +1,9 @@
+diff a/src/components/header/searchForm/searchForm.tsx b/src/components/header/searchForm/searchForm.tsx	(rejected hunks)
+@@ -9,6 +9,5 @@ export default function searchForm() {
+             <input  className="search__form" placeholder="╨Я╨╛╨╕╤Б╨║ ╨┐╨╛ ╨║╨░╤В╨░╨╗╨╛╨│╤Г" type="text" />
+             <Icon icon={ICONS.search}/>
+         </div>
+-            
+     </div>
+ }
+\ No newline at end of file

@@ -1,22 +1,22 @@
 import "./header.scss"
 import Logo from "../logo/logo"
-import Timetable from "./timetable/timetable"
 import SearchForm from "./searchForm/searchForm"
-import Comparison from "./comparison/comparison"
-import Cart from "./cart/cart"
+import ProductComparison from "./productComparison/productComparison"
+import ProductCart from "./productCart/productCart"
 import PhoneNumbers from "../phoneNumbers/phoneNumbers"
-import Subheader from "./subHeader/subHeader"
+import SubHeader from "./subHeader/subHeader"
+import TimeTable from "./timetable/timetable"
 
 export default function Header() {
-    return <header className="header">
-        <Subheader />
-        <div className="header-container">
+    return <header className="header-wrapper">
+        <SubHeader />
+        <div className="header">
             <PhoneNumbers />
             <Logo />
-            <Timetable />
+            <TimeTable />
             <SearchForm />
-            <Comparison />
-            <Cart />
+            <ProductComparison />
+            <ProductCart />
         </div>
     </header>
 }

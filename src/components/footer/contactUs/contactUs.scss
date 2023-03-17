@@ -1,0 +1,23 @@
+.contacts-us-wrapper {
+    grid-area: contacts-us; 
+
+    & > .contacts-us {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        line-height: 2;
+
+        & > .text-with-icon {
+            font-size: 20px;
+            color: var(--text-color);
+        }
+    }
+
+    &.list-wrapper > .contacts-us__title {
+        font-size: 19px;
+    }
+}
+
+.contacts-field__text {
+    font-size: 15px;
+}

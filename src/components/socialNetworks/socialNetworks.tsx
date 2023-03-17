@@ -13,7 +13,4 @@ export default function SocialNetworks() {
             <SocialNetwork link="https://www.youtube.com/channel/UCaozapn6TjrSjtue6Xs0xxg" icon={<Sprite yOffset={-144}/>}  />
         </div>
     </div>
-
-
-
 }

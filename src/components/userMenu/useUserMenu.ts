@@ -11,13 +11,10 @@ const userMenuController = new UserMenuController();
 
 export function useUserMenu(userMenuRef: React.RefObject<HTMLElement>) {
 
-    function onClickCreator() {
-        return (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    function toggleUserMenu() {
             if (!userMenuRef.current) return;
-
             userMenuController.toggleTitleOpened(<HTMLElement>userMenuRef.current)
-        }
     }
 
-    return { onClickCreator }
+    return { toggleUserMenu }
 }

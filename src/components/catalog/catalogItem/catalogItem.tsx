@@ -7,20 +7,10 @@ type PropsType = {
     children: ReactNode | ReactNode[]
 }
 
-export default function CatalogItem({ children: _children }: PropsType) {
+export default function CatalogItem({ children }: PropsType) {
     const catalogItemsRef = useRef(null);
-    const { catalogLiOnClick } = useCatalog(catalogItemsRef);
+    const { catalogLiOnClick, renderChildrens,title } = useCatalog(catalogItemsRef, children);
 
-    let children = undefined;
-
-    if (Array.isArray(_children)) { //TODO relocate logic to hook
-        var title = _children[0];
-        children = _children.slice(1);
-    }
-    else {
-        var title = _children;
-        children = null;
-    }
 
     return <li onClick={catalogLiOnClick} className="catalog-item-wrapper">
         <div className="catalog-item">
@@ -28,7 +18,7 @@ export default function CatalogItem({ children: _children }: PropsType) {
             <Sprite yOffset={null} />
         </div>
         <ul ref={catalogItemsRef} className="catalog-items">
-            {children}
+            {renderChildrens()}
         </ul>
     </li>
 }

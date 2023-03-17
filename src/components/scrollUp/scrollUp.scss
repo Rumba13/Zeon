@@ -1,4 +1,4 @@
-.scroll-top {
+.scroll-up {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -19,13 +19,13 @@
    }
 }
 
-.scroll-top-wrapper {
+.scroll-up-wrapper {
    grid-area: scrollTop;
    margin-bottom: 32px;
    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
    transition: all 0.4s;
 
-   &:hover > .scroll-top {
+   &:hover > .scroll-up {
       border-bottom: 0px;
    }
 
@@ -35,6 +35,6 @@
    }
 }
 
-.scroll-top__text {
+.scroll-up__text {
    color: var(--text-color);
 }

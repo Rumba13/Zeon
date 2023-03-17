@@ -1,0 +1,22 @@
+.leave-review {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: 1px solid var(--primary-color);
+    transition: all 0.4s;
+
+    & .leave-review__text {
+        color: orange;
+    }
+    
+    & .sprite {
+        width: 23px;
+        height: 16px;
+    }
+    
+
+    &:hover {
+        color: orange;
+    }
+}

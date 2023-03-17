@@ -1,8 +1,8 @@
 .product-tabs {
     border: 0;
 
-    & .tabs-titles {
-        display: inline-flex;
+    & .tab-list {
+        display: inline-flex !important;
         flex-grow: 1;
 
         & .tab__title {
@@ -25,30 +25,29 @@
             &:hover {
                 color: var(--text-color);
             }
+
+            &.opened {
+                border-top: 1px solid var(--secondary-color);
+                border-bottom: 1px solid white;
+                background-color: var(--high-opacity-color);
+                color: var(--dark-text-color);
+            }
         }
+
         & .icon {
             height: 12px;
             margin-right: 4px;
         }
 
-        & .opened {
-            border-color: var(--secondary-color) var(--light-border-color) white var(--light-border-color); //TODO add scss variable for some strange "white"
-            color: var(--dark-text-color);
-            background-color: white;
 
-            &:hover {
-                color: var(--dark-text-color);
-            }
-        }
     }
 
-    & .tabs-content {
+    & .tab-panels {
         border: 1px solid var(--light-border-color);
 
-        // & .tab__content {
+        // & .tab__panel {
 
         //     &.opened {}
         // }
     }
 }
-

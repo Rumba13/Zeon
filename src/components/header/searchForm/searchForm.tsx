@@ -9,6 +9,5 @@ export default function searchForm() {
             <input  className="search__form" placeholder="Поиск по каталогу" type="text" />
             <Icon icon={ICONS.search}/>
         </div>
-            
     </div>
 }

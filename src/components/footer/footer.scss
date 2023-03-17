@@ -1,7 +1,7 @@
 .footer-wrapper {
     background: var(--third-color);
 
-    & > .scroll-top-wrapper {
+    & > .scroll-up-wrapper {
         height: 62px;
     }
 }
@@ -12,8 +12,8 @@
     grid-gap: 5px;
     grid-template: 2.5fr 80px 1fr / 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "logo aboutCompany magazineInformation contacts"
-    "middle middle middle middle"
+    "logo about-company about-store contacts-us"
+    "copyright-and-rules copyright-and-rules copyright-and-rules copyright-and-rules"
     "disclaimer disclaimer disclaimer disclaimer";
     
     margin: 0 auto;

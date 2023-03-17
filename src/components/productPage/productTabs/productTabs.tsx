@@ -4,6 +4,8 @@ import Tabs, { TabType } from "../../tabs/tabs";
 import TabTitle from "../../tabs/tabTitle/tabTitle";
 import TabTitles from "../../tabs/tabTitles/tabTitles";
 import { ICONS } from "../../../images/images";
+import TabContents from "../../tabs/tabContents/tabContents";
+import TabContent from "../../tabs/tabContent/tabContent";
 
 const tabs: TabType[] = [
     {
@@ -23,14 +25,5 @@ const tabs: TabType[] = [
 ]
 
 export default function ProductTabs() {
-    return <Tabs className="product-tabs" tabs={tabs}>
-        <TabTitles>
-            <TabTitle>Lers</TabTitle>
-            <TabTitle>Gays</TabTitle>
-        </TabTitles>
-        {/* <TabContents>
-            <TabContent>ldasd</TabContent>
-            <TabContent>ldasd</TabContent>
-        </TabContents> */}
-    </Tabs>
+    return <Tabs tabs={tabs} className="product-tabs"> </Tabs>
 }

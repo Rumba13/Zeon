@@ -84,7 +84,7 @@
     & .catalog-item-wrapper {
         border: none;
         border-bottom: 1px solid var(--primary-color);
-        color: black; //TODO add scss default text color variable
+        color: var(--default-text-color);
         background: white;
     }
 
