@@ -9,8 +9,7 @@ type PropsType = {
 
 export default function CatalogItem({ children }: PropsType) {
     const catalogItemsRef = useRef(null);
-    const { catalogLiOnClick, renderChildrens,title } = useCatalog(catalogItemsRef, children);
-
+    const { catalogLiOnClick, renderChildrens, title } = useCatalog(catalogItemsRef, children);
 
     return <li onClick={catalogLiOnClick} className="catalog-item-wrapper">
         <div className="catalog-item">

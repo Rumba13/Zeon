@@ -1,9 +1,12 @@
+import { MouseEventHandler } from "react";
 import "./icon.scss";
 
 type PropsType = {
-    icon: string
+    icon: string,
+    className?: string,
+    onClick?:MouseEventHandler
 }
 
-export default function Icon({ icon }: PropsType) {
-        return <img src={icon} className="icon"></img>
+export default function Icon({ icon, className,onClick }: PropsType) {
+    return <img onClick={onClick} src={icon} className={`icon ${className}`}/>
 }

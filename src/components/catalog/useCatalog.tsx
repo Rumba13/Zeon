@@ -36,12 +36,13 @@ class ListController {
         } else {
             ul.style.height = `${ul.scrollHeight}px`;
 
-             /*
-                The expression is wrapped by function to prevent EsLint's error no-useless-constructor
-                The expression forces browser to apply height
-            */
-            (() => ul.clientHeight)();
 
+            (() => ul.clientHeight)();
+            /*
+                            The expression is wrapped by function to prevent EsLint's error no-useless-constructor
+                            The expression forces browser to apply height
+            */
+           
             ul.style.height = "0px";
         }
     }
@@ -65,7 +66,7 @@ class ListController {
 
 const listController = new ListController();
 
-export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>, children:ReactNode | ReactNode[]) {
+export function useCatalog(catalogItemsRef: React.RefObject<HTMLUListElement>, children: ReactNode | ReactNode[]) {
 
     function catalogLiOnClickCreator(catalogItemsRef: React.RefObject<HTMLUListElement>) {
         return (e: React.MouseEvent<HTMLElement, MouseEvent>) => {

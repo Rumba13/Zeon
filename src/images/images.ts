@@ -20,6 +20,7 @@ import iconSlider4 from "./sliderImage4.jpg"
 import iconReviews from "./reviews-icon.png"
 import iconCharacteristic from "./characterIcon.png" //??
 import iconSale from "./sale.png"
+import iconCross from "./cross.svg";
 
 export const ICONS = {
     search: iconSearch,
@@ -35,6 +36,7 @@ export const ICONS = {
     reviews: iconReviews,
     characteristic: iconCharacteristic,
     sale: iconSale,
+    cross: iconCross,
 
     //legacy
     repair: iconBannerRepair,
