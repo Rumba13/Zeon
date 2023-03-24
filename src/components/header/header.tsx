@@ -1,6 +1,6 @@
 import "./header.scss"
 import Logo from "../logo/logo"
-import SearchForm from "./searchForm/searchForm"
+import Search from "./search/search"
 import ProductComparison from "./productComparison/productComparison"
 import ProductCart from "./productCart/productCart"
 import PhoneNumbers from "../phoneNumbers/phoneNumbers"
@@ -14,7 +14,7 @@ export default function Header() {
             <PhoneNumbers />
             <Logo />
             <TimeTable />
-            <SearchForm />
+            <Search />
             <ProductComparison />
             <ProductCart />
         </div>
