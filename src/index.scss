@@ -72,6 +72,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
+  color: var(--default-text-color)
 }
 
 a:hover {
@@ -205,6 +206,5 @@ html {
   --inactive-color: var(--dark-slate-grey);
 
   //Unique colors
-
   --user-menu-item-color: rgba(255, 255, 255, 0.4);
 }
