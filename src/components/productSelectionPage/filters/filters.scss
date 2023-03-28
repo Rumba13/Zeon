@@ -1,0 +1,8 @@
+.filters {
+    display: flex;
+
+    & .arrow-radio-button {
+        margin-right: 25px;
+        color:var(--inactive-color)
+    }
+}

@@ -1,0 +1,8 @@
+.checkbox {
+    color: var(--inactive-color);
+    
+    & > .checkbox__title {
+        
+        margin-left: 7px;
+    }
+}
