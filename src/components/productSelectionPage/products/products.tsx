@@ -1,5 +1,10 @@
 import "./products.scss";
+import ProductItem, { ProductType } from "./productsItem/productsItem";
 
-export default function Products() {
-    return <div className="products"></div>
+type PropsType = {
+    products: ProductType[]
+}
+
+export default function Products({ products }: PropsType) {
+    return <div className="products">{products.map(product => <ProductItem {...product} />)}</div>
 }

@@ -1,8 +1,11 @@
-import "./addProductToComparison.scss";
-import Button from "../button/button";
+import AddProductToComparison from "../../abstractAddProductToComparison/abstractAddProductToComparison"
 
-export default function AddProductToComparison() {
-    return <Button className="comparison-button">
+type PropsType = {
+    id:number,
+}
+
+export default function ProductPageAddProductToComparison({id}:PropsType) {
+    return <AddProductToComparison id={id}>
         <span className="comparison-button__text">Добавить к сравнению</span>
-    </Button> 
+    </AddProductToComparison>
 }

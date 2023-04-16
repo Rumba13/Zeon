@@ -1,6 +1,6 @@
 import "./subProductSlider.scss";
-import { useSlickSlider } from "../../../hooks/useSlickSlider";
 import { useEffect } from "react";
+import { useSlickSlider } from "../../../app/hooks";
 
 type PropsType = {
     sliderItems: string[]

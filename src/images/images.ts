@@ -21,6 +21,9 @@ import iconReviews from "./reviews-icon.png"
 import iconCharacteristic from "./characterIcon.png" //??
 import iconSale from "./sale.png"
 import iconCross from "./cross.svg";
+import iconHelp from "./help.png";
+
+
 
 export const ICONS = {
     search: iconSearch,
@@ -37,6 +40,7 @@ export const ICONS = {
     characteristic: iconCharacteristic,
     sale: iconSale,
     cross: iconCross,
+    help:iconHelp,
 
     //legacy
     repair: iconBannerRepair,

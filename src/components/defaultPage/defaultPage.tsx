@@ -1,24 +1,16 @@
 import "./defaultPage.scss";
 import Banner from "../banner/banner";
 import BannerSlider from "../bannerSlider/bannerSlider";
-import Product, { ProductType } from "../product/product";
 import ProductSelection from "../productSelection/productSelection";
 import { ICONS } from "../../images/images";
+import { ProductType } from "../productSelectionPage/products/productsItem/productsItem";
+import Product from "./product/product";
 
 const testProducts: ProductType[] = [
-    { id: 1, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "dakdjsid jaildjiadjaisdjai jdiaida diadiaiddj iadjada" },
-    { id: 2, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 3, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 4, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 5, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 6, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 7, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 8, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 9, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" },
-    { id: 10, previewSrc: "https://clck.ru/33XVQd", price: 10000, title: "Dildo Deluxe" }
+    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber:" adsddada", manufacturer:"dasda" },
 ]
 
-export default function MainPage() {
+export default function DefaultPage() {
     return <div className="content">
         <Banner imageSrc={ICONS.autoZeon} href={"https://avtozeon.by/"} />
         <BannerSlider />

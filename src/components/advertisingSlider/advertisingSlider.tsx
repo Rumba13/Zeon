@@ -1,6 +1,6 @@
 import "./advertisingSlider.scss";
-import { useSlickSlider } from "../../hooks/useSlickSlider";
 import { ICONS } from "../../images/images";
+import { useSlickSlider } from "../../app/hooks";
 
 export default function AdvertisingSlider() {
     const { renderSliderItems } = useSlickSlider(".advertising-slider", {

@@ -7,6 +7,7 @@ type PropsType = {
 }
 
 export default function ProductSelection({ href, imageSrc, title }: PropsType) {
+    // TODO refactoring
     return <div className="product-selection">
         <a href={href} className="product-selection__title">{title}</a>
         <a href={href} className="product-selection-image-wrapper">

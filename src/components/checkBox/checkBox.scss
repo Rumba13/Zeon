@@ -1,6 +1,10 @@
-.checkbox {
+.checkbox-wrapper {
     color: var(--inactive-color);
     
+    & > .checkbox {
+        
+    }
+
     & > .checkbox__title {
         
         margin-left: 7px;
