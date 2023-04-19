@@ -14,6 +14,5 @@ export default function UserMenu() {
             <a className="user-menu__action" href="https://colorscheme.ru/color-names.html">Войти в кабинет</a>
             <a className="user-menu__action" href="##">Зарегистрироваться</a>
         </ul>
-        <div className="open-list-icon"></div>
     </div>
 }

@@ -7,14 +7,29 @@
 .header {
     display: grid;
     grid-gap: 5px;
-    grid-template: 1fr 1fr / 1fr 2fr 2fr 1fr 1fr;
-    grid-template-areas: 
-    "logo timetable phoneNumbers phoneNumbers phoneNumbers"
-    "logo search search comparison cart";
+    grid-template: 1fr 1fr 1fr 1fr / auto 2fr 2fr 1fr 1fr;
+    grid-template-areas:
+        "logo timetable phoneNumbers phoneNumbers phoneNumbers"
+        "logo timetable phoneNumbers phoneNumbers phoneNumbers"
+        "logo search search comparison cart"
+        "logo search search comparison cart";
+
 
     height: 100%;
     max-height: 120px;
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding-bottom: 13px;
+}
+
+@media(max-width:900px) {
+    .header {
+        grid-template: 1fr 1fr 1fr 1fr / auto 2fr 2fr 1fr 1fr;
+        align-items: end;
+        grid-template-areas:
+        "logo timetable phoneNumbers phoneNumbers phoneNumbers"
+        "logo timetable phoneNumbers phoneNumbers phoneNumbers"
+        "logo search search comparison comparison"
+        "logo search search cart cart";
+    }
 }

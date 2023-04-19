@@ -5,11 +5,9 @@
 
 .search {
    grid-area: search;
-
    position: relative;
-   display: block;
-   width: 100%;
-
+   display: flex;
+   flex: 0 0 100%;
    & .icon {
       height: 17px;
       width: 17px;

@@ -1,8 +1,10 @@
 .phone-number {
     display: flex;
     color: black;
+    min-width: fit-content;
 
     & > .phone-number__text {
+        display: block;
         align-self: center;
         white-space: nowrap;
         transition: all 0.4s; 

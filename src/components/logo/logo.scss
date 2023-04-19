@@ -1,7 +1,17 @@
 .logo {
-    display: grid;
-    align-self: center; 
+    display: -ms-inline-grid;
+    align-self: center;
     grid-area: logo;
-    margin: 6px;
-    margin-right: 10px;
+    min-width: fit-content;
+    width: 100%;
+
+    & a {
+        min-width: fit-content;
+
+
+    }
+
+    & img {
+        max-width: 162px;
+    }
 }
