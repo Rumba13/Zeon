@@ -1,5 +1,11 @@
-.link-action {
-    justify-content: flex-end;
+.comparison {
     grid-area: comparison;
-    text-align: right;
+    min-width: fit-content;
+    align-items: center;
+
+    & > .sprite {
+        display: none; //TODO refuck
+        width: auto;
+        height: 25px;
+    }
 }

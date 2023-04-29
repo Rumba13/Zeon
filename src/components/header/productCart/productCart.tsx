@@ -2,9 +2,9 @@ import Sprite from "../../sprite/sprite";
 import "./productCart.scss";
 
 export default function ProductCart() {
-    return <a href="##" className="cart link-action">
+    return <a href="##" className="cart product-action">
         <Sprite yOffset={-998} />
-        <span className="link-action__text">
+        <span className="product-action__text">
             Корзина
         </span>
         <span className="counter">{0}</span>

@@ -2,11 +2,13 @@ import "./sprite.scss";
 
 type PropsType = {
     yOffset: number | null,
-    className?:string
+    className?: string
 }
 
-export default function Sprite({ yOffset,className }: PropsType) {
+export default function Sprite({ yOffset, className }: PropsType) {
     return <div
-     style={{ backgroundPositionY: yOffset ? yOffset : undefined }}
-      className={`sprite ${className ?? ""}`}></div>
+        style={{ backgroundPositionY: yOffset ? yOffset : undefined }}
+        className={`sprite ${className ?? ""}`}>
+
+    </div>
 }

@@ -4,6 +4,7 @@
     align-self: center;
     grid-area: timetable;
 }
+
 .time-table {
     position: relative;
     height: 100%;
@@ -12,25 +13,32 @@
     padding: 3px;
     background-color: var(--light-third-color);
 
+    &.opened {
+        & .time-table__text {
+            display: none;
+        }
+    }
+
     & .sprite {
         align-self: center;
         height: 13px;
         width: 13px;
         margin: 0 5px 0 8px;
     }
-    
+
+    .time-table__text {
+        white-space: nowrap;
+    }
+
     &::after {
         //triangle
-        content: ''; 
-        position: absolute; 
+        content: '';
+        position: absolute;
         right: -7px;
-        top: 0; 
-        
+        top: 0;
+
         border-style: solid;
         border-width: 12.5px 0 12.5px 7px;
         border-color: transparent transparent transparent var(--light-third-color);
     }
 }
-
-
-

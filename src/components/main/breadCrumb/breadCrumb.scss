@@ -1,7 +1,10 @@
 .bread-crumb {
+    display: inline-block;
+    white-space: nowrap;
+    word-break: break-all;
     margin: 0 10px;
     font-size: 12px;
-    color: var( --dark-text-color);
+    color: var(--dark-text-color);
 
     &:last-child {
         color: var(--text-color);

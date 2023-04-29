@@ -1,9 +1,9 @@
 .cart {
     grid-area: cart;
-    text-align: right;
+ 
+    min-width: fit-content;
 
-    & > .sprite {
-        width: 25px;
+    &>.sprite {
         height: 25px;
     }
 }

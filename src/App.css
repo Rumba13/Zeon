@@ -10,3 +10,14 @@
   ;
   font-family: "PT Sans", sans-serif;
 }
+
+@media(max-width:650px) {
+  .app {
+    grid-template: 120px auto 1fr / 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer"
+  ;
+  }
+}

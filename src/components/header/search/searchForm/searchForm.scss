@@ -1,0 +1,33 @@
+.search {
+    grid-area: search;
+    position: relative;
+    display: flex;
+    
+    & .icon {
+       height: 17px;
+       width: 17px;
+       position: absolute;
+       right: 15px;
+       top: calc(50% - 8px);
+    }
+ 
+    & .search__form {
+       width: 100%;
+       padding: 14px;
+       font-size: 15px;
+       border: 3px solid var(--secondary-color);
+       transition: border 0.4s;
+ 
+       &:focus {
+          border: 3px solid var(--secondary-color);
+       }
+ 
+       &:hover {
+          border-color: var(--light-third-color);
+       }
+    }
+ }
+ 
+ .search__form {
+    width: 100%;
+ }

@@ -3,22 +3,23 @@ import "./phoneNumber.scss"
 
 type PropsType = {
     number: string,
-    childBefore?:React.ReactNode
-}
-
-export default function PhoneNumber({  childBefore,number }: PropsType) {
-    return <a href={`tel:${number}`} className="phone-number">
-        {childBefore}
-        <span className="phone-number__text">{convertPhoneNumber(number)}</span>
-    </a>
+    icon?:React.ReactNode
 }
 
 export function convertPhoneNumber(number: string) {
-    let template = "+xxx (xx) x-xxx-xxx"
+    let template = "+xxx (xx) x-xxx-xxx";
 
     for (let i = 0; template.includes('x'); i++) {
-        template = template.replace('x', number[i])
+        template = template.replace('x', number[i]);
     }
     
     return template;
 }
+
+export default function PhoneNumber({  icon,number }: PropsType) {
+    return <a href={`tel:${number}`} className="phone-number">
+        {icon}
+        <span className="phone-number__text">{convertPhoneNumber(number)}</span>
+    </a>
+}
+

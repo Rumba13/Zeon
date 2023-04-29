@@ -1,0 +1,28 @@
+.fixed-search {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 15px;
+    left: 50%;
+    z-index: 100;  
+    width: var(--content-max-width);
+    border: 1px solid #c5c5c5;
+    transform: translate(-50%);
+ 
+    & .icon {
+       height: 22px;
+       margin: 0 24px 0 24px;
+    }
+ 
+    & .search__form {
+       height: 80px;
+       font-size: 28px;
+    }
+ }
+
+ @media(max-width:1200px) {
+    .fixed-search {
+        width: 100%;
+     }
+ }

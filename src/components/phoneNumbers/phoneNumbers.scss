@@ -1,9 +1,10 @@
 .phone-numbers-wrapper {
     display: flex;
     align-self: center;
-    overflow-x: scroll;
     grid-area: phoneNumbers;
-
+    overflow-x: auto;
+    margin-right: 20px;
+    margin-left: 10px;
 
     & > .phone-number {
         margin: 7px;
@@ -38,8 +39,9 @@
     }
 }
 
-@media(max-width:var(--content-max-width)) {
-    .phone-numbers-wrapper {
-        
-    }
-}
+// @media(max-width:1120px) {
+//     .phone-numbers-wrapper {
+//         border: 1px solid #000;
+//         overflow: visible;
+//     }
+// }

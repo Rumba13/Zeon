@@ -1,21 +1,32 @@
-import { ReactNode } from "react";
+import BreadCrumb from "../breadCrumb/breadCrumb";
 import "./breadCrumbs.scss";
 
 type PropsType = {
-    children: ReactNode[] | ReactNode
+
 }
 
-const separator = ">"
+type BreadCrumbType = {
+    text: string,
+    link: string
+}
 
-export default function BreadCrumbs({ children }: PropsType) {
+const breadCrumbs: BreadCrumbType[] = [
+    { text: "Главная", link: "11" },
+    { text: "Компьютеры и сети", link: "11" },
+    { text: "Компьютеры и комплектующие", link: "11" },
+    { text: "Блоки питания", link: "11" },
+    { text: "Блок питания be quiet! Pure Power 11 700W CM BN299", link: "11" },
+]
 
-    return <div className="bread-crumbs">{
-        Array.isArray(children)
-            ? children.map((child, index) =>
-                (index === children.length - 1)
-                    ? <>{child}</>
-                    : <>{child}{separator}</>
-            )
-            : void 0
-    }</div>
+export default function BreadCrumbs({ }: PropsType) {
+
+    return <div className="bread-crumbs">
+
+        {breadCrumbs.map((crumb, index, crumbs) =>
+            <BreadCrumb to={crumb.link} isLast={index === crumbs.length - 1}>
+                {crumb.text}
+            </BreadCrumb>
+        )}
+        
+    </div>
 }
