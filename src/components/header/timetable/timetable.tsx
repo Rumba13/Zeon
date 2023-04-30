@@ -1,5 +1,5 @@
-import Sprite from "../../sprite/sprite";
 import "./timetable.scss";
+import Sprite from "../../sprite/sprite";
 import useTimeTable from "./useTimeTable";
 
 export default function Timetable() {

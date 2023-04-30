@@ -42,3 +42,23 @@
         border-color: transparent transparent transparent var(--light-third-color);
     }
 }
+
+@media(max-width:650px) {
+    .time-table-wrapper {}
+
+    .time-table {
+        width: 100%;
+        display: block;
+
+        &.opened .time-table__text,
+        & .time-table__text {
+            text-align: center;
+            display: block;
+        }
+
+        & .sprite {
+            display: none;
+
+        }
+    }
+}

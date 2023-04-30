@@ -20,6 +20,7 @@
     width: 100%;
     margin: 0 auto;
     padding-left: 10px;
+    flex-wrap: wrap;
 
     &>.logo {}
 
@@ -56,11 +57,11 @@
     }
 
     .header {
-        grid-template: 1fr / auto auto auto;
+        grid-template: 1fr / auto 1fr auto auto;
         align-items: center;
         justify-items: right;
         grid-template-areas:
-            "logo comparison cart search";
+            "logo phone-numbers-low-width comparison cart search";
 
         &>.time-table-wrapper {
             display: none;
@@ -70,6 +71,11 @@
             display: none;
         }
 
+        & .logo img {
+            max-width: 120px;
+            
+        }
+
     }
 }
 
@@ -77,11 +83,10 @@
 
     //minimaze product-actions and search
     .header {
-        grid-template: 1fr / 1fr auto auto auto;
+        grid-template: 1fr / 1fr auto auto auto auto;
         grid-template-areas:
-            "logo comparison cart search";
+            "logo phone-numbers-low-width comparison cart search";
         justify-content: end;
-
     }
 
     .product-action {
@@ -98,6 +103,5 @@
             border-radius: 50%;
         }
     }
-
-
 }
+

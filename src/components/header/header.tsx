@@ -6,6 +6,7 @@ import ProductCart from "./productCart/productCart"
 import PhoneNumbers from "../phoneNumbers/phoneNumbers"
 import SubHeader from "./subHeader/subHeader"
 import TimeTable from "./timetable/timetable"
+import PhoneNumbersLowWidth from "./phoneNumbersLowWidth/phoneNumbersLowWidth"
 
 export default function Header() {
     return <header className="header-wrapper">
@@ -14,6 +15,7 @@ export default function Header() {
             <PhoneNumbers />
             <Logo />
             <TimeTable />
+            <PhoneNumbersLowWidth/>
             <Search />
             <ProductComparison />
             <ProductCart />
