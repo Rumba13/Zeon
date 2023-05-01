@@ -15,7 +15,7 @@ export default function Footer() {
             <AboutCompany />
             <AboutStore />
             <ContactUs />
-            <CopyrightAndRules />
+            <CopyrightAndRules />    
             <Disclaimer />
         </footer>
     </div>

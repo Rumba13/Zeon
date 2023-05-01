@@ -9,7 +9,7 @@ type PropsType = {
 }
 
 function getLogo(color: LogoColors): string {
-    switch (color) {
+    switch (color) { //TODO uncapitalize
         case "Dark":
             return ICONS.darkLogo
         case "White":

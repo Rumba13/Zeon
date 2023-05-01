@@ -1,7 +1,7 @@
 .footer-wrapper {
     background: var(--third-color);
 
-    & > .scroll-up-wrapper {
+    &>.scroll-up-wrapper {
         height: 62px;
     }
 }
@@ -10,19 +10,56 @@
     display: grid;
     grid-area: footer;
     grid-gap: 5px;
-    grid-template: 2.5fr 80px 1fr / 1fr 1fr 1fr 1fr;
+    grid-template: auto 80px auto / repeat(4, auto);
     grid-template-areas:
-    "logo about-company about-store contacts-us"
-    "copyright-and-rules copyright-and-rules copyright-and-rules copyright-and-rules"
-    "disclaimer disclaimer disclaimer disclaimer";
-    
+        "logo about-company about-store contacts-us"
+        "copyright-and-rules copyright-and-rules copyright-and-rules copyright-and-rules"
+        "disclaimer disclaimer disclaimer disclaimer";
+
+    max-width: var(--content-max-width);
     margin: 0 auto;
     padding-bottom: 50px;
-    width: 100%;
-    max-width: var(--content-max-width);
 
-    & > .logo {
+    &>.logo {
+        display: flex;
         align-self: start;
+        justify-content: center;
         grid-area: logo;
     }
+}
+
+@media(max-width:650px) {
+    .footer {
+        grid-template: repeat(3, auto) 1fr / repeat(3, auto);
+
+        grid-template-areas:
+            "logo logo logo"
+            "about-company about-store contacts-us"
+            "copyright-and-rules copyright-and-rules copyright-and-rules"
+            "disclaimer disclaimer disclaimer";
+        padding: 0 5px;
+
+        &>.copyright-and-rules {
+            display: flex;
+            flex-direction: column;
+
+            &>.copyright-and-rules__copyright {
+                border-right: 0;
+            }
+        }
+    }
+
+}
+
+@media(max-width:400px) {
+    .footer {
+        grid-template: repeat(5, auto)/ repeat(2, auto);
+        grid-template-areas:
+            "logo logo"
+            "about-company about-store"
+            "contacts-us contacts-us"
+            "copyright-and-rules copyright-and-rules"
+            "disclaimer disclaimer";
+    }
+
 }

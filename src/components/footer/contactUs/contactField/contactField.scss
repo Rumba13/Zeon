@@ -3,6 +3,8 @@
     align-items: center;
 
     & .sprite {
+        flex: 0 0 auto;
+        padding-right: 10px;
         margin-right: 10px;
         width: 15px;
         height: 18px;
