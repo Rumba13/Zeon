@@ -1,40 +1,44 @@
 .content {
     display: grid;
-    grid-template: auto auto auto 1fr / 1fr 1fr 1fr;
+    grid-template: min-content min-content auto / 2fr 1fr;
     grid-template-areas:
-    "full-width-banner full-width-banner full-width-banner"
-    "banner-slider banner-slider top-product-selection"
-    "banner-slider banner-slider bottom-product-selection"
-    "products products products";
-
-    align-items:  start;
-    
+        "banner banner"
+        "banner-slider product-selections"
+        "products products";
     grid-area: content;
+    height: fit-content;
+
     margin-left: 20px;
 
-    & .banner:first-child {
+    & .banner {
         margin-bottom: 25px;
-        grid-area: full-width-banner;
+        grid-area: banner;
     }
 
     & .banner-slider {
         grid-area: banner-slider;
     }
-    & .product-selection:nth-child(1) {
-        grid-area: top-product-selection;
-    }
-    & .product-selection:nth-child(2) {
-        grid-area: bottom-product-selection;
+
+    & .product-selections {
+        grid-area: product-selections;
     }
 
-
-    & .products {
+    & div.products {
         display: flex;
-        margin-top: 20px;
-        margin-bottom: 28px;
+        justify-content: center; //TODO find way to center products and make them wrap from the left
         flex-wrap: wrap;
+        margin-top: 20px;
+        margin-bottom: 38px;
         grid-area: products;
-
     }
 }
 
+@media(max-width:850px) {
+    .content {
+        grid-template: min-content min-content auto / 100%;
+        grid-template-areas:
+            "banner banner"
+            "banner-slider product-selections"
+            "products products";
+    }
+}

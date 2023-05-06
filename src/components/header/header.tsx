@@ -15,7 +15,7 @@ export default function Header() {
             <PhoneNumbers />
             <Logo />
             <TimeTable />
-            <PhoneNumbersLowWidth/>
+            <PhoneNumbersLowWidth />
             <Search />
             <ProductComparison />
             <ProductCart />

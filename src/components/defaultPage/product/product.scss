@@ -1,9 +1,10 @@
 .product-preview-wrapper {
-    flex: 0 0 33.333333%;
-    height: 290px;
     margin-bottom: 10px;
     padding: 0 8px 8px 10px;
-    background-color: white !important;
+    background-color: #ffffff !important;
+    flex: 33.33333%;
+    max-width: 33.33333%;
+    min-width: 250px;
 }
 
 .product-preview {
@@ -15,6 +16,9 @@
     text-align: center;
     border: 1px solid var(--primary-color);
     transition: box-shadow 0.4s;
+
+    & .preview__image {
+    } 
 
     &:hover {
         & .buy-button-wrapper {

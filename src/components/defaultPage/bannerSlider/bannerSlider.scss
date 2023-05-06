@@ -2,7 +2,8 @@
     display: flex;
     position: relative;
     max-height: 340px;
-
+    min-height: fit-content;
+    
     & img {
         max-height: 100%;
     }

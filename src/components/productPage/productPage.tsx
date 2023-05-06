@@ -6,7 +6,6 @@ import Rating from "./rating/rating";
 import Delivery from "./delivery/delivery";
 import ProductPrices from "./productPrices/productPrices";
 import ProductCartOffer from "./productCartOffer/productCartOffer";
-import ProductAddToCart from "../abstractAddProductToCart/abstractAddProductToCart";
 import SubProductSlider from "./subProductSlider/subProductSlider";
 import ProductTabs from "./productTabs/productTabs";
 import ProductImporter from "./productImporter/productImporter";

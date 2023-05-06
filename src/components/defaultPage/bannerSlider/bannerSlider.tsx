@@ -1,6 +1,6 @@
 import "./bannerSlider.scss";
-import { ICONS } from "../../images/images";
-import { useSlickSlider } from "../../app/hooks/useSlickSlider";
+import { ICONS } from "../../../images/images";
+import { useSlickSlider } from "../../../app/hooks/useSlickSlider";
 
 export default function BannerSlider() {
     const { renderSliderItems } = useSlickSlider(".banner-slider", {

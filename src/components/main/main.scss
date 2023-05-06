@@ -3,10 +3,21 @@
     grid-area: main;
     grid-template: auto 1fr / 300px 1fr;
     grid-template-areas:
-    "bread-crumbs bread-crumbs"
-    "aside content";
-    width: 100%;
+        "bread-crumbs bread-crumbs"
+        "aside content";
+
     max-width: 1120px;
     margin: 0 auto;
     margin-top: 10px;
+    height: fit-content;
+}
+
+@media(max-width:850px) {
+    .main {
+        grid-template: auto auto 1fr / 1fr;
+        grid-template-areas:
+            "bread-crumbs"
+            "aside"
+            "content";
+    }
 }

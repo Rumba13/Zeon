@@ -1,14 +1,14 @@
 import "./main.scss"
 import Aside from "../aside/aside";
 import Content from "../content/content";
-import BreadCrumb from "./breadCrumb/breadCrumb";
 import BreadCrumbs from "./breadCrumbs/breadCrumbs";
+import { DynamicAdaptive } from "../dynamicAdaptive/dynamicAdaptive";
 
 export default function Main() {
     return <main className="main">
-        <BreadCrumbs/>
-        
-            
+        <DynamicAdaptive.Delete at={850}>
+            <BreadCrumbs />
+        </DynamicAdaptive.Delete>
         <Aside />
         <Content />
     </main>

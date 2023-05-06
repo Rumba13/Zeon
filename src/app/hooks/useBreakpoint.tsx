@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+import useForceUpdate from "./useForceUpdate";
 
 type AdaptiveComponentType = {
     component: JSX.Element,
@@ -38,7 +39,6 @@ class AdaptiveComponents {
             const currentComponentObject = this.componentObjects[i];
             const mediaQueryList = window.matchMedia(`(max-width: ${currentComponentObject.breakpointAt}px)`);
 
-
             if (currentComponentObject.isBasic || mediaQueryList.matches) {
                 componentObject = currentComponentObject;
             }
@@ -46,17 +46,12 @@ class AdaptiveComponents {
 
         return componentObject.component
     }
-    public addResizeListener(listener: Function) {
-        window.addEventListener("resize", listener as any);
-    }
 }
 
 export default function useBreakpoint(component: JSX.Element) {
-    const [, forceUpdate] = useReducer(x => x + 1, 0);
+    const forceUpdate = useForceUpdate();
     const adaptiveComponents = new AdaptiveComponents(component);
     
-    useEffect(() => adaptiveComponents.addResizeListener(forceUpdate), [])
-    //TODO find better way to optimize adaptive in react
-
+    useEffect(() => window.addEventListener("resize", forceUpdate), [])
     return adaptiveComponents;
 }

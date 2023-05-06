@@ -6,11 +6,13 @@
     display: flex;
     max-width: var(--content-max-width);
     margin: 0 auto;
+    height: 100%;
 
-    & > .sub-header-menu-blur-zone .overflow-scroll{
+    &>.sub-header-menu-blur-zone .overflow-scroll {
         display: flex;
         align-items: center;
     }
+
 
     &>.user-menu {
         margin-left: auto;

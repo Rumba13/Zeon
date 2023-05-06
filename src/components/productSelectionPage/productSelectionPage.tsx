@@ -6,6 +6,7 @@ import Tags from "./tags/tags";
 import { TagType } from "./tags/tag/tag";
 import { ProductType } from "./products/productsItem/productsItem";
 import { ICONS } from "../../images/images";
+import { DynamicAdaptive } from "../dynamicAdaptive/dynamicAdaptive";
 
 
 const testTags: TagType[] = [
@@ -85,6 +86,8 @@ const testProducts: ProductType[] = [
 
 export default function ProductSelectionPage() {
     return <div className="product-selection-page">
+        <DynamicAdaptive.Insert moveToMark="aside-content"/>
+
         <h2 className="product-selection-page__title">title</h2>
         <Tags tags={testTags} />
         <Filters />
