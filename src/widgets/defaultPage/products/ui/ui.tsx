@@ -1,11 +1,25 @@
-import { MiniProductDto } from "../../../../pages/defaultPage/libs/dtos";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
+import { Loading } from "../../../../shared/loading";
 import Product from "../../../product/product";
+import { loadDefaultProductsThunk } from "../model/model";
 
 type PropsType = {
-    products: MiniProductDto[]
+
 }
 
-export function ProductsWidget({ products }: PropsType) {
+export function Products({ }: PropsType) {
+    const dispatch = useAppDispatch();
+    const products = useAppSelector((state) => state.defaultPage.products);
+
+    useEffect(() => {
+        dispatch(loadDefaultProductsThunk());
+    }, [dispatch, loadDefaultProductsThunk])
+
+    if (!products) {
+        return <Loading />
+    }
+
     return <div className="products">
         <div className="product-container">
             {products.map(product => <Product {...product} />)}

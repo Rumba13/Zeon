@@ -1,12 +1,20 @@
 import { useSlickSlider } from "../../../shared/useSlickSlider";
-import { ICONS } from "../../../images/images";
 import "./bannerSlider.scss";
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "../../../shared/hooks";
+import { Loading } from "../../../shared/loading";
+import { loadSliderItemsThunk } from "../model/model";
 
-type PropsType = {
-    items:string[]
-}
+type PropsType = {}
 
-export default function BannerSlider({items}:PropsType) {
+export default function BannerSlider({}: PropsType) {
+    const dispatch = useAppDispatch();
+    const sliderItems = useAppSelector((state) => state.defaultPage.sliderItems);
+
+    useEffect(() => {
+        dispatch(loadSliderItemsThunk());
+    }, [dispatch, loadSliderItemsThunk])
+
     const { renderSliderItems } = useSlickSlider(".banner-slider", {
         infinite: true,
         slidesToShow: 1,
@@ -17,5 +25,9 @@ export default function BannerSlider({items}:PropsType) {
         autoplaySpeed: 3000
     })
 
-    return <div className="banner-slider">{renderSliderItems(items)}</div>
+    if (!sliderItems) {
+        return <Loading />
+    }
+
+    return <div className="banner-slider">{renderSliderItems(sliderItems)}</div>
 }

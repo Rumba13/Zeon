@@ -12,10 +12,9 @@ export type DefaultPageStateType = {
     sliderItems?: SliderItemDto[]
 }
 
-const defaultPageService = new DefaultPageService(new DefaultPageRepository());
+export const defaultPageService = new DefaultPageService(new DefaultPageRepository());
 
-const initialState: DefaultPageStateType = {
-}
+const initialState: DefaultPageStateType = {}
 
 const defaultPageSlice = createSlice({
     name: "defaultPage",
@@ -39,32 +38,8 @@ const defaultPageSlice = createSlice({
         setBannerSliderItems(state: DefaultPageStateType, action: PayloadAction<SliderItemDto[]>) {
             state.sliderItems = action.payload
         },
-    },
-    extraReducers(builder) {
-    },
+    }
 })
 
-export const loadAdvertisingBannerThunk = createAsyncThunk("defaultPage/loadAdvertisingBannerThunk",
-    async (_: SyntheticEvent | void, thunkAPI) => {
-        const advertisingBanner = await defaultPageService.getAdvertisingBanner();
-        thunkAPI.dispatch(setAdvertisingBanner(advertisingBanner))
-    });
-export const loadDefaultProductsThunk = createAsyncThunk("defaultPage/loadDefaultProductsThunk",
-    async (_: SyntheticEvent | void, thunkAPI) => {
-        const products = await defaultPageService.getDefaultProducts();
-        thunkAPI.dispatch(setDefaultProducts(products))
-    });
-export const loadProductSelectionsThunk = createAsyncThunk("defaultPage/loadProductSelectionsThunk",
-    async (_: SyntheticEvent | void, thunkAPI) => {
-        const productSelections = await defaultPageService.getProductSelections();
-        thunkAPI.dispatch(setProductSelections(productSelections))
-    });
-export const loadSliderItemsThunk = createAsyncThunk("defaultPage/loadSliderItemsThunk",
-    async (_: SyntheticEvent | void, thunkAPI) => {
-        const sliderItems = await defaultPageService.getSliderItems();
-        thunkAPI.dispatch(setBannerSliderItems(sliderItems));
-    });
-
-
-const { setDefaultProducts, setAdvertisingBanner, setProductSelections, setBannerSliderItems } = defaultPageSlice.actions;
+export const { setDefaultProducts, setAdvertisingBanner, setProductSelections, setBannerSliderItems } = defaultPageSlice.actions;
 export default defaultPageSlice.reducer;

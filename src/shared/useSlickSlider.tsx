@@ -17,7 +17,7 @@ export function useSlickSlider(slickSliderClass: string, options: JQuerySlickOpt
 
     useEffect(() => {
         $(slickSliderClass).not('.slick-initialized').slick(options)
-    }, [])
+    }, [slickSliderClass, options])
 
     return { renderSliderItems, addSlickEventListener }
 }
