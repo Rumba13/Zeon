@@ -4,37 +4,48 @@ import BannerSlider from "./bannerSlider/bannerSlider";
 import ProductSelection from "../productSelection/productSelection";
 import { ICONS } from "../../images/images";
 import { ProductType } from "../productSelectionPage/products/productsItem/productsItem";
-import Product from "./product/product";
 import { DynamicAdaptive } from "../dynamicAdaptive/dynamicAdaptive";
+import Product from "../../widgets/product/product";
+import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
+import { useEffect } from "react";
+import { setAdvertisingBannerThunk, setDefaultProductsThunk, setProductSelectionsThunk } from "../../pages/defaultPage";
+import { Loading } from "../../shared/loading";
 
-const testProducts: ProductType[] = [
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-    { code: 1, previewImage: "https://clck.ru/33XVQd", price: 10000, type: "dakdjsid", batchNumber: " adsddada", manufacturer: "dasda" },
-
-]
 
 export default function DefaultPage() {
+    const state = useAppSelector(state => state.defaultPage);
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(setProductSelectionsThunk())
+        dispatch(setDefaultProductsThunk())
+        dispatch(setAdvertisingBannerThunk())
+    }, [dispatch, setProductSelectionsThunk, setDefaultProductsThunk, setAdvertisingBannerThunk])
+
     return <div className="content">
-        <DynamicAdaptive.Insert moveToMark="aside-content" />
+
+        {state.advertisingBanner
+            ? <Banner img={state.advertisingBanner.img} href={state.advertisingBanner.href} />
+            : <Loading />
+        }
 
 
-        <Banner imageSrc={ICONS.autoZeon} href={"https://avtozeon.by/"} />
         <BannerSlider />
-        <DynamicAdaptive.Delete at={850}>
-            <div className="product-selections">
-                <ProductSelection href="#" title="Техника Holt" imageSrc={ICONS.holt} />
-                <ProductSelection href="#" title="Обогреватели" imageSrc={ICONS.heating} />
+
+        <div className="product-selections">
+            {state.productSelections
+                ? state.productSelections.map(selection => <ProductSelection {...selection} />)
+                : <Loading />
+            }
+        </div>
+
+        <div className="products">
+            <div className="product-container">
+                {state.products
+                    ? state.products.map(product => <Product {...product} />)
+                    : <Loading />
+                }
             </div>
-        </DynamicAdaptive.Delete>
-
-        <div className="products">{testProducts.map(product => <Product {...product} />)}</div>
-
+        </div>
     </div>
-
 }

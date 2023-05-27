@@ -1,12 +1,12 @@
 import "./banner.scss";
 
 type PropsType = {
-    imageSrc:any,
+    img:any,
     href: string,
 }
 
-export default function Banner({imageSrc,href}:PropsType) {
+export default function Banner({img,href}:PropsType) {
     return <a href={href} className="banner">
-        <img src={imageSrc} alt="" />
+        <img src={img} alt="" />
     </a>
 }

@@ -24,12 +24,17 @@
     }
 
     & div.products {
+        width: 100%;
         display: flex;
-        justify-content: center; //TODO find way to center products and make them wrap from the left
-        flex-wrap: wrap;
         margin-top: 20px;
         margin-bottom: 38px;
         grid-area: products;
+        justify-content: center;
+    }
+    & .product-container {
+        display: flex;
+        justify-content: left; //TODO find way to center products and make them wrap from the left
+        flex-wrap: wrap;
     }
 }
 

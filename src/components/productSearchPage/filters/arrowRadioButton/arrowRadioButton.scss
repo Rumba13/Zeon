@@ -1,0 +1,19 @@
+.arrow-radio-button {
+    display: flex;
+    align-items: center;
+
+    & .arrow {
+        width: 4px;
+        height: 7px;
+        margin-left: 7px;
+        transform: rotate(90deg);
+
+        &._up {
+            transform: rotate(270deg);
+        }
+    }
+
+    &.active {
+        color: var(--active-color);
+    }
+}

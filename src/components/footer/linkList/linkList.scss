@@ -1,0 +1,25 @@
+.link-list {
+    & .link-list__title {
+        margin-bottom: 10px;
+        font-size: 21px;
+        font-weight: 600;
+        color: white;
+    }
+
+    & .link-list__list {
+        
+        .link-list-item__link:hover {
+            border-bottom: 1px solid transparent;
+        }
+
+        .link-list-item__link{
+            font-size: 15px;
+            line-height: 2;
+            border-bottom: 1px solid var(--text-color);
+            color: var(--text-color);
+            transition: all 0.4s;
+        }
+    }
+
+
+}

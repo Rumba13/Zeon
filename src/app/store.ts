@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { ProductPageReducer } from '../pages/productPage';
+import { productSelectionPageReducer } from '../pages/productSelectionPage';
+import { defaultPageReducer } from '../pages/defaultPage';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    productPage:ProductPageReducer,
+    productSelectionPage: productSelectionPageReducer,
+    defaultPage: defaultPageReducer
   },
 });
 

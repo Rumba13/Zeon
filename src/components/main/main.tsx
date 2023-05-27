@@ -6,9 +6,7 @@ import { DynamicAdaptive } from "../dynamicAdaptive/dynamicAdaptive";
 
 export default function Main() {
     return <main className="main">
-        <DynamicAdaptive.Delete at={850}>
-            <BreadCrumbs />
-        </DynamicAdaptive.Delete>
+        <BreadCrumbs />
         <Aside />
         <Content />
     </main>

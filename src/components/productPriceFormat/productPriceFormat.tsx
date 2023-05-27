@@ -1,7 +1,7 @@
 import "./productPriceFormat.scss";
 
 type PropsType = {
-    children?:number
+    children?:number | string
 }
 
 export default function ProductPriceFormat({children}:PropsType) {
@@ -9,5 +9,5 @@ export default function ProductPriceFormat({children}:PropsType) {
         return <></>
     }
     
-    return <>{`${children.toFixed(2).replace(".", ",")} руб`}</>
+    return <>{`${Number(children).toFixed(2).replace(".", ",")} руб`}</>
 }
