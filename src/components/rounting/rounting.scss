@@ -1,4 +1,4 @@
-.content {
+.default-page {
     display: grid;
     grid-template: min-content min-content auto / 2fr 1fr;
     grid-template-areas:
@@ -39,7 +39,7 @@
 }
 
 @media(max-width:850px) {
-    .content {
+    .default-page {
         grid-template: min-content min-content auto / 100%;
         grid-template-areas:
             "banner banner"

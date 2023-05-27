@@ -1,9 +1,0 @@
-diff a/src/components/main/main.tsx b/src/components/main/main.tsx	(rejected hunks)
-@@ -14,6 +13,7 @@ export default function Main() {
-             <BreadCrumb key="TEST_KEY╨С╨╗╨╛╨║╨╕ ╨┐╨╕╤В╨░╨╜╨╕╤П" to="">╨С╨╗╨╛╨║╨╕ ╨┐╨╕╤В╨░╨╜╨╕╤П</BreadCrumb>
-             <BreadCrumb key="TEST_KEY╨С╨╗╨╛╨║ ╨┐╨╕╤В╨░╨╜╨╕╤П be quiet!" to="">╨С╨╗╨╛╨║ ╨┐╨╕╤В╨░╨╜╨╕╤П be quiet! Pure Power 11 700W CM BN299</BreadCrumb>
-         </BreadCrumbs>
-+        
-         <Aside />
-         <Content />
-     </main>

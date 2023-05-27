@@ -12,7 +12,7 @@ import ProductImporter from "./productImporter/productImporter";
 import ProductOnCredit from "./productOnCredit/productInCredit";
 import AddProductToCart from "./addProductToCart/addProductToCart";
 import AddProductToComparison from "./addProductToComparison/addProductToComparison";
-import { useAppDispatch, useAppSelector } from "../../app/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../shared/hooks";
 import { getProductByIdThunk, ProductPageState, setProductPageId } from "../../pages/productPage/index";
 import { useParams } from "react-router-dom";
 import { LoadingStatus } from "../../shared/loadingStatus";

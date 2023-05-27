@@ -1,5 +1,5 @@
 import { ICONS } from "../../../images/images";
-import { AdvertisingBannerDto, MiniProductDto, ProductSelectionDto } from "../libs/dtos";
+import { AdvertisingBannerDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos";
 
 export default class DefaultPageRepository {
     constructor() { }
@@ -38,6 +38,14 @@ export default class DefaultPageRepository {
                 title: "Обогреватели",
                 img: ICONS.heating
             }
+        ])
+    }
+    public async getSliderItems(): Promise<SliderItemDto[]> {
+        return await Promise.resolve([
+            ICONS.slider1,
+            ICONS.slider2,
+            ICONS.slider3,
+            ICONS.slider4,
         ])
     }
 }
