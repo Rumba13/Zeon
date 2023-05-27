@@ -29,7 +29,6 @@ export default function DefaultPage() {
             : <Loading />
         }
 
-
         <BannerSlider />
 
         <div className="product-selections">

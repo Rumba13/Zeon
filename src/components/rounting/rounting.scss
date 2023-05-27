@@ -1,0 +1,49 @@
+.content {
+    display: grid;
+    grid-template: min-content min-content auto / 2fr 1fr;
+    grid-template-areas:
+        "banner banner"
+        "banner-slider product-selections"
+        "products products";
+    grid-area: content;
+    height: fit-content;
+
+    margin-left: 20px;
+
+    & .banner {
+        margin-bottom: 25px;
+        grid-area: banner;
+    }
+
+    & .banner-slider {
+        grid-area: banner-slider;
+    }
+
+    & .product-selections {
+        grid-area: product-selections;
+    }
+
+    & div.products {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 38px;
+        grid-area: products;
+        justify-content: center;
+    }
+    & .product-container {
+        display: flex;
+        justify-content: left; //TODO find way to center products and make them wrap from the left
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:850px) {
+    .content {
+        grid-template: min-content min-content auto / 100%;
+        grid-template-areas:
+            "banner banner"
+            "banner-slider product-selections"
+            "products products";
+    }
+}

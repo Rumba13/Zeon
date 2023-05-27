@@ -1,13 +1,12 @@
 import "./main.scss"
 import Aside from "../aside/aside";
-import Content from "../content/content";
+import Routing from "../rounting/rounting";
 import BreadCrumbs from "./breadCrumbs/breadCrumbs";
-import { DynamicAdaptive } from "../dynamicAdaptive/dynamicAdaptive";
 
 export default function Main() {
     return <main className="main">
         <BreadCrumbs />
         <Aside />
-        <Content />
+        <Routing />
     </main>
 }   
