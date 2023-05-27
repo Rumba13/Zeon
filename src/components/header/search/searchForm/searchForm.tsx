@@ -3,7 +3,7 @@ import Icon from "../../../icon/icon";
 import { Field } from "formik";
 import { ICONS } from "../../../../images/images";
 import BigSearchIcon from "../../../../images/searchBig.png"
-import useBreakpoint from "../../../../app/hooks/useBreakpoint";
+import useBreakpoint from "../../../../shared/useBreakpoint";
 
 type PropsType = {
     isFixedSearchOpen: boolean,

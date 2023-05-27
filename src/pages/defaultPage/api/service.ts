@@ -1,5 +1,5 @@
 import { LoadingStatus } from "../../../shared/loadingStatus";
-import { MiniProductDto, AdvertisingBannerDto, ProductSelectionDto, DefaultPageDto } from "../libs/dtos";
+import { MiniProductDto, AdvertisingBannerDto, ProductSelectionDto, DefaultPageDto, SliderItemDto } from "../libs/dtos";
 import DefaultPageRepository from "./repository";
 
 export default class DefaultPageService {
@@ -18,7 +18,7 @@ export default class DefaultPageService {
     public async getProductSelections(): Promise<ProductSelectionDto[]> {
         return await this.repository.getProductSelections();
     }
-    public async getDefaultPageData():Promise<DefaultPageDto> {
+    public async getDefaultPageData(): Promise<DefaultPageDto> {
         const products = await this.repository.getDefaultProducts();
         const advertisingBanner = await this.repository.getAdvertisingBanner();
         const productSelections = await this.repository.getProductSelections();
@@ -28,5 +28,8 @@ export default class DefaultPageService {
             productSelections,
             products,
         }
+    }
+    public async getSliderItems(): Promise<SliderItemDto[]> {
+        return await this.repository.getSliderItems()
     }
 }

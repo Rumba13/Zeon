@@ -1,10 +1,10 @@
 import "./phoneNumbersLowWidth.scss";
-import useBreakpoint from "../../../app/hooks/useBreakpoint";
+import useBreakpoint from "../../../shared/useBreakpoint";
 import PhoneNumbers from "../../phoneNumbers/phoneNumbers";
 import Timetable from "../timetable/timetable";
 import Icon from "../../icon/icon";
 import Sprite from "../../sprite/sprite";
-import usePopup from "../../../app/hooks/usePopup";
+import usePopup from "../../../shared/usePopup";
 import { useState } from "react";
 
 export default function PhoneNumbersLowWidth() {

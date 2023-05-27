@@ -25,3 +25,5 @@ export type DefaultPageDto = {
     advertisingBanner: AdvertisingBannerDto
     products: MiniProductDto[]
 }
+
+export type SliderItemDto = string;
