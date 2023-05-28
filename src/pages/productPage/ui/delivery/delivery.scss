@@ -1,0 +1,46 @@
+.delivery-tabs {
+    margin-top: 15px;
+
+    & .tab-list {
+       display: inline-flex;
+        & .tab__title {
+            transition: all 0.4s;
+
+            &.opened {
+                font-weight: 700;
+                color: black !important;
+                background-color: white !important;
+            }
+
+            &:hover {
+                color:var(--secondary-color)
+            }
+        }
+    }
+
+    & .tab-panels {
+
+        & .tab__panel {
+
+            &.opened {
+                animation: animateContentAppear 0.4s;
+            }
+            
+            & .highlight {
+                color: var(--secondary-color);
+            }
+
+            font-size: 12px;
+            line-height: 2;
+        }
+    }
+}
+
+@keyframes animateContentAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

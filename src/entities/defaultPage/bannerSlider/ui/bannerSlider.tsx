@@ -4,26 +4,20 @@ import { loadSliderItemsThunk } from "../model/model";
 import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
 import { Loading } from "../../../../shared/loading";
 import { useSlickSlider } from "../../../../shared/useSlickSlider";
-
+import { sliderConfig } from "../lib/sliderConfig"
 type PropsType = {}
 
-export default function BannerSlider({}: PropsType) {
+export function BannerSlider({ }: PropsType) {
     const dispatch = useAppDispatch();
     const sliderItems = useAppSelector((state) => state.defaultPage.sliderItems);
-
+    
+    const { renderSliderItems } = useSlickSlider(".banner-slider", sliderConfig)
+    
     useEffect(() => {
         dispatch(loadSliderItemsThunk());
     }, [dispatch, loadSliderItemsThunk])
 
-    const { renderSliderItems } = useSlickSlider(".banner-slider", {
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 3000
-    })
+
 
     if (!sliderItems) {
         return <Loading />

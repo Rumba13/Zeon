@@ -1,0 +1,53 @@
+.product-tabs {
+    border: 0;
+
+    & .tab-list {
+        display: inline-flex !important;
+        flex-grow: 1;
+
+        & .tab__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            min-width: fit-content;
+
+            margin: 0px 5px -1px 0px;
+            padding: 15px 25px;
+            border: 1px solid var(--light-border-color);
+            border-radius: 2px;
+
+            font-weight: 700;
+            color: var(--light-text-color);
+            background-color: var(--light-third-color);
+            overflow: hidden;
+
+            &:hover {
+                color: var(--text-color);
+            }
+
+            &.opened {
+                border-top: 1px solid var(--secondary-color);
+                border-bottom: 1px solid white;
+                background-color: var(--high-opacity-color);
+                color: var(--dark-text-color);
+            }
+        }
+
+        & .icon {
+            height: 12px;
+            margin-right: 4px;
+        }
+
+
+    }
+
+    & .tab-panels {
+        border: 1px solid var(--light-border-color);
+
+        // & .tab__panel {
+
+        //     &.opened {}
+        // }
+    }
+}

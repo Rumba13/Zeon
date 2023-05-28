@@ -1,0 +1,19 @@
+.product-page {
+    display: grid;
+    grid-template: auto auto 100% auto/ 53.6% 46.4%;
+    grid-template-areas: "sliders product-information"
+                         "tabs tabs"
+                         "importer importer";
+
+    & .product-sliders {
+        grid-area: sliders;
+    }
+
+    & .product-information {
+        grid-area: product-information;
+    }
+    & .tabs {
+        grid-area: tabs;
+        margin-top: 20px;
+    }
+}

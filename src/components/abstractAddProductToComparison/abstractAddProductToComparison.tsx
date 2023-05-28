@@ -1,4 +1,4 @@
-import Button from "../productPage/button/button"
+import Button from "../../pages/productPage/ui/button/button"
 import "./abstractAddProductToComparison.scss"
 
 type PropsType = {

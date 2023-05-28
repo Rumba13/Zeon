@@ -1,5 +1,5 @@
+import Button from "../../pages/productPage/ui/button/button";
 import "./abstractAddProductToCart.scss";
-import Button from "../productPage/button/button";
 
 type PropsType = {
     id:number,
