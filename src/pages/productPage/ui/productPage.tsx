@@ -3,7 +3,6 @@ import MainProductSlider from "./mainProductSlider/mainProductSlider";
 import ManufacturerInfo from "./manufacturerInfo/manufacturerInfo"
 import Rating from "./rating/rating";
 import Delivery from "./delivery/delivery";
-import ProductPrices from "./productPrices/productPrices";
 import ProductCartOffer from "./productCartOffer/productCartOffer";
 import SubProductSlider from "./subProductSlider/subProductSlider";
 import ProductTabs from "./productTabs/productTabs";
@@ -18,6 +17,7 @@ import { ProductPageState, setProductPageId, getProductByIdThunk } from "../mode
 import { ProductTitle } from "../../../entities/productTitle";
 import { Loading } from "../../../shared/loading";
 import { useEffect } from "react";
+import { ProductPrices } from "../../../entities/productPage/productPrices";
 
 
 export function ProductPage() {
@@ -41,23 +41,26 @@ export function ProductPage() {
     }
     else {
         return <div className="product-page">
-            <div className="product-sliders">
-                <MainProductSlider sliderItems={product.photos} />
-                <SubProductSlider sliderItems={product.photos} />
+        {/* entities */}
+        {/* feature */}
+            <div className="product-sliders">{/* widget */}
+                <MainProductSlider sliderItems={product.photos} />   {/* entities */}
+                <SubProductSlider sliderItems={product.photos} />   {/* entities */}
             </div>
-            <div className="product-information">
+            <div className="product-information"> {/* widget */}
                 <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
-                <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
-                <Rating />
-                <Delivery />
-                <ProductOnCredit monthCreditValue={product.creditPriceInMonth} />
-                <ProductPrices price={product.price} cartPrice={product.discountPrice} />
-                <ProductCartOffer />
-                <AddProductToCart id={product.id} />
-                <AddProductToComparison id={product.id} />
+                <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />{/* entities */}
+                <Rating /> {/* feature */}
+                <Delivery />{/* entities */}
+                <ProductOnCredit monthCreditValue={product.creditPriceInMonth} />{/* entities */}
+                <ProductPrices price={product.price} discountPrice={product.discountPrice} />
+                <ProductCartOffer /> {/* entities */}
+                <AddProductToCart id={product.id} />{/* feature */}
+                <AddProductToComparison id={product.id} />{/* feature */}
             </div>
-            <ProductTabs />
-            <ProductImporter />
+
+            <ProductTabs />{/* entities */}
+            <ProductImporter /> {/* entities */}
         </div>
     }
 }
