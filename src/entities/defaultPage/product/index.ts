@@ -1,0 +1,1 @@
+export  {ProductMini} from "./ui/ui"

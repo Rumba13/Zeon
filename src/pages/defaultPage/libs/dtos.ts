@@ -1,5 +1,3 @@
-import { DefaultPageStateType } from "../model/model"
-
 export type MiniProductDto = {
     id: number,
     previewImg: string,

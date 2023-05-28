@@ -1,9 +1,9 @@
-import { useSlickSlider } from "../../../shared/useSlickSlider";
 import "./bannerSlider.scss";
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../../shared/hooks";
-import { Loading } from "../../../shared/loading";
 import { loadSliderItemsThunk } from "../model/model";
+import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
+import { Loading } from "../../../../shared/loading";
+import { useSlickSlider } from "../../../../shared/useSlickSlider";
 
 type PropsType = {}
 

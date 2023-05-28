@@ -1,10 +1,9 @@
 import "./styles.scss";
 import { useEffect } from "react";
-import { AdvertisingBannerDto } from "../../../pages/defaultPage/libs/dtos";
-import { useAppDispatch, useAppSelector } from "../../../shared/hooks";
-import { Loading } from "../../../shared/loading";
-import Banner from "../../../shared/banner/banner";
 import { loadAdvertisingBannerThunk } from "../model/model";
+import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
+import { Loading } from "../../../../shared/loading";
+import Banner from "../../../../shared/banner/banner";
 
 type PropsType = {
 

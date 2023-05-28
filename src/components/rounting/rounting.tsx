@@ -1,9 +1,9 @@
 import "./rounting.scss"
 import ProductPage from "../productPage/productPage"
-import Page404 from "../page404/page404"
 import { Route, Routes } from "react-router"
 import ProductSelectionPage from "../productSelectionPage/productSelectionPage"
 import { DefaultPage } from "../../pages/defaultPage"
+import { Page404 } from "../../pages/page404"
 
 export default function Routing() {
     return <Routes>

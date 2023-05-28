@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
 import { Loading } from "../../../../shared/loading";
-import Product from "../../../product/product";
 import { loadDefaultProductsThunk } from "../model/model";
+import { ProductMini } from "../../../../entities/defaultPage/product";
 
 type PropsType = {
 
@@ -22,7 +22,7 @@ export function Products({ }: PropsType) {
 
     return <div className="products">
         <div className="product-container">
-            {products.map(product => <Product {...product} />)}
+            {products.map(product => <ProductMini {...product} />)}
         </div>
     </div>
 }

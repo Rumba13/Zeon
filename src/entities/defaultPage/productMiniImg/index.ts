@@ -1,0 +1,1 @@
+export {ProductMiniImg} from "./ui/productMiniImg"
