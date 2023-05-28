@@ -1,23 +1,22 @@
 import "./productPage.scss";
 import MainProductSlider from "./mainProductSlider/mainProductSlider";
 import ManufacturerInfo from "./manufacturerInfo/manufacturerInfo"
-import Rating from "./rating/rating";
 import Delivery from "./delivery/delivery";
-import ProductCartOffer from "./productCartOffer/productCartOffer";
 import SubProductSlider from "./subProductSlider/subProductSlider";
 import ProductTabs from "./productTabs/productTabs";
 import ProductImporter from "./productImporter/productImporter";
 import ProductOnCredit from "./productOnCredit/productInCredit";
-import AddProductToCart from "./addProductToCart/addProductToCart";
-import AddProductToComparison from "./addProductToComparison/addProductToComparison";
 import { useParams } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../../shared/hooks";
-import { LoadingStatus } from "../../../shared/loadingStatus";
-import { ProductPageState, setProductPageId, getProductByIdThunk } from "../model/model";
+import { setProductPageId, getProductByIdThunk } from "../model/model";
 import { ProductTitle } from "../../../entities/productTitle";
 import { Loading } from "../../../shared/loading";
 import { useEffect } from "react";
 import { ProductPrices } from "../../../entities/productPage/productPrices";
+import { DiscountOffer } from "../../../entities/productPage/productCartOffer";
+import { AddProductToCart } from "../../../features/productPage/addProductToCart";
+import { AddProductToComparison } from "../../../features/productPage/addProductToComparison";
+import { Rating } from "../../../features/productPage/rating";
 
 
 export function ProductPage() {
@@ -41,8 +40,6 @@ export function ProductPage() {
     }
     else {
         return <div className="product-page">
-        {/* entities */}
-        {/* feature */}
             <div className="product-sliders">{/* widget */}
                 <MainProductSlider sliderItems={product.photos} />   {/* entities */}
                 <SubProductSlider sliderItems={product.photos} />   {/* entities */}
@@ -54,9 +51,9 @@ export function ProductPage() {
                 <Delivery />{/* entities */}
                 <ProductOnCredit monthCreditValue={product.creditPriceInMonth} />{/* entities */}
                 <ProductPrices price={product.price} discountPrice={product.discountPrice} />
-                <ProductCartOffer /> {/* entities */}
-                <AddProductToCart id={product.id} />{/* feature */}
-                <AddProductToComparison id={product.id} />{/* feature */}
+                <DiscountOffer />
+                <AddProductToCart id={product.id} />
+                <AddProductToComparison id={product.id} />
             </div>
 
             <ProductTabs />{/* entities */}

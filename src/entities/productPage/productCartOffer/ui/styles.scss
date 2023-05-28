@@ -1,9 +1,9 @@
-.product-cart-offer {
+.discount-offer {
     align-items: center;
     margin-top: 15px;
     text-align: center;
 
-    & .cart-offer__icon {
+    & .discount-offer__icon {
         display: inline-block;
         vertical-align: middle;
         height: 14px;
@@ -15,19 +15,19 @@
         color: var(--dark-text-color);
         background: var(--primary-color);
 
-        &:hover ~ .cart-offer__text {
+        &:hover ~ .discount-offer__text {
             color: var(--secondary-color);
             border-color: var(--secondary-color);
         }
     }
 
-    & .cart-offer__text {
+    & .discount-offer__text {
         border-bottom: 1px dashed var(--primary-color);
         font-size: 15px;
         line-height: 1.4;
     }
 
-    & .cart-offer__text:hover {
+    & .discount-offer__text:hover {
         color: var(--secondary-color);
         border-color: var(--secondary-color);
     }

@@ -1,11 +1,11 @@
+import "./styles.scss";
 import React from "react";
-import "./rating.scss";
 
 type PropsType = {
 
 }
 
-export default function Rating({ }: PropsType) {
+export function Rating({ }: PropsType) {
     const activeStarsRef = React.createRef<HTMLDivElement>();
     const starsCounter = React.createRef<HTMLDivElement>();
 

@@ -2,9 +2,9 @@ import "./productsItem.scss";
 import Characteristics from "./characteristics/characteristics";
 import DeliveryDate from "./deliveryDate/deliveryDate";
 import ProductPriceFormat from "../../../productPriceFormat/productPriceFormat";
-import AddProductToComparison from "./addProductToComparison/addProductToComparison";
 import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
 import ShadowOnHover from "../../../shadowOnHover/shadowOnHover";
+import AddProductToComparison from "./addProductToComparison/addProductToComparison";
 
 export type ProductType = {
     type: string,
@@ -41,7 +41,7 @@ export default function ProductItem({ type, manufacturer, batchNumber, code, cha
             </span>
             <span className="product-price__hint">*цена с клубной картой</span>
             <ProductItemAddProductToCart id={code} />
-            <AddProductToComparison id={code} />
+            {/* <AddProductToComparison id={code} /> */}
         </div>
     </ShadowOnHover>
 }

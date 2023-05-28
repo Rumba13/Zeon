@@ -1,4 +1,4 @@
-import AddProductToCart from "../../../../abstractAddProductToCart/abstractAddProductToCart";
+import { PrimaryProductButton } from "../../../../../shared/primaryProductButton";
 import Sprite from "../../../../sprite/sprite";
 import "./addProductToCart.scss";
 
@@ -7,8 +7,8 @@ type PropsType = {
 }
 
 export default function ProductItemAddProductToCart({id}:PropsType) {
-    return <AddProductToCart id={id}>
+    return <PrimaryProductButton>
         <Sprite yOffset={-876}/>
         <span className="cart-button__text">Купить</span>
-    </AddProductToCart>
+    </PrimaryProductButton>
 }
