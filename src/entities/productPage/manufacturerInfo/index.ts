@@ -1,0 +1,1 @@
+export {ManufacturerInfo} from "./ui/ui"

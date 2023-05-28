@@ -1,11 +1,4 @@
 import "./productPage.scss";
-import MainProductSlider from "./mainProductSlider/mainProductSlider";
-import ManufacturerInfo from "./manufacturerInfo/manufacturerInfo"
-import Delivery from "./delivery/delivery";
-import SubProductSlider from "./subProductSlider/subProductSlider";
-import ProductTabs from "./productTabs/productTabs";
-import ProductImporter from "./productImporter/productImporter";
-import ProductOnCredit from "./productOnCredit/productInCredit";
 import { useParams } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../../shared/hooks";
 import { setProductPageId, getProductByIdThunk } from "../model/model";
@@ -16,7 +9,14 @@ import { ProductPrices } from "../../../entities/productPage/productPrices";
 import { DiscountOffer } from "../../../entities/productPage/productCartOffer";
 import { AddProductToCart } from "../../../features/productPage/addProductToCart";
 import { AddProductToComparison } from "../../../features/productPage/addProductToComparison";
-import { Rating } from "../../../features/productPage/rating";
+import { MainProductSlider } from "../../../entities/productPage/mainProductSlider";
+import { SubProductSlider } from "../../../entities/productPage/subProductSlider";
+import { ManufacturerInfo } from "../../../entities/productPage/manufacturerInfo";
+import { Delivery } from "../../../entities/productPage/delivery";
+import { ProductOnCredit } from "../../../entities/productPage/productOnCredit";
+import { Rating } from "../../../features/rating";
+import { ProductImporter } from "../../../entities/productPage/productImporter";
+import { ProductTabs } from "../../../entities/productPage/productTabs";
 
 
 export function ProductPage() {
@@ -40,24 +40,24 @@ export function ProductPage() {
     }
     else {
         return <div className="product-page">
-            <div className="product-sliders">{/* widget */}
-                <MainProductSlider sliderItems={product.photos} />   {/* entities */}
-                <SubProductSlider sliderItems={product.photos} />   {/* entities */}
+            <div className="product-sliders">{/* layout */}
+                <MainProductSlider sliderItems={product.photos} />
+                <SubProductSlider sliderItems={product.photos} />  
             </div>
-            <div className="product-information"> {/* widget */}
+            <div className="product-information"> {/* layout */}
                 <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
-                <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />{/* entities */}
-                <Rating /> {/* feature */}
-                <Delivery />{/* entities */}
-                <ProductOnCredit monthCreditValue={product.creditPriceInMonth} />{/* entities */}
+                <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
+                <Rating /> 
+                <Delivery />
+                <ProductOnCredit monthCreditValue={product.creditPriceInMonth} />
                 <ProductPrices price={product.price} discountPrice={product.discountPrice} />
                 <DiscountOffer />
                 <AddProductToCart id={product.id} />
                 <AddProductToComparison id={product.id} />
             </div>
 
-            <ProductTabs />{/* entities */}
-            <ProductImporter /> {/* entities */}
+            <ProductTabs />
+            <ProductImporter />
         </div>
     }
 }

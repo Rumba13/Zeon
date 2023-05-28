@@ -1,0 +1,1 @@
+export {SubProductSlider} from "./ui/ui"
