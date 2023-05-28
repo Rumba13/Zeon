@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router"
 import ProductSelectionPage from "../productSelectionPage/productSelectionPage"
 import { DefaultPage } from "../../pages/defaultPage"
 import { Page404 } from "../../pages/page404"
-import ProductPage from "../../pages/productPage/ui/productPage"
+import { ProductPage } from "../../pages/productPage"
 
 export default function Routing() {
     return <Routes>

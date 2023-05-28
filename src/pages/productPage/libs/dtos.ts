@@ -1,4 +1,5 @@
 export type ProductDto  = {
+    type:string,
     title: string,
     id: number,
     price: number,

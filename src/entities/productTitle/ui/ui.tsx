@@ -5,10 +5,17 @@ type PropsType = {
     type: string,
     manufacturer: string,
     batch: string,
-    href: string,
-    className?:string
+    href?: string,
+    className?: string
 }
 
 export function ProductTitle({ href, type, manufacturer, batch, className }: PropsType) {
-    return <Link className={className ?? ""} to={href}>{manufacturer}{type}{batch}</Link>;
+    const title = `${manufacturer ?? ""} ${type ?? ""} ${batch ?? ""}`
+
+
+    if (!href) {
+        return <span className={className ?? ""} >{title}</span>;
+    }
+
+    return <Link className={className ?? ""} to={href}>{title}</Link>;
 }

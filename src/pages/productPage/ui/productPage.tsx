@@ -1,6 +1,5 @@
 import "./productPage.scss";
 import MainProductSlider from "./mainProductSlider/mainProductSlider";
-import ProductTitle from "./productTitle/productTitle";
 import ManufacturerInfo from "./manufacturerInfo/manufacturerInfo"
 import Rating from "./rating/rating";
 import Delivery from "./delivery/delivery";
@@ -16,31 +15,38 @@ import { useParams } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../../shared/hooks";
 import { LoadingStatus } from "../../../shared/loadingStatus";
 import { ProductPageState, setProductPageId, getProductByIdThunk } from "../model/model";
+import { ProductTitle } from "../../../entities/productTitle";
+import { Loading } from "../../../shared/loading";
+import { useEffect } from "react";
 
 
-export default function ProductPage() {
-    const product = useAppSelector<ProductPageState>((state) => state.productPage);
+export function ProductPage() {
+    const product = useAppSelector((state) => state.productPage.product);
+    const productId = useAppSelector((state) => state.productPage.urlId);
     const dispatch = useAppDispatch();
     const { id: productIdFromUrl } = useParams();
 
-    if (product.loadingStatus === LoadingStatus.loading) {
-        if (!product.id) {
+    useEffect(() => {
+        if (!productId) {
             dispatch(setProductPageId(Number(productIdFromUrl)))
         }
         else {
-            dispatch(getProductByIdThunk(Number(product.id)))
+            dispatch(getProductByIdThunk(productId))
         }
+    }, [dispatch, getProductByIdThunk, setProductPageId, productId, productIdFromUrl])
 
-        return <span>Loading...</span>
+
+    if (!product) {
+        return <Loading />
     }
-    else if (product.loadingStatus === LoadingStatus.idle) {
+    else {
         return <div className="product-page">
             <div className="product-sliders">
                 <MainProductSlider sliderItems={product.photos} />
                 <SubProductSlider sliderItems={product.photos} />
             </div>
             <div className="product-information">
-                <ProductTitle title={product.title} id={product.id} />  {/* TODO add to title manufacturer name and batch number */}
+                <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
                 <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
                 <Rating />
                 <Delivery />
@@ -53,8 +59,5 @@ export default function ProductPage() {
             <ProductTabs />
             <ProductImporter />
         </div>
-    }
-    else {
-        return <span>Error</span>
     }
 }

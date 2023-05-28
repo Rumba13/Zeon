@@ -6,6 +6,7 @@ export default class ProductPageRepository {
 
     public async getProductById(id: number): Promise<ProductDto> {
         return await Promise.resolve({
+            type: "lerkaType",
             id: 88,
             title: "lerka",
             batch: "sdadd",
