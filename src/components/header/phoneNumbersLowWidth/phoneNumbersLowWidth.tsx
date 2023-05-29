@@ -1,11 +1,9 @@
 import "./phoneNumbersLowWidth.scss";
 import useBreakpoint from "../../../shared/useBreakpoint";
 import PhoneNumbers from "../../phoneNumbers/phoneNumbers";
-import Timetable from "../timetable/timetable";
-import Icon from "../../icon/icon";
 import Sprite from "../../sprite/sprite";
-import usePopup from "../../../shared/usePopup";
 import { useState } from "react";
+import { TimeTable } from "../../../entities/timeTable";
 
 export default function PhoneNumbersLowWidth() {
     const adaptiveComponent = useBreakpoint(<></>);
@@ -16,7 +14,7 @@ export default function PhoneNumbersLowWidth() {
             <Sprite onClick={() => togglePopup(!isPopupOpened)} yOffset={-1032} className="phone-numbers-icon" />
 
             <div className={`phone-numbers-low-width-content ${isPopupOpened ? "opened" : ""}`}>
-                <Timetable />
+                <TimeTable />
                 <PhoneNumbers />
             </div>
         </div>
