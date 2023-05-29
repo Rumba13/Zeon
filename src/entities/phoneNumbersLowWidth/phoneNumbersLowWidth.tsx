@@ -1,9 +1,9 @@
 import "./phoneNumbersLowWidth.scss";
-import useBreakpoint from "../../../shared/useBreakpoint";
-import PhoneNumbers from "../../phoneNumbers/phoneNumbers";
-import Sprite from "../../sprite/sprite";
+import useBreakpoint from "../../shared/useBreakpoint";
+import PhoneNumbers from "../../components/phoneNumbers/phoneNumbers";
+import Sprite from "../../components/sprite/sprite";
 import { useState } from "react";
-import { TimeTable } from "../../../entities/timeTable";
+import { TimeTable } from "../timeTable";
 
 export default function PhoneNumbersLowWidth() {
     const adaptiveComponent = useBreakpoint(<></>);

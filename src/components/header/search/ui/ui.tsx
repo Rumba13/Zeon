@@ -1,11 +1,11 @@
-import "./search.scss";
+import "./styles.scss";
 import { useRef } from "react";
 import { useSearchForm } from "./useSearch";
 import { Formik, Field } from "formik";
-import FixedSearch from "./fixedSearch/fixedSearch";
-import SearchForm from "./searchForm/searchForm";
+import { SearchForm } from "../../../../features/searchForm";
+import { FixedSearch } from "../../../../features/fixedSearch";
 
-export default function Search() {
+export function Search() {
     const fixedSearchRef = useRef<HTMLInputElement>(null);
     const { openFixedSearch, closeFixedSearch, onSubmit, isFixedSearchOpen } = useSearchForm(fixedSearchRef);
 

@@ -1,8 +1,11 @@
 .search {
     grid-area: search;
     position: relative;
-    display: flex;
-    
+    display: none;
+
+    &.opened {
+      display: flex;
+    }
     & .icon {
        height: 17px;
        width: 17px;
@@ -10,6 +13,7 @@
        right: 15px;
        top: calc(50% - 8px);
     }
+
  
     & .search__form {
        width: 100%;

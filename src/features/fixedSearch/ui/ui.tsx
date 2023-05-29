@@ -1,7 +1,7 @@
 import { Field } from "formik";
-import { ICONS } from "../../../../images/images";
-import Icon from "../../../icon/icon";
-import "./fixedSearch.scss";
+import "./styles.scss";
+import Icon from "../../../components/icon/icon";
+import { ICONS } from "../../../images/images";
 
 type PropsType = {
     fixedSearchRef: React.RefObject<HTMLInputElement>,
@@ -10,7 +10,7 @@ type PropsType = {
     closeFixedSearch: React.MouseEventHandler<Element>
 }
 
-export default function FixedSearch({ fixedSearchRef, isFixedSearchOpen, openFixedSearch, closeFixedSearch }: PropsType) {
+export function FixedSearch({ fixedSearchRef, isFixedSearchOpen, openFixedSearch, closeFixedSearch }: PropsType) {
 
     return <div ref={fixedSearchRef} className={`fixed-search ${!isFixedSearchOpen ? "hidden" : ""}`}>
         <Icon icon={ICONS.search} className="search-icon" />
