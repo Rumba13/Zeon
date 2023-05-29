@@ -18,7 +18,7 @@ export function MainProductSlider({ sliderItems }: PropsType) { //TODO refuck
         addSlickEventListener("afterChange", ({ currentSlide }: SlickEventObject) =>
             $(".sub-product-slider").slick('slickGoTo', currentSlide, true)
         )
-    }, [])
+    }, [addSlickEventListener])
 
     return <div className="main-product-slider">
         {renderSliderItems(sliderItems)}

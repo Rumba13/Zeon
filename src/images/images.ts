@@ -18,7 +18,8 @@ import iconSlider2 from "./sliderImage2.jpg"
 import iconSlider3 from "./sliderImage3.jpg"
 import iconSlider4 from "./sliderImage4.jpg"
 import iconReviews from "./reviews-icon.png"
-import iconCharacteristic from "./characterIcon.png" //??
+import iconCharacteristic from "./characterIcon.png" 
+
 import iconSale from "./sale.png"
 import iconCross from "./cross.svg";
 import iconHelp from "./help.png";
