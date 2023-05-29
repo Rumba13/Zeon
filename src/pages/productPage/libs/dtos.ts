@@ -8,5 +8,5 @@ export type ProductDto  = {
     manufacturer: string,
     batch: string,
     guaranteeMonths: number,
-    creditPriceInMonth:number
+    creditPricePerMonth:number
 }

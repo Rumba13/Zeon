@@ -5,7 +5,7 @@ type PropsType = {
 
 }
 
-export function Rating({ }: PropsType) {
+export function Rating({ }: PropsType) { //TODO refuck
     const activeStarsRef = React.createRef<HTMLDivElement>();
     const starsCounter = React.createRef<HTMLDivElement>();
 

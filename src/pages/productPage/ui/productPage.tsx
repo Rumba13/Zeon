@@ -49,7 +49,7 @@ export function ProductPage() {
                 <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
                 <Rating /> 
                 <Delivery />
-                <ProductOnCredit monthCreditValue={product.creditPriceInMonth} />
+                <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth} />
                 <ProductPrices price={product.price} discountPrice={product.discountPrice} />
                 <DiscountOffer />
                 <AddProductToCart id={product.id} />
