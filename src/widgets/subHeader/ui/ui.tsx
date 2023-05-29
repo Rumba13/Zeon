@@ -1,11 +1,11 @@
-import "./subHeader.scss";
-import UserMenu from "../../userMenu/userMenu";
-import Icon from "../../icon/icon";
+import "./styles.scss";
+import BlurZone from "../../../components/blurZone/blurZone";
+import UserMenu from "../../../components/userMenu/userMenu";
 import { ICONS } from "../../../images/images";
-import SubHeaderItem from "./subHeaderItem/subHeaderItem";
-import BlurZone from "../../blurZone/blurZone";
+import Icon from "../../../components/icon/icon";
+import { SubHeaderItem } from "../../../entities/subHeaderItem";
 
-export default function SubHeader() {
+export function SubHeader() {
     return <div className="sub-header-menu-wrapper">
         <ul className="sub-header-menu">
             <BlurZone className="sub-header-menu-blur-zone">

@@ -1,7 +1,7 @@
-import "./productComparison.scss"
-import Sprite from "../../sprite/sprite"
+import "./styles.scss"
+import Sprite from "../../../components/sprite/sprite"
 
-export default function ProductComparison() {
+export function ProductComparison() {
     return <a href="##" className="comparison product-action">
         <Sprite yOffset={-964} />
 
