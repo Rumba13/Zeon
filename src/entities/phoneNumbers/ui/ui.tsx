@@ -1,8 +1,8 @@
-import "./phoneNumbers.scss";
-import PhoneNumber from "./phoneNumber/phoneNumber";
-import Sprite from "../sprite/sprite";
+import "./styles.scss";
+import Sprite from "../../../components/sprite/sprite";
+import { PhoneNumber } from "../../phoneNumber/";
 
-export default function PhoneNumbers() {
+export function PhoneNumbers() {
     return <div className="phone-numbers-wrapper">
         <PhoneNumber number="375447300500" icon={<Sprite yOffset={-721} />} />
         <PhoneNumber number="375255300500" icon={<Sprite yOffset={-354} />} />

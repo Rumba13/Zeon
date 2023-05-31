@@ -1,11 +1,11 @@
-import "./phoneNumbersLowWidth.scss";
-import useBreakpoint from "../../shared/useBreakpoint";
-import PhoneNumbers from "../../components/phoneNumbers/phoneNumbers";
-import Sprite from "../../components/sprite/sprite";
+import "./styles.scss";
+import useBreakpoint from "../../../shared/useBreakpoint";
+import Sprite from "../../../components/sprite/sprite";
 import { useState } from "react";
-import { TimeTable } from "../timeTable";
+import { TimeTable } from "../../timeTable";
+import { PhoneNumbers } from "../../phoneNumbers";
 
-export default function PhoneNumbersLowWidth() {
+export function PhoneNumbersLowWidth() { //TODO refuck with atn-d? write HOC to select mobile or desktop component
     const adaptiveComponent = useBreakpoint(<></>);
     const [isPopupOpened, togglePopup] = useState<boolean>(true);
 
