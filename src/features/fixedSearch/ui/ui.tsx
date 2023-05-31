@@ -1,7 +1,7 @@
 import { Field } from "formik";
 import "./styles.scss";
-import Icon from "../../../components/icon/icon";
 import { ICONS } from "../../../images/images";
+import { Icon } from "../../../entities/icon";
 
 type PropsType = {
     fixedSearchRef: React.RefObject<HTMLInputElement>,
