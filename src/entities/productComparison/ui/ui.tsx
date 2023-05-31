@@ -1,5 +1,6 @@
+import { Sprite } from "../../sprite"
 import "./styles.scss"
-import Sprite from "../../../components/sprite/sprite"
+ 
 
 export function ProductComparison() {
     return <a href="##" className="comparison product-action">

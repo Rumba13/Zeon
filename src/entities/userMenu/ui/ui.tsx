@@ -1,4 +1,4 @@
-import Sprite from "../../../components/sprite/sprite";
+import { Sprite } from "../../sprite";
 import "./styles.scss";
 import {  useState } from "react";
 

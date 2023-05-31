@@ -1,10 +1,9 @@
 import "./productsItem.scss";
 import Characteristics from "./characteristics/characteristics";
 import DeliveryDate from "./deliveryDate/deliveryDate";
-import ProductPriceFormat from "../../../productPriceFormat/productPriceFormat";
 import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
 import ShadowOnHover from "../../../shadowOnHover/shadowOnHover";
-import AddProductToComparison from "./addProductToComparison/addProductToComparison";
+import { ProductPrice } from "../../../../entities/productPrice";
 
 export type ProductType = {
     type: string,
@@ -33,12 +32,11 @@ export default function ProductItem({ type, manufacturer, batchNumber, code, cha
             <Characteristics characteristics={characteristics} />
         </div>
         <div className="product-price">
-            <span className="product-price__price">
-                <ProductPriceFormat>{price}</ProductPriceFormat>
-            </span>
-            <span className="product-price__discount-price">
-                <ProductPriceFormat>{discountPrice}</ProductPriceFormat>*
-            </span>
+            <ProductPrice className="product-price__price" price={price} />
+            {/* TODO refuck, add DTOs */}
+            <ProductPrice className="product-price__discount-price" price={discountPrice ?? 0} />
+
+
             <span className="product-price__hint">*цена с клубной картой</span>
             <ProductItemAddProductToCart id={code} />
             {/* <AddProductToComparison id={code} /> */}

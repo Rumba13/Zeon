@@ -1,6 +1,6 @@
-import { PrimaryProductButton } from "../../../../../shared/primaryProductButton";
-import Sprite from "../../../../sprite/sprite";
 import "./addProductToCart.scss";
+import { Sprite } from "../../../../../entities/sprite";
+import { PrimaryProductButton } from "../../../../../shared/primaryProductButton";
 
 type PropsType = {
     id:number,

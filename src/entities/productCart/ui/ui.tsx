@@ -1,5 +1,6 @@
+import { Sprite } from "../../sprite";
 import "./styles.scss";
-import Sprite from "../../../components/sprite/sprite";
+ ;
 
 export function ProductCart() {
     return <a href="##" className="cart product-action">

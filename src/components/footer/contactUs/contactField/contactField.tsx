@@ -1,4 +1,4 @@
-import Sprite from "../../../sprite/sprite";
+import { Sprite } from "../../../../entities/sprite";
 import "./contactField.scss";
 
 type PropsType = {

@@ -1,6 +1,7 @@
 import "./styles.scss";
-import Sprite from "../../../components/sprite/sprite";
+ ;
 import { PhoneNumber } from "../../phoneNumber/";
+import { Sprite } from "../../sprite";
 
 export function PhoneNumbers() {
     return <div className="phone-numbers-wrapper">

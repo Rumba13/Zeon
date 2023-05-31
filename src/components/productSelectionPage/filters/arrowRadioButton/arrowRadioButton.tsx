@@ -1,7 +1,7 @@
 import { useState } from "react";
 import RadioButton from "../../../radioButton/radioButton";
-import Sprite from "../../../sprite/sprite";
 import "./arrowRadioButton.scss";
+import { Sprite } from "../../../../entities/sprite";
 
 type PropsType = {
     children: string,

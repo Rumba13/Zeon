@@ -1,5 +1,5 @@
 import "./addProductToComparison.scss";
-import Sprite from "../../../../sprite/sprite";
+ ;
 type PropsType = {
     id: number
 }

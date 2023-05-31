@@ -1,7 +1,7 @@
 import "./catalogItem.scss";
 import React, { ReactNode, useRef } from "react";
 import { useCatalog } from "../useCatalog";
-import Sprite from "../../sprite/sprite";
+import { Sprite } from "../../../entities/sprite";
 
 type PropsType = {
     children: ReactNode | ReactNode[]

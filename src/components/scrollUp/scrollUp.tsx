@@ -1,5 +1,5 @@
+import { Sprite } from "../../entities/sprite";
 import "./scrollUp.scss"
-import Sprite from "../sprite/sprite"
 import useScrollUp from "./useScrollUp"
 
 export default function ScrollUp() {

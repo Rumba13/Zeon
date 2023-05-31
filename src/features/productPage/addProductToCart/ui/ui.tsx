@@ -1,6 +1,6 @@
 import "./styles.scss";
-import Sprite from "../../../../components/sprite/sprite";
 import { PrimaryProductButton } from "../../../../shared/primaryProductButton";
+import { Sprite } from "../../../../entities/sprite";
 
 type PropsType = {
     id: number

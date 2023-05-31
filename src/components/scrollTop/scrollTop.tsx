@@ -1,5 +1,6 @@
+import { Sprite } from "../../entities/sprite";
 import "./scrollTop.scss"
-import Sprite from "../sprite/sprite"
+ 
 
 export default function ScrollTop() {
 
