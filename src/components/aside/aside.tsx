@@ -4,7 +4,7 @@ import Catalog from "../catalog/catalog"
 import SocialNetworks from "../socialNetworks/socialNetworks"
 import SingleReview from "../singleReview/singleReview"
 import { ICONS } from "../../images/images"
-import { DynamicAdaptive } from "../dynamicAdaptive/dynamicAdaptive"
+import { DynamicAdaptive } from "../legacy_dynamicAdaptive/dynamicAdaptive"
 import { MiniNews } from "../../entities/miniNews"
 
 export default function Aside() { //TODO refuck

@@ -6,7 +6,7 @@ import Tags from "./tags/tags";
 import { TagType } from "./tags/tag/tag";
 import { ProductType } from "./products/productsItem/productsItem";
 import { ICONS } from "../../images/images";
-import { DynamicAdaptive } from "../dynamicAdaptive/dynamicAdaptive";
+import { DynamicAdaptive } from "../legacy_dynamicAdaptive/dynamicAdaptive";
 
 
 const testTags: TagType[] = [

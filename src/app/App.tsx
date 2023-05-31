@@ -2,7 +2,7 @@ import './App.css';
 import Footer from '../components/footer/footer';
 import Main from '../components/main/main';
 import { BrowserRouter } from "react-router-dom";
-import DynamicAdaptiveContextComponent from '../components/dynamicAdaptive/context';
+import DynamicAdaptiveContextComponent from '../components/legacy_dynamicAdaptive/context';
 import { Header } from '../widgets/header';
 
 function App() {
