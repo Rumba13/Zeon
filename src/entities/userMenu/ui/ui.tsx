@@ -1,13 +1,11 @@
-import "./userMenu.scss";
-import Sprite from "../sprite/sprite";
-import { useUserMenu } from "./useUserMenu";
-import { useRef } from "react";
+import Sprite from "../../../components/sprite/sprite";
+import "./styles.scss";
+import {  useState } from "react";
 
-export default function UserMenu() {
-    const userMenuRef = useRef(null)
-    const { toggleUserMenu } = useUserMenu(userMenuRef);
+export function UserMenu() {
+    const [isMenuOpened, setMenuOpened] = useState<boolean>(false);
 
-    return <div onClick={toggleUserMenu} ref={userMenuRef} className="user-menu">
+    return <div className={`user-menu ${isMenuOpened ? "opened" : ""}`} onClick={() => setMenuOpened(!isMenuOpened)}>
         <Sprite yOffset={-849} />
         <a className="user-menu__title">Войти на сайт</a>
         <ul className="user-menu-actions">
