@@ -1,5 +1,5 @@
+import { Sprite } from "../../sprite";
 import "./styles.scss";
-import { Sprite } from "../../../sprite";
 
 export function LeaveReview() {
     return <div className="leave-review single-review-activity">
