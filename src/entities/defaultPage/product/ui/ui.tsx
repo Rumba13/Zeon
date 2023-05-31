@@ -1,11 +1,10 @@
 import "./product.scss";
-import { Link } from "react-router-dom";
-import ShadowOnHover from "../../../../components/shadowOnHover/shadowOnHover";
 import { MiniProductDto } from "../../../../pages/defaultPage/libs/dtos";
 import { ProductMiniImg } from "../../productMiniImg";
 import { BuyButton } from "../../../../features/buyButton";
 import { ProductPrice } from "../../../productPrice";
 import { ProductTitle } from "../../../productTitle";
+import { ShadowOnHover } from "../../../shadowOnHover";
 
 type PropsType = MiniProductDto;
 

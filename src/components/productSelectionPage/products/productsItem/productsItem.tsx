@@ -2,8 +2,8 @@ import "./productsItem.scss";
 import Characteristics from "./characteristics/characteristics";
 import DeliveryDate from "./deliveryDate/deliveryDate";
 import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
-import ShadowOnHover from "../../../shadowOnHover/shadowOnHover";
 import { ProductPrice } from "../../../../entities/productPrice";
+import { ShadowOnHover } from "../../../../entities/shadowOnHover";
 
 export type ProductType = {
     type: string,
