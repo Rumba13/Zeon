@@ -1,5 +1,5 @@
-import { ProductSelectionDto } from "../../pages/defaultPage/libs/dtos";
 import "./productSelection.scss";
+import { ProductSelectionDto } from "../../pages/defaultPage/libs/dtos";
 
 type PropsType = ProductSelectionDto;
 
