@@ -1,0 +1,42 @@
+:root {
+  --content-max-width: 1120px;
+  --default-text-color: black;
+  --default-text-size: 14px;
+  --default-text-line-height: 1.42;
+
+  //Named Colors
+  --smoky-white: #f1f1f1;
+  --weak-smoky-white: #ededec;
+  --gainsborough-color: #dddddd;
+  --white-aluminium: #aaaaaa;
+  --pale-blue: #959699;
+  --dark-grey: #888888;
+  --slate-grey: #43454c;
+  --grey-brown: #3a3a3a;
+  --transparent-black: rgba(255, 255, 255, 0.051);
+  --granite-grey: #2e3038;
+  --dark-slate-grey: #2e303899;
+
+  --irish-green: #53b220;
+  --saturated-yellow: #ecad26;
+
+  //Theme Colors
+  --primary-color: var(--weak-smoky-white);
+  --secondary-color: var(--irish-green);
+  --third-color: var(--granite-grey);
+  --light-third-color: var(--smoky-white);
+
+  --text-color: var(--pale-blue);
+  --light-text-color: var(--white-aluminium);
+  --dark-text-color: var(--grey-brown);
+
+  --border-color: var(--slate-grey);
+  --light-border-color: var(--gainsborough-color);
+  --background-hover-color: var(--transparent-black);
+
+  --active-color: var(--saturated-yellow);
+  --inactive-color: var(--dark-slate-grey);
+
+  //Unique colors
+  --user-menu-item-color: rgba(255, 255, 255, 0.4);
+}

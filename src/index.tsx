@@ -1,10 +1,10 @@
+import './app/styles/index.scss';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './app/App';
 import reportWebVitals from './app/reportWebVitals';
-import './app/index.scss';
 
 
 const container = document.getElementById('root')!;

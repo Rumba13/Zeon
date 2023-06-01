@@ -1,4 +1,5 @@
-import './App.css';
+import './styles/App.scss';
+
 import Footer from '../components/footer/footer';
 import Main from '../components/main/main';
 import { BrowserRouter } from "react-router-dom";
