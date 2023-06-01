@@ -1,6 +1,6 @@
-import "./disclaimer.scss"
+import "./styles.scss"
 
-export default function Disclaimer() {
+export function Disclaimer() {
     return <div className="disclaimer">В случае возникновения спорной ситуации Вы можете обратиться к администратору торгового зала: Алексейчик Илья Александрович – администратор. Тел.: +375 (232) 300-500
         <br />
         <br />

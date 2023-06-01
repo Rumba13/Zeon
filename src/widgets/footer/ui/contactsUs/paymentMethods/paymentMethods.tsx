@@ -1,5 +1,5 @@
 import "./paymentMethods.scss"
-import { ICONS } from "../../../../images/images"
+import { ICONS } from "../../../../../images/images"
 
 export default function PaymentMethods() {
     return <div className="payment-methods">

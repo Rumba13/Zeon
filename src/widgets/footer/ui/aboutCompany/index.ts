@@ -1,0 +1,1 @@
+export {AboutCompany} from "./ui/ui"

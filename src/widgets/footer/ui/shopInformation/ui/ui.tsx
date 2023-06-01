@@ -1,9 +1,9 @@
-import "./magazineInformation.scss";
+import "./styles.scss"
 
-export default function MagazineInformation() {
-    return <div className="magazineInformation list-wrapper">
+export function ShopInformation() {
+    return <div className="shop-information list-wrapper">
         <h2 className="title">Интернет-магазин</h2>
-        <ul className="magazineInformation-list list">
+        <ul className="shop-information-list list">
             <li className="list-item"><a className="list-item__link" href="##">Телевизоры</a> </li>
             <li className="list-item"><a className="list-item__link" href="##">Ноутбуки</a> </li>
             <li className="list-item"><a className="list-item__link" href="##">Мобильные телефоны</a> </li>

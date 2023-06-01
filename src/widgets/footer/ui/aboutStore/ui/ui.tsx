@@ -1,6 +1,6 @@
-import "./aboutStore.scss";
+import "./styles.scss";
 
-export default function AboutStore() {
+export function AboutStore() { //TODO refuck with linkList from shared(unnamed it from legacy)
     return <div className="about-store list-wrapper">
         <h2 className="title">Интернет-магазин</h2>
         <ul className="about-store-list list">

@@ -1,9 +1,9 @@
-import "./contactUs.scss"
-import ContactsField from "./contactField/contactField"
-import PaymentMethods from "./paymentMethods/paymentMethods"
-import { formatPhone } from "../../../entities/phoneNumbers"
+import "./styles.scss"
+import ContactsField from "../contactField/contactField"
+import PaymentMethods from "../paymentMethods/paymentMethods"
+import { formatPhone } from "../../../../../entities/phoneNumbers"
 
-export default function ContactsUs() {
+export function ContactsUs() {
     return <div className="contacts-us-wrapper list-wrapper">
         <h2 className="contacts-us__title title">Контактная информация</h2>
         <div className="contacts-us">
@@ -11,6 +11,6 @@ export default function ContactsUs() {
             <ContactsField spriteYOffset={-204} text="corp@zeon.by" link="mailto:corp@zeon.by" />
             <ContactsField spriteYOffset={-693} text="Беларусь, Гомель, ул. Советская 39, оф.14" />
         </div>
-       <PaymentMethods/>
+        <PaymentMethods />
     </div>
 }

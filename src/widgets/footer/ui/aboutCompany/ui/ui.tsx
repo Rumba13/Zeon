@@ -1,6 +1,6 @@
-import "./aboutCompany.scss"
+import "./styles.scss"
 
-export default function AboutCompany() {
+export function AboutCompany() {
     return <div className="aboutCompany list-wrapper">
         <h2 className="title">Компания</h2>
 
