@@ -1,9 +1,9 @@
-import "./productSelection.scss";
-import { ProductSelectionDto } from "../../pages/defaultPage/libs/dtos";
+import "./styles.scss";
+import { ProductSelectionDto } from "../../../../../pages/defaultPage/libs/dtos";
 
 type PropsType = ProductSelectionDto;
 
-export default function ProductSelection({ href, img, title }: PropsType) {
+export function ProductSelection({ href, img, title }: PropsType) {
     // TODO refactoring
     return <div className="product-selection">
         <a href={href} className="product-selection__title">{title}</a>

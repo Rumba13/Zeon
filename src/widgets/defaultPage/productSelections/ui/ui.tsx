@@ -1,10 +1,8 @@
 import { useEffect } from "react";
-import ProductSelection from "../../../../components/productSelection/productSelection";
-import banner from "../../../../shared/ui//banner/banner";
-
 import { Loading } from "../../../../shared/ui//loading";
 import { loadProductSelectionsThunk } from "../model/model";
 import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
+import { ProductSelection } from "./productSelection";
 
 type PropsType = {
 }
