@@ -1,13 +1,13 @@
-import "./catalogItem.scss";
+import "./styles.scss";
 import { ReactNode, useRef } from "react";
-import { useCatalog } from "../useCatalog";
-import { Sprite } from "../../../shared/ui//sprite";
+import { useCatalog } from "../../lib/useCatalog";
+import { Sprite } from "../../../../shared/ui/sprite";
 
 type PropsType = {
     children: ReactNode | ReactNode[]
 }
 
-export default function CatalogItem({ children }: PropsType) {
+export function CatalogItem({ children }: PropsType) {
     const catalogItemsRef = useRef(null);
     const { catalogLiOnClick, renderChildrens, title } = useCatalog(catalogItemsRef, children);
 

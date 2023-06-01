@@ -1,5 +1,5 @@
+import { CatalogItem } from "./catalogItem";
 import "./styles.scss";
-import CatalogItem from "../catalogItem/catalogItem";
 
 export function Catalog() {
     return <ul className="catalog">

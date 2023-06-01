@@ -1,9 +1,9 @@
 import './styles/app.scss';
 import { BrowserRouter } from "react-router-dom";
-import DynamicAdaptiveContextComponent from '../components/legacy_dynamicAdaptive/context';
 import { Header } from '../widgets/header';
-import Main from '../components/main/main';
 import { Footer } from '../widgets/footer';
+import DynamicAdaptiveContextComponent from '../legacy_components/legacy_dynamicAdaptive/context';
+import Main from '../legacy_components/main/main';
 
 export function App() {
   return (

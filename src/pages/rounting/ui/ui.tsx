@@ -1,9 +1,9 @@
 import "./styles.scss"
 import { Route, Routes } from "react-router"
-import ProductSelectionPage from "../../../components/productSelectionPage/productSelectionPage"
 import { DefaultPage } from "../../defaultPage"
 import { Page404 } from "../../page404"
 import { ProductPage } from "../../productPage"
+import ProductSelectionPage from "../../../legacy_components/productSelectionPage/productSelectionPage"
 
 export function Routing() {
     return <Routes>

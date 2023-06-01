@@ -1,11 +1,11 @@
 import "./styles.scss"
 import { ICONS } from "../../../images/images"
-import { DynamicAdaptive } from "../../../components/legacy_dynamicAdaptive/dynamicAdaptive"
 import { MiniNews } from "../../../entities/miniNews"
 import { MiniReview } from "../../../entities/miniReview"
 import Banner from "../../../shared/ui/banner/banner"
-import { Catalog } from "../../../components/catalog"
 import { SocialNetworks } from "../../../entities/socialNetworks"
+import { Catalog } from "../../catalog"
+import { DynamicAdaptive } from "../../../legacy_components/legacy_dynamicAdaptive/dynamicAdaptive"
 
 export function Aside() { //TODO refuck
     return <aside className="aside">
