@@ -1,4 +1,4 @@
-import { ICONS } from "../../../images/images";
+import { ICONS } from "../../../../images/images";
 
 export type LogoColors = "white" | "dark";
 

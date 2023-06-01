@@ -1,9 +1,9 @@
 import "./styles.scss";
-import useBreakpoint from "../../../shared/useBreakpoint";
+import useBreakpoint from "../../../shared/lib/useBreakpoint";
 import { useState } from "react";
 import { TimeTable } from "../../timeTable";
 import { PhoneNumbers } from "../../phoneNumbers";
-import { Sprite } from "../../../shared/sprite";
+import { Sprite } from "../../../shared/ui//sprite";
 
 export function PhoneNumbersLowWidth() { //TODO refuck with atn-d? write HOC to select mobile or desktop component
     const adaptiveComponent = useBreakpoint(<></>);

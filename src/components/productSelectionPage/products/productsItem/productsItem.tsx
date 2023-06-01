@@ -3,7 +3,7 @@ import Characteristics from "./characteristics/characteristics";
 import DeliveryDate from "./deliveryDate/deliveryDate";
 import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
 import { ProductPrice } from "../../../../entities/productPrice";
-import { ShadowOnHover } from "../../../../shared/shadowOnHover";
+import { ShadowOnHover } from "../../../../shared/ui//shadowOnHover";
 
 export type ProductType = {
     type: string,

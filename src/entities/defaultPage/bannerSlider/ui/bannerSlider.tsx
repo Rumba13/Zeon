@@ -1,10 +1,10 @@
 import "./bannerSlider.scss";
 import { useEffect } from "react";
 import { loadSliderItemsThunk } from "../model/model";
-import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
-import { Loading } from "../../../../shared/loading";
-import { useSlickSlider } from "../../../../shared/useSlickSlider";
+import { Loading } from "../../../../shared/ui//loading";
+import { useSlickSlider } from "../../../../shared/lib/useSlickSlider";
 import { sliderConfig } from "../lib/sliderConfig"
+import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
 type PropsType = {}
 
 export function BannerSlider({ }: PropsType) {

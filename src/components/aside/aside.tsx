@@ -3,7 +3,7 @@ import { ICONS } from "../../images/images"
 import { DynamicAdaptive } from "../legacy_dynamicAdaptive/dynamicAdaptive"
 import { MiniNews } from "../../entities/miniNews"
 import { MiniReview } from "../../entities/miniReview"
-import Banner from "../../shared/banner/banner"
+import Banner from "../../shared/ui//banner/banner"
 import { Catalog } from "../catalog"
 import { SocialNetworks } from "../../entities/socialNetworks"
 

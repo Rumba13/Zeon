@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { useSlickSlider, SlickEventObject } from "../../../../shared/useSlickSlider";
+import { useSlickSlider, SlickEventObject } from "../../../../shared/lib/useSlickSlider";
 import { useEffect } from "react";
 import { sliderConfig } from "../lib/sliderConfig";
 

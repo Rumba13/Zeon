@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import ProductSelection from "../../../../components/productSelection/productSelection";
-import banner from "../../../../shared/banner/banner";
-import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
-import { Loading } from "../../../../shared/loading";
+import banner from "../../../../shared/ui//banner/banner";
+
+import { Loading } from "../../../../shared/ui//loading";
 import { loadProductSelectionsThunk } from "../model/model";
+import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
 
 type PropsType = {
 }
@@ -22,6 +23,6 @@ export function ProductSelections({}: PropsType) {
     }
 
     return <div className="product-selections">
-        {selections.map(selection => <ProductSelection {...selection} key={selection.img} />)}
+        {selections.map((selection:any) => <ProductSelection {...selection} key={selection.img} />)}
     </div>
 }

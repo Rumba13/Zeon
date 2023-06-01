@@ -1,9 +1,8 @@
 import "./productPage.scss";
 import { useParams } from "react-router-dom";
-import { useAppSelector, useAppDispatch } from "../../../shared/hooks";
 import { setProductPageId, getProductByIdThunk } from "../model/model";
 import { ProductTitle } from "../../../entities/productTitle";
-import { Loading } from "../../../shared/loading";
+import { Loading } from "../../../shared/ui//loading";
 import { useEffect } from "react";
 import { ProductPrices } from "../../../entities/productPage/productPrices";
 import { DiscountOffer } from "../../../entities/productPage/productCartOffer";
@@ -17,6 +16,7 @@ import { ProductOnCredit } from "../../../entities/productPage/productOnCredit";
 import { Rating } from "../../../features/rating";
 import { ProductImporter } from "../../../entities/productPage/productImporter";
 import { ProductTabs } from "../../../entities/productPage/productTabs";
+import { useAppSelector, useAppDispatch } from "../../../shared/lib/hooks";
 
 
 export function ProductPage() {

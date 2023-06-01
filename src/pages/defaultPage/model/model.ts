@@ -1,6 +1,4 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { SyntheticEvent } from "react"
-import { LoadingStatus } from "../../../shared/loadingStatus"
 import { AdvertisingBannerDto, DefaultPageDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos"
 import DefaultPageRepository from "../api/repository"
 import DefaultPageService from "../api/service"

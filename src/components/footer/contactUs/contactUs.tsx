@@ -1,7 +1,7 @@
 import "./contactUs.scss"
 import ContactsField from "./contactField/contactField"
 import PaymentMethods from "./paymentMethods/paymentMethods"
-import { formatPhone } from "../../../entities/phoneNumber"
+import { formatPhone } from "../../../entities/phoneNumbers"
 
 export default function ContactsUs() {
     return <div className="contacts-us-wrapper list-wrapper">

@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import useForceUpdate from "../../shared/useForceUpdate";
+import useForceUpdate from "../../shared/lib/useForceUpdate";
 import { DynamicAdaptiveContext } from "./context";
 
 type PropsType = {

@@ -1,5 +1,5 @@
 import "./styles.scss"
-import { SecondaryProductButton } from "../../../../shared/secondaryProductButton"
+import { SecondaryProductButton } from "../../../../shared/ui//secondaryProductButton"
 
 type PropsType = {
     id: number,

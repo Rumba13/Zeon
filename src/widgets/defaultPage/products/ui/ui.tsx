@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../../../shared/hooks";
-import { Loading } from "../../../../shared/loading";
+import { Loading } from "../../../../shared/ui//loading";
 import { loadDefaultProductsThunk } from "../model/model";
 import { ProductMini } from "../../../../entities/defaultPage/product";
+import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
 
 type PropsType = {
 

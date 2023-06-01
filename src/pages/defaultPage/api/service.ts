@@ -1,4 +1,3 @@
-import { LoadingStatus } from "../../../shared/loadingStatus";
 import { MiniProductDto, AdvertisingBannerDto, ProductSelectionDto, DefaultPageDto, SliderItemDto } from "../libs/dtos";
 import DefaultPageRepository from "./repository";
 

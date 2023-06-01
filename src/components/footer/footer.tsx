@@ -5,7 +5,7 @@ import ContactUs from "./contactUs/contactUs";
 import CopyrightAndRules from "./copyrightAndRules/copyrightAndRules";
 import Disclaimer from "./disclaimer/disclaimer";
 import { ScrollUp } from "../../features/scrollUp";
-import { Logo } from "../../shared/logo";
+import { Logo } from "../../shared/ui//logo";
 
 export default function Footer() {
     return <div className="footer-wrapper">

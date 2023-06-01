@@ -1,4 +1,4 @@
-import { AdvertisingBannerDto } from "../../pages/defaultPage/libs/dtos";
+import { AdvertisingBannerDto } from "../../../pages/defaultPage/libs/dtos";
 import "./banner.scss";
 
 type PropsType = {

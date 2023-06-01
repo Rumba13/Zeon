@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { useSlickSlider } from "../../../../shared/useSlickSlider";
+import { useSlickSlider } from "../../../../shared/lib/useSlickSlider";
 import { sliderConfig } from "../lib/sliderConfig";
 
 type PropsType = {

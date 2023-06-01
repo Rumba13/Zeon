@@ -1,4 +1,4 @@
-import { Sprite } from "../../../shared/sprite"
+import { Sprite } from "../../../shared/ui//sprite"
 import "./styles.scss"
  
 

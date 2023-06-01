@@ -6,7 +6,7 @@ import { SubHeader } from "../../subHeader"
 import { Search } from "../search"
 import { PhoneNumbersLowWidth } from "../../../entities/phoneNumbersLowWidth"
 import { PhoneNumbers } from "../../../entities/phoneNumbers"
-import { Logo } from "../../../shared/logo"
+import { Logo } from "../../../shared/ui/logo"
 
 export function Header() {
     return <header className="header-wrapper">

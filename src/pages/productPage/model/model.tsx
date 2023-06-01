@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { LoadingStatus } from "../../../shared/loadingStatus"
 import { ProductDto } from "../libs/dtos";
 import ProductPageRepository from "../api/repository"
 import ProductPageService from "../api/service"

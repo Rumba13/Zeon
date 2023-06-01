@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useForceUpdate from "../../shared/useForceUpdate";
+import useForceUpdate from "../../shared/lib/useForceUpdate";
 
 type PropsType = {
     at: number,

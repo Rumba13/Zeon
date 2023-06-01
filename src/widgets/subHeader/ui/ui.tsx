@@ -2,8 +2,8 @@ import "./styles.scss";
 import { ICONS } from "../../../images/images";
 import { SubHeaderItem } from "../../../entities/subHeaderItem";
 import { UserMenu } from "../../../entities/userMenu";
-import { BlurZone } from "../../../shared/blurZone";
-import { Icon } from "../../../shared/icon";
+import { BlurZone } from "../../../shared/ui/blurZone";
+import { Icon } from "../../../shared/ui/icon";
 
 export function SubHeader() {
     return <div className="sub-header-menu-wrapper">
