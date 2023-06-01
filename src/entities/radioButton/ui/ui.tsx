@@ -1,6 +1,6 @@
+import "./styles.scss";
 import { Field } from "formik";
 import { useState } from "react";
-import "./radioButton.scss";
 
 type PropsType = {
     children?: React.ReactNode,
@@ -10,7 +10,7 @@ type PropsType = {
     onClick?: () => any
 }
 
-export default function RadioButton({ children, className, radioGroup, title, onClick }: PropsType) {
+export function RadioButton({ children, className, radioGroup, title, onClick }: PropsType) {
     return <label className={`radio-button ${className ?? ""}`}>
         <Field onClick={onClick}  type="radio" name={radioGroup} value={title} hidden/>
         {children}

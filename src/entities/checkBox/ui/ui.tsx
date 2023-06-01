@@ -7,7 +7,7 @@ type PropsType = {
     className:string
 }
 
-export default function CheckBox({name,title,className}:PropsType) {
+export function CheckBox({name,title,className}:PropsType) {
     return (
         <label className={`checkbox-wrapper ${className ?? ""}`}>
             <Field className="checkbox" type="checkbox" name={name} value={title}/>
