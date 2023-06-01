@@ -1,12 +1,11 @@
-import './styles/App.scss';
-
+import './styles/app.scss';
 import Footer from '../components/footer/footer';
 import Main from '../components/main/main';
 import { BrowserRouter } from "react-router-dom";
 import DynamicAdaptiveContextComponent from '../components/legacy_dynamicAdaptive/context';
 import { Header } from '../widgets/header';
 
-function App() {
+export function App() {
   return (
     <div className="app">
       <DynamicAdaptiveContextComponent>
@@ -19,5 +18,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
