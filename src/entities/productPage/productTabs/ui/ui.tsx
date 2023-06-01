@@ -1,7 +1,7 @@
 import "./styles.scss";
 import Tabs, { TabType } from "../../../../components/tabs/tabs";
 import { ICONS } from "../../../../images/images";
-import { Icon } from "../../../icon";
+import { Icon } from "../../../../shared/icon";
 
 const tabs: TabType[] = [
     {

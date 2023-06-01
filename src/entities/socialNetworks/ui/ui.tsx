@@ -1,6 +1,6 @@
 import "./styles.scss";
-import { Sprite } from "../../sprite";
 import { SocialNetwork } from "./socialNetwork";
+import { Sprite } from "../../../shared/sprite";
 
 export function SocialNetworks() {
     return <div className="social-networks">

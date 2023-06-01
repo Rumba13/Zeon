@@ -1,6 +1,6 @@
 import "./styles.scss"
-import { Sprite } from "../../../entities/sprite";
-import { scrollUp } from "../lib/scrollUp";
+import { Sprite } from "../../../shared/sprite"
+import { scrollUp } from "../lib/scrollUp"
 
 export function ScrollUp() {
 

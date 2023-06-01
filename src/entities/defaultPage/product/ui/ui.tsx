@@ -4,7 +4,7 @@ import { ProductMiniImg } from "../../productMiniImg";
 import { BuyButton } from "../../../../features/buyButton";
 import { ProductPrice } from "../../../productPrice";
 import { ProductTitle } from "../../../productTitle";
-import { ShadowOnHover } from "../../../shadowOnHover";
+import { ShadowOnHover } from "../../../../shared/shadowOnHover";
 
 type PropsType = MiniProductDto;
 

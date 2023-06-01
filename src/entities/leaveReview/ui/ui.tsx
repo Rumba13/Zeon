@@ -1,4 +1,4 @@
-import { Sprite } from "../../sprite";
+import { Sprite } from "../../../shared/sprite";
 import "./styles.scss";
 
 export function LeaveReview() {

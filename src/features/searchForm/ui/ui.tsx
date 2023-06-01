@@ -1,10 +1,10 @@
 import "./styles.scss";
 import { Field } from "formik";
 import BigSearchIcon from "../../../images/searchBig.png"
-import {Icon} from "../../../entities/icon";
 
 import { ICONS } from "../../../images/images";
 import useBreakpoint from "../../../shared/useBreakpoint";
+import { Icon } from "../../../shared/icon";
 
 type PropsType = {
     isFixedSearchOpen: boolean,

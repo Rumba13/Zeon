@@ -4,8 +4,8 @@ import AboutStore from "./aboutStore/aboutStore";
 import ContactUs from "./contactUs/contactUs";
 import CopyrightAndRules from "./copyrightAndRules/copyrightAndRules";
 import Disclaimer from "./disclaimer/disclaimer";
-import { Logo } from "../../entities/logo";
 import { ScrollUp } from "../../features/scrollUp";
+import { Logo } from "../../shared/logo";
 
 export default function Footer() {
     return <div className="footer-wrapper">

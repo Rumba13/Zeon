@@ -1,4 +1,4 @@
-import { Sprite } from "../../sprite";
+import { Sprite } from "../../../shared/sprite";
 import "./styles.scss";
 import {  useState } from "react";
 
