@@ -1,11 +1,11 @@
 import "./aside.scss"
-import SocialNetworks from "../socialNetworks/socialNetworks"
 import { ICONS } from "../../images/images"
 import { DynamicAdaptive } from "../legacy_dynamicAdaptive/dynamicAdaptive"
 import { MiniNews } from "../../entities/miniNews"
 import { MiniReview } from "../../entities/miniReview"
 import Banner from "../../shared/banner/banner"
 import { Catalog } from "../catalog"
+import { SocialNetworks } from "../../entities/socialNetworks"
 
 export default function Aside() { //TODO refuck
     return <aside className="aside">

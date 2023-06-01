@@ -1,9 +1,8 @@
-import "./socialNetworks.scss";
-import SocialNetwork from "./socialNetwork/socialNetwork";
-import { Sprite } from "../../entities/sprite";
- ;
+import "./styles.scss";
+import { Sprite } from "../../sprite";
+import { SocialNetwork } from "./socialNetwork";
 
-export default function SocialNetworks() {
+export function SocialNetworks() {
     return <div className="social-networks">
         <h2 className="social-networks__title">Мы в социальных сетях</h2>
         <div className="social-networks-list">
