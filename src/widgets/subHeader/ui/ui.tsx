@@ -1,9 +1,9 @@
 import "./styles.scss";
-import BlurZone from "../../../components/blurZone/blurZone";
 import { ICONS } from "../../../images/images";
 import { SubHeaderItem } from "../../../entities/subHeaderItem";
 import { UserMenu } from "../../../entities/userMenu";
 import { Icon } from "../../../entities/icon";
+import { BlurZone } from "../../../entities/blurZone";
 
 export function SubHeader() {
     return <div className="sub-header-menu-wrapper">

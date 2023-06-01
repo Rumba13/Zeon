@@ -42,7 +42,7 @@ class ListController {
                             The expression is wrapped by function to prevent EsLint's error no-useless-constructor
                             The expression forces browser to apply height
             */
-           
+
             ul.style.height = "0px";
         }
     }
