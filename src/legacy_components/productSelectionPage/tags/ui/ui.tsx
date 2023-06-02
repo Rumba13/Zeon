@@ -1,12 +1,12 @@
-import Tag, { TagType } from "./tag/tag";
-import "./tags.scss";
+import { SelectionTagDto } from "../../../../pages/productSelectionPage/lib/dtos";
+import Tag from "./tag";
+import "./styles.scss";
 
 type PropsType = {
-    tags: TagType[]
+    tags: SelectionTagDto[]
 }
 
-export default function Tags({ tags }: PropsType) {
-
+export function Tags({ tags }: PropsType) {
     return <div className="tags">
         <h2 className="tags__title">Популярные теги:</h2>
         <div className="tags-container">

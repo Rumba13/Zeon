@@ -4,29 +4,20 @@ import DeliveryDate from "./deliveryDate/deliveryDate";
 import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
 import { ProductPrice } from "../../../../entities/productPrice";
 import { ShadowOnHover } from "../../../../shared/ui//shadowOnHover";
+import { SelectionProductDto } from "../../../../pages/productSelectionPage/lib/dtos";
 
-export type ProductType = {
-    type: string,
-    manufacturer: string,
-    batchNumber: string
-    code: number,
-    characteristics?: ProductCharacteristicsType
-    discountPrice?: number,
-    price: number,
-    previewImage?: string,
-    deliveryDate?: Date,
-}
+export type ProductType = SelectionProductDto
 
 export type ProductCharacteristicsType = Object
 
-export default function ProductItem({ type, manufacturer, batchNumber, code, characteristics, discountPrice, price, previewImage, deliveryDate }: ProductType) {
+export default function ProductItem({ type, manufacturer, batch, code, characteristics, discountPrice, price,previewImage , deliveryDate }: ProductType) {
 
     return <ShadowOnHover className="product">
         <a href={`product/${code}`} className="product-preview-wrapper">
             <img className="product__preview" src={previewImage} alt="" />
         </a>
         <div className="product-information">
-            <span className="product-information__title">{type} {manufacturer} {batchNumber}</span>
+            <span className="product-information__title">{type} {manufacturer} {batch}</span>
             <DeliveryDate date={deliveryDate} />
             <span className="product-information__code"> Код товара: {code}</span>
             <Characteristics characteristics={characteristics} />
