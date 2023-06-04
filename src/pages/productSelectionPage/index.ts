@@ -5,6 +5,7 @@ export {
     setCurrentPage,
     setPagesCount,
     default as productSelectionPageReducer,
+    loadPaginatorThunk
     
 } from "./model/model";
 

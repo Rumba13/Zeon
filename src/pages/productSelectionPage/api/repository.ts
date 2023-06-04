@@ -1,5 +1,5 @@
 import { ICONS } from "../../../images/images"
-import { SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos"
+import { PaginatorDto, SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos"
 
 export default class ProductSelectionPageRepository {
     constructor() { }
@@ -81,5 +81,8 @@ export default class ProductSelectionPageRepository {
     }
     public async loadSelectionTitle(): Promise<SelectionTitleDto> {
         return Promise.resolve("title")
+    }
+    public loadPaginator():Promise<PaginatorDto> {
+        return Promise.resolve({currentPage:1, pagesCount:40});
     }
 }

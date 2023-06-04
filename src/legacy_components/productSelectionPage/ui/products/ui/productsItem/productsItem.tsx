@@ -2,9 +2,9 @@ import "./productsItem.scss";
 import Characteristics from "./characteristics/characteristics";
 import DeliveryDate from "./deliveryDate/deliveryDate";
 import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
-import { ProductPrice } from "../../../../entities/productPrice";
-import { ShadowOnHover } from "../../../../shared/ui//shadowOnHover";
-import { SelectionProductDto } from "../../../../pages/productSelectionPage/lib/dtos";
+import { ProductPrice } from "../../../../../../entities/productPrice";
+import { SelectionProductDto } from "../../../../../../pages/productSelectionPage/lib/dtos";
+import { ShadowOnHover } from "../../../../../../shared/ui/shadowOnHover";
 
 export type ProductType = SelectionProductDto
 

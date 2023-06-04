@@ -1,6 +1,6 @@
-import { SelectionTagDto } from "../../../../pages/productSelectionPage/lib/dtos";
 import Tag from "./tag";
 import "./styles.scss";
+import { SelectionTagDto } from "../../../../../pages/productSelectionPage/lib/dtos";
 
 type PropsType = {
     tags: SelectionTagDto[]

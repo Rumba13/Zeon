@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { SyntheticEvent } from "react";
-import { SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos";
+import { PaginatorDto, SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos";
 import ProductSelectionPageRepository from "../api/repository";
 import ProductSelectionPageService from "../api/service";
 
@@ -8,15 +8,13 @@ export type ProductSelectionPageStateType = {
     selectionTags?: SelectionTagDto[],
     products?: SelectionProductDto[],
     title?: SelectionTitleDto,
-    paginator: {
-        currentPage: number
-        pagesCount?: number
-    }
+    paginator: PaginatorDto
 }
 
 const initialState: ProductSelectionPageStateType = {
     paginator: {
-        currentPage: 1
+        currentPage: 1,
+        pagesCount: 40
     }
 }
 
@@ -61,8 +59,14 @@ export const loadSelectionTitleThunk = createAsyncThunk("productSelectionPage/lo
         const title = await productSelectionPageService.loadSelectionTitle();
         thunkApi.dispatch(setSelectionTitle(title));
     })
+export const loadPaginatorThunk = createAsyncThunk("productSelectionPage/loadPaginatorThunk",
+    async (_: SyntheticEvent | void, thunkApi) => {
+        const paginator = await productSelectionPageService.loadPaginator();
+        thunkApi.dispatch(setPagesCount(paginator.pagesCount))
+    })
 
-const { setSelectionProducts, setSelectionTags, setSelectionTitle, setCurrentPage, setPagesCount } = productSelectionPageSlice.actions;
+
+const { setSelectionProducts, setSelectionTags, setSelectionTitle, setCurrentPage, setPagesCount, } = productSelectionPageSlice.actions;
 
 export { setCurrentPage, setPagesCount, }
 export default productSelectionPageSlice.reducer;

@@ -1,6 +1,6 @@
+import { SelectionTagDto } from "../../../../../../pages/productSelectionPage/lib/dtos";
 import "./styles.scss";
 import { Link } from "react-router-dom";
-import { SelectionTagDto } from "../../../../../pages/productSelectionPage/lib/dtos";
 
 type PropsType = SelectionTagDto
 

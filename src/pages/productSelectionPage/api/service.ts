@@ -1,4 +1,4 @@
-import { SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos"
+import { PaginatorDto, SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos"
 import ProductSelectionPageRepository from "./repository";
 
 export default class ProductSelectionPageService {
@@ -16,5 +16,8 @@ export default class ProductSelectionPageService {
     }
     public async loadSelectionTitle(): Promise<SelectionTitleDto> {
         return await this.repository.loadSelectionTitle();
+    }
+    public async loadPaginator(): Promise<PaginatorDto> {
+        return await this.repository.loadPaginator();
     }
 }

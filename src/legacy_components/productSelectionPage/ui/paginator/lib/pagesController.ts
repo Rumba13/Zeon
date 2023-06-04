@@ -1,8 +1,6 @@
-import { useState } from "react";
+export type PageType = number | "..."
 
-export type PageNumberType = (number | "...")
-
-class PagesController {
+export class PagesController {
     constructor() { }
 
     private getFirstPaginatorPageNumbers(pageCount: number) {
@@ -19,7 +17,7 @@ class PagesController {
     private getFirstMidPaginatorPageNumbers(currentPage: number) {
         const paginatorNumbers = [];
 
-        for (let pageNumber = currentPage - 3; pageNumber < currentPage; pageNumber++) {
+        for (let pageNumber = currentPage - 3; pageNumber <= currentPage; pageNumber++) {
             if (pageNumber > 0) { //if page exists show it
                 paginatorNumbers.push(pageNumber)
             }
@@ -47,7 +45,7 @@ class PagesController {
 
         return paginatorNumbers;
     }
-    public removeDuplicates(paginatorNumbers: number[]): number[] {
+    private removeDuplicates(paginatorNumbers: number[]): number[] {
         paginatorNumbers.sort((a, b) => a - b);
 
         return paginatorNumbers.filter((currentPage, pageIndex, pages) => {
@@ -69,8 +67,8 @@ class PagesController {
 
         return pages;
     }
-    public addEllipsis(paginatorNumbers: number[]): PageNumberType[] {
-        const paginatorItems: PageNumberType[] = [];
+    private addEllipsis(paginatorNumbers: number[]): PageType[] {
+        const paginatorItems: PageType[] = [];
 
         paginatorNumbers.forEach((currentPage, pageIndex, pages) => {
             const nextPage = pages[pageIndex + 1];
@@ -84,14 +82,4 @@ class PagesController {
 
         return paginatorItems;
     }
-}
-
-export function usePaginator() {
-    const [currentPage, setCurrentPage] = useState<number>(3);
-    const [pageCount, setPageCount] = useState<number>(41);
-
-    const pagesController = new PagesController();
-    const pages = pagesController.getPagesNumbers(currentPage, pageCount);
-
-    return { pages, currentPage }
 }

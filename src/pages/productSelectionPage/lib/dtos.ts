@@ -1,6 +1,6 @@
 export type SelectionTagDto = {
-    title:string,
-    link:string
+    title: string,
+    link: string
 }
 
 export type SelectionProductDto = {
@@ -16,3 +16,8 @@ export type SelectionProductDto = {
 }
 
 export type SelectionTitleDto = string;
+
+export type PaginatorDto = {
+    currentPage: number
+    pagesCount: number
+}
