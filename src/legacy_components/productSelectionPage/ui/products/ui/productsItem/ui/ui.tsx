@@ -1,10 +1,10 @@
-import "./productsItem.scss";
-import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
-import { ProductPrice } from "../../../../../../entities/productPrice";
-import { SelectionProductDto } from "../../../../../../pages/productSelectionPage/lib/dtos";
-import { ShadowOnHover } from "../../../../../../shared/ui/shadowOnHover";
-import { Characteristics } from "./characteristics";
-import { DeliveryDate } from "./deliveryDate";
+import "./styles.scss";
+import { ProductPrice } from "../../../../../../../entities/productPrice";
+import { SelectionProductDto } from "../../../../../../../pages/productSelectionPage/lib/dtos";
+import { ShadowOnHover } from "../../../../../../../shared/ui/shadowOnHover";
+import { Characteristics } from "../characteristics";
+import { DeliveryDate } from "../deliveryDate";
+import { AddProductToCart } from "../addProductToCart";
 
 export type ProductType = SelectionProductDto
 
@@ -29,7 +29,7 @@ export function ProductItem({ type, manufacturer, batch, code, characteristics, 
 
 
             <span className="product-price__hint">*цена с клубной картой</span>
-            <ProductItemAddProductToCart id={code} />
+            <AddProductToCart id={code} />
             {/* <AddProductToComparison id={code} /> */}
         </div>
     </ShadowOnHover>

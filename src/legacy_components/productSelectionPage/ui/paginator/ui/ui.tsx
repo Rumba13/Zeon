@@ -1,8 +1,8 @@
 import "./styles.scss";
 import PaginatorItem from "./paginatorItem";
-import { PaginatorDto } from "../../../../pages/productSelectionPage/lib/dtos";
 import { PagesController } from "../lib/pagesController";
 import { useParams } from "react-router-dom";
+import { PaginatorDto } from "../../../../../pages/productSelectionPage/lib/dtos";
 
 type PropsType = {
     paginator: PaginatorDto

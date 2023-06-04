@@ -1,6 +1,6 @@
-import { SelectionProductDto } from "../../../../../pages/productSelectionPage/lib/dtos";
-import ProductItem from "./productsItem/productsItem";
 import "./styles.scss";
+import { SelectionProductDto } from "../../../../../pages/productSelectionPage/lib/dtos";
+import { ProductItem } from "./productsItem";
 
 type PropsType = {
     products: SelectionProductDto[]

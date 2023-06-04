@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { ProductCharacteristicsType } from "../../productsItem";
+import { ProductCharacteristicsType } from "../../ui/ui";
 import { formatCharacteristics } from "./formatCharacteristic";
 
 type PropsType = {
