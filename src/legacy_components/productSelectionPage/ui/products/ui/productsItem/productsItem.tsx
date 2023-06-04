@@ -1,16 +1,16 @@
 import "./productsItem.scss";
-import Characteristics from "./characteristics/characteristics";
-import DeliveryDate from "./deliveryDate/deliveryDate";
 import ProductItemAddProductToCart from "./addProductToCart/addProductToCart";
 import { ProductPrice } from "../../../../../../entities/productPrice";
 import { SelectionProductDto } from "../../../../../../pages/productSelectionPage/lib/dtos";
 import { ShadowOnHover } from "../../../../../../shared/ui/shadowOnHover";
+import { Characteristics } from "./characteristics";
+import { DeliveryDate } from "./deliveryDate";
 
 export type ProductType = SelectionProductDto
 
 export type ProductCharacteristicsType = Object
 
-export default function ProductItem({ type, manufacturer, batch, code, characteristics, discountPrice, price,previewImage , deliveryDate }: ProductType) {
+export function ProductItem({ type, manufacturer, batch, code, characteristics, discountPrice, price,previewImage , deliveryDate }: ProductType) {
 
     return <ShadowOnHover className="product">
         <a href={`product/${code}`} className="product-preview-wrapper">

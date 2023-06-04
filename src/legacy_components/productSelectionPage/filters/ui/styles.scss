@@ -1,0 +1,13 @@
+.filters {
+    display: flex;
+    margin-bottom: 30px;
+
+    & .arrow-radio-button {
+        margin-right: 25px;
+        color:var(--inactive-color)
+    }
+
+    & > .in-order .checkbox {
+        display: none;
+    }
+}
