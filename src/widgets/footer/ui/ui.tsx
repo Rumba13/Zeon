@@ -7,7 +7,7 @@ import { ContactsUs } from "./contactsUs";
 import { CopyrightAndRules } from "./copyrightAndRules";
 import { Disclaimer } from "./disclaimer";
 
-export function Footer() {
+export function Footer() { //TODO layout
     return <div className="footer-wrapper">
             <ScrollUp />
         <footer className="footer">

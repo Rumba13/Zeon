@@ -3,9 +3,9 @@ import "./styles.scss";
 import {  useState } from "react";
 
 export function UserMenu() {
-    const [isMenuOpened, setMenuOpened] = useState<boolean>(false);
+    const [isOpened, setOpened] = useState<boolean>(false);
 
-    return <div className={`user-menu ${isMenuOpened ? "opened" : ""}`} onClick={() => setMenuOpened(!isMenuOpened)}>
+    return <div className={`user-menu ${isOpened ? "opened" : ""}`} onClick={() => setOpened(!isOpened)}>
         <Sprite yOffset={-849} />
         <a className="user-menu__title">Войти на сайт</a>
         <ul className="user-menu-actions">

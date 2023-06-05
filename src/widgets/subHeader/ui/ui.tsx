@@ -9,14 +9,14 @@ export function SubHeader() {
     return <div className="sub-header-menu-wrapper">
         <ul className="sub-header-menu">
             <BlurZone className="sub-header-menu-blur-zone">
-                <SubHeaderItem link="##" className="-with-icon">Акция<Icon icon={ICONS.sale} /></SubHeaderItem>
-                <SubHeaderItem link="##">Новости</SubHeaderItem>
-                <SubHeaderItem link="##">Рассрочка</SubHeaderItem>
-                <SubHeaderItem link="##">Как купить</SubHeaderItem>
-                <SubHeaderItem link="##">Доставка</SubHeaderItem>
-                <SubHeaderItem link="##">Контакты</SubHeaderItem>
-                <SubHeaderItem link="##">Клубная Карта</SubHeaderItem>
-                <SubHeaderItem link="##">Услуги</SubHeaderItem>
+                <SubHeaderItem href="##" className="-with-icon">Акция<Icon icon={ICONS.sale} /></SubHeaderItem>
+                <SubHeaderItem href="##">Новости</SubHeaderItem>
+                <SubHeaderItem href="##">Рассрочка</SubHeaderItem>
+                <SubHeaderItem href="##">Как купить</SubHeaderItem>
+                <SubHeaderItem href="##">Доставка</SubHeaderItem>
+                <SubHeaderItem href="##">Контакты</SubHeaderItem>
+                <SubHeaderItem href="##">Клубная Карта</SubHeaderItem>
+                <SubHeaderItem href="##">Услуги</SubHeaderItem>
             </BlurZone>
 
             <UserMenu />

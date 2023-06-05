@@ -1,7 +1,7 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { ProductPageReducer } from '../pages/productPage';
-import { productSelectionPageReducer } from '../pages/productSelectionPage';
 import { defaultPageReducer } from '../pages/defaultPage';
+import { productSelectionPageReducer } from '../pages/searchPage';
 
 export const store = configureStore({
   reducer: {

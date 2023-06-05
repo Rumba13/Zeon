@@ -1,4 +1,4 @@
-import "./page404.scss";
+import "./styles.scss";
 
 export function Page404() {
     return <div className="page-404">

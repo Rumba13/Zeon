@@ -8,12 +8,11 @@ import { PhoneNumbersLowWidth } from "../../../entities/phoneNumbersLowWidth"
 import { PhoneNumbers } from "../../../entities/phoneNumbers"
 import { Logo } from "../../../shared/ui/logo"
 
-export function Header() {
+export function Header() {//TODO layout
     return <header className="header-wrapper">
         <SubHeader />
         <div className="header">
             <PhoneNumbers />
-
             <Logo />
             <TimeTable />
             <PhoneNumbersLowWidth />

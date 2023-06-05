@@ -5,4 +5,4 @@ export {
     type ProductPageState
 } from "./model/model"
 
-export {ProductPage} from "./ui/productPage"
+export {ProductPage} from "./ui/ui"

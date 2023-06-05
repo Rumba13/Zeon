@@ -1,12 +1,12 @@
 import "./styles.scss"
 import { ICONS } from "../../../images/images"
-import { MiniNews } from "../../../entities/miniNews"
-import { MiniReview } from "../../../entities/miniReview"
-import Banner from "../../../shared/ui/banner/banner"
-import { SocialNetworks } from "../../../entities/socialNetworks"
 import { Catalog } from "../../catalog"
+import { MiniNews } from "../../../entities/AsideGroup/miniNews"
+import { MiniReview } from "../../../entities/AsideGroup/miniReview"
+import { SocialNetworks } from "../../../entities/AsideGroup/socialNetworks"
+import Banner from "../../../shared/ui/banner/banner"
 
-export function Aside() { //TODO refuck
+export function Aside() { //TODO refuck to layout
     return <aside className="aside">
         <Catalog />
         {/* <DynamicAdaptive.Cut moveTo="aside-content" at={850}> */}
