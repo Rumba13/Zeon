@@ -4,8 +4,8 @@ import { Logo } from "../../../shared/ui/logo";
 import { AboutCompany } from "./aboutCompany";
 import { AboutStore } from "./aboutStore";
 import { ContactsUs } from "./contactsUs";
-import { CopyrightAndRules } from "./copyrightAndRules";
 import { Disclaimer } from "./disclaimer";
+import { Copyright } from "./copyrightAndRules";
 
 export function Footer() { //TODO layout
     return <div className="footer-wrapper">
@@ -15,7 +15,7 @@ export function Footer() { //TODO layout
             <AboutCompany />
             <AboutStore />
             <ContactsUs />
-            <CopyrightAndRules />    
+            <Copyright />    
             <Disclaimer />
         </footer>
     </div>

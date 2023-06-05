@@ -1,1 +1,1 @@
-export {ProductCart} from "./ui/ui"
+export {ShoppingCart} from "./ui/ui"

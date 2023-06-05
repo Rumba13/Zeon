@@ -5,7 +5,6 @@ import { Sprite } from "../../../../../shared/ui/sprite"
 import { PaymentMethods } from "../paymentMethods"
 
 export function ContactsUs() {
-
     return <div className="contacts-us-container">
         <LinkList className="contacts-us" title="Контактная информация">
             <LinkListItem className="contacts-field" href="tel:375447300500">

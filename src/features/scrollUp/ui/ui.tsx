@@ -3,7 +3,6 @@ import { Sprite } from "../../../shared/ui//sprite"
 import { scrollUp } from "../lib/scrollUp"
 
 export function ScrollUp() {
-
     return <div onClick={scrollUp} className="scroll-up-wrapper">
         <div className="scroll-up">
             <Sprite yOffset={-377} />

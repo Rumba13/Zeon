@@ -44,20 +44,20 @@
     .product-action {
         grid-area: comparison;
 
-        // & .product-action__text {
-        //     display: none;
-        // }
+        & .product-action__text {
+            display: none;
+        }
 
-        // & div.sprite {
-        //     display: block;
-        // }
-        // & .counter {
-        //     border-radius: 50%;
-        // }
+        & div.sprite {
+            display: block;
+        }
+        & .counter {
+            border-radius: 50%;
+        }
     }
 
     .header {
-        grid-template: 1fr / auto 1fr auto auto;
+        grid-template: auto / auto 1fr auto auto auto;
         align-items: center;
         justify-items: right;
         grid-template-areas:
@@ -67,13 +67,12 @@
             display: none;
         }
 
-        &>.phone-numbers-wrapper {
+        &>.phone-numbers {
             display: none;
         }
 
         & .logo img {
             max-width: 120px;
-            
         }
 
     }
