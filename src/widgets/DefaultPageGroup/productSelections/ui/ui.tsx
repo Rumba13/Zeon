@@ -4,8 +4,7 @@ import { loadProductSelectionsThunk } from "../model/model";
 import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
 import { ProductSelection } from "./productSelection";
 
-type PropsType = {
-}
+type PropsType = {}
 
 export function ProductSelections({}: PropsType) {
     const dispatch = useAppDispatch();
@@ -15,12 +14,11 @@ export function ProductSelections({}: PropsType) {
         dispatch(loadProductSelectionsThunk());
     }, [dispatch, loadProductSelectionsThunk])
 
-
     if (!selections) {
         return <Loading />
     }
 
     return <div className="product-selections">
-        {selections.map((selection:any) => <ProductSelection {...selection} key={selection.img} />)}
+        {selections.map((selection) => <ProductSelection {...selection} key={selection.img} />)}
     </div>
 }

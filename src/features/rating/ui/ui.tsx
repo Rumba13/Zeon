@@ -1,39 +1,20 @@
 import "./styles.scss";
-import React from "react";
+import { useRating } from "../lib/useRating";
 
-type PropsType = {
-
-}
+type PropsType = {}
 
 export function Rating({ }: PropsType) { //TODO refuck
-    const activeStarsRef = React.createRef<HTMLDivElement>();
-    const starsCounter = React.createRef<HTMLDivElement>();
+    const { highlightStarsRef, activeStarCount, setRating } = useRating();
 
-    function setRating(rating: number) {
-        if (rating > 5) {
-            return console.warn("idiotto rating more than 5");
-        }
-        setActiveStars(rating)
-        setStarsCounter(rating);
-
-        function setActiveStars(count:number) {
-            activeStarsRef.current?.style.setProperty("--active-stars-procent", `${count * 20}%`)
-        }
-        function setStarsCounter(count: number) {
-            if (starsCounter.current) starsCounter.current.textContent = count.toString()
-        }
-    }
-    
-    return <div className="rating">
+    return <div className="rating-wrapper">
         <span className="rating__title">Рейтинг:</span>
-
-        <div className="rating-widget">
-            <div className="minus">-</div>
-            <div ref={starsCounter} className="rating-widget__rating">0</div>
-            <div className="plus">+</div>
+        <div className="rating">
+            <div className="rating__minus" onClick={() => setRating(activeStarCount - 1)}>-</div>
+            <div className="rating__star-count">{activeStarCount}</div>
+            <div className="rating__plus" onClick={() => setRating(activeStarCount + 1)}>+</div>
         </div>
         <div className="rating-stars">
-            <div ref={activeStarsRef} className="rating-stars-active"></div>
+            <div ref={highlightStarsRef} className="rating-stars-active"></div>
         </div>
     </div>
 }

@@ -1,4 +1,5 @@
 import "./styles.scss";
+import { formatTitle } from "./formatTitle";
 import { Link } from "react-router-dom";
 
 type PropsType = {
@@ -10,7 +11,7 @@ type PropsType = {
 }
 
 export function ProductTitle({ href, type, manufacturer, batch, className }: PropsType) {
-    const title = `${manufacturer ?? ""} ${type ?? ""} ${batch ?? ""}` //TODO separate to lib function
+    const title = formatTitle(manufacturer, type, batch);
 
     if (!href) {
         return <span className={className ?? ""} >{title}</span>;

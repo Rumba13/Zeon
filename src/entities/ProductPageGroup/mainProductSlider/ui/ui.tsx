@@ -20,7 +20,5 @@ export function MainProductSlider({ sliderItems }: PropsType) { //TODO refuck
         )
     }, [addSlickEventListener])
 
-    return <div className="main-product-slider">
-        {renderSliderItems(sliderItems)}
-    </div>
+    return <div className="main-product-slider">{renderSliderItems(sliderItems)}</div>
 }

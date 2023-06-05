@@ -9,7 +9,7 @@ type PropsType = {
 
 }
 
-export function DefaultPageBanner({ }: PropsType) { //TODO abstract
+export function DefaultPageBanner({ }: PropsType) { 
     const dispatch = useAppDispatch();
     const banner = useAppSelector((state) => state.defaultPage.advertisingBanner);
 

@@ -4,9 +4,7 @@ import { loadDefaultProductsThunk } from "../model/model";
 import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
 import { ProductMini } from "../../../../entities/DefaultPageGroup/product";
 
-type PropsType = {
-
-}
+type PropsType = {}
 
 export function Products({ }: PropsType) {
     const dispatch = useAppDispatch();

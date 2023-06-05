@@ -18,7 +18,6 @@ import { SubProductSlider } from "../../../entities/ProductPageGroup/subProductS
 import { AddProductToCart } from "../../../features/ProductPageGroup/addProductToCart";
 import { AddProductToComparison } from "../../../features/ProductPageGroup/addProductToComparison";
 
-
 export function ProductPage() {
     const product = useAppSelector((state) => state.productPage.product);
     const productId = useAppSelector((state) => state.productPage.urlId);
@@ -42,12 +41,12 @@ export function ProductPage() {
         return <div className="product-page">
             <div className="product-sliders">{/* layout */}
                 <MainProductSlider sliderItems={product.photos} />
-                <SubProductSlider sliderItems={product.photos} />  
+                <SubProductSlider sliderItems={product.photos} />
             </div>
             <div className="product-information"> {/* layout */}
                 <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
                 <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
-                <Rating /> 
+                <Rating />
                 <Delivery />
                 <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth} />
                 <ProductPrices price={product.price} discountPrice={product.discountPrice} />
@@ -55,7 +54,6 @@ export function ProductPage() {
                 <AddProductToCart id={product.id} />
                 <AddProductToComparison id={product.id} />
             </div>
-
             <ProductTabs />
             <ProductImporter />
         </div>

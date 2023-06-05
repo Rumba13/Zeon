@@ -1,4 +1,4 @@
-.rating {
+.rating-wrapper {
     display: flex;
     align-items: center;
 }
@@ -9,23 +9,24 @@
     color: var(--inactive-color);
 }
 
-.rating-widget {
+.rating {
     display: flex;
     justify-content: center;
     font-size: 12px;
 
     --buttons-border-radius-size: 15px;
 
-    & .plus,
-    .minus {
+    & .rating__plus,
+    .rating__minus {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 24px;
         width: 20px;
-
+        
         background: var(--primary-color);
         transition: all 0.4s;
+        user-select: none;
 
         &:hover {
             color: var(--active-color);
@@ -33,16 +34,16 @@
         }
     }
 
-    & .minus {
+    & .rating__minus {
         border-radius: var(--buttons-border-radius-size) 0 0 var(--buttons-border-radius-size);
     }
 
-    & .plus {
+    & .rating__plus {
         border-radius: 0 var(--buttons-border-radius-size) var(--buttons-border-radius-size) 0;
 
     }
 
-    & .rating-widget__rating {
+    & .rating__star-count {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -59,7 +60,7 @@
     & .rating-stars-active {
         height: 100%;
         width: var(--active-stars-procent);
-        background: url("../../../../src/images/star.png") left bottom;
+        background: url("../../../../src/images/star.png") bottom;
 
         --active-stars-procent: 0%;
     }

@@ -1,4 +1,4 @@
-import "./product.scss";
+import "./styles.scss";
 import { MiniProductDto } from "../../../../pages/defaultPage/libs/dtos";
 import { ProductMiniImg } from "../../productMiniImg";
 import { BuyButton } from "../../../../features/buyButton";

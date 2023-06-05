@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 type SliderItemsOptionsType = {
-    handleClickCreator: Function
+    onClick: Function
 }
 export type SlickEventObject = {
     currentSlide: number,
@@ -9,7 +9,7 @@ export type SlickEventObject = {
 
 export function useSlickSlider(slickSliderClass: string, options: JQuerySlickOptions) {
     function renderSliderItems(items: string[], options?: SliderItemsOptionsType) {
-        return items.map((img, index) => <div key={img} onClick={options?.handleClickCreator(index)} className="slider__item"><img src={img} /></div>) || []
+        return items.map((img, index) => <div key={img} onClick={() => options?.onClick(index)} className="slider__item"><img src={img} /></div>) || []
     }
     function addSlickEventListener(eventType: string, handler: Function) {
         $(slickSliderClass).on(eventType, (_event: any, _slick: any, currentSlide: number, nextSlide: number) => handler({ currentSlide, nextSlide }));

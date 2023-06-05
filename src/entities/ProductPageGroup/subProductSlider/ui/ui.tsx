@@ -9,13 +9,9 @@ type PropsType = {
 export function SubProductSlider({ sliderItems }: PropsType) {
     const { renderSliderItems } = useSlickSlider(".sub-product-slider", sliderConfig)
 
-    const handleClickCreator = (index: number) => {
-        return () => {
-            $(".sub-product-slider").slick('slickGoTo', index, true);
-        }
+    function handleClick(index: number) {
+        $(".sub-product-slider").slick('slickGoTo', index, true);
     }
 
-    return <div className="sub-product-slider">
-        {renderSliderItems(sliderItems, { handleClickCreator })}
-    </div>
+    return <div className="sub-product-slider">{renderSliderItems(sliderItems, { onClick: handleClick })}</div>
 }
