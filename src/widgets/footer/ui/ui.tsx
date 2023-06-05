@@ -11,7 +11,7 @@ export function Footer() { //TODO layout
     return <div className="footer-wrapper">
             <ScrollUp />
         <footer className="footer">
-            <Logo color="white" />
+            <Logo variant="white" />
             <AboutCompany />
             <AboutStore />
             <ContactsUs />

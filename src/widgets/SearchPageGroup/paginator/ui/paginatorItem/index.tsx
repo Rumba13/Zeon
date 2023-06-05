@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 type PropsType = {
     className?: string,

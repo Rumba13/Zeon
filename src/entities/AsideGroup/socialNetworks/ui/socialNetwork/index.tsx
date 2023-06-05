@@ -1,10 +1,10 @@
 import "./styles.scss";
 
 type PropsType = {
-    link:string,
+    href:string,
     icon:React.ReactNode
 }
 
-export function SocialNetwork({link, icon}:PropsType) {
-    return <a href={link} className="social-network">{icon}</a>
+export function SocialNetwork({href, icon}:PropsType) {
+    return <a href={href} className="social-network">{icon}</a>
 }

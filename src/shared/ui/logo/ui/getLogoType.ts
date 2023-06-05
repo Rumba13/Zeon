@@ -1,8 +1,8 @@
 import { ICONS } from "../../../../images/images";
 
-export type LogoColors = "white" | "dark";
+export type LogoVariant = "white" | "dark";
 
-export function getLogoType(color: LogoColors): string {
+export function getLogoType(color: LogoVariant): string {
     switch (color) { 
         case "dark":
             return ICONS.darkLogo

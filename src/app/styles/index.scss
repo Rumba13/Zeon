@@ -8,15 +8,15 @@
   color: white;
 }
 
-.list-item>a {
+.link-list-item>a {
   font-size: 15px;
 }
 
-.list-item__link:hover {
+.link-list-item__link:hover {
   border-bottom: 1px solid transparent;
 }
 
-.list-item__link {
+.link-list-item__link {
   font-size: 17px;
   line-height: 2;
   border-bottom: 1px solid var(--text-color);
