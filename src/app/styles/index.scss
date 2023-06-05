@@ -1,29 +1,6 @@
 @import "./normalize.scss";
 @import "./variables.scss";
 
-.list-wrapper>.title {
-  margin-bottom: 10px;
-  font-size: 21px;
-  font-weight: 600;
-  color: white;
-}
-
-.link-list-item>a {
-  font-size: 15px;
-}
-
-.link-list-item__link:hover {
-  border-bottom: 1px solid transparent;
-}
-
-.link-list-item__link {
-  font-size: 17px;
-  line-height: 2;
-  border-bottom: 1px solid var(--text-color);
-  color: var(--text-color);
-  transition: all 0.4s;
-}
-
 .product-action {
   display: flex;
   align-items: center;
@@ -58,5 +35,3 @@
   color: white;
   background-color: var(--secondary-color);
 }
-
-/* TODO:fix list */

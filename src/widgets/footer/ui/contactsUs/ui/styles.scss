@@ -1,24 +1,28 @@
-.contacts-us-wrapper {
-    grid-area: contacts-us; 
+.contacts-us-container {
+    grid-area: contacts-us;
 
-    & > .contacts-us {
-        display: flex;
-        flex-direction: column;
+    & .contacts-us {
         margin-bottom: 20px;
         line-height: 2;
 
-        & > .text-with-icon {
-            font-size: 20px;
-            color: var(--text-color);
+        & .link-list__title {
+            text-align: center;
+            font-size: 19px;
+        }
+
+        & .contacts-field .link-list-item__link {
+            display: flex;
+            align-items: center;
+            border: 0;
+
+            & .sprite {
+                flex: 0 0 auto;
+                padding-right: 10px;
+                margin-right: 10px;
+                width: 15px;
+                height: 18px;
+            }
         }
     }
 
-    &.list-wrapper > .contacts-us__title {
-        text-align: center;
-        font-size: 19px;
-    }
-}
-
-.contacts-field__text {
-    font-size: 15px;
 }

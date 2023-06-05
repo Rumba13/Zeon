@@ -1,12 +1,9 @@
 import "./styles.scss"
-import LinkListItem from "../../../../../shared/ui/legacy_linkList/linkListItem/linkListItem"
+import { LinkList, LinkListItem } from "../../../../../shared/ui/linkList"
 
 export function AboutCompany() {
-    return <div className="about-company list-wrapper">
-        <h2 className="about-company__title title">Компания</h2>
-
-        <ul className="about-company-list list">
-            <LinkListItem href="##" >Новости</LinkListItem>
+    return <LinkList className="about-company" title="Компания">
+        <LinkListItem href="##" >Новости</LinkListItem>
             <LinkListItem href="##" >Рассрочка</LinkListItem>
             <LinkListItem href="##" >Как купить</LinkListItem>
             <LinkListItem href="##" >Доставка</LinkListItem>
@@ -19,6 +16,5 @@ export function AboutCompany() {
             <LinkListItem href="##" >Услуги</LinkListItem>
             <LinkListItem href="##" >Страхование</LinkListItem>
             <LinkListItem href="##" >Подарочные сертификаты</LinkListItem>
-        </ul>
-    </div>
+    </LinkList>
 }
