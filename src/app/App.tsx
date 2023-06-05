@@ -1,4 +1,4 @@
-import './styles/app.scss';
+import './styles/App.scss';
 import { BrowserRouter } from "react-router-dom";
 import { Header } from '../widgets/header';
 import { Footer } from '../widgets/footer';

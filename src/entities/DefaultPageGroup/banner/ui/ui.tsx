@@ -2,8 +2,8 @@ import "./styles.scss";
 import { useEffect } from "react";
 import { loadAdvertisingBannerThunk } from "../model/model";
 import { Loading } from "../../../../shared/ui//loading";
-import Banner from "../../../../shared/ui//banner/banner";
 import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
+import { Banner } from "../../../../shared/ui/banner";
 
 type PropsType = {
 
