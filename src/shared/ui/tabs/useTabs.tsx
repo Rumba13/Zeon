@@ -1,20 +1,23 @@
-const OPENED_TAB_CLASS = "opened";
+import React from "react";
 
+export function useTabs() {
+    const tabsContentsRef = React.createRef<HTMLDivElement>();
+    const tabsPanelsRef = React.createRef<HTMLDivElement>();
 
-export default function useTabs(tabsListRef:React.RefObject<HTMLElement>, tabsPanelsRef:React.RefObject<HTMLElement>) {
-
-    function openTabByIndex(index: number) {
-        if (!tabsListRef.current || !tabsPanelsRef.current)  {
-            return null;
+    const OPENED_TAB_CLASS = "opened";
+    
+    function openTab(index: number) {
+        if (!tabsContentsRef.current || !tabsPanelsRef.current) {
+            return;
         }
 
-        const tabsList = Array.from(tabsListRef.current.children);
+        const tabsContents = Array.from(tabsContentsRef.current.children);
         const tabsPanels = Array.from(tabsPanelsRef.current.children)
 
-        closeTabs(tabsList)
+        closeTabs(tabsContents)
         closeTabs(tabsPanels)
 
-        openTab(tabsList[index])
+        openTab(tabsContents[index])
         openTab(tabsPanels[index])
 
         function openTab(element: Element) {
@@ -25,5 +28,5 @@ export default function useTabs(tabsListRef:React.RefObject<HTMLElement>, tabsPa
         }
     }
 
-    return {openTabByIndex}
+    return { openTab,tabsContentsRef,tabsPanelsRef }
 }

@@ -1,7 +1,7 @@
-import Tabs, { TabType } from "../../../../shared/ui/tabs/tabs";
+import { TabType, Tabs } from "../../../../shared/ui/tabs";
 import "./styles.scss";
 
-const testTabs: TabType[] = [
+const tabs: TabType[] = [
     {
         title: "Доставка по Гомелю",
         content: <>
@@ -21,5 +21,5 @@ const testTabs: TabType[] = [
 ]
 
 export function Delivery() {
-    return <Tabs className="delivery-tabs" tabs={testTabs} />
+    return <Tabs className="delivery-tabs" tabs={tabs} />
 }

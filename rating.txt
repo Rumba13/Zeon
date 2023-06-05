@@ -1,0 +1,54 @@
+[1mdiff --git a/src/features/rating/ui/ui.tsx b/src/features/rating/ui/ui.tsx[m
+[1mindex 47ff1be..0aac024 100644[m
+[1m--- a/src/features/rating/ui/ui.tsx[m
+[1m+++ b/src/features/rating/ui/ui.tsx[m
+[36m@@ -1,39 +1,20 @@[m
+ import "./styles.scss";[m
+[31m-import React from "react";[m
+[32m+[m[32mimport { useRating } from "../lib/useRating";[m[41m[m
+ [m
+[31m-type PropsType = {[m
+[31m-[m
+[31m-}[m
+[32m+[m[32mtype PropsType = {}[m[41m[m
+ [m
+ export function Rating({ }: PropsType) { //TODO refuck[m
+[31m-    const activeStarsRef = React.createRef<HTMLDivElement>();[m
+[31m-    const starsCounter = React.createRef<HTMLDivElement>();[m
+[31m-[m
+[31m-    function setRating(rating: number) {[m
+[31m-        if (rating > 5) {[m
+[31m-            return console.warn("idiotto rating more than 5");[m
+[31m-        }[m
+[31m-        setActiveStars(rating)[m
+[31m-        setStarsCounter(rating);[m
+[32m+[m[32m    const { highlightStarsRef, activeStarCount, setRating } = useRating();[m[41m[m
+ [m
+[31m-        function setActiveStars(count:number) {[m
+[31m-            activeStarsRef.current?.style.setProperty("--active-stars-procent", `${count * 20}%`)[m
+[31m-        }[m
+[31m-        function setStarsCounter(count: number) {[m
+[31m-            if (starsCounter.current) starsCounter.current.textContent = count.toString()[m
+[31m-        }[m
+[31m-    }[m
+[31m-    [m
+[31m-    return <div className="rating">[m
+[32m+[m[32m    return <div className="rating-wrapper">[m[41m[m
+         <span className="rating__title">Рейтинг:</span>[m
+[31m-[m
+[31m-        <div className="rating-widget">[m
+[31m-            <div className="minus">-</div>[m
+[31m-            <div ref={starsCounter} className="rating-widget__rating">0</div>[m
+[31m-            <div className="plus">+</div>[m
+[32m+[m[32m        <div className="rating">[m[41m[m
+[32m+[m[32m            <div className="rating__minus" onClick={() => setRating(activeStarCount - 1)}>-</div>[m[41m[m
+[32m+[m[32m            <div className="rating__star-count">{activeStarCount}</div>[m[41m[m
+[32m+[m[32m            <div className="rating__plus" onClick={() => setRating(activeStarCount + 1)}>+</div>[m[41m[m
+         </div>[m
+         <div className="rating-stars">[m
+[31m-            <div ref={activeStarsRef} className="rating-stars-active"></div>[m
+[32m+[m[32m            <div ref={highlightStarsRef} className="rating-stars-active"></div>[m[41m[m
+         </div>[m
+     </div>[m
+ }[m
+\ No newline at end of file[m

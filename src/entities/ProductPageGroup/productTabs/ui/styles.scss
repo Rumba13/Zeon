@@ -1,11 +1,11 @@
 .product-tabs {
     border: 0;
 
-    & .tab-list {
+    & .tab-panels {
         display: inline-flex !important;
         flex-grow: 1;
 
-        & .tab__title {
+        & .tab__panel {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,7 +42,7 @@
 
     }
 
-    & .tab-panels {
+    & .tab-contents {
         border: 1px solid var(--light-border-color);
 
         // & .tab__panel {

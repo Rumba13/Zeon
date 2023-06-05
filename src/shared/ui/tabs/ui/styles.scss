@@ -2,9 +2,10 @@
     border: 1px solid var(--primary-color);
     border-radius: 3px;
 
-    & .tab-list {
+    & .tab-panels {
+        display: inline-flex;
         
-        & .tab__title {
+        & .tab__panel {
             width: 100%;
             font-size: 14px;
             line-height: 1.4;
@@ -14,10 +15,10 @@
         }
     }
 
-    & .tab-panels {
+    & .tab-contents {
         padding: 20px;
 
-        & .tab__panel {
+        & .tab__content {
             display: none;
 
             &.opened {
