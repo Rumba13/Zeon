@@ -7,7 +7,7 @@ type PropsType = {
     sliderItems: string[]
 }
 
-export function MainProductSlider({ sliderItems }: PropsType) { //TODO refuck
+export function MainProductSlider({ sliderItems }: PropsType) {
     const { renderSliderItems, addSlickEventListener } = useSlickSlider(".main-product-slider", sliderConfig)
 
     useEffect(() => {

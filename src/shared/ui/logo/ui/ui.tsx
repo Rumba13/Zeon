@@ -6,7 +6,7 @@ type PropsType = {
     variant?: LogoVariant,
 }
 
-export function Logo({ variant = "dark" }: PropsType) { //TODO refuck rename color to variant
+export function Logo({ variant = "dark" }: PropsType) {
     return <div className="logo">
         <Link to="/">
             <img src={getLogoVariant(variant)} alt="Zыon" />

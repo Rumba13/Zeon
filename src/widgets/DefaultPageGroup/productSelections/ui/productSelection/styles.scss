@@ -3,21 +3,21 @@
     flex-direction: column;
     padding: 5px;
     border: 1px solid var(--primary-color);
-}
 
-.product-selection__title {
-    margin-bottom: 6px;
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    color: var(--dark-text-color);
-    transition: all 0.4s;
+    & .product-selection__title {
+        margin-bottom: 6px;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+        color: var(--dark-text-color);
+        transition: all 0.4s;
 
-    &:hover {
-        color: var(--secondary-color);
+        &:hover {
+            color: var(--secondary-color);
+        }
     }
-}
 
-.image-wrapper__image {
-    width: 100%;
+    & .product-selection-image__image {
+        width: 100%;
+    }
 }
