@@ -1,3 +1,4 @@
+import { getLinkToSetPage } from "./getLinkToSetPage";
 import "./styles.scss";
 import { Link } from "react-router-dom";
 
@@ -10,15 +11,7 @@ type PropsType = {
 }
 
 export default function PaginatorItem({ children: value, className, pageToSet, currentPage, pagesCount }: PropsType) {
-
-    function getLinkToSetPage(page: number) { //TODO ???
-        if (typeof page === "number" && page > 0 && page <= pagesCount) {
-            return `/search/${page}`;
-        }
-        return "";
-    }
-
     return <li className={`paginator-item ${className ?? ""} ${currentPage === +value ? "active" : ""}`} >
-        <Link className="paginator-item__link" to={getLinkToSetPage(pageToSet)} >{value}</Link>
+        <Link className="paginator-item__link" to={getLinkToSetPage(pageToSet, pagesCount)} >{value}</Link>
     </li>
 }
