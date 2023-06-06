@@ -1,9 +1,9 @@
-export type SelectionTagDto = {
+export type SearchTagDto = {
     title: string,
     link: string
 }
 
-export type SelectionProductDto = {
+export type SearchProductDto = {
     type: string,
     manufacturer: string,
     batch: string
@@ -15,7 +15,7 @@ export type SelectionProductDto = {
     deliveryDate: Date,
 }
 
-export type SelectionTitleDto = string;
+export type SearchPageTitleDto = string;
 
 export type PaginatorDto = {
     currentPage: number

@@ -1,15 +1,13 @@
 export {
-    loadSelectionProductsThunk,
-    loadSelectionTagsThunk,
-    loadSelectionTitleThunk,
+    loadSearchProductsThunk,
+    loadSearchTagsThunk,
+    loadSearchTitleThunk,
     setCurrentPage,
     setPagesCount,
-    default as productSelectionPageReducer,
+    default as searchPageReducer,
     loadPaginatorThunk,
-    
-    
 } from "./model/model";
 
 export {SearchPage} from "./ui/ui"
 
-export type {ProductSelectionPageStateType} from "./model/model" 
+export type {SearchPageStateType} from "./model/model" 

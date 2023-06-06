@@ -1,72 +1,72 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { SyntheticEvent } from "react";
-import { PaginatorDto, SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos";
-import ProductSelectionPageRepository from "../api/repository";
-import ProductSelectionPageService from "../api/service";
+import { PaginatorDto, SearchProductDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos";
+import SearchPageRepository from "../api/repository";
+import SearchPageService from "../api/service";
 
-export type ProductSelectionPageStateType = {
-    selectionTags?: SelectionTagDto[],
-    products?: SelectionProductDto[],
-    title?: SelectionTitleDto,
+export type SearchPageStateType = {
+    searchTags?: SearchTagDto[],
+    products?: SearchProductDto[],
+    title?: SearchPageTitleDto,
     paginator: PaginatorDto
 }
 
-const initialState: ProductSelectionPageStateType = {
+const initialState: SearchPageStateType = {
     paginator: {
         currentPage: 1,
         pagesCount: 40
     }
 }
 
-const productSelectionPageService = new ProductSelectionPageService(new ProductSelectionPageRepository());
+const searchPageService = new SearchPageService(new SearchPageRepository());
 
-const productSelectionPageSlice = createSlice({
-    name: "productSelectionPage",
+const searchPageSlice = createSlice({
+    name: "searchPage",
     initialState,
     reducers: {
-        setSelectionTags(state: ProductSelectionPageStateType, action: PayloadAction<SelectionTagDto[]>) {
-            state.selectionTags = action.payload
+        setSearchTags(state: SearchPageStateType, action: PayloadAction<SearchTagDto[]>) {
+            state.searchTags = action.payload
         },
-        setSelectionProducts(state: ProductSelectionPageStateType, action: PayloadAction<SelectionProductDto[]>) {
+        setSearchProducts(state: SearchPageStateType, action: PayloadAction<SearchProductDto[]>) {
             state.products = action.payload
         },
-        setSelectionTitle(state: ProductSelectionPageStateType, action: PayloadAction<SelectionTitleDto>) {
+        setSearchTitle(state: SearchPageStateType, action: PayloadAction<SearchPageTitleDto>) {
             state.title = action.payload
         },
-        setCurrentPage(state: ProductSelectionPageStateType, action: PayloadAction<number>) {
+        setCurrentPage(state: SearchPageStateType, action: PayloadAction<number>) {
             state.paginator.currentPage = action.payload
         },
-        setPagesCount(state: ProductSelectionPageStateType, action: PayloadAction<number>) {
+        setPagesCount(state: SearchPageStateType, action: PayloadAction<number>) {
             state.paginator.pagesCount = action.payload
-        },
+        }
     }
 })
 
-export const loadSelectionTagsThunk = createAsyncThunk("productSelectionPage/loadSelectionTagsThunk",
+export const loadSearchTagsThunk = createAsyncThunk("searchPage/loadSearchTagsThunk",
     async (_: SyntheticEvent | void, thunkApi) => {
-        const selectionTags = await productSelectionPageService.loadSelectionTags();
-        thunkApi.dispatch(setSelectionTags(selectionTags));
+        const searchTags = await searchPageService.loadSearchTags();
+        thunkApi.dispatch(setSearchTags(searchTags));
     })
 
-export const loadSelectionProductsThunk = createAsyncThunk("productSelectionPage/loadSelectionProductsThunk",
+export const loadSearchProductsThunk = createAsyncThunk("searchPage/loadSearchProductsThunk",
     async (_: SyntheticEvent | void, thunkApi) => {
-        const products = await productSelectionPageService.loadSelectionProducts();
-        thunkApi.dispatch(setSelectionProducts(products));
+        const products = await searchPageService.loadSearchProducts();
+        thunkApi.dispatch(setSearchProducts(products));
     })
 
-export const loadSelectionTitleThunk = createAsyncThunk("productSelectionPage/loadSelectionTitleThunk",
+export const loadSearchTitleThunk = createAsyncThunk("searchPage/loadSearchTitleThunk",
     async (_: SyntheticEvent | void, thunkApi) => {
-        const title = await productSelectionPageService.loadSelectionTitle();
-        thunkApi.dispatch(setSelectionTitle(title));
+        const title = await searchPageService.loadSearchTitle();
+        thunkApi.dispatch(setSearchTitle(title));
     })
-export const loadPaginatorThunk = createAsyncThunk("productSelectionPage/loadPaginatorThunk",
+
+export const loadPaginatorThunk = createAsyncThunk("searchPage/loadPaginatorThunk",
     async (_: SyntheticEvent | void, thunkApi) => {
-        const paginator = await productSelectionPageService.loadPaginator();
+        const paginator = await searchPageService.loadPaginator();
         thunkApi.dispatch(setPagesCount(paginator.pagesCount))
     })
 
+const { setSearchProducts, setSearchTags, setSearchTitle, setCurrentPage, setPagesCount, } = searchPageSlice.actions;
 
-const { setSelectionProducts, setSelectionTags, setSelectionTitle, setCurrentPage, setPagesCount, } = productSelectionPageSlice.actions;
-
-export { setCurrentPage, setPagesCount, }
-export default productSelectionPageSlice.reducer;
+export { setCurrentPage, setPagesCount }
+export default searchPageSlice.reducer;

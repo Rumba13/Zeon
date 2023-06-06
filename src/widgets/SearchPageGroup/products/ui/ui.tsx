@@ -1,9 +1,9 @@
 import "./styles.scss";
 import { ProductItem } from "../../../../entities/SearchPageGroup/productsItem";
-import { SelectionProductDto } from "../../../../pages/searchPage/lib/dtos";
+import { SearchProductDto } from "../../../../pages/searchPage/lib/dtos";
 
 type PropsType = {
-    products: SelectionProductDto[]
+    products: SearchProductDto[]
 }
 
 export function Products({ products }: PropsType) {

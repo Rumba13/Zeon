@@ -1,9 +1,9 @@
 import "./styles.scss";
-import { SelectionTagDto } from "../../../../pages/searchPage/lib/dtos";
+import { SearchTagDto } from "../../../../pages/searchPage/lib/dtos";
 import {Tag} from "./tag";
 
 type PropsType = {
-    tags: SelectionTagDto[]
+    tags: SearchTagDto[]
 }
 
 export function Tags({ tags }: PropsType) {

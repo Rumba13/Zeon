@@ -1,10 +1,10 @@
 import { ICONS } from "../../../images/images"
-import { PaginatorDto, SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos"
+import { SearchProductDto, PaginatorDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos";
 
-export default class ProductSelectionPageRepository {
+export default class SearchPageRepository {
     constructor() { }
 
-    public async loadSelectionTags(): Promise<SelectionTagDto[]> {
+    public async loadSearchTags(): Promise<SearchTagDto[]> {
         return Promise.resolve([
             { title: "0", link: "##", isActive: false },
             { title: "240gb", link: "##", isActive: false },
@@ -13,7 +13,7 @@ export default class ProductSelectionPageRepository {
             { title: "10000213133133123123130gb10000213133133123123130gb10000213133133123123130gb10000213133133123123130gb10000213133133123123130gb 10000213133133123123130gb", link: "##", isActive: false },
         ])
     }
-    public async loadSelectionProducts(): Promise<SelectionProductDto[]> {
+    public async loadSearchProducts(): Promise<SearchProductDto[]> {
         return new Promise(resolve => setTimeout(() => resolve([
                 {
                     manufacturer: "G.SKILL",
@@ -79,7 +79,7 @@ export default class ProductSelectionPageRepository {
                     discountPrice: 20000,
                     previewImage: ICONS.slider1} ]), 2000))
     }
-    public async loadSelectionTitle(): Promise<SelectionTitleDto> {
+    public async loadSearchPageTitle(): Promise<SearchPageTitleDto> {
         return Promise.resolve("title")
     }
     public loadPaginator():Promise<PaginatorDto> {

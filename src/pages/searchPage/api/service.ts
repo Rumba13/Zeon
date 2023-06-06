@@ -1,21 +1,21 @@
-import { PaginatorDto, SelectionProductDto, SelectionTagDto, SelectionTitleDto } from "../lib/dtos"
-import ProductSelectionPageRepository from "./repository";
+import { PaginatorDto, SearchProductDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos"
+import SearchPageRepository from "./repository";
 
-export default class ProductSelectionPageService {
-    private repository: ProductSelectionPageRepository;
+export default class SearchPageService {
+    private repository: SearchPageRepository;
 
-    constructor(repository: ProductSelectionPageRepository) {
+    constructor(repository: SearchPageRepository) {
         this.repository = repository
     }
 
-    public async loadSelectionTags(): Promise<SelectionTagDto[]> {
-        return await this.repository.loadSelectionTags();
+    public async loadSearchTags(): Promise<SearchTagDto[]> {
+        return await this.repository.loadSearchTags();
     }
-    public async loadSelectionProducts(): Promise<SelectionProductDto[]> {
-        return await this.repository.loadSelectionProducts();
+    public async loadSearchProducts(): Promise<SearchProductDto[]> {
+        return await this.repository.loadSearchProducts();
     }
-    public async loadSelectionTitle(): Promise<SelectionTitleDto> {
-        return await this.repository.loadSelectionTitle();
+    public async loadSearchTitle(): Promise<SearchPageTitleDto> {
+        return await this.repository.loadSearchPageTitle();
     }
     public async loadPaginator(): Promise<PaginatorDto> {
         return await this.repository.loadPaginator();
