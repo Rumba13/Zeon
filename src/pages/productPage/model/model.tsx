@@ -6,7 +6,6 @@ import ProductPageService from "../api/service"
 const productPageService = new ProductPageService(new ProductPageRepository()); //TODO Di container (awilix)
 
 export type ProductPageState = {
-    urlId?: number,
     product?:ProductDto
 } 
 

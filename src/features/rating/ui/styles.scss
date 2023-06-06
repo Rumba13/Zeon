@@ -54,14 +54,14 @@
 
 .rating-stars {
     height: 20px;
-    width: 82px;
+    width: 80px;
     margin-left: 15px;
 
     & .rating-stars-active {
         height: 100%;
         width: var(--active-stars-procent);
-        background: url("../../../../src/images/star.png") bottom;
-
+        background: url("../../../../src/images/star.png") 0px 16px;
+        
         --active-stars-procent: 0%;
     }
 }

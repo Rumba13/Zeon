@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 
 export function useRating() {
-    const highlightStarsRef = React.createRef<HTMLDivElement>();
-    const [activeStarCount, setStarCounterCount] = useState<number>(0);
+    const highlightedStarsRef = React.createRef<HTMLDivElement>();
+    const [ratingValue, setStarCounterCount] = useState<number>(0);
 
     function setRating(rating: number) {
         if (rating > 5 || rating < 0) {
-            return console.warn("idiotto rating more than 5");
+            return;
         }
 
         setStarCounterCount(rating);
-        highlightActiveStars(rating)
+        highlightActiveStars(rating);
 
-        function highlightActiveStars(count: number) {
-            highlightStarsRef.current?.style.setProperty("--active-stars-procent", `${count * 20}%`)
+        function highlightActiveStars(starCount: number) {
+            highlightedStarsRef.current?.style.setProperty("--active-stars-procent", `${starCount * 20}%`)
         }
     }
 
-    return { highlightStarsRef, setRating, activeStarCount }
+    return { highlightedStarsRef, setRating, ratingValue }
 }
