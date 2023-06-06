@@ -5,7 +5,7 @@ import { TimeTable } from "../../timeTable";
 import { PhoneNumbers } from "../../phoneNumbers";
 import { Sprite } from "../../../shared/ui//sprite";
 
-export function PhoneNumbersLowWidth() { //TODO refuck with atn-d? write HOC to select mobile or desktop component
+export function PhoneNumbersLowWidth() { //TODO refuck write HOC to select mobile or desktop component
     const adaptiveComponent = useBreakpoint(<></>);
     const [isPopupOpened, togglePopup] = useState<boolean>(true);
 

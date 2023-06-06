@@ -70,7 +70,7 @@ button::-moz-focus-inner {
 
 a,
 a:visited {
-    //TODO set default text color
+    color: var(--default-text-color);
     text-decoration: none;
 }
 

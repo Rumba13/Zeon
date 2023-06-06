@@ -1,6 +1,6 @@
 import "./styles.scss"
 import { TimeTable } from "../../../entities/timeTable"
-import { ProductComparison } from "../../../entities/productComparison"
+import { ComparisonCart } from "../../../entities/productComparison"
 import { SubHeader } from "../../subHeader"
 import { Search } from "../search"
 import { PhoneNumbersLowWidth } from "../../../entities/phoneNumbersLowWidth"
@@ -17,7 +17,7 @@ export function Header() {//TODO layout
             <TimeTable />
             <PhoneNumbersLowWidth />
             <Search />
-            <ProductComparison />
+            <ComparisonCart />
             <ShoppingCart />
         </div>
     </header>

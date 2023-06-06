@@ -5,7 +5,7 @@ import { AboutCompany } from "./aboutCompany";
 import { AboutStore } from "./aboutStore";
 import { ContactsUs } from "./contactsUs";
 import { Disclaimer } from "./disclaimer";
-import { Copyright } from "./copyrightAndRules";
+import { CopyrightAndRules } from "./copyrightAndRules";
 
 export function Footer() { //TODO layout
     return <div className="footer-wrapper">
@@ -15,7 +15,7 @@ export function Footer() { //TODO layout
             <AboutCompany />
             <AboutStore />
             <ContactsUs />
-            <Copyright />    
+            <CopyrightAndRules />    
             <Disclaimer />
         </footer>
     </div>

@@ -1,1 +1,1 @@
-export {ProductComparison} from "./ui/ui"
+export {ComparisonCart} from "./ui/ui"

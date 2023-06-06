@@ -1,7 +1,7 @@
 import "./styles.scss";
 import { ICONS } from "../../../../../images/images";
 
-export function Copyright() {
+export function CopyrightAndRules() {
     return <div className="copyright-and-rules">
         <span className="copyright-and-rules__copyright">© 2023 ООО «Зеон плюс»</span>
         <a href="##" className="copyright-and-rules__rules">Правила обработки персональных данных</a>

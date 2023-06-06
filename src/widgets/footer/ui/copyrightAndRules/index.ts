@@ -1,1 +1,1 @@
-export {Copyright} from "./ui/ui"
+export {CopyrightAndRules} from "./ui/ui"
