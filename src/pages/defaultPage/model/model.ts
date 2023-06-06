@@ -1,11 +1,11 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { AdvertisingBannerDto, DefaultPageDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos"
+import { BannerDto, DefaultPageDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos"
 import DefaultPageRepository from "../api/repository"
 import DefaultPageService from "../api/service"
 
 export type DefaultPageStateType = {
     productSelections?: ProductSelectionDto[]
-    advertisingBanner?: AdvertisingBannerDto
+    advertisingBanner?: BannerDto
     products?: MiniProductDto[]
     sliderItems?: SliderItemDto[]
 }
@@ -24,7 +24,7 @@ const defaultPageSlice = createSlice({
             state.products = products;
             state.productSelections = productSelections;
         },
-        setAdvertisingBanner(state: DefaultPageStateType, action: PayloadAction<AdvertisingBannerDto>) {
+        setAdvertisingBanner(state: DefaultPageStateType, action: PayloadAction<BannerDto>) {
             state.advertisingBanner = action.payload
         },
         setDefaultProducts(state: DefaultPageStateType, action: PayloadAction<MiniProductDto[]>) {

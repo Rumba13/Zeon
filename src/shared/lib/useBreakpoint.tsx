@@ -31,7 +31,7 @@ class AdaptiveComponents {
             return Number(componentObjectA.breakpointAt) - Number(componentObjectB.breakpointAt)
         });
     }
-    public getComponent() {//TODO refactor
+    public getComponent() {
         this.sortComponents();
         var componentObject = this.componentObjects[0];
 

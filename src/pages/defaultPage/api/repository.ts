@@ -1,5 +1,5 @@
 import { ICONS } from "../../../images/images";
-import { AdvertisingBannerDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos";
+import { BannerDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos";
 
 export default class DefaultPageRepository {
     constructor() { }
@@ -16,7 +16,7 @@ export default class DefaultPageRepository {
             { id: 8, previewImg: "https://clck.ru/33XVQd", discountPrice: 10000, type: "dakdjsid", batch: " adsddada", manufacturer: "dasda" },
         ])
     }
-    public async getAdvertisingBanner(): Promise<AdvertisingBannerDto> {
+    public async getAdvertisingBanner(): Promise<BannerDto> {
         return await new Promise(((resolve, reject) => {
             setTimeout(() => {
                 resolve({

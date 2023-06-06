@@ -7,7 +7,7 @@ export type MiniProductDto = {
     manufacturer: string,
 }
 
-export type AdvertisingBannerDto = {
+export type BannerDto = {
     img: string,
     href: string
 }
@@ -20,7 +20,7 @@ export type ProductSelectionDto = {
 
 export type DefaultPageDto = {
     productSelections: ProductSelectionDto[]
-    advertisingBanner: AdvertisingBannerDto
+    advertisingBanner: BannerDto
     products: MiniProductDto[]
 }
 

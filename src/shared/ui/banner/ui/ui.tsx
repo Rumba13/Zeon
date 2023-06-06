@@ -1,8 +1,8 @@
-import { AdvertisingBannerDto } from "../../../../pages/defaultPage/libs/dtos";
+import { BannerDto } from "../../../../pages/defaultPage/libs/dtos";
 import "./styles.scss";
 
-type PropsType = { //TODO change naming to BannerDto
-    banner:AdvertisingBannerDto
+type PropsType = {
+    banner:BannerDto
 }
 
 export function Banner({ banner}: PropsType) {

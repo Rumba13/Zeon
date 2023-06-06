@@ -1,4 +1,4 @@
-import { MiniProductDto, AdvertisingBannerDto, ProductSelectionDto, DefaultPageDto, SliderItemDto } from "../libs/dtos";
+import { MiniProductDto, BannerDto, ProductSelectionDto, DefaultPageDto, SliderItemDto } from "../libs/dtos";
 import DefaultPageRepository from "./repository";
 
 export default class DefaultPageService {
@@ -11,7 +11,7 @@ export default class DefaultPageService {
     public async getDefaultProducts(): Promise<MiniProductDto[]> {
         return await this.repository.getDefaultProducts();
     }
-    public async getAdvertisingBanner(): Promise<AdvertisingBannerDto> {
+    public async getAdvertisingBanner(): Promise<BannerDto> {
         return await this.repository.getAdvertisingBanner();
     }
     public async getProductSelections(): Promise<ProductSelectionDto[]> {
