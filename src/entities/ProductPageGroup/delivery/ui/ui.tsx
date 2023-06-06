@@ -1,5 +1,5 @@
-import { TabType, Tabs } from "../../../../shared/ui/tabs";
 import "./styles.scss";
+import { TabType, Tabs } from "../../../../shared/ui/tabs";
 
 const tabs: TabType[] = [
     {

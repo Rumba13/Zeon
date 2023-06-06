@@ -17,7 +17,7 @@ const tabs: TabType[] = [
             Отзывы (0)
         </>,
         content: "lers"
-    },
+    }
 ]
 
 export function ProductTabs() {

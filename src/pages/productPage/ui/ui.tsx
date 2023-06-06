@@ -32,7 +32,7 @@ export function ProductPage() {
     if (!product) {
         return <Loading />
     }
-    
+
     return <div className="product-page">
         <div className="product-sliders">{/* layout */}
             <MainProductSlider sliderItems={product.photos} />

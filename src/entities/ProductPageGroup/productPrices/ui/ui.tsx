@@ -1,4 +1,4 @@
-import "./productPrices.scss";
+import "./styles.scss";
 import { ProductPrice } from "../../../productPrice";
 
 type PropsType = {
