@@ -1,18 +1,17 @@
 import "./styles.scss";
-import { useAppDispatch, useAppSelector } from "../../../shared/lib/hooks";
 import { useEffect } from "react";
-import { loadSelectionProductsThunk, loadSelectionTagsThunk, loadSelectionTitleThunk } from "..";
+import { loadSelectionProductsThunk, loadSelectionTagsThunk, loadSelectionTitleThunk,loadPaginatorThunk } from "..";
+import { useAppDispatch, useAppSelector } from "../../../shared/lib/hooks";
 import { Loading } from "../../../shared/ui/loading";
-import { loadPaginatorThunk } from "..";
+import { PageTitle } from "../../../layouts/SearchPageGroup/pageTitle";
 import { SearchFilters } from "../../../widgets/SearchPageGroup/filters";
 import { Paginator } from "../../../widgets/SearchPageGroup/paginator";
 import { SearchPageProducts } from "../../../widgets/SearchPageGroup/products";
-import { Tags } from "../../../widgets/SearchPageGroup/tags";
-import { PageTitle } from "../../../layouts/SearchPageGroup/pageTitle";
+import { SearchTags } from "../../../widgets/SearchPageGroup/tags";
 
 export function SearchPage() {
-    const { paginator, products, selectionTags, title } = useAppSelector(state => state.productSelectionPage);
     const dispatch = useAppDispatch();
+    const { paginator, products, selectionTags, title:pageTitle } = useAppSelector(state => state.productSelectionPage);
 
     useEffect(() => {
         dispatch(loadSelectionProductsThunk());
@@ -23,9 +22,9 @@ export function SearchPage() {
 
     return <div className="product-selection-page">
 
-        {title ? <PageTitle title={title} /> : <Loading />}
+        {pageTitle ? <PageTitle title={pageTitle} /> : <Loading />}
 
-        {selectionTags ? <Tags tags={selectionTags} /> : <Loading />}
+        {selectionTags ? <SearchTags tags={selectionTags} /> : <Loading />}
 
         <SearchFilters />
 
