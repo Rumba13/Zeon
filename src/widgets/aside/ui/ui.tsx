@@ -6,7 +6,7 @@ import { MiniReview } from "../../../entities/AsideGroup/miniReview"
 import { SocialNetworks } from "../../../entities/AsideGroup/socialNetworks"
 import { Banner } from "../../../shared/ui/banner"
 
-export function Aside() { //TODO refuck to layout
+export function Aside() { //TODO layout
     return <aside className="aside">
         <Catalog />
         {/* <DynamicAdaptive.Cut moveTo="aside-content" at={850}> */}

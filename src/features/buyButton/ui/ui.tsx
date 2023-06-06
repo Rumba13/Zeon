@@ -1,5 +1,5 @@
+import "./styles.scss";
 import { Sprite } from "../../../shared/ui//sprite";
-import "./buyButton.scss";
 
 type PropsType = {
     productId: number

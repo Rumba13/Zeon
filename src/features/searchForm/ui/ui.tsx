@@ -14,7 +14,7 @@ export function SearchForm({ isFixedSearchOpen, openFixedSearch }: PropsType) {
     const adaptiveComponents = useBreakpoint(
         <div className={`search ${!isFixedSearchOpen ? "opened" : ""}`}>
             <Field onFocus={openFixedSearch} className="search__form" placeholder="Поиск по каталогу" type="text" name="search" />
-            <Icon onClick={openFixedSearch} icon={ICONS.search} className="search-icon" /> {/* TODO component?? */}
+            <Icon onClick={openFixedSearch} icon={ICONS.search} className="search-icon" />
         </div>
     );
     

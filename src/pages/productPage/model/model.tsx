@@ -3,7 +3,7 @@ import { ProductDto } from "../libs/dtos";
 import ProductPageRepository from "../api/repository"
 import ProductPageService from "../api/service"
 
-const productPageService = new ProductPageService(new ProductPageRepository()); //TODO Di container (awilix)
+const productPageService = new ProductPageService(new ProductPageRepository()); //TOTHINK Di container (awilix)
 
 export type ProductPageState = {
     product?:ProductDto
