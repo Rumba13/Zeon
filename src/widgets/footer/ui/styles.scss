@@ -1,3 +1,5 @@
+@import "../../../app/styles/variables.scss";
+
 .footer-wrapper {
     background: var(--third-color);
 
@@ -28,7 +30,7 @@
     }
 }
 
-@media(max-width:650px) {
+@media(max-width:$header-brekpoint-2) {
     .footer {
         grid-template: repeat(3, auto) 1fr / repeat(3, auto);
 

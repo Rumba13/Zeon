@@ -1,3 +1,5 @@
+@import "../../../app//styles/variables.scss";
+
 .phone-numbers {
     display: flex;
     align-self: center;
@@ -39,7 +41,7 @@
     }
 }
 
-// @media(max-width:1120px) {
+// @media(max-width:$content-max-width) {
 //     .phone-numbers-wrapper {
 //         border: 1px solid #000;
 //         overflow: visible;

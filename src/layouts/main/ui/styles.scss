@@ -1,3 +1,5 @@
+@import "../../../app/styles/variables.scss"; 
+
 .main {
     display: grid;
     grid-area: main;
@@ -6,7 +8,7 @@
         "bread-crumbs bread-crumbs"
         "aside content";
 
-    max-width: 1120px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     margin-top: 10px;
     height: fit-content;

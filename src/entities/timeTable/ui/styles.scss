@@ -1,3 +1,5 @@
+@import "../../../app/styles/variables.scss";
+
 .time-table-wrapper {
     grid-area: timetable;
     display: flex;
@@ -43,7 +45,7 @@
     }
 }
 
-@media(max-width:650px) {
+@media(max-width:$header-brekpoint-2) {
     .time-table-wrapper {}
 
     .time-table {
