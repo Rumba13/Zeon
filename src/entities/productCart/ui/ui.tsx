@@ -1,10 +1,10 @@
 import "./styles.scss";
-import { Sprite } from "../../../shared/ui//sprite";
+import { Sprite } from "../../../shared/ui/sprite";
 
-export function ShoppingCart() { //TODO separate abstracte classNames, write component
-    return <a href="##" className="cart product-action">
+export function ShoppingCart() { 
+    return <a href="##" className="product-action cart">
         <Sprite yOffset={-998} />
         <span className="product-action__text">Корзина</span>
-        <span className="counter">{0}</span>
+        <span className="product-action__counter">0</span>
     </a>
 }

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type UlType = HTMLElement | undefined;
+type UlType = HTMLElement | undefined; // TODO refuck
 
 class ListController {
     constructor() { }

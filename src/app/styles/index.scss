@@ -5,33 +5,30 @@
   display: flex;
   align-items: center;
   justify-content: end;
-}
+  min-width: fit-content;
 
-.product-action__text {
-  display: inline-block;
-  margin: 5px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dark-text-color);
-  transition: all 0.4s;
+  & .product-action__text {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-text-color);
+    transition: all 0.4s;
 
-  &:hover {
-    color: var(--secondary-color);
+    &:hover {
+      color: var(--secondary-color);
+    }
   }
-}
 
-.product-action>.sprite {
-  width: 25px;
-}
-
-.counter {
-  width: 25px;
-  height: 25px;
-  font-weight: 800;
-  line-height: 25px;
-  /* exact like height */
-  text-align: center;
-  color: white;
-  background-color: var(--secondary-color);
+  & .product-action__counter {
+    width: 25px;
+    height: 25px;
+    font-weight: 800;
+    line-height: 25px;
+    /* exact like height */
+    color: white;
+    text-align: center;
+    background-color: var(--secondary-color);
+  }
 }

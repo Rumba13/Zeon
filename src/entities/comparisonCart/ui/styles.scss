@@ -2,10 +2,8 @@
 
 .comparison-cart {
     grid-area: comparison;
-    min-width: fit-content;
-    align-items: center;
 
-    & > .sprite {
+    & .sprite {
         width: 26px;
         height: 26px;
     }

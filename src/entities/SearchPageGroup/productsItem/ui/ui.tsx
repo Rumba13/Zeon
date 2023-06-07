@@ -10,7 +10,7 @@ export type ProductType = SearchProductDto
 
 export type ProductCharacteristicsType = Object
 
-export function ProductItem({ type, manufacturer, batch, code, characteristics, discountPrice, price, previewImage, deliveryDate }: ProductType) {
+export function ProductSearchResult({ type, manufacturer, batch, code, characteristics, discountPrice, price, previewImage, deliveryDate }: ProductType) {
     //TODO entities more high level, separate to layout, refactoring
 
     return <ShadowOnHover className="product">

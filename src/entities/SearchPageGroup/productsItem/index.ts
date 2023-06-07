@@ -1,1 +1,1 @@
-export {ProductItem} from "./ui/ui"
+export {ProductSearchResult} from "./ui/ui"
