@@ -5,7 +5,7 @@ type PropsType = {
 
 export function ProductPrice({ price,className }: PropsType) {
 
-    function formatPrice(price: number) {
+    function formatPrice(price: number) { //TODO separate
         return Number(price).toFixed(2).replace(".", ",")
     }
 

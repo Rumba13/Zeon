@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { MiniProductDto } from "../../../../pages/defaultPage/libs/dtos";
-import { ProductMiniImg } from "../../productMiniImg";
+import { ProductImage } from "../../productImage";
 import { BuyButton } from "../../../../features/buyButton";
 import { ProductPrice } from "../../../productPrice";
 import { ProductTitle } from "../../../productTitle";
@@ -14,7 +14,7 @@ export function ProductMini({ previewImg, discountPrice, id, manufacturer, type,
 
     return <div className="product-mini-wrapper">
         <ShadowOnHover className="product-mini">
-            <ProductMiniImg href={hrefToProduct} img={previewImg} />
+            <ProductImage href={hrefToProduct} img={previewImg} />
             <ProductTitle className="product-mini__title" href={hrefToProduct} batch={batch} manufacturer={manufacturer} type={type}/>
             <ProductPrice className="product-mini__price" price={discountPrice} />
             <ProductPriceHint className="product-mini__price-hint"/>

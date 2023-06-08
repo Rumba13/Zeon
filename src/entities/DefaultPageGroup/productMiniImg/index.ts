@@ -1,1 +1,0 @@
-export {ProductMiniImg} from "./ui/ui"
