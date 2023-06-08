@@ -1,15 +1,12 @@
+import { formatPrice } from "./formatPrice"
+
 type PropsType = {
     price: number,
-    className?:string
+    className?: string
 }
 
-export function ProductPrice({ price,className }: PropsType) {
-
-    function formatPrice(price: number) { //TODO separate
-        return Number(price).toFixed(2).replace(".", ",")
-    }
-
+export function ProductPrice({ price, className }: PropsType) {
     return <span className={className ?? ""}>
-        {`${formatPrice(price)} руб`}
+        {formatPrice(price) + " руб"}
     </span>
 }
