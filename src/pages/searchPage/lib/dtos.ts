@@ -7,7 +7,7 @@ export type SearchProductDto = {
     type: string,
     manufacturer: string,
     batch: string
-    code: number,
+    id: number,
     characteristics: Object
     discountPrice: number,
     price: number,

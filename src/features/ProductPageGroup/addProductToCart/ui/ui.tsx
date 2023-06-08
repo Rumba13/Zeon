@@ -3,12 +3,24 @@ import { PrimaryProductButton } from "../../../../shared/ui//primaryProductButto
 import { Sprite } from "../../../../shared/ui//sprite";
 
 type PropsType = {
-    id: number
+    id: number,
+    variant: VariantType
 }
 
-export function AddProductToCart({ id }: PropsType) {
-    return <PrimaryProductButton >
-        <Sprite yOffset={-876} />
-        <span className="cart-button__text">Добавить товар в корзину</span>
-    </PrimaryProductButton>
+type VariantType = "mini" | "full";
+
+export function AddProductToCart({ variant, id }: PropsType) {
+
+    if (variant === "mini") {
+        return <PrimaryProductButton >
+            <Sprite yOffset={-876} />
+            <span className="cart-button__text">Купить</span>
+        </PrimaryProductButton>
+    }
+    else {
+        return <PrimaryProductButton >
+            <Sprite yOffset={-876} />
+            <span className="cart-button__text">Добавить товар в корзину</span>
+        </PrimaryProductButton>
+    }
 }

@@ -17,6 +17,7 @@ import { SubProductSlider } from "../../../entities/ProductPageGroup/subProductS
 import { AddProductToCart } from "../../../features/ProductPageGroup/addProductToCart";
 import { AddProductToComparison } from "../../../features/ProductPageGroup/addProductToComparison";
 import { Rating } from "../../../features/rating";
+import { Sprite } from "../../../shared/ui/sprite";
 
 export function ProductPage() {
     const dispatch = useAppDispatch();
@@ -46,8 +47,8 @@ export function ProductPage() {
             <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth} />
             <ProductPrices price={product.price} discountPrice={product.discountPrice} />
             <DiscountOffer />
-            <AddProductToCart id={product.id} />
-            <AddProductToComparison id={product.id} />
+            <AddProductToCart variant="full" id={product.id} />
+            <AddProductToComparison variant="full" id={product.id} />
         </div>
         <ProductTabs />
         <ProductImporter />
