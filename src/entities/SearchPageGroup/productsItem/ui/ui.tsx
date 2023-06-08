@@ -8,6 +8,7 @@ import { AddProductToCart } from "../../../../features/ProductPageGroup/addProdu
 import { ProductTitle } from "../../../productTitle";
 import { ProductPriceHint } from "../../../productPriceHint";
 import { AddProductToComparison } from "../../../../features/ProductPageGroup/addProductToComparison";
+import { ProductMiniImg } from "../../../DefaultPageGroup/productMiniImg";
 
 export type ProductType = SearchProductDto;
 
@@ -17,15 +18,15 @@ export function ProductSearchResult({ type, manufacturer, batch, id, characteris
     //TODO entities more high level, separate to layout, refactoring
 
     return <ShadowOnHover className="product">
-        <a href={`product/${id}`} className="product-preview-wrapper">  {/* preview image */}
-            <img className="product__preview" src={previewImage} alt="" />
-        </a>
+        <ProductMiniImg img={previewImage} href={`product/${id}`}/>
+
         <div className="product-information">{/* layout */}
             <ProductTitle className="product-information__title" batch={batch} manufacturer={manufacturer} type={type} />
             <DeliveryDate date={deliveryDate} />
             <span className="product-information__code"> Код товара: {id}</span>
             <Characteristics characteristics={characteristics} />
         </div>
+        
         <div className="product-price">{/* layout */}
             <ProductPrice className="product-price__price" price={price} />
             <ProductPrice className="product-price__discount-price" price={discountPrice} />

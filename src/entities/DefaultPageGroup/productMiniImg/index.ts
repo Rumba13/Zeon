@@ -1,1 +1,1 @@
-export {ProductMiniImg} from "./ui/productMiniImg"
+export {ProductMiniImg} from "./ui/ui"

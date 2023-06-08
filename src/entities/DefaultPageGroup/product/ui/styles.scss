@@ -17,9 +17,6 @@
     border: 1px solid var(--primary-color);
     transition: box-shadow 0.4s;
 
-    & .preview__image {
-    } 
-
     &:hover {
         & .buy-button-wrapper {
             pointer-events: all;
@@ -51,14 +48,6 @@
     }
 
 }
-
-.preview {
-    width: 100%;
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--primary-color);
-}
-
-
 
 .product-mini__price {
     margin-bottom: 6px;
