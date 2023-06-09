@@ -1,14 +1,15 @@
 import "./styles.scss";
-import { BreadCrumb, BreadCrumbType } from "./breadCrumb";
+import { Breadcrumb } from "antd";
 
-type PropsType = {
-    breadCrumbs: BreadCrumbType[]
-}
+type PropsType = {}
 
-export function BreadCrumbs({ breadCrumbs }: PropsType) {
-    return <div className="bread-crumbs">
-        {breadCrumbs.map(({ title, href }, index, crumbs) =>
-            <BreadCrumb to={href} isLast={index === crumbs.length - 1}>{title}</BreadCrumb>
-        )}
-    </div>
+
+export function BreadCrumbs({ }: PropsType) {
+    return <Breadcrumb className="bread-crumbs" separator=">" items={[
+        { title: "Главная", href: "11" },
+        { title: "Компьютеры и сети", href: "11" },
+        { title: "Компьютеры и комплектующие", href: "11" },
+        { title: "Блоки питания", href: "11" },
+        { title: "Блок питания be quiet! Pure Power 11 700W CM BN299"},
+    ]} />
 }

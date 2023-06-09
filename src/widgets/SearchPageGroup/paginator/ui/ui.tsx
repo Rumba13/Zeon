@@ -15,10 +15,10 @@ export function Paginator({ paginator: { pagesCount } }: PropsType) {
     const pages = (new PagesController()).getPagesNumbers(currentPage, pagesCount)
 
     return <ul className="paginator">
-        <PaginatorItem pagesCount={pagesCount} currentPage={currentPage} className="paginator__previous-page" pageToSet={currentPage - 1} >&lt;</PaginatorItem>
+        <PaginatorItem className="paginator__previous-page" pageToSet={currentPage - 1} pagesCount={pagesCount} currentPage={currentPage}  >&lt;</PaginatorItem>
 
         {pages.map(page => <PaginatorItem pagesCount={pagesCount} currentPage={currentPage} pageToSet={page}>{page}</PaginatorItem>)}
 
-        <PaginatorItem pagesCount={pagesCount} currentPage={currentPage} className="paginator__next-page" pageToSet={currentPage + 1} > &gt;</PaginatorItem>
+        <PaginatorItem className="paginator__next-page" pageToSet={currentPage + 1} pagesCount={pagesCount} currentPage={currentPage} > &gt;</PaginatorItem>
     </ul>
 }
