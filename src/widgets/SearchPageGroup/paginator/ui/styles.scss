@@ -1,11 +1,23 @@
-.paginator {
+.pagination {
     display: flex;
     justify-content: center;
-    margin: 15px 0px ;
-}
-.paginator__item {
-}
-.paginator__previous-page {
-}
-.paginator__next-page {
+    margin: 15px 0px;
+
+    & .ant-pagination-item-active {
+        border: 0;
+        background-color: var(--secondary-color);
+        border-radius: 0;
+
+        &:hover {
+            background-color: var(--secondary-color);
+
+            & a {
+                color: var(--primary-color);
+            }
+        }
+
+        & a {
+            color: var(--primary-color);
+        }
+    }
 }

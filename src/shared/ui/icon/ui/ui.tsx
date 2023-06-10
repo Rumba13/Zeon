@@ -8,5 +8,5 @@ type PropsType = {
 }
 
 export function Icon({ icon, className, onClick }: PropsType) {
-    return <img onClick={onClick as MouseEventHandler} src={icon} className={`icon ${className ?? ""}`} />
+    return <img className={`icon ${className ?? ""}`} src={icon} onClick={onClick as MouseEventHandler} />
 }

@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "../../../shared/lib/hooks";
 import { Loading } from "../../../shared/ui/loading";
 import { PageTitle } from "../../../layouts/SearchPageGroup/pageTitle";
 import { SearchFilters } from "../../../widgets/SearchPageGroup/filters";
-import { Paginator } from "../../../widgets/SearchPageGroup/paginator";
+import { Pagination } from "../../../widgets/SearchPageGroup/paginator";
 import { SearchTags } from "../../../widgets/SearchPageGroup/tags";
 import { ProductSearchResults } from "../../../widgets/SearchPageGroup/productSearchResults";
 
@@ -30,6 +30,6 @@ export function SearchPage() {
 
         {products ? <ProductSearchResults products={products} /> : <Loading />}
 
-        {paginator ? <Paginator paginator={paginator} /> : <Loading />}
+        {paginator ? <Pagination paginator={paginator} /> : <Loading />}
     </div>
 }

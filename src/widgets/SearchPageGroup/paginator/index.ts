@@ -1,1 +1,1 @@
-export {Paginator} from "./ui/ui";
+export {Pagination} from "./ui/ui";
