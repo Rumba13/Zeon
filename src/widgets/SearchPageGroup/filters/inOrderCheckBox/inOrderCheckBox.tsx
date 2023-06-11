@@ -1,5 +1,5 @@
-import { Field } from "formik";
 import "./inOrderCheckBox.scss";
+import { Field } from "formik"; //TODO refuck to fsd
 
 type PropsType = {
     value: boolean

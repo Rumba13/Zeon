@@ -3,20 +3,20 @@
 
     &::after {
         content: "";
-        visibility: hidden;
         position: absolute;
-        right: 0;
-        width: 45px;
         top: 0;
         bottom: 0;
+        right: 0;
+        width: 45px;
         background: linear-gradient(90deg, transparent, #2e3038);
+        visibility: hidden;
     }
 }
 .overflow-scroll {
     display: flex;
-    overflow: scroll;
-    min-height: 100%;
     flex: 0 1;
+    min-height: 100%;
+    overflow: scroll;
 
     &::-webkit-scrollbar {
         display: none;

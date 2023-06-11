@@ -7,16 +7,16 @@
     &:hover {
         background-color: var(--secondary-color);
 
-        &>a {
+        & a {
             color: var(--smoky-white);
         }
     }
 
 
-    &>a {
-        word-wrap: break-word;
+    & a {
         display: block;
         padding: 6px 15px;
+        word-wrap: break-word;
         color: var(--inactive-color);
         transition: color 0.4s;
     }

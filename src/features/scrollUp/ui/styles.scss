@@ -3,7 +3,6 @@
    justify-content: center;
    align-items: center;
    flex-direction: row;
-   
    height: 100%;
    max-width: var(--content-max-width);
    margin: 0 auto;
@@ -11,9 +10,9 @@
    border-bottom: 1px solid var(--border-color);
 
    & .sprite {
-      align-self: center;
-      height: 17px;
       width: 15px;
+      height: 17px;
+      align-self: center;
       margin-right: 8px;
       margin-bottom: -5px;
    }

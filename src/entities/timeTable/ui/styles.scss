@@ -23,8 +23,8 @@
 
     & .sprite {
         align-self: center;
-        height: 13px;
         width: 13px;
+        height: 13px;
         margin: 0 5px 0 8px;
     }
 
@@ -46,16 +46,14 @@
 }
 
 @media(max-width:$header-brekpoint-2) {
-    .time-table-wrapper {}
-
     .time-table {
-        width: 100%;
         display: block;
+        width: 100%;
 
         &.opened .time-table__text,
         & .time-table__text {
-            text-align: center;
             display: block;
+            text-align: center;
         }
 
         & .sprite {

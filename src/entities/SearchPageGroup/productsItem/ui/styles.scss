@@ -10,9 +10,9 @@
     }
 
     .product-image {
-        max-height: 100%;
-        max-width: 26%;
         flex: 0 0 26%;
+        max-width: 26%;
+        max-height: 100%;
         
         & .product-image__image {
             max-height: 100%;
@@ -52,9 +52,9 @@
         }
 
         & .product-price__discount-price {
-            word-wrap: break-word;
             font-size: 20px;
             font-weight: 700;
+            word-wrap: break-word;
         }
         
         & .product-price__price {
@@ -69,13 +69,13 @@
         }
         & .comparison-button {
             & .sprite {
-                height: 12px;
                 width: 13px;
+                height: 12px;
             }
             & .comparison-button__text {
+                margin-left: 5px;
                 font-size: 12px;
                 font-weight: 600;
-                margin-left: 5px;
             }
         }
     }

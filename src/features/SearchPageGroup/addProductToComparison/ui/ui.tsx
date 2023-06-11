@@ -9,5 +9,4 @@ export function AddProductToComparison({ id }: PropsType) {
     //     <Sprite yOffset={-124} />
     //     <span className="comparison-button__text">Сравнить</span>
     // </ProductAddToComparison>
-    
 }

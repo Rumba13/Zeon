@@ -4,9 +4,9 @@
 
 .sub-header-menu {
     display: flex;
+    height: 100%;
     max-width: var(--content-max-width);
     margin: 0 auto;
-    height: 100%;
 
     &>.sub-header-menu-blur-zone .overflow-scroll {
         display: flex;
@@ -37,14 +37,14 @@
 
     &.-with-icon .icon {
         align-self: center;
-        height: 30px;
         width: 30px;
+        height: 30px;
         background: no-repeat;
     }
 
     &>.item__text {
         display: flex;
-        padding: 0px 10px;
+        padding: 0 10px;
     }
 
     &:hover {

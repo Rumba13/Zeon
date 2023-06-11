@@ -1,11 +1,11 @@
 .fixed-search {
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     top: 15px;
     left: 50%;
     z-index: 100;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: var(--content-max-width);
     border: 1px solid #c5c5c5;
     transform: translate(-50%);

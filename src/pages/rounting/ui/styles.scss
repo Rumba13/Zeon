@@ -7,12 +7,11 @@
         "products products";
     grid-area: content;
     height: fit-content;
-
     margin-left: 20px;
 
     & .banner {
-        margin-bottom: 25px;
         grid-area: banner;
+        margin-bottom: 25px;
     }
 
     & .banner-slider {
@@ -23,13 +22,13 @@
         grid-area: product-selections;
     }
 
-    & div.products {
-        width: 100%;
+    & div.products { //TODO fix specificity
         display: flex;
+        justify-content: center;
+        grid-area: products;
+        width: 100%;
         margin-top: 20px;
         margin-bottom: 38px;
-        grid-area: products;
-        justify-content: center;
     }
     & .product-container {
         display: flex;

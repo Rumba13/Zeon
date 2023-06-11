@@ -4,13 +4,15 @@
     text-align: center;
 
     & .discount-offer__icon {
+        --height: 14px;
+
         display: inline-block;
         vertical-align: middle;
-        height: 14px;
         width: 14px;
+        height: var(--height);
         margin-right: 5px;
         font-size: 9px;
-        line-height: 14px;  /*exact like height*/
+        line-height: var(--height); 
         border-radius: 50%;
         color: var(--dark-text-color);
         background: var(--primary-color);

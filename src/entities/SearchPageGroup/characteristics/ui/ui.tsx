@@ -7,5 +7,5 @@ type PropsType = {
 }
 
 export function Characteristics({ characteristics }: PropsType) {
-    return <span className="product-information__characteristics">{formatCharacteristics(characteristics)}</span>
+    return <span className="characteristics">{formatCharacteristics(characteristics)}</span>
 }

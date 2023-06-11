@@ -2,11 +2,11 @@
     display: flex;
     color: var(--inactive-color);
 
-    &>.checkbox-real {
+    & .checkbox-real {
         display: none;
     }
 
-    &>.checkbox__title {
+    & .checkbox__title {
         margin-left: 7px;
     }
 
@@ -22,8 +22,8 @@
             position: absolute;
             top: 50%;
             left: 1px;
-            height: 15px;
             width: 15px;
+            height: 15px;
             border-radius: 50%;
             background-color: whitesmoke;
             transition: all 0.3s;
@@ -38,8 +38,6 @@
             &>.checkbox-point {
                 left: calc(100% - 1px);
                 transform: translate(-100%, -50%);
-
-
                 background-color: whitesmoke;
             }
         }

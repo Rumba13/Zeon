@@ -1,10 +1,10 @@
 .product-mini-wrapper {
-    margin-bottom: 10px;
-    padding: 0 8px 8px 10px;
-    background-color: #ffffff !important;
     flex: 33.33333%;
     max-width: 33.33333%;
     min-width: 250px;
+    margin-bottom: 10px;
+    padding: 0 8px 8px 10px;
+    background-color: #ffffff !important;
 }
 
 .product-mini {
@@ -19,11 +19,10 @@
 
     &:hover {
         & .buy-button-wrapper {
-            pointer-events: all;
-
-            opacity: 1;
-            transform: translateY(19px);
             box-shadow: 0 10px 25px -3px rgb(0 0 0 / 20%);
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(19px);
         }
     }
 
@@ -33,10 +32,8 @@
         margin-top: 10px;
         font-size: 16px;
         font-weight: 700;
-    
         color: var(--secondary-color);
         transition: color 0.4s;
-    
         &:hover {
             color: var(--dark-text-color);
         }

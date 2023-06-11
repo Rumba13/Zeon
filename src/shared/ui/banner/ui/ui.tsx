@@ -1,5 +1,5 @@
-import { BannerDto } from "../../../../pages/defaultPage/libs/dtos";
 import "./styles.scss";
+import { BannerDto } from "../../../../pages/defaultPage/libs/dtos";
 
 type PropsType = {
     banner:BannerDto

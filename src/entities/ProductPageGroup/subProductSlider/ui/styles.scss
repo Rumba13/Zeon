@@ -51,9 +51,9 @@
         transition: opacity 0.4s;
 
         &.slick-prev {
-            height: 16px;
-            width: 10px;
             left: 15px;
+            width: 10px;
+            height: 16px;
             background-position: 0 -823px;
 
             &:hover {
@@ -62,9 +62,9 @@
         }
 
         &.slick-next {
-            height: 16px;
-            width: 10px;
             right: 15px;
+            width: 10px;
+            height: 16px;
             background-position: 0 -797px;
 
             &:hover {

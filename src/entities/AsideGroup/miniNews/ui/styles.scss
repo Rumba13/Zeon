@@ -2,11 +2,10 @@
     margin: 5px;
     padding-top: 10px;
     padding-bottom: 18px;
+    border-top: var(--border-style);
+    border-bottom: var(--border-style);
 
-    border-top: var(--border-styles);
-    border-bottom: var(--border-styles);
-
-    --border-styles: 1px solid var(--primary-color);
+    --border-style: 1px solid var(--primary-color);
 }
 
 .mini-news__title {

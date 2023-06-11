@@ -1,5 +1,5 @@
-import { formatDate } from "./formatDate";
 import "./styles.scss";
+import { formatDate } from "./formatDate";
 
 type PropsType = {
     date: Date

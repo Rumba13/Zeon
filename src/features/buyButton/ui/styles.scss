@@ -1,14 +1,14 @@
 .buy-button-wrapper { //TODO fix global and local styles
     position: absolute;
-    left: 0;
     bottom: -35px;
+    left: 0;
     z-index: 2;
-    box-sizing: border-box;
-    height: 54px;
     width: 100%;
+    height: 54px;
     padding: 10px;
+    box-sizing: border-box;
     border: 1px solid var(--primary-color);
-    border-top: none;
+    border-top: 0;
     background-color: white;
     opacity: 0;
     transition: all 0.4s;

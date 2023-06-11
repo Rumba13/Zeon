@@ -4,9 +4,9 @@
     align-items: center;
     margin-top: 20px;
     font-size: 11px;
+    color: var(--text-color);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    color: var(--text-color);
 
     & .copyright-and-rules__rules {
         color: var(--text-color);

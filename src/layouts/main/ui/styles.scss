@@ -9,9 +9,9 @@
         "aside content";
 
     max-width: var(--content-max-width);
+    height: fit-content;
     margin: 0 auto;
     margin-top: 10px;
-    height: fit-content;
 }
 
 @media(max-width:850px) {
