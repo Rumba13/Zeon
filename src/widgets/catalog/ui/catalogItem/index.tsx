@@ -9,9 +9,9 @@ type PropsType = {
 
 export function CatalogItem({ children }: PropsType) {
     const catalogItemsRef = useRef(null);
-    const { catalogLiOnClick, renderChildrens, title } = useCatalog(catalogItemsRef, children);
-
-    return <li onClick={catalogLiOnClick} className="catalog-item-wrapper">
+    const { catalogLiClickHandler, renderChildrens, title } = useCatalog(catalogItemsRef, children);
+    //@ts-ignore
+    return <li onClick={catalogLiClickHandler} className="catalog-item-wrapper">
         <div className="catalog-item">
             <span className="catalog-item__text">{title}</span>
             <Sprite yOffset={null} />
