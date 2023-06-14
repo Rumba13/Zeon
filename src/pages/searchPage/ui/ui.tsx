@@ -8,6 +8,7 @@ import { SearchFilters } from "../../../widgets/SearchPageGroup/filters";
 import { Pagination } from "../../../widgets/SearchPageGroup/paginator";
 import { SearchTags } from "../../../widgets/SearchPageGroup/tags";
 import { ProductSearchResults } from "../../../widgets/SearchPageGroup/productSearchResults";
+import { useSelector } from "react-redux";
 
 export function SearchPage() {
     const dispatch = useAppDispatch();
