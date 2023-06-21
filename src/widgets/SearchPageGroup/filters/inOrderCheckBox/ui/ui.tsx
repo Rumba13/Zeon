@@ -1,11 +1,11 @@
-import "./inOrderCheckBox.scss";
+import "./styles.scss";
 import { Field } from "formik"; //TODO refuck to fsd
 
 type PropsType = {
     value: boolean
 }
 
-export default function InOrderCheckBox({ value }: PropsType) {
+export function InOrderCheckBox({ value }: PropsType) {
     const isActive = value;
 
     return <label className={`in-order-checkbox-wrapper ${isActive ? "active":""}`}>

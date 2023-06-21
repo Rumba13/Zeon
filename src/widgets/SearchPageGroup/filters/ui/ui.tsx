@@ -2,7 +2,7 @@ import "./styles.scss";
 import ArrowRadioButton from "../arrowRadioButton/arrowRadioButton";
 import { Formik } from "formik";
 import { useState } from "react";
-import InOrderCheckBox from "../inOrderCheckBox/inOrderCheckBox";
+import { InOrderCheckBox } from "../inOrderCheckBox";
 
 type SortType = "asc" | "desc";
 
