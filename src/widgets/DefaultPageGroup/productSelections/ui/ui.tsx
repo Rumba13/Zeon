@@ -1,24 +1,24 @@
 import { useEffect } from "react";
 import { Loading } from "../../../../shared/ui//loading";
-import { loadProductSelectionsThunk } from "../model/model";
-import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
 import { ProductSelection } from "./productSelection";
+import { useStore } from "../../../../shared/lib/hooks";
+import { DefaultPageStateType } from "../../../../pages/defaultPage";
+import { observer } from "mobx-react";
 
 type PropsType = {}
 
-export function ProductSelections({}: PropsType) {
-    const dispatch = useAppDispatch();
-    const selections = useAppSelector((state) => state.defaultPage.productSelections);
+export const ProductSelections = observer(({ }: PropsType) => {
+    const state = useStore<DefaultPageStateType>(state => state.defaultPage)
 
     useEffect(() => {
-        dispatch(loadProductSelectionsThunk());
-    }, [dispatch, loadProductSelectionsThunk])
+        state.loadProductSelections();
+    }, [state])
 
-    if (!selections) {
+    if (!state.productSelections) {
         return <Loading />
     }
 
     return <div className="product-selections">
-        {selections.map((selection) => <ProductSelection {...selection} key={selection.img} />)}
+        {state.productSelections.map((selection) => <ProductSelection {...selection} key={selection.img} />)}
     </div>
-}
+})

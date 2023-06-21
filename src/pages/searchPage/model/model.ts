@@ -1,72 +1,42 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { SyntheticEvent } from "react";
 import { PaginatorDto, SearchProductDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos";
-import SearchPageRepository from "../api/repository";
-import SearchPageService from "../api/service";
+import { Repository } from "../api/repository";
+import { Service } from "../api/service";
+import { makeAutoObservable } from "mobx";
 
-export type SearchPageStateType = {
-    searchTags?: SearchTagDto[],
-    products?: SearchProductDto[],
-    title?: SearchPageTitleDto,
-    paginator: PaginatorDto
-}
+class SearchPageState {
+    private service: Service
 
-const initialState: SearchPageStateType = {
-    paginator: {
+    public searchTags?: SearchTagDto[]
+    public products?: SearchProductDto[]
+    public title?: SearchPageTitleDto
+    public paginator: PaginatorDto = {
         currentPage: 1,
         pagesCount: 40
     }
+
+    private setProducts = (products: SearchProductDto[]) => this.products = products;
+    private setTitle = (title: SearchPageTitleDto) => this.title = title;
+    private setSearchTags = (searchTags: SearchTagDto[]) => this.searchTags = searchTags;
+    private setPaginator = (paginator: PaginatorDto) => this.paginator = paginator;
+
+    constructor(service: Service) {
+        makeAutoObservable(this);
+        this.service = service;
+    }
+
+    public async loadProducts() {
+        this.setProducts(await this.service.loadSearchProducts());
+    }
+    public async loadPageTitle() {
+        this.setTitle(await this.service.loadPageTitle());
+    }
+    public async loadSearchTags() {
+        this.setSearchTags(await this.service.loadSearchTags());
+    }
+    public async loadPaginator() {
+        this.setPaginator(await this.service.loadPaginator());
+    }
 }
 
-const searchPageService = new SearchPageService(new SearchPageRepository());
-
-const searchPageSlice = createSlice({
-    name: "searchPage",
-    initialState,
-    reducers: {
-        setSearchTags(state: SearchPageStateType, action: PayloadAction<SearchTagDto[]>) {
-            state.searchTags = action.payload
-        },
-        setSearchProducts(state: SearchPageStateType, action: PayloadAction<SearchProductDto[]>) {
-            state.products = action.payload
-        },
-        setSearchTitle(state: SearchPageStateType, action: PayloadAction<SearchPageTitleDto>) {
-            state.title = action.payload
-        },
-        setCurrentPage(state: SearchPageStateType, action: PayloadAction<number>) {
-            state.paginator.currentPage = action.payload
-        },
-        setPagesCount(state: SearchPageStateType, action: PayloadAction<number>) {
-            state.paginator.pagesCount = action.payload
-        }
-    }
-})
-
-export const loadSearchTagsThunk = createAsyncThunk("searchPage/loadSearchTagsThunk",
-    async (_: SyntheticEvent | void, thunkApi) => {
-        const searchTags = await searchPageService.loadSearchTags();
-        thunkApi.dispatch(setSearchTags(searchTags));
-    })
-
-export const loadSearchProductsThunk = createAsyncThunk("searchPage/loadSearchProductsThunk",
-    async (_: SyntheticEvent | void, thunkApi) => {
-        const products = await searchPageService.loadSearchProducts();
-        thunkApi.dispatch(setSearchProducts(products));
-    })
-
-export const loadSearchTitleThunk = createAsyncThunk("searchPage/loadSearchTitleThunk",
-    async (_: SyntheticEvent | void, thunkApi) => {
-        const title = await searchPageService.loadSearchTitle();
-        thunkApi.dispatch(setSearchTitle(title));
-    })
-
-export const loadPaginatorThunk = createAsyncThunk("searchPage/loadPaginatorThunk",
-    async (_: SyntheticEvent | void, thunkApi) => {
-        const paginator = await searchPageService.loadPaginator();
-        thunkApi.dispatch(setPagesCount(paginator.pagesCount))
-    })
-
-const { setSearchProducts, setSearchTags, setSearchTitle, setCurrentPage, setPagesCount, } = searchPageSlice.actions;
-
-export { setCurrentPage, setPagesCount }
-export default searchPageSlice.reducer;
+export { SearchPageState as SearchPageStateType };
+export const searchPageState = new SearchPageState(new Service(new Repository()));

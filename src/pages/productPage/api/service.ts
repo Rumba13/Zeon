@@ -1,14 +1,14 @@
 import { ProductDto } from "../libs/dtos";
-import ProductPageRepository from "./repository";
+import {Repository} from "./repository";
 
-export default class ProductPageService {
-    private productPageRepository:ProductPageRepository
+export class Service {
+    private productPageRepository:Repository
 
-    constructor(productPageRepository:ProductPageRepository){
+    constructor(productPageRepository:Repository){
         this.productPageRepository = productPageRepository;
     }
 
-    public async getProductById(id:number):Promise<ProductDto> {
-        return await this.productPageRepository.getProductById(id);
+    public async loadProduct(id:number):Promise<ProductDto> {
+        return await this.productPageRepository.loadProduct(id);
     }
 }

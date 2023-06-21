@@ -1,43 +1,41 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { BannerDto, DefaultPageDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos"
-import DefaultPageRepository from "../api/repository"
-import DefaultPageService from "../api/service"
+import { BannerDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos"
+import {Repository} from "../api/repository"
+import { Service } from "../api/service"
+import { makeAutoObservable } from "mobx"
 
-export type DefaultPageStateType = {
-    productSelections?: ProductSelectionDto[]
-    advertisingBanner?: BannerDto
-    products?: MiniProductDto[]
-    sliderItems?: SliderItemDto[]
+class DefaultPageState {
+    private service: Service;
+
+    public productSelections?: ProductSelectionDto[];
+    public advertisingBanner?: BannerDto;
+    public products?: MiniProductDto[];
+    public sliderItems?: SliderItemDto[];
+
+    private setProductSelections = (selections: ProductSelectionDto[]) => this.productSelections = selections;
+    private setAdvertisingBanner = (banner: BannerDto) => this.advertisingBanner = banner;
+    private setProducts = (products: MiniProductDto[]) => this.products = products;
+    private setSliderItems = (sliderItems: SliderItemDto[]) => this.sliderItems = sliderItems;
+
+    constructor(service: Service) {
+        this.service = service;
+        makeAutoObservable(this);
+    }
+
+    public async loadAdvertisingBanner() {
+        this.setAdvertisingBanner(await this.service.loadAdvertisingBanner());
+    }
+    public async loadProductSelections() {
+        this.setProductSelections(await this.service.loadProductSelections());
+    }
+
+    public async loadDefaultProducts() {
+        this.setProducts(await this.service.loadDefaultProducts());
+    }
+
+    public async loadSliderItems() {
+        this.setSliderItems(await this.service.getSliderItems());
+    }
 }
 
-export const defaultPageService = new DefaultPageService(new DefaultPageRepository());
-
-const initialState: DefaultPageStateType = {}
-
-const defaultPageSlice = createSlice({
-    name: "defaultPage",
-    initialState,
-    reducers: {
-        setDefaultPageData(state: DefaultPageStateType, action: PayloadAction<DefaultPageDto>) {
-            const { advertisingBanner, products, productSelections } = action.payload;
-            state.advertisingBanner = advertisingBanner;
-            state.products = products;
-            state.productSelections = productSelections;
-        },
-        setAdvertisingBanner(state: DefaultPageStateType, action: PayloadAction<BannerDto>) {
-            state.advertisingBanner = action.payload
-        },
-        setDefaultProducts(state: DefaultPageStateType, action: PayloadAction<MiniProductDto[]>) {
-            state.products = action.payload
-        },
-        setProductSelections(state: DefaultPageStateType, action: PayloadAction<ProductSelectionDto[]>) {
-            state.productSelections = action.payload
-        },
-        setBannerSliderItems(state: DefaultPageStateType, action: PayloadAction<SliderItemDto[]>) {
-            state.sliderItems = action.payload
-        },
-    }
-})
-
-export const { setDefaultProducts, setAdvertisingBanner, setProductSelections, setBannerSliderItems } = defaultPageSlice.actions;
-export default defaultPageSlice.reducer;
+export const defaultPageState = new DefaultPageState(new Service(new Repository()));
+export type { DefaultPageState as DefaultPageStateType };

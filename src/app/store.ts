@@ -1,21 +1,14 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import { ProductPageReducer } from '../pages/productPage';
-import { defaultPageReducer } from '../pages/defaultPage';
-import { searchPageReducer } from '../pages/searchPage';
+import { searchPageState } from '../pages/searchPage';
+import { createContext } from 'react';
+import { defaultPageState } from '../pages/defaultPage';
+import { productPageState } from '../pages/productPage';
 
-export const store = configureStore({
-  reducer: {
-    productPage: ProductPageReducer,
-    searchPage: searchPageReducer,
-    defaultPage: defaultPageReducer
-  },
-});
+const store = {
+  defaultPage: defaultPageState,
+  productPage: productPageState,
+  searchPage: searchPageState,
+}
 
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
->;
+export { store as rootState }
+export type RootStateType = typeof store;
+export const RootStateContext = createContext(store);

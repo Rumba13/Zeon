@@ -1,9 +1,8 @@
 import "./styles.scss";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAppSelector, useAppDispatch } from "../../../shared/lib/hooks";
+import { useStore } from "../../../shared/lib/hooks";
 import { Loading } from "../../../shared/ui/loading";
-import { setProductPageId, getProductByIdThunk } from "../model/model";
 import { ProductTitle } from "../../../entities/productTitle";
 import { Delivery } from "../../../entities/ProductPageGroup/delivery";
 import { MainProductSlider } from "../../../entities/ProductPageGroup/mainProductSlider";
@@ -17,18 +16,17 @@ import { SubProductSlider } from "../../../entities/ProductPageGroup/subProductS
 import { AddProductToCart } from "../../../features/ProductPageGroup/addProductToCart";
 import { AddProductToComparison } from "../../../features/ProductPageGroup/addProductToComparison";
 import { Rating } from "../../../features/rating";
-import { Sprite } from "../../../shared/ui/sprite";
+import { ProductPageStateType } from "../model/model";
+import { observer } from "mobx-react";
 
-export function ProductPage() {
-    const dispatch = useAppDispatch();
-    const { product } = useAppSelector((state) => state.productPage);
+export const ProductPage = observer(() => {
+    const state = useStore<ProductPageStateType>(state => state.productPage)
     const { id: productId } = useParams();
-
+    const { product } = state;
+    
     useEffect(() => {
-        if (productId) {
-            dispatch(getProductByIdThunk(+productId))
-        }
-    }, [dispatch, getProductByIdThunk, setProductPageId, productId])
+        productId && state.loadProduct(+productId)
+    }, [state, productId])
 
     if (!product) {
         return <Loading />
@@ -53,4 +51,4 @@ export function ProductPage() {
         <ProductTabs />
         <ProductImporter />
     </div>
-}
+})

@@ -1,26 +1,26 @@
 import { MiniProductDto, BannerDto, ProductSelectionDto, DefaultPageDto, SliderItemDto } from "../libs/dtos";
-import DefaultPageRepository from "./repository";
+import { Repository } from "./repository";
 
-export default class DefaultPageService {
-    private repository: DefaultPageRepository;
+export class Service {
+    private repository: Repository;
 
-    constructor(repository: DefaultPageRepository) {
+    constructor(repository: Repository) {
         this.repository = repository;
     }
 
-    public async getDefaultProducts(): Promise<MiniProductDto[]> {
-        return await this.repository.getDefaultProducts();
+    public async loadDefaultProducts(): Promise<MiniProductDto[]> {
+        return await this.repository.loadDefaultProducts();
     }
-    public async getAdvertisingBanner(): Promise<BannerDto> {
-        return await this.repository.getAdvertisingBanner();
+    public async loadAdvertisingBanner(): Promise<BannerDto> {
+        return await this.repository.loadAdvertisingBanner();
     }
-    public async getProductSelections(): Promise<ProductSelectionDto[]> {
-        return await this.repository.getProductSelections();
+    public async loadProductSelections(): Promise<ProductSelectionDto[]> {
+        return await this.repository.loadProductSelections();
     }
-    public async getDefaultPageData(): Promise<DefaultPageDto> {
-        const products = await this.repository.getDefaultProducts();
-        const advertisingBanner = await this.repository.getAdvertisingBanner();
-        const productSelections = await this.repository.getProductSelections();
+    public async loadDefaultPageData(): Promise<DefaultPageDto> {
+        const products = await this.repository.loadDefaultProducts();
+        const advertisingBanner = await this.repository.loadAdvertisingBanner();
+        const productSelections = await this.repository.loadProductSelections();
 
         return {
             advertisingBanner,
@@ -29,6 +29,6 @@ export default class DefaultPageService {
         }
     }
     public async getSliderItems(): Promise<SliderItemDto[]> {
-        return await this.repository.getSliderItems()
+        return await this.repository.loadSliderItems()
     }
 }

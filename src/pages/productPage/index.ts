@@ -1,8 +1,6 @@
 export {
-    getProductByIdThunk,
-    setProductPageId,
-    default as ProductPageReducer,
-    type ProductPageState
+    productPageState,
+    ProductPageStateType
 } from "./model/model"
 
-export {ProductPage} from "./ui/ui"
+export { ProductPage } from "./ui/ui"

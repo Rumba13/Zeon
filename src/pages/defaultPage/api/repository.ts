@@ -1,10 +1,10 @@
 import { ICONS } from "../../../images/images";
 import { BannerDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos";
 
-export default class DefaultPageRepository {
+export class Repository {
     constructor() { }
 
-    public async getDefaultProducts(): Promise<MiniProductDto[]> {
+    public async loadDefaultProducts(): Promise<MiniProductDto[]> {
         return await Promise.resolve([
             { id: 1, previewImg: "https://clck.ru/33XVQd", discountPrice: 10000, type: "dakdjsid", batch: " adsddada", manufacturer: "dasda" },
             { id: 2, previewImg: "https://clck.ru/33XVQd", discountPrice: 10000, type: "dakdjsid", batch: " adsddada", manufacturer: "dasda" },
@@ -16,7 +16,7 @@ export default class DefaultPageRepository {
             { id: 8, previewImg: "https://clck.ru/33XVQd", discountPrice: 10000, type: "dakdjsid", batch: " adsddada", manufacturer: "dasda" },
         ])
     }
-    public async getAdvertisingBanner(): Promise<BannerDto> {
+    public async loadAdvertisingBanner(): Promise<BannerDto> {
         return await new Promise(((resolve, reject) => {
             setTimeout(() => {
                 resolve({
@@ -26,7 +26,7 @@ export default class DefaultPageRepository {
             }, 1000)
         }))
     }
-    public async getProductSelections(): Promise<ProductSelectionDto[]> {
+    public async loadProductSelections(): Promise<ProductSelectionDto[]> {
         return await Promise.resolve([
             {
                 href: "#",
@@ -40,7 +40,7 @@ export default class DefaultPageRepository {
             }
         ])
     }
-    public async getSliderItems(): Promise<SliderItemDto[]> {
+    public async loadSliderItems(): Promise<SliderItemDto[]> {
         return await Promise.resolve([
             ICONS.slider1,
             ICONS.slider2,

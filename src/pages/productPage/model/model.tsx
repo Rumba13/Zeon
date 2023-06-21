@@ -1,39 +1,23 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { ProductDto } from "../libs/dtos";
-import ProductPageRepository from "../api/repository"
-import ProductPageService from "../api/service"
+import { Repository } from "../api/repository"
+import { Service } from "../api/service"
+import { makeAutoObservable } from "mobx";
 
-const productPageService = new ProductPageService(new ProductPageRepository()); //TOTHINK Di container (awilix)
+class ProductPageState {
+    private service: Service;
+    public product?: ProductDto
 
-export type ProductPageState = {
-    product?:ProductDto
-} 
+    private setProduct = (product: ProductDto) => this.product = product;
 
-const initialState: ProductPageState = {
+    constructor(service: Service) {
+        this.service = service;
+        makeAutoObservable(this);
+    }
+    
+    public async loadProduct(id:number) {
+        this.setProduct(await this.service.loadProduct(id));
+    }
 }
 
-export const productPageSlice = createSlice({
-    name: "productPage",
-    initialState,
-    reducers: {
-        setProductPageId(state: ProductPageState, action: PayloadAction<number>) {
-            return {...state, urlId:action.payload}
-
-        },
-        setProduct(state: ProductPageState, action: PayloadAction<ProductDto>) {
-            console.log(1)
-            return {...state, product:action.payload}
-        },
-    }
-})
-
-export const getProductByIdThunk = createAsyncThunk("productPage/getProductById",
-    async (id: number, thunkAPI) => {
-        const product = await productPageService.getProductById(id);
-        thunkAPI.dispatch(setProduct(product));
-    }
-)
-
-const { setProductPageId, setProduct } = productPageSlice.actions;
-export { setProductPageId };
-export default productPageSlice.reducer;
+export { ProductPageState as ProductPageStateType };
+export const productPageState = new ProductPageState(new Service(new Repository()));

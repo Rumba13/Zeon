@@ -1,13 +1,6 @@
 export {
-    loadSearchProductsThunk,
-    loadSearchTagsThunk,
-    loadSearchTitleThunk,
-    setCurrentPage,
-    setPagesCount,
-    default as searchPageReducer,
-    loadPaginatorThunk,
+    searchPageState,
+    SearchPageStateType
 } from "./model/model";
 
 export {SearchPage} from "./ui/ui"
-
-export type {SearchPageStateType} from "./model/model" 

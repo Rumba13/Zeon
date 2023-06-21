@@ -18,16 +18,21 @@ export function ProductSearchResult({ type, manufacturer, batch, id, characteris
     //TODO entities more high level, separate to layout, refactoring
 
     return <ShadowOnHover className="product">
-        <ProductImage img={previewImage} href={`product/${id}`} />
-        <ProductTitle className="product-information__title" batch={batch} manufacturer={manufacturer} type={type} />
-        <DeliveryDate date={deliveryDate} />
-        <span className="product-information__code"> Код товара: {id}</span>
-        <Characteristics characteristics={characteristics} />
+        <ProductImage img={previewImage} href={`product/${id}`}/>
 
-        <ProductPrice className="product-price__price" price={price} />
-        <ProductPrice className="product-price__discount-price" price={discountPrice} />
-        <ProductPriceHint />
-        <AddProductToCart variant="mini" id={id} />
-        <AddProductToComparison variant="mini" id={id} />
+        <div className="product-information">{/* layout */}
+            <ProductTitle className="product-information__title" batch={batch} manufacturer={manufacturer} type={type} />
+            <DeliveryDate date={deliveryDate} />
+            <span className="product-information__code"> Код товара: {id}</span>
+            <Characteristics characteristics={characteristics} />
+        </div>
+        
+        <div className="product-price">{/* layout */}
+            <ProductPrice className="product-price__price" price={price} />
+            <ProductPrice className="product-price__discount-price" price={discountPrice} />
+            <ProductPriceHint />
+            <AddProductToCart variant="mini" id={id} />
+            <AddProductToComparison variant="mini" id={id} />
+        </div>
     </ShadowOnHover>
 }
