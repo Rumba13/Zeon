@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 
-export function useRating() {
-    const highlightedStarsRef = React.createRef<HTMLDivElement>();
-    const [ratingValue, setStarCounterCount] = useState<number>(0);
+export function useRating(_setRating:(rating:number) => any) {
+    const highlightingStarsRef = React.createRef<HTMLDivElement>();
 
     function setRating(rating: number) {
         if (rating > 5 || rating < 0) {
             return;
         }
 
-        setStarCounterCount(rating);
+        _setRating(rating);
         highlightActiveStars(rating);
 
         function highlightActiveStars(starCount: number) {
-            highlightedStarsRef.current?.style.setProperty("--active-stars-procent", `${starCount * 20}%`)
+            highlightingStarsRef.current?.style.setProperty("--active-stars-procent", `${starCount * 20}%`)
         }
     }
 
-    return { highlightedStarsRef, setRating, ratingValue }
+    return { highlightingStarsRef, setRating }
 }

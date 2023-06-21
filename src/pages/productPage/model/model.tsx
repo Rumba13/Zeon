@@ -1,7 +1,7 @@
 import { ProductDto } from "../libs/dtos";
 import { Repository } from "../api/repository"
 import { Service } from "../api/service"
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 
 class ProductPageState {
     private service: Service;
@@ -9,13 +9,27 @@ class ProductPageState {
 
     private setProduct = (product: ProductDto) => this.product = product;
 
+
     constructor(service: Service) {
         this.service = service;
         makeAutoObservable(this);
     }
-    
-    public async loadProduct(id:number) {
+
+    public async loadProduct(id: number) {
         this.setProduct(await this.service.loadProduct(id));
+    }
+    public setRating = async (rating: number) => {
+        
+        if (!this.product) {
+            throw new Error("Trying set rating when product isnt BLYA");
+        }
+
+        //server logic
+
+        runInAction(() => {
+            if (this.product)
+                this.product.rating = rating
+        })
     }
 }
 

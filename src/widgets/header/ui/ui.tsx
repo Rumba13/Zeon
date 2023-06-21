@@ -8,7 +8,7 @@ import { Logo } from "../../../shared/ui/logo";
 import { ShoppingCart } from "../../../entities/productCart";
 import { ComparisonCart } from "../../../entities/comparisonCart";
 
-export function Header() {//TODO layout
+export function Header() {
     return <header className="header-wrapper">
         <SubHeader />
         <div className="header">

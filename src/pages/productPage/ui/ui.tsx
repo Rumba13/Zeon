@@ -23,7 +23,7 @@ export const ProductPage = observer(() => {
     const state = useStore<ProductPageStateType>(state => state.productPage)
     const { id: productId } = useParams();
     const { product } = state;
-    
+
     useEffect(() => {
         productId && state.loadProduct(+productId)
     }, [state, productId])
@@ -40,7 +40,7 @@ export const ProductPage = observer(() => {
         <div className="product-information"> {/* layout */}
             <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
             <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
-            <Rating />
+            <Rating rating={product.rating} setRating={state.setRating} />
             <Delivery />
             <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth} />
             <ProductPrices price={product.price} discountPrice={product.discountPrice} />
