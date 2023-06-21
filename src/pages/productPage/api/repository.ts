@@ -1,10 +1,10 @@
 import { ICONS } from "../../../images/images";
 import { ProductDto } from "../libs/dtos";
 
-export default class ProductPageRepository {
+export class Repository {
     constructor() { }
 
-    public async getProductById(id: number): Promise<ProductDto> {
+    public async loadProduct(id: number): Promise<ProductDto> {
         return await Promise.resolve({
             type: "lerkaType",
             id: 88,

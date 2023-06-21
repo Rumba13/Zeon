@@ -9,7 +9,7 @@ type PropsType = {
 
 type VariantType = "mini" | "full";
 
-export function AddProductToComparison({ variant, id }: PropsType) { //TODO refuck
+export function AddProductToComparison({ variant, id }: PropsType) { //TODO refuck //TODO Fullstate
 
     if (variant === "mini") {
         return <SecondaryProductButton className="comparison-button" >

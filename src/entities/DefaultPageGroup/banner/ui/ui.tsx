@@ -1,26 +1,25 @@
 import "./styles.scss";
 import { useEffect } from "react";
-import { loadAdvertisingBannerThunk } from "../model/model";
 import { Loading } from "../../../../shared/ui//loading";
-import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
+import {  useStore } from "../../../../shared/lib/hooks";
 import { Banner } from "../../../../shared/ui/banner";
+import { DefaultPageStateType } from "../../../../pages/defaultPage";
+import { observer } from "mobx-react";
 
 type PropsType = {
 
 }
 
-export function DefaultPageBanner({ }: PropsType) { 
-    const dispatch = useAppDispatch();
-    const banner = useAppSelector((state) => state.defaultPage.advertisingBanner);
+export const DefaultPageBanner = observer(({ }: PropsType) => {
+    const state = useStore<DefaultPageStateType>(state => state.defaultPage);
 
     useEffect(() => {
-        dispatch(loadAdvertisingBannerThunk());
-    }, [dispatch, loadAdvertisingBannerThunk])
+        state.loadAdvertisingBanner()
+    }, [state])
 
-
-    if (!banner) {
+    if (!state.advertisingBanner) {
         return <Loading />
     }
 
-    return <Banner banner={banner}/>
-}
+    return <Banner banner={state.advertisingBanner} />
+})

@@ -1,7 +1,7 @@
 import { ICONS } from "../../../images/images"
 import { SearchProductDto, PaginatorDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos";
 
-export default class SearchPageRepository {
+export class Repository {
     constructor() { }
 
     public async loadSearchTags(): Promise<SearchTagDto[]> {
@@ -79,7 +79,7 @@ export default class SearchPageRepository {
                     discountPrice: 20000,
                     previewImage: ICONS.slider1} ]), 2000))
     }
-    public async loadSearchPageTitle(): Promise<SearchPageTitleDto> {
+    public async loadPageTitle(): Promise<SearchPageTitleDto> {
         return Promise.resolve("title")
     }
     public loadPaginator():Promise<PaginatorDto> {

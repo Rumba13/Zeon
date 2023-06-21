@@ -3,7 +3,7 @@ import { useRating } from "../lib/useRating";
 
 type PropsType = {}
 
-export function Rating({ }: PropsType) {
+export function Rating({ }: PropsType) { //TODO Fullstate
     const { highlightedStarsRef, ratingValue, setRating } = useRating();
 
     return <div className="rating-wrapper">

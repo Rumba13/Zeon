@@ -1,7 +1,7 @@
 import "./styles.scss";
 import { Sprite } from "../../../shared/ui/sprite";
 
-export function ShoppingCart() { 
+export function ShoppingCart() { //TODO Fullstate
     return <a href="##" className="product-action cart">
         <Sprite yOffset={-998} />
         <span className="product-action__text">Корзина</span>

@@ -9,7 +9,7 @@ type PropsType = {
 
 type VariantType = "mini" | "full";
 
-export function AddProductToCart({ variant, id }: PropsType) {
+export function AddProductToCart({ variant, id }: PropsType) { //TODO Fullstate
 
     if (variant === "mini") {
         return <PrimaryProductButton >

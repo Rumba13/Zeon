@@ -1,7 +1,7 @@
 import "./styles.scss"
 import { Sprite } from "../../../shared/ui/sprite"
  
-export function ComparisonCart() {
+export function ComparisonCart() { //TODO Fullstate
     return <a href="##" className="product-action comparison-cart">
         <Sprite yOffset={-964} />
         <span className="product-action__text">В сравнении</span>

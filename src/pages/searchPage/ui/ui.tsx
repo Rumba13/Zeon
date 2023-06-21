@@ -1,36 +1,30 @@
 import "./styles.scss";
 import { useEffect } from "react";
-import { loadSearchProductsThunk, loadSearchTagsThunk, loadSearchTitleThunk,loadPaginatorThunk } from "..";
-import { useAppDispatch, useAppSelector } from "../../../shared/lib/hooks";
+import { useStore } from "../../../shared/lib/hooks";
 import { Loading } from "../../../shared/ui/loading";
 import { PageTitle } from "../../../layouts/SearchPageGroup/pageTitle";
 import { SearchFilters } from "../../../widgets/SearchPageGroup/filters";
 import { Pagination } from "../../../widgets/SearchPageGroup/paginator";
 import { SearchTags } from "../../../widgets/SearchPageGroup/tags";
 import { ProductSearchResults } from "../../../widgets/SearchPageGroup/productSearchResults";
-import { useSelector } from "react-redux";
+import { observer } from "mobx-react";
 
-export function SearchPage() {
-    const dispatch = useAppDispatch();
-    const { paginator, products, searchTags, title:pageTitle } = useAppSelector(state => state.searchPage);
+export const SearchPage = observer(() => {
+    const state = useStore(state => state.searchPage);
+    const { title, products, paginator, searchTags } = state;
 
     useEffect(() => {
-        dispatch(loadSearchProductsThunk());
-        dispatch(loadSearchTagsThunk());
-        dispatch(loadSearchTitleThunk());
-        dispatch(loadPaginatorThunk());
-    }, [dispatch, loadSearchProductsThunk, loadSearchTagsThunk, loadSearchTitleThunk, loadPaginatorThunk])
+        state.loadProducts()
+        state.loadPageTitle()
+        state.loadSearchTags()
+        state.loadPaginator()
+    }, [state])
 
     return <div className="search-page">
-
-        {pageTitle ? <PageTitle title={pageTitle} /> : <Loading />}
-
+        {title ? <PageTitle title={title} /> : <Loading />}
         {searchTags ? <SearchTags tags={searchTags} /> : <Loading />}
-
         <SearchFilters />
-
         {products ? <ProductSearchResults products={products} /> : <Loading />}
-
         {paginator ? <Pagination paginator={paginator} /> : <Loading />}
     </div>
-}
+});

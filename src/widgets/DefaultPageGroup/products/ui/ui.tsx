@@ -1,26 +1,26 @@
 import { useEffect } from "react";
 import { Loading } from "../../../../shared/ui//loading";
-import { loadDefaultProductsThunk } from "../model/model";
-import { useAppDispatch, useAppSelector } from "../../../../shared/lib/hooks";
+import { useStore } from "../../../../shared/lib/hooks";
 import { ProductMini } from "../../../../entities/DefaultPageGroup/product";
+import { DefaultPageStateType } from "../../../../pages/defaultPage";
+import { observer } from "mobx-react";
 
 type PropsType = {}
 
-export function Products({ }: PropsType) {
-    const dispatch = useAppDispatch();
-    const products = useAppSelector((state) => state.defaultPage.products);
+export const Products = observer(({ }: PropsType) => {
+    const state = useStore<DefaultPageStateType>(state => state.defaultPage);
 
     useEffect(() => {
-        dispatch(loadDefaultProductsThunk());
-    }, [dispatch, loadDefaultProductsThunk])
+        state.loadDefaultProducts()
+    }, [state])
 
-    if (!products) {
+    if (!state.products) {
         return <Loading />
     }
 
     return <div className="products">
         <div className="product-container">
-            {products.map(product => <ProductMini {...product} />)}
+            {state.products.map(product => <ProductMini {...product} />)}
         </div>
     </div>
-}
+})
