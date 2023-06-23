@@ -14,10 +14,10 @@ export const SearchPage = observer(() => {
     const { title, products, paginator, searchTags } = state;
 
     useEffect(() => {
-        state.loadProducts()
-        state.loadPageTitle()
-        state.loadSearchTags()
-        state.loadPaginator()
+        state.loadProducts();
+        state.loadPageTitle();
+        state.loadSearchTags();
+        state.loadPaginator();
     }, [state])
 
     return <div className="search-page">

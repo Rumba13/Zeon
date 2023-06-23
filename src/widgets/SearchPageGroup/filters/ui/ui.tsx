@@ -1,20 +1,19 @@
 import "./styles.scss";
-import ArrowRadioButton from "../arrowRadioButton/arrowRadioButton";
 import { Formik } from "formik";
-import { useState } from "react";
 import { InOrderCheckBox } from "../inOrderCheckBox";
+import { useStore } from "../../../../shared/lib/hooks";
+import { observer } from "mobx-react";
+import { ArrowRadioButton } from "../arrowRadioButton";
 
-type SortType = "asc" | "desc";
+export const Filters = observer(() => {
+    const { sortBy, setSortBy, setSortType } = useStore(state => state.searchPage);
 
-export function Filters() {
-    const [activeSortType, setActiveSortType] = useState<SortType>("asc");
-
-    function setSortTypeFromArrowValue(arrowValue: boolean) { //TODO refuck to global state
+    function setSortTypeFromArrowValue(arrowValue: boolean) { 
         if (arrowValue) {
-            setActiveSortType("asc")
+            setSortType("asc")
         }
         else {
-            setActiveSortType("desc")
+            setSortType("desc")
         }
     }
 
@@ -25,13 +24,13 @@ export function Filters() {
         >
             {({ values }) =>
                 <>
-                    <ArrowRadioButton setArrowValue={setSortTypeFromArrowValue} currentFilter={values.filter} radioGroup="filter" >По цене</ArrowRadioButton>
-                    <ArrowRadioButton setArrowValue={setSortTypeFromArrowValue} currentFilter={values.filter} radioGroup="filter" >Название</ArrowRadioButton>
-                    <ArrowRadioButton setArrowValue={setSortTypeFromArrowValue} currentFilter={values.filter} radioGroup="filter">Популярность</ArrowRadioButton>
+                    <ArrowRadioButton radioGroup="filter" sortBy="price" setSortBy={setSortBy} setStateIsArrowUp={setSortTypeFromArrowValue} currentSortBy={sortBy}  >По цене</ArrowRadioButton>
+                    <ArrowRadioButton radioGroup="filter" sortBy="name" setSortBy={setSortBy} setStateIsArrowUp={setSortTypeFromArrowValue} currentSortBy={sortBy}  >Название</ArrowRadioButton>
+                    <ArrowRadioButton radioGroup="filter" sortBy="popularity" setSortBy={setSortBy} setStateIsArrowUp={setSortTypeFromArrowValue} currentSortBy={sortBy} >Популярность</ArrowRadioButton>
 
                     <InOrderCheckBox value={values.inOrder} />
                 </>
             }
         </Formik>
     </div>
-}
+})

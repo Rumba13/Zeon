@@ -1,7 +1,8 @@
+import { makeAutoObservable } from "mobx";
 import { PaginatorDto, SearchProductDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos";
 import { Repository } from "../api/repository";
 import { Service } from "../api/service";
-import { makeAutoObservable } from "mobx";
+import { SortByType, SortType } from "../lib/filtersType";
 
 class SearchPageState {
     private service: Service
@@ -13,18 +14,28 @@ class SearchPageState {
         currentPage: 1,
         pagesCount: 40
     }
+    public sortBy: SortByType = "popularity";
+    public sortType: SortType = "desc";
 
     private setProducts = (products: SearchProductDto[]) => this.products = products;
     private setTitle = (title: SearchPageTitleDto) => this.title = title;
     private setSearchTags = (searchTags: SearchTagDto[]) => this.searchTags = searchTags;
     private setPaginator = (paginator: PaginatorDto) => this.paginator = paginator;
 
+    public setSortType = (sortType: SortType) => {
+        this.sortType = sortType
+    };
+    public setSortBy = (sortBy: SortByType) => {
+        console.log(sortBy)
+        this.sortBy = sortBy
+    };
+
     constructor(service: Service) {
         makeAutoObservable(this);
         this.service = service;
     }
 
-    public async loadProducts() {
+    public async loadProducts() { //TODO add filters logic, when finish back
         this.setProducts(await this.service.loadSearchProducts());
     }
     public async loadPageTitle() {
