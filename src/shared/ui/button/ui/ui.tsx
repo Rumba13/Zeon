@@ -1,11 +1,12 @@
 import "./styles.scss";
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 type PropsType = {
-    children:ReactNode,
-    className?:string
+    children: ReactNode,
+    className?: string,
+    onClick?: Function
 }
 
-export function Button({children,className}:PropsType) {
-    return <div className={`button ${className ?? ""}`}>{children}</div>
+export function Button({ children, className, onClick }: PropsType) {
+    return <div className={`button ${className ?? ""}`} onClick={onClick as MouseEventHandler}>{children}</div>
 }

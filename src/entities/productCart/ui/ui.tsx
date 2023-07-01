@@ -1,10 +1,14 @@
 import "./styles.scss";
 import { Sprite } from "../../../shared/ui/sprite";
+import { observer } from "mobx-react";
+import { useStore } from "../../../shared/lib/hooks";
 
-export function ShoppingCart() { //TODO Fullstate
+export const ShoppingCart = observer(() => {
+    const shoppingCart = useStore(state => state.shoppingCart);
+
     return <a href="##" className="product-action cart">
         <Sprite yOffset={-998} />
         <span className="product-action__text">Корзина</span>
-        <span className="product-action__counter">0</span>
+        <span className="product-action__counter">{shoppingCart.productsCount}</span>
     </a>
-}
+})

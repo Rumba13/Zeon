@@ -1,6 +1,8 @@
 import "./styles.scss";
 import { PrimaryProductButton } from "../../../../shared/ui//primaryProductButton";
 import { Sprite } from "../../../../shared/ui//sprite";
+import { useStore } from "../../../../shared/lib/hooks";
+import { observer } from "mobx-react";
 
 type PropsType = {
     id: number,
@@ -9,18 +11,19 @@ type PropsType = {
 
 type VariantType = "mini" | "full";
 
-export function AddProductToCart({ variant, id }: PropsType) { //TODO Fullstate
+export const AddProductToCart = observer(({ variant, id }: PropsType) => {
+    const addProductToCart = useStore(state => state.shoppingCart.addProduct);
 
     if (variant === "mini") {
-        return <PrimaryProductButton >
+        return <PrimaryProductButton onClick={() => addProductToCart(id)}>
             <Sprite yOffset={-876} />
             <span className="cart-button__text">Купить</span>
         </PrimaryProductButton>
     }
     else {
-        return <PrimaryProductButton >
+        return <PrimaryProductButton onClick={() => addProductToCart(id)}>
             <Sprite yOffset={-876} />
             <span className="cart-button__text">Добавить товар в корзину</span>
         </PrimaryProductButton>
     }
-}
+})
