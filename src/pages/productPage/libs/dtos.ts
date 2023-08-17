@@ -11,3 +11,5 @@ export type ProductDto  = {
     creditPricePerMonth:number,
     rating:number
 }
+//!IMP
+//TODO add field 'characteristic' from productSearchDto 

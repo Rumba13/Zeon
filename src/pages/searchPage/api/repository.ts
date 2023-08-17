@@ -5,7 +5,7 @@ export class Repository {
     constructor() { }
 
     public async loadSearchTags(): Promise<SearchTagDto[]> {
-        return Promise.resolve([
+        return await Promise.resolve([
             { title: "0", link: "##", isActive: false },
             { title: "240gb", link: "##", isActive: false },
             { title: "512gb", link: "##", isActive: true },
@@ -14,75 +14,76 @@ export class Repository {
         ])
     }
     public async loadSearchProducts(): Promise<SearchProductDto[]> {
-        return new Promise(resolve => setTimeout(() => resolve([
-                {
-                    manufacturer: "G.SKILL",
-                    type: "Оперативная память",
-                    batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
-                    id: 1233131231331,
-                    characteristics: { lers: 1, gay: "dsdasdad" },
-                    deliveryDate: (new Date(312313)),
-                    price: 100,
-                    discountPrice: 20000,
-                    previewImage: ICONS.slider1
-                },
-                {
-                    manufacturer: "G.SKILL",
-                    type: "Оперативная память",
-                    batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
-                    id: 1233131231331,
-                    characteristics: { lers: 1, gay: "dsdasdad" },
-                    deliveryDate: (new Date(312313)),
-                    price: 100,
-                    discountPrice: 20000,
-                    previewImage: ICONS.slider1
-                },
-                {
-                    manufacturer: "G.SKILL",
-                    type: "Оперативная память",
-                    batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
-                    id: 1233131231331,
-                    characteristics: { lers: 1, gay: "dsdasdad" },
-                    deliveryDate: (new Date(312313)),
-                    price: 100,
-                    discountPrice: 20000,
-                    previewImage: ICONS.slider1
-                },
-                {
-                    manufacturer: "G.SKILL",
-                    type: "Оперативная память",
-                    batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
-                    id: 1233131231331,
-                    characteristics: { lers: 1, gay: "dsdasdad" },
-                    deliveryDate: (new Date(312313)),
-                    price: 100,
-                    discountPrice: 20000,
-                    previewImage: ICONS.slider1
-                }, {
-                    manufacturer: "G.SKILL",
-                    type: "Оперативная память",
-                    batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
-                    id: 1233131231331,
-                    characteristics: { lers: 1, gay: "dsdasdad" },
-                    deliveryDate: (new Date(312313)),
-                    price: 100,
-                    discountPrice: 20000,
-                    previewImage: ICONS.slider1
-                }, {
-                    manufacturer: "G.SKILL",
-                    type: "Оперативная память",
-                    batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
-                    id: 1233131231331,
-                    characteristics: { lers: 1, gay: "dsdasdad" },
-                    deliveryDate: (new Date(312313)),
-                    price: 100,
-                    discountPrice: 20000,
-                    previewImage: ICONS.slider1} ]), 2000))
+        return await new Promise(resolve => setTimeout(() => resolve([
+            {
+                manufacturer: "G.SKILL",
+                type: "Оперативная память",
+                batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
+                id: 1233131231331,
+                characteristics: { lers: 1, gay: "dsdasdad" },
+                deliveryDate: (new Date(312313)),
+                price: 100,
+                discountPrice: 20000,
+                previewImage: ICONS.slider1
+            },
+            {
+                manufacturer: "G.SKILL",
+                type: "Оперативная память",
+                batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
+                id: 1233131231331,
+                characteristics: { lers: 1, gay: "dsdasdad" },
+                deliveryDate: (new Date(312313)),
+                price: 100,
+                discountPrice: 20000,
+                previewImage: ICONS.slider1
+            },
+            {
+                manufacturer: "G.SKILL",
+                type: "Оперативная память",
+                batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
+                id: 1233131231331,
+                characteristics: { lers: 1, gay: "dsdasdad" },
+                deliveryDate: (new Date(312313)),
+                price: 100,
+                discountPrice: 20000,
+                previewImage: ICONS.slider1
+            },
+            {
+                manufacturer: "G.SKILL",
+                type: "Оперативная память",
+                batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
+                id: 1233131231331,
+                characteristics: { lers: 1, gay: "dsdasdad" },
+                deliveryDate: (new Date(312313)),
+                price: 100,
+                discountPrice: 20000,
+                previewImage: ICONS.slider1
+            }, {
+                manufacturer: "G.SKILL",
+                type: "Оперативная память",
+                batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
+                id: 1233131231331,
+                characteristics: { lers: 1, gay: "dsdasdad" },
+                deliveryDate: (new Date(312313)),
+                price: 100,
+                discountPrice: 20000,
+                previewImage: ICONS.slider1
+            }, {
+                manufacturer: "G.SKILL",
+                type: "Оперативная память",
+                batch: "Ripjaws V 32GB DDR4 PC4-21300 F4-2666C19S-32GVK",
+                id: 1233131231331,
+                characteristics: { lers: 1, gay: "dsdasdad" },
+                deliveryDate: (new Date(312313)),
+                price: 100,
+                discountPrice: 20000,
+                previewImage: ICONS.slider1
+            }]), 2000))
     }
     public async loadPageTitle(): Promise<SearchPageTitleDto> {
-        return Promise.resolve("title")
+        return await Promise.resolve("title")
     }
-    public loadPaginator():Promise<PaginatorDto> {
-        return Promise.resolve({currentPage:1, pagesCount:40});
+    public async loadPaginator(): Promise<PaginatorDto> {
+        return await Promise.resolve({ currentPage: 1, pagesCount: 40 });
     }
 }

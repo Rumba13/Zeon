@@ -1,6 +1,6 @@
 export {
-    searchPageState,
-    SearchPageStateType
+    searchPageStore,
+    type SearchPageStoreType
 } from "./model/model";
 
 export type {

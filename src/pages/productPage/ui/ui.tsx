@@ -16,11 +16,11 @@ import { SubProductSlider } from "../../../entities/ProductPageGroup/subProductS
 import { AddProductToCart } from "../../../features/ProductPageGroup/addProductToCart";
 import { AddProductToComparison } from "../../../features/ProductPageGroup/addProductToComparison";
 import { Rating } from "../../../features/rating";
-import { ProductPageStateType } from "../model/model";
+import { ProductPageStoreType } from "../model/model";
 import { observer } from "mobx-react";
 
 export const ProductPage = observer(() => {
-    const state = useStore<ProductPageStateType>(state => state.productPage)
+    const state = useStore<ProductPageStoreType>(state => state.productPage)
     const { id: productId } = useParams();
     const { product } = state;
 

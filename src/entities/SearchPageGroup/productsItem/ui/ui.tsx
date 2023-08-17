@@ -15,7 +15,7 @@ export type ProductType = SearchProductDto;
 export type ProductCharacteristicsType = Object;
 
 export function ProductSearchResult({ type, manufacturer, batch, id, characteristics, discountPrice, price, previewImage, deliveryDate }: ProductType) {
-    //TODO entities more high level, separate to layout, refactoring
+    //TODO entities more high level, separate to layout, refactoring fix naming
 
     return <ShadowOnHover className="product">
         <ProductImage img={previewImage} href={`product/${id}`}/>

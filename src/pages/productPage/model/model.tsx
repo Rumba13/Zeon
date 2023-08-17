@@ -3,7 +3,7 @@ import { Repository } from "../api/repository"
 import { Service } from "../api/service"
 import { makeAutoObservable, runInAction } from "mobx";
 
-class ProductPageState {
+class ProductPageStore {
     private service: Service;
     public product?: ProductDto
 
@@ -33,5 +33,5 @@ class ProductPageState {
     }
 }
 
-export { ProductPageState as ProductPageStateType };
-export const productPageState = new ProductPageState(new Service(new Repository()));
+export type { ProductPageStore as ProductPageStoreType };
+export const productPageStore = new ProductPageStore(new Service(new Repository()));

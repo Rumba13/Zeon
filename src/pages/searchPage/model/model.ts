@@ -4,7 +4,7 @@ import { Repository } from "../api/repository";
 import { Service } from "../api/service";
 import { SortByType, SortType } from "../lib/filtersType";
 
-class SearchPageState {
+class SearchPageStore {
     private service: Service
 
     public searchTags?: SearchTagDto[]
@@ -49,5 +49,5 @@ class SearchPageState {
     }
 }
 
-export { SearchPageState as SearchPageStateType };
-export const searchPageState = new SearchPageState(new Service(new Repository()));
+export type { SearchPageStore as SearchPageStoreType };
+export const searchPageStore = new SearchPageStore(new Service(new Repository()));

@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { Loading } from "../../../../shared/ui//loading";
 import { useStore } from "../../../../shared/lib/hooks";
 import { ProductMini } from "../../../../entities/DefaultPageGroup/product";
-import { DefaultPageStateType } from "../../../../pages/defaultPage";
+import { DefaultPageStoreType } from "../../../../pages/defaultPage";
 import { observer } from "mobx-react";
 
 type PropsType = {}
 
 export const Products = observer(({ }: PropsType) => {
-    const state = useStore<DefaultPageStateType>(state => state.defaultPage);
+    const state = useStore<DefaultPageStoreType>(state => state.defaultPage);
 
     useEffect(() => {
         state.loadDefaultProducts()

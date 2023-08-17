@@ -1,9 +1,9 @@
 import { BannerDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos"
-import {Repository} from "../api/repository"
+import { Repository } from "../api/repository"
 import { Service } from "../api/service"
 import { makeAutoObservable } from "mobx"
 
-class DefaultPageState {
+class DefaultPageStore {
     private service: Service;
 
     public productSelections?: ProductSelectionDto[];
@@ -37,5 +37,5 @@ class DefaultPageState {
     }
 }
 
-export const defaultPageState = new DefaultPageState(new Service(new Repository()));
-export type { DefaultPageState as DefaultPageStateType };
+export const defaultPageStore = new DefaultPageStore(new Service(new Repository()));
+export type { DefaultPageStore as DefaultPageStoreType };

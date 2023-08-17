@@ -1,6 +1,6 @@
 export {
-    productPageState,
-    ProductPageStateType
-} from "./model/model"
+    productPageStore,
+    type ProductPageStoreType
+} from "./model/model";
 
-export { ProductPage } from "./ui/ui"
+export { ProductPage } from "./ui/ui";
