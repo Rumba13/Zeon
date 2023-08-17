@@ -3,9 +3,10 @@ import { Button } from "../../button";
 
 type PropsType = {
     children: React.ReactNode,
-    onClick?: Function
+    onClick?: Function,
+    className?:string
 }
-//TODO refuck
-export function PrimaryProductButton({ children, onClick }: PropsType) {
-    return <Button className="cart-button" onClick={onClick}>{children}</Button>
+
+export function PrimaryProductButton({ children, onClick,className }: PropsType) {
+    return <Button className={`cart-button ${className || ""}`} onClick={onClick}>{children}</Button>
 }

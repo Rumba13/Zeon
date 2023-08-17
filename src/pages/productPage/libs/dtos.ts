@@ -9,7 +9,6 @@ export type ProductDto  = {
     batch: string,
     guaranteeMonths: number,
     creditPricePerMonth:number,
-    rating:number
+    rating:number,
+    characteristic: Object
 }
-//!IMP
-//TODO add field 'characteristic' from productSearchDto 

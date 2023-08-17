@@ -11,7 +11,7 @@ type PropsType = {
 
 type VariantType = "mini" | "full";
 
-export const AddProductToComparison = observer(({ variant, id }: PropsType) => { //TODO refuck //TODO Fullstate
+export const AddProductToComparison = observer(({ variant, id }: PropsType) => {
     const addProductToComparison = useStore(state => state.comparisonCart.addProduct);
 
     if (variant === "mini") {

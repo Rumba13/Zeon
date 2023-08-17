@@ -6,22 +6,23 @@ import { observer } from "mobx-react";
 
 type PropsType = {
     id: number,
-    variant: VariantType
+    variant: VariantType,
+    className?: string
 }
 
 type VariantType = "mini" | "full";
 
-export const AddProductToCart = observer(({ variant, id }: PropsType) => {
+export const AddProductToCart = observer(({ variant, id, className }: PropsType) => {
     const addProductToCart = useStore(state => state.shoppingCart.addProduct);
 
     if (variant === "mini") {
-        return <PrimaryProductButton onClick={() => addProductToCart(id)}>
+        return <PrimaryProductButton className={className} onClick={() => addProductToCart(id)}>
             <Sprite yOffset={-876} />
             <span className="cart-button__text">Купить</span>
         </PrimaryProductButton>
     }
     else {
-        return <PrimaryProductButton onClick={() => addProductToCart(id)}>
+        return <PrimaryProductButton className={className} onClick={() => addProductToCart(id)}>
             <Sprite yOffset={-876} />
             <span className="cart-button__text">Добавить товар в корзину</span>
         </PrimaryProductButton>

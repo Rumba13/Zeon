@@ -15,10 +15,11 @@
     padding: 10px;
     text-align: center;
     border: 1px solid var(--primary-color);
+    background-color: #ffffff;
     transition: box-shadow 0.4s;
 
     &:hover {
-        & .buy-button-wrapper {
+        & .product-mini__button-wrapper {
             box-shadow: 0 10px 25px -3px rgb(0 0 0 / 20%);
             opacity: 1;
             pointer-events: all;
@@ -34,14 +35,46 @@
         font-weight: 700;
         color: var(--secondary-color);
         transition: color 0.4s;
+
         &:hover {
             color: var(--dark-text-color);
         }
     }
 
-    & .buy-button__text {
-        color: var(--primary-color);
+    .product-mini__button-wrapper {
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 54px;
+        box-sizing: border-box;
+        transition: all 0.4s;
+        pointer-events: none;
+        z-index: 100;
+        opacity: 0;
+        background-color: inherit;
+        
+    }
+    
+    & .product-mini__button {
+        margin: 30px;
+        margin-top: 0;
+        height: 38px;
 
+        border-radius: 0;
+        border: 1px solid var(--primary-color);
+        border-top: 0;
+        background-color: var(--secondary-color);
+
+
+        & span {
+            color: var(--primary-color);
+        }
+        &:hover {
+            background-color: var(--active-color);
+
+        }
     }
 
 }

@@ -35,7 +35,7 @@ class SearchPageStore {
         this.service = service;
     }
 
-    public async loadProducts() { //TODO add filters logic, when finish back
+    public async loadProducts() { 
         this.setProducts(await this.service.loadSearchProducts());
     }
     public async loadPageTitle() {

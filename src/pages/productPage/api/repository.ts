@@ -16,6 +16,7 @@ export class Repository {
             discountPrice: 1000,
             photos: [ICONS.slider1, ICONS.slider2, ICONS.slider3, ICONS.slider4],
             creditPricePerMonth: 15.5,
+            characteristic: {},
             rating: 5
         })
     }
