@@ -1,27 +1,31 @@
+import Cookies from "js-cookie";
 import { makeAutoObservable } from "mobx";
 
 export class ComparisonCartStore {
     public products: number[] = [];
+    private cookieName:string = "comparison-cart";
 
-    public get productsCount():number {
+    public get productsCount() {
         return this.products.length;
     }
-
+    private writeCartInCookie() {
+        Cookies.set(this.cookieName, JSON.stringify(this.products));
+    }
+    private readCartFromCookie() {
+        this.products = JSON.parse(Cookies.get(this.cookieName) || "[]");
+    }
     constructor() {
         makeAutoObservable(this);
-        this.loadCart();
+        this.readCartFromCookie();
     }
-
-    private loadCart() {
-
+    public addProduct = (id: number) => {
+        this.products.push(id);
+        this.writeCartInCookie();
     }
-
-    public addProduct = (productId: number) => {
-        this.products.push(productId);
-    }
-    public removeProduct = (productId: number) => {
-        const productIndex = this.products.indexOf(productId);
+    public removeProduct = (id: number) => {
+        const productIndex = this.products.indexOf(id);
         this.products.splice(productIndex, 1);
+        this.writeCartInCookie();
     }
 }
 

@@ -3,7 +3,7 @@ import { createContext } from 'react';
 import { defaultPageStore } from '../pages/defaultPage';
 import { productPageStore } from '../pages/productPage';
 import { comparisonCartStore } from '../entities/comparisonCart';
-import { shoppingCartStore } from '../entities/productCart/model';
+import { shoppingCartStore } from '../entities/productCart/model/index';
 
 const store = {
   defaultPage: defaultPageStore,

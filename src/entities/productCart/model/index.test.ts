@@ -16,7 +16,10 @@ test("shopping cart add product", () => {
 test("shopping cart remove product", () => {
     const shoppingCartStore = new ShoppingCartStore();
 
-    shoppingCartStore.products = [1,2,3,4];
+    shoppingCartStore.addProduct(1);
+    shoppingCartStore.addProduct(2);
+    shoppingCartStore.addProduct(3);
+    shoppingCartStore.addProduct(4);
 
     shoppingCartStore.removeProduct(1);
 
