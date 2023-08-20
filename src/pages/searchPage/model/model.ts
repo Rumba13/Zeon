@@ -14,9 +14,11 @@ class SearchPageStore {
         currentPage: 1,
         pagesCount: 40
     }
+    public searchQuery: string = "";
     public sortBy: SortByType = "popularity";
     public sortType: SortType = "desc";
 
+    public setSearchQuery = (query:string) => this.searchQuery = query;
     private setProducts = (products: SearchProductDto[]) => this.products = products;
     private setTitle = (title: SearchPageTitleDto) => this.title = title;
     private setSearchTags = (searchTags: SearchTagDto[]) => this.searchTags = searchTags;
@@ -35,7 +37,7 @@ class SearchPageStore {
         this.service = service;
     }
 
-    public async loadProducts() { 
+    public async loadProducts() {
         this.setProducts(await this.service.loadSearchProducts());
     }
     public async loadPageTitle() {

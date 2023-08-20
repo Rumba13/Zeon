@@ -6,6 +6,9 @@
 .hidden {
    visibility: hidden;
 }
+.display-none {
+   display: none !important;
+}
 
 .search-icon {
    cursor: pointer;

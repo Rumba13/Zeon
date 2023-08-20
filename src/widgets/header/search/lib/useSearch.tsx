@@ -6,12 +6,13 @@ export function useSearchForm(fixedSearchRef: RefObject<HTMLDivElement>) {
     function closeFixedSearchIfClickOutside(e: Event) {
         console.log(e.target)
         if (!fixedSearchRef.current?.contains(e.target as HTMLElement)) {
-            closeFixedSearch()
+            closeFixedSearch();
+            document.removeEventListener("click", closeFixedSearchIfClickOutside);
         }
     }
     function openFixedSearch() {
         setIsFixedSearchOpen(true);
-        setTimeout(() => document.addEventListener("click", closeFixedSearchIfClickOutside, { once: true }), 100)
+        setTimeout(() => document.addEventListener("click", closeFixedSearchIfClickOutside), 300)
     }
     function closeFixedSearch() {
         setIsFixedSearchOpen(false);
