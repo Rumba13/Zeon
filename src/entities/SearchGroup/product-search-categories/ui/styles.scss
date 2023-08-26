@@ -1,0 +1,29 @@
+.product-search-categories {
+    grid-area: product-categories;
+    overflow-y: scroll;
+    max-height: 100%;
+
+    & .product-search-categories__title {
+        font-size: 25px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: var(--primary-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+
+        background-color: var(--scroll-bar-color);
+    }
+
+    & .categories-list__item {
+        margin: 25px 0;
+        margin-right: 20px;
+
+        &._active a {
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+    }
+}

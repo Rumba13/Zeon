@@ -1,4 +1,7 @@
 .search-tips {
+    grid-area: search-tips;
+    margin-bottom: 15px;
+    
     & .search-tips__title {
         font-size: 15px;
         color: var(--inactive-color);

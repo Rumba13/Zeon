@@ -3,9 +3,25 @@
    top: 15px;
    left: 50%;
    z-index: 100;
-   transform: translate(-50%);
-   display: grid;
+   height: 97vh;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid #000; //TODO remove in prod
    background-color: white;
+   transform: translate(-50%);
+
+   & .search-results {
+      max-height: 100%;
+      padding: 20px;
+      display: grid;
+
+      grid-template: auto 79.5vh / 3fr 7fr; //TODO remove vh
+
+      grid-template-areas:
+         "search-tips search-tips"
+         "product-categories search-results"
+      ;
+   }
 }
 
 .fixed-search {
@@ -14,6 +30,8 @@
    justify-content: space-between;
    width: var(--content-max-width);
    border: 1px solid #c5c5c5;
+   min-height: 80px;
+
 
    & .icon {
       height: 22px;
@@ -21,14 +39,11 @@
    }
 
    & .search__form {
-      height: 80px;
       font-size: 28px;
    }
 }
 
-.fixed-search-wrapper .padding-wrapper {
-   padding: 20px;
-}
+
 
 @media(max-width:1200px) {
 

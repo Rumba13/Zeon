@@ -15,7 +15,7 @@ type SearchTipsType = {
 export function SearchTips({ items, searchQuery }: PropsType) {
 
     if (searchQuery.trim() === "" || items.length === 0) {
-        return <></>
+        return <span className="search-tips"></span> //it must return classname to prevent grid crush
     }
 
 
