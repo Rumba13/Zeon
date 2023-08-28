@@ -5,6 +5,7 @@ import { Icon } from "../../../shared/ui/icon";
 import { SearchTips } from "../../../entities/SearchPageGroup/search-tips";
 import { useStore } from "../../../shared/lib/hooks";
 import { ProductSearchCategories } from "../../../entities/SearchGroup/product-search-categories/ui/ui";
+import { SearchResultContent } from "../../../entities/SearchGroup/search-result-content";
 
 type PropsType = {
     clickableZoneRef: React.RefObject<HTMLInputElement>,
@@ -32,7 +33,7 @@ export function FixedSearch({ clickableZoneRef, isFixedSearchOpen, openFixedSear
 
             <ProductSearchCategories />
 
-            <div className="search-results-content">РезультPP</div>
+            <SearchResultContent/>
         </div>
     </div>
 }

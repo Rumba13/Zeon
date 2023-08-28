@@ -33,3 +33,15 @@
     background-color: var(--secondary-color);
   }
 }
+
+.scroll-bar {
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--primary-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+
+    background-color: var(--scroll-bar-color);
+  }
+}

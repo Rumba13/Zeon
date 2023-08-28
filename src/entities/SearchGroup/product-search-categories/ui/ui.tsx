@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./styles.scss";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CategoryItem } from "./category-item";
 import { ProductCategoryType } from "../libs/productCategoryType";
@@ -52,7 +52,7 @@ export function ProductSearchCategories({ }: PropsType) {
         return false;
     }
 
-    return <ul className="product-search-categories">
+    return <ul className="product-search-categories scroll-bar">
         <h2 className="product-search-categories__title">Категории</h2>
         {categories.map((category, index) => <CategoryItem isActive={index === activeCategoryIndex} onClick={(e) => categoryItemOnClickHandler(e, index, category.dataId)} productCategory={category} />)}
     </ul>

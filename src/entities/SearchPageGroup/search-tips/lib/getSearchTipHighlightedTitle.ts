@@ -19,8 +19,6 @@ export function getSearchTipHighlightedTitle(title: string, searchQuery: string)
 
     highlightedPart = searchQuery
 
-    console.log(highlightStart)
-
     partBeforeHighlight = title.substring(0, highlightStart);
     partAfterHighlight = title.substring(highlightStart + searchQuery.length);
 

@@ -13,6 +13,7 @@
    & .search-results {
       max-height: 100%;
       padding: 20px;
+      padding-right: 0;
       display: grid;
 
       grid-template: auto 79.5vh / 3fr 7fr; //TODO remove vh
