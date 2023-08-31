@@ -1,6 +1,5 @@
 .search-results-content {
     padding: 0 40px;
-
     overflow-y: scroll;
 
     & .search-results-content__title {
@@ -21,6 +20,10 @@
         box-sizing: content-box;
         padding: 15px 0;
         border-bottom: 1px solid var(--weak-smoky-white);
+
+        &:last-child {
+            border-bottom: 0;
+        }
 
         & .search-result-product__delivery {
             grid-area: delivery;
