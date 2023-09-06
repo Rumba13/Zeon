@@ -1,5 +1,4 @@
 import { BannerDto, MiniProductDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos"
-import { Repository } from "../api/repository"
 import { Service } from "../api/service"
 import { makeAutoObservable } from "mobx"
 
@@ -37,5 +36,5 @@ class DefaultPageStore {
     }
 }
 
-export const defaultPageStore = new DefaultPageStore(new Service(new Repository()));
+export const defaultPageStore = new DefaultPageStore(new Service());
 export type { DefaultPageStore as DefaultPageStoreType };

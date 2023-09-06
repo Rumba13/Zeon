@@ -1,34 +1,23 @@
-import { MiniProductDto, BannerDto, ProductSelectionDto, DefaultPageDto, SliderItemDto } from "../libs/dtos";
-import { Repository } from "./repository";
+import { MiniProductDto, BannerDto, ProductSelectionDto, SliderItemDto } from "../libs/dtos";
+import { serverConnection } from "../../../shared/api/serverConnection";
 
 export class Service {
-    private repository: Repository;
-
-    constructor(repository: Repository) {
-        this.repository = repository;
-    }
+    constructor() { }
 
     public async loadDefaultProducts(): Promise<MiniProductDto[]> {
-        return await this.repository.loadDefaultProducts();
+        const products: MiniProductDto[] = (await serverConnection.get("/reccomended-products")).data;
+        return products;
     }
     public async loadAdvertisingBanner(): Promise<BannerDto> {
-        return await this.repository.loadAdvertisingBanner();
+        const advertisingBanner = await (await serverConnection.get("/advertising-banner")).data;
+        return advertisingBanner;
     }
     public async loadProductSelections(): Promise<ProductSelectionDto[]> {
-        return await this.repository.loadProductSelections();
-    }
-    public async loadDefaultPageData(): Promise<DefaultPageDto> {
-        const products = await this.repository.loadDefaultProducts();
-        const advertisingBanner = await this.repository.loadAdvertisingBanner();
-        const productSelections = await this.repository.loadProductSelections();
-
-        return {
-            advertisingBanner,
-            productSelections,
-            products,
-        }
+        const selections: ProductSelectionDto[] = (await serverConnection.get("/reccomended-product-categories")).data;
+        return selections;
     }
     public async getSliderItems(): Promise<SliderItemDto[]> {
-        return await this.repository.loadSliderItems()
+        const sliderItems:string[] = (await serverConnection.get("/home-page-slider")).data;
+        return sliderItems;
     }
 }

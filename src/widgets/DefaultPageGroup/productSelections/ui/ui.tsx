@@ -9,7 +9,7 @@ type PropsType = {}
 
 export const ProductSelections = observer(({ }: PropsType) => {
     const state = useStore<DefaultPageStoreType>(state => state.defaultPage);
-    
+
     useEffect(() => {
         state.loadProductSelections();
     }, [state])
@@ -19,6 +19,6 @@ export const ProductSelections = observer(({ }: PropsType) => {
     }
 
     return <div className="product-selections">
-        {state.productSelections.map((selection) => <ProductSelection {...selection} key={selection.img} />)}
+        {state.productSelections.slice(0, 2).map((selection) => <ProductSelection {...selection} key={selection.img} />)}
     </div>
 })

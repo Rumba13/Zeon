@@ -18,6 +18,7 @@ import { AddProductToComparison } from "../../../features/ProductPageGroup/addPr
 import { Rating } from "../../../features/rating";
 import { ProductPageStoreType } from "../model/model";
 import { observer } from "mobx-react";
+import { ErrorBoundary } from "../../../shared/ui/errorBoundary/ui/ui";
 
 export const ProductPage = observer(() => {
     const state = useStore<ProductPageStoreType>(state => state.productPage)
@@ -25,7 +26,7 @@ export const ProductPage = observer(() => {
     const { product } = state;
 
     useEffect(() => {
-        productId && state.loadProduct(+productId)
+        productId && state.loadProduct(+productId);
     }, [state, productId])
 
     if (!product) {
@@ -33,22 +34,25 @@ export const ProductPage = observer(() => {
     }
 
     return <div className="product-page">
-        <div className="product-sliders">{/* layout */}
-            <MainProductSlider sliderItems={product.photos} />
-            <SubProductSlider sliderItems={product.photos} />
-        </div>
-        <div className="product-information"> {/* layout */}
-            <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
-            <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
-            <Rating rating={product.rating} setRating={state.setRating} />
-            <Delivery />
-            <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth} />
-            <ProductPrices price={product.price} discountPrice={product.discountPrice} />
-            <DiscountOffer />
-            <AddProductToCart variant="full" id={product.id} />
-            <AddProductToComparison variant="full" id={product.id} />
-        </div>
-        <ProductTabs />
-        <ProductImporter />
+        <ErrorBoundary>
+            <div className="product-sliders">{/* layout */}
+                <MainProductSlider sliderItems={product.photos} />
+                <SubProductSlider sliderItems={product.photos} />
+            </div>
+            <div className="product-information"> {/* layout */}
+                <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
+                <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
+                <Rating rating={product.rating} setRating={state.setRating} />
+                <Delivery />
+                <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth} />
+                <ProductPrices price={product.price} discountPrice={product.discountPrice} />
+                <DiscountOffer />
+                <AddProductToCart variant="full" id={product.id} />
+                <AddProductToComparison variant="full" id={product.id} />
+            </div>
+            <ProductTabs />
+            <ProductImporter />
+        </ErrorBoundary>
+
     </div>
 })

@@ -2,12 +2,13 @@ import "./styles.scss";
 import { useSlickSlider, SlickEventObject } from "../../../../shared/lib/useSlickSlider";
 import { useEffect } from "react";
 import { sliderConfig } from "../lib/sliderConfig";
+import ImageNotFoundIcon from "../../../../images/image-not-found.jpg"
 
 type PropsType = {
     sliderItems: string[]
 }
 
-export function MainProductSlider({ sliderItems }: PropsType) {
+export function MainProductSlider({ sliderItems = [ImageNotFoundIcon] }: PropsType) {
     const { renderSliderItems, addSlickEventListener } = useSlickSlider(".main-product-slider", sliderConfig)
 
     useEffect(() => {

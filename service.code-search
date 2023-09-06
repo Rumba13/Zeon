@@ -1,0 +1,47 @@
+# Query: service
+# Flags: WordMatch
+# ContextLines: 1
+
+48 results - 8 files
+
+src\pages\defaultPage\api\service.ts:
+  3  
+  4: export class Service {
+  5      private repository: Repository;
+
+
+src\pages\productPage\api\service.ts:
+  3  
+  4: export class Service {
+  5      private productPageRepository:Repository
+
+src\pages\productPage\model\model.tsx:
+   2  import { Repository } from "../api/repository"
+   3: import { Service } from "../api/service"
+   4  import { makeAutoObservable, runInAction } from "mobx";
+
+   6  class ProductPageStore {
+   7:     private service: Service;
+   8      public product?: ProductDto
+
+  12  
+  13:     constructor(service: Service) {
+  14:         this.service = service;
+  15          makeAutoObservable(this);
+
+  18      public async loadProduct(id: number) {
+  19:         this.setProduct(await this.service.loadProduct(id));
+  20      }
+
+  36  export type { ProductPageStore as ProductPageStoreType };
+  37: export const productPageStore = new ProductPageStore(new Service(new Repository()));
+
+src\pages\searchPage\api\service.ts:
+  3  
+  4: export class Service {
+  5      private repository: Repository;
+
+src\widgets\aside\ui\ui.tsx:
+  12          {/* <DynamicAdaptive.Cut moveTo="aside-content" at={850}> */}
+  13:             <Banner banner={{ href: "https://www.777555.by/service/", img: ICONS.repair }} />
+  14              <MiniNews />
