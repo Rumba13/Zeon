@@ -1,23 +1,20 @@
-import { PaginatorDto, SearchProductDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos"
-import { Repository } from "./repository";
+import { serverConnection } from "../../../shared/api/serverConnection";
+import { SearchProductDto, SearchTagDto, SearchPageTitleDto, SearchResult } from "../lib/dtos"
 
 export class Service {
-    private repository: Repository;
 
-    constructor(repository: Repository) {
-        this.repository = repository
-    }
+    constructor() { }
+    public async loadProduct(productId: string): Promise<SearchProductDto> {
 
-    public async loadSearchTags(): Promise<SearchTagDto[]> {
-        return await this.repository.loadSearchTags();
+        if (typeof productId !== "string" && typeof productId !== "number") {
+            throw new Error("Не в этот раз дубина || product id type is not string or number, please check page url " + typeof productId);
+        }
+
+        const product = (await serverConnection.get("/product", { params: { id: productId } })).data;
+        return product;
     }
-    public async loadSearchProducts(): Promise<SearchProductDto[]> {
-        return await this.repository.loadSearchProducts();
-    }
-    public async loadPageTitle(): Promise<SearchPageTitleDto> {
-        return await this.repository.loadPageTitle();
-    }
-    public async loadPaginator(): Promise<PaginatorDto> {
-        return await this.repository.loadPaginator();
+    public async search(query: string): Promise<SearchResult> {
+        const searchResults: SearchResult = (await serverConnection.get(`/search?query=${query}`)).data;
+        return searchResults
     }
 }

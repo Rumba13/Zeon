@@ -9,7 +9,7 @@ export function Routing() {
     return <Routes>
         <Route path="/" element={<DefaultPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/search/:page" element={<SearchPage />} />
+        <Route path="/search" element={<SearchPage />} />
         <Route path="*" element={<Page404 />} />
     </Routes>
 }   

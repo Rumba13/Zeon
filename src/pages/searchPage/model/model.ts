@@ -1,6 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { PaginatorDto, SearchProductDto, SearchTagDto, SearchPageTitleDto } from "../lib/dtos";
-import { Repository } from "../api/repository";
+import {  SearchTagDto, SearchPageTitleDto } from "../lib/dtos";
 import { Service } from "../api/service";
 import { SortByType, SortType } from "../lib/filtersType";
 
@@ -8,21 +7,22 @@ class SearchPageStore {
     private service: Service
 
     public searchTags?: SearchTagDto[]
-    public products?: SearchProductDto[]
+    public products: string[] = []
     public title?: SearchPageTitleDto
-    public paginator: PaginatorDto = {
-        currentPage: 1,
-        pagesCount: 40
-    }
+
+    //TODO ЭТо пиздец, я уверен что писал это бухим. Как можно было додуматься до ТАКОЙ ебатни. Пиздец. Ебанутый.(Снести) ((Стрелка вниз))
+    currentPage: number = 1;
+    pagesCount: number = 1;
     public searchQuery: string = "";
     public sortBy: SortByType = "popularity";
     public sortType: SortType = "desc";
 
-    public setSearchQuery = (query:string) => this.searchQuery = query;
-    private setProducts = (products: SearchProductDto[]) => this.products = products;
-    private setTitle = (title: SearchPageTitleDto) => this.title = title;
+    public setSearchQuery = (query: string) => this.searchQuery = query;
+    private setProducts = (products: string[]) => this.products = products;
+    private setTitle = (title: SearchPageTitleDto) => this.title = title; //TODO set pageTitleOnSearch
     private setSearchTags = (searchTags: SearchTagDto[]) => this.searchTags = searchTags;
-    private setPaginator = (paginator: PaginatorDto) => this.paginator = paginator;
+    public setCurrentPage = (page: number) => this.currentPage = page;
+    public setPageCount = (pagesCount: number) => this.pagesCount = pagesCount;
 
     public setSortType = (sortType: SortType) => {
         this.sortType = sortType
@@ -36,20 +36,23 @@ class SearchPageStore {
         makeAutoObservable(this);
         this.service = service;
     }
+    public async search(query: string) {
+        this.searchQuery = query;
 
-    public async loadProducts() {
-        this.setProducts(await this.service.loadSearchProducts());
+        this.setTitle(this.searchQuery);
+
+        const searchResult = await this.service.search(this.searchQuery);
+
+        this.setCurrentPage(1);
+        this.setPageCount(searchResult.pageCount)
+        this.setSearchTags(searchResult.searchTags);
+        this.setProducts(searchResult.productsOnPage);
     }
-    public async loadPageTitle() {
-        this.setTitle(await this.service.loadPageTitle());
-    }
-    public async loadSearchTags() {
-        this.setSearchTags(await this.service.loadSearchTags());
-    }
-    public async loadPaginator() {
-        this.setPaginator(await this.service.loadPaginator());
+    public loadProduct = async (productId: string) => { //TODO add new type for product id
+        const product = await this.service.loadProduct(productId);
+        return product;
     }
 }
 
 export type { SearchPageStore as SearchPageStoreType };
-export const searchPageStore = new SearchPageStore(new Service(new Repository()));
+export const searchPageStore = new SearchPageStore(new Service());
