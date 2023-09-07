@@ -7,7 +7,7 @@ export function paginationItemRenderCreator(pagesCount: number) {
     const itemRender: PaginationProps["itemRender"] = (_, type, originalElement) => {
         const page = _;
         if (type === "page") {
-            return <Link to={getLinkToSetPage(page, 40)}>{String(_)}</Link>
+            return <Link to={getLinkToSetPage(page, pagesCount)}>{String(_)}</Link>
         }
         else return originalElement;
     }

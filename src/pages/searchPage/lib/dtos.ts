@@ -21,3 +21,9 @@ export type PaginatorDto = {
     currentPage: number
     pagesCount: number
 }
+
+export type SearchResult = {
+    productsOnPage: string[],
+    searchTags: SearchTagDto[],
+    pageCount: number,
+}

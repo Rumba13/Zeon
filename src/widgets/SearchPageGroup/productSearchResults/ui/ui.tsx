@@ -3,9 +3,10 @@ import { ProductSearchResult } from "../../../../entities/SearchPageGroup/produc
 import { SearchProductDto } from "../../../../pages/searchPage/lib/dtos";
 
 type PropsType = {
-    products: SearchProductDto[]
+    productIds: string[],
+    loadProduct: (productId: string) => Promise<SearchProductDto>
 }
 
-export function ProductSearchResults({ products }: PropsType) {
-    return <div className="product-search-results">{products.map(product => <ProductSearchResult {...product} />)}</div>
+export function ProductSearchResults({ productIds, loadProduct }: PropsType) {
+    return <div className="product-search-results">{productIds.map(productId => <ProductSearchResult productId={productId} loadProduct={loadProduct} />)}</div>
 }

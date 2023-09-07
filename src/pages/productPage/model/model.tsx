@@ -9,7 +9,6 @@ class ProductPageStore {
 
     private setProduct = (product: ProductDto) => this.product = product;
 
-
     constructor(service: Service) {
         this.service = service;
         makeAutoObservable(this);
@@ -34,4 +33,4 @@ class ProductPageStore {
 }
 
 export type { ProductPageStore as ProductPageStoreType };
-export const productPageStore = new ProductPageStore(new Service(new Repository()));
+export const productPageStore = new ProductPageStore(new Service());

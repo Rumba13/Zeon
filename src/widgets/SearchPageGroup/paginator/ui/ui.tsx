@@ -8,9 +8,6 @@ type PropsType = {
     paginator: PaginatorDto
 }
 
-export function Pagination({ paginator: { pagesCount } }: PropsType) {
-    const { page } = useParams()
-    const currentPage = Number(page) || 1;
-
+export function Pagination({ paginator: { pagesCount,currentPage } }: PropsType) {
     return <AntPagination className="pagination" pageSize={1} total={pagesCount} defaultCurrent={currentPage} itemRender={paginationItemRenderCreator(pagesCount)} />
 }

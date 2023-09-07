@@ -8,23 +8,31 @@ import { Pagination } from "../../../widgets/SearchPageGroup/paginator";
 import { SearchTags } from "../../../widgets/SearchPageGroup/tags";
 import { ProductSearchResults } from "../../../widgets/SearchPageGroup/productSearchResults";
 import { observer } from "mobx-react";
+import { useSearchParams } from "react-router-dom";
 
-export const SearchPage = observer(() => {
+export const SearchPage = observer(() => { //TODO refuck
     const state = useStore(state => state.searchPage);
-    const { title, products, paginator, searchTags } = state;
+    const [searchParams, setSearchParams] = useSearchParams();
+    const { title, products, searchTags, pagesCount, currentPage } = state;
 
+    const searchQuery = searchParams.get("query");
+    const searchParamsPage = Number(searchParams.get("page")) || 1;
+
+    if (typeof searchQuery !== "string") {
+        history.pushState(null, "", "/")
+        return <></>
+    }
+    
     useEffect(() => {
-        state.loadProducts();
-        state.loadPageTitle();
-        state.loadSearchTags();
-        state.loadPaginator();
-    }, [state])
+        state.search(searchQuery);
+        state.setCurrentPage(searchParamsPage);
+    }, [state, searchQuery, searchParamsPage])
 
     return <div className="search-page">
         {title ? <PageTitle title={title} /> : <Loading />}
         {searchTags ? <SearchTags tags={searchTags} /> : <Loading />}
         <SearchFilters />
-        {products ? <ProductSearchResults products={products} /> : <Loading />}
-        {paginator ? <Pagination paginator={paginator} /> : <Loading />}
+        {products ? <ProductSearchResults productIds={products} loadProduct={state.loadProduct} /> : <Loading />}
+        {pagesCount ? <Pagination paginator={{ currentPage, pagesCount }} /> : <Loading />}
     </div>
 });
