@@ -1,16 +1,15 @@
 import "./styles.scss"
-import { ICONS } from "../../../images/images"
 import { Catalog } from "../../catalog"
 import { MiniNews } from "../../../entities/AsideGroup/miniNews"
 import { MiniReview } from "../../../entities/AsideGroup/miniReview"
 import { SocialNetworks } from "../../../entities/AsideGroup/socialNetworks"
-import { Banner } from "../../../shared/ui/banner"
+import { AdvertisingBanner } from "../../../entities/AsideGroup/advertising-banner"
 
 export function Aside() {
     return <aside className="aside">
         <Catalog />
         {/* <DynamicAdaptive.Cut moveTo="aside-content" at={850}> */}
-            <Banner banner={{ href: "https://www.777555.by/service/", img: ICONS.repair }} />
+            <AdvertisingBanner/>
             <MiniNews />
             <SocialNetworks />
             <MiniReview />
