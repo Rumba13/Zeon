@@ -1,12 +1,12 @@
 import "./styles.scss";
-import { TimeTable } from "../../../entities/timeTable";
-import { SubHeader } from "../../subHeader";
 import { Search } from "../search";
 import { PhoneNumbersLowWidth } from "../../../entities/phoneNumbersLowWidth";
-import { PhoneNumbers } from "../../../entities/phoneNumbers";
 import { Logo } from "../../../shared/ui/logo";
-import { ShoppingCart } from "../../../entities/productCart";
-import { ComparisonCart } from "../../../entities/comparisonCart";
+import { ComparisonCart } from "../../../entities/comparison-cart";
+import { PhoneNumbers } from "../../../entities/phone-numbers";
+import { ShoppingCart } from "../../../entities/product-cart";
+import { TimeTable } from "../../../entities/time-table";
+import { SubHeader } from "../../sub-header";
 
 export function Header() {
     return <header className="header-wrapper">

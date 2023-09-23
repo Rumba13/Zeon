@@ -1,12 +1,14 @@
-import { ProductAsFastSearchResult } from "../../../../shared/api/productAsFastSearchResult";
-import { ProductAsFastResult } from "./productAsFastResult";
 import "./styles.scss";
+import {
+    ProductFastSearchResultType
+} from "../../../../shared/api/types/product-fast-search-result-type";
+import {ProductFastSearchResult} from "./product-fast-search-result";
 
 type PropsType = {
 
 }
 
-const products: ProductAsFastSearchResult[] = [
+const products: ProductFastSearchResultType[] = [
     {
         id: 112313,
         title: "Пылесос PUGNA против иллюзий",
@@ -79,6 +81,6 @@ export function SearchResultContent({ }: PropsType) {
     return <div className="search-results-content scroll-bar">
         <h2 className="search-results-content__title">Популярные товары</h2>
 
-        {products.map(product => <ProductAsFastResult product={product} />)}
+        {products.map(product => <ProductFastSearchResult product={product} />)}
     </div>
 }

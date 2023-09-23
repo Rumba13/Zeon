@@ -1,7 +1,24 @@
 .about-company {
-    grid-area: about-company;
+  grid-area: about-company;
 
-    & > .about-company__title {
-        font-size: 30px;
+  & > .about-company__title {
+    font-size: 21px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+  }
+
+  & > .about-company-list {
+    & .about-company__list-item > .list-item__link {
+      font-size: 15px;
+      line-height: 2;
+      border-bottom: 1px solid var(--text-color);
+      color: var(--text-color);
+      transition: all 0.4s;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
     }
+  }
 }

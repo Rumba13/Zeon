@@ -2,9 +2,9 @@ import "./styles.scss";
 import { useRef } from "react";
 import { useSearchForm } from "../lib/useSearch";
 import { Formik } from "formik";
-import { SearchForm } from "../../../../features/searchForm";
-import { FixedSearch } from "../../../../features/fixedSearch";
 import { useStore } from "../../../../shared/lib/hooks";
+import { SearchForm } from "../../../../features/search/search-form";
+import { FixedSearch } from "../../../../features/search/fixed-search";
 
 export function Search() {
     const clickableZoneRef = useRef<HTMLInputElement>(null);

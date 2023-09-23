@@ -1,1 +1,1 @@
-export {Tabs, type TabType} from "./ui/ui"
+export {Tabs, type TabType} from "./tabs"

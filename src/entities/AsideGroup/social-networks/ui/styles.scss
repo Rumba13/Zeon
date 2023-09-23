@@ -1,0 +1,90 @@
+.social-networks {
+    margin-top: 28px;
+
+    .social-networks__title {
+        margin-bottom: 5px;
+        color: var(--inactive-color);
+    }
+
+    & .social-networks-list a:first-child {
+        margin-left: 0px;
+    }
+
+    .social-network {
+        & .sprite {
+            height: 17px;
+            width: 17px;
+        }
+
+        &:hover div {
+            color: white;
+        }
+    }
+}
+
+.social-networks-list {
+    display: flex;
+
+    &>a {
+        transition: all 0.4s;
+    }
+
+    & a:nth-child(1) .sprite {
+        height: 14px;
+        width: 8px;
+    }
+
+    & a:nth-child(2) .sprite {
+        height: 10px;
+        width: 16px;
+    }
+
+    & a:nth-child(3) .sprite {
+        height: 16px;
+        width: 16px;
+    }
+
+    & a:nth-child(4) .sprite {
+        height: 16px;
+        width: 10px;
+    }
+
+    & a:nth-child(5) .sprite {
+        height: 12px;
+        width: 16px;
+    }
+
+    & a:nth-child(1):hover .sprite {
+        background-position-y: -332px !important;
+    }
+
+    & a:nth-child(2):hover .sprite {
+        background-position-y: -66px !important;
+    }
+
+    & a:nth-child(3):hover .sprite {
+        background-position-y: -518px !important;
+    }
+
+    & a:nth-child(4):hover .sprite {
+        background-position-y: -566px !important;
+    }
+
+    & a:nth-child(5):hover .sprite {
+        background-position-y: -184px !important;
+    }
+}
+
+.social-network {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    margin: 5px;
+    background: var(--light-third-color);
+
+    &:hover{
+        background: var(--secondary-color);
+    }
+}

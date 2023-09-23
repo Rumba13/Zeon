@@ -1,6 +1,6 @@
 import './styles/App.scss';
 import { BrowserRouter } from "react-router-dom";
-import { Layout } from '../layouts/layout';
+import { Layout } from '../layouts/app-layout';
 import { Routing } from '../pages/rounting';
 
 export function App() {

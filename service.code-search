@@ -4,28 +4,28 @@
 
 48 results - 8 files
 
-src\pages\defaultPage\api\service.ts:
+src\pages\defaultPage\api\search-product-home-page-service.ts:
   3  
-  4: export class Service {
+  4: export class SearchService {
   5      private repository: Repository;
 
 
-src\pages\productPage\api\service.ts:
+src\pages\productPage\api\search-product-home-page-service.ts:
   3  
-  4: export class Service {
+  4: export class SearchService {
   5      private productPageRepository:Repository
 
-src\pages\productPage\model\model.tsx:
+src\pages\productPage\model\model.ts:
    2  import { Repository } from "../api/repository"
-   3: import { Service } from "../api/service"
+   3: import { SearchService } from "../api/service"
    4  import { makeAutoObservable, runInAction } from "mobx";
 
    6  class ProductPageStore {
-   7:     private service: Service;
+   7:     private service: SearchService;
    8      public product?: ProductDto
 
   12  
-  13:     constructor(service: Service) {
+  13:     constructor(service: SearchService) {
   14:         this.service = service;
   15          makeAutoObservable(this);
 
@@ -34,14 +34,14 @@ src\pages\productPage\model\model.tsx:
   20      }
 
   36  export type { ProductPageStore as ProductPageStoreType };
-  37: export const productPageStore = new ProductPageStore(new Service(new Repository()));
+  37: export const productPageStore = new ProductPageStore(new SearchService(new Repository()));
 
-src\pages\searchPage\api\service.ts:
+src\pages\searchPage\api\search-product-home-page-service.ts:
   3  
-  4: export class Service {
+  4: export class SearchService {
   5      private repository: Repository;
 
-src\widgets\aside\ui\ui.tsx:
+src\widgets\aside\ui\social-network.tsx:
   12          {/* <DynamicAdaptive.Cut moveTo="aside-content" at={850}> */}
   13:             <Banner banner={{ href: "https://www.777555.by/service/", img: ICONS.repair }} />
   14              <MiniNews />

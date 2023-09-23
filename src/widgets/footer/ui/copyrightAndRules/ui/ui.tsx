@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { ICONS } from "../../../../../images/images";
+import yandexLogo from "../../../../../images/yandexMarketLogo.png";
 
 export function CopyrightAndRules() {
     return <div className="copyright-and-rules">
@@ -7,7 +7,7 @@ export function CopyrightAndRules() {
         <a href="##" className="copyright-and-rules__rules">Правила обработки персональных данных</a>
         
         <a href="https://market.yandex.by/shop/259201/reviews/add" className="href">
-            <img src={ICONS.yandexLogo} alt="yandex" />
+            <img src={yandexLogo} alt="yandex" />
         </a>
     </div>
 }

@@ -1,8 +1,8 @@
 import "./styles.scss";
 import { useState } from "react";
-import { RadioButton } from "../../../../../shared/ui/radioButton";
 import { Sprite } from "../../../../../shared/ui/sprite";
-import { SortByType } from "../../../../../pages/searchPage";
+import {RadioButton} from "../../../../../shared/ui/radio-button";
+import { SortByType } from "../../../../../pages/search-page";
 
 type PropsType = {
     radioGroup: string,

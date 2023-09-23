@@ -1,1 +1,0 @@
-export { ProductSelections as DefaultPageProductSelections } from "./ui/ui"

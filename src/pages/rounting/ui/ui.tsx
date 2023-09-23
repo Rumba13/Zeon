@@ -1,13 +1,14 @@
 import "./styles.scss"
+import { HomePage } from "../../home-page"
+import { Page404 } from "../../page-404"
+import { ProductPage } from "../../product-page"
+import { SearchPage } from "../../search-page"
 import { Route, Routes } from "react-router"
-import { DefaultPage } from "../../defaultPage"
-import { Page404 } from "../../page404"
-import { ProductPage } from "../../productPage"
-import { SearchPage } from "../../searchPage/ui/ui"
+
 
 export function Routing() {
     return <Routes>
-        <Route path="/" element={<DefaultPage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="*" element={<Page404 />} />

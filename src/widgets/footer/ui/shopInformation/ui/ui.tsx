@@ -1,6 +1,6 @@
 import "./styles.scss"
 
-export function ShopInformation() {
+export function ShopInformation() { //TODO refuck
     return <div className="shop-information list-wrapper">
         <h2 className="title">Интернет-магазин</h2>
         <ul className="shop-information-list list">

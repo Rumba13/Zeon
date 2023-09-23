@@ -1,1 +1,0 @@
-export {AboutStore} from "./ui/ui"

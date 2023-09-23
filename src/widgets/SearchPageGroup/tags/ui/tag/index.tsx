@@ -1,8 +1,8 @@
-import { SearchTagDto } from "../../../../../pages/searchPage/lib/dtos";
 import "./styles.scss";
 import { Link } from "react-router-dom";
+import {SearchTagType} from "../../../../../shared/api/types/search-tag-type";
 
-type PropsType = SearchTagDto
+type PropsType = SearchTagType
 
 export function Tag({ title, link }: PropsType) {
     return <div className={`tag ${false ? "active" : ""}`}>

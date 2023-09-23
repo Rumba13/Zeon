@@ -1,1 +1,1 @@
-export {Products as DefaultPageProducts} from "./ui/ui"
+export {Products as HomePageProducts} from "./ui/ui"

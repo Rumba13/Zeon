@@ -1,26 +1,24 @@
 import { useEffect } from "react";
-import { Loading } from "../../../../shared/ui//loading";
-import { useStore } from "../../../../shared/lib/hooks";
-import { ProductMini } from "../../../../entities/DefaultPageGroup/product";
-import { DefaultPageStoreType } from "../../../../pages/defaultPage";
+import { ProductMini } from "../../../../entities/product-mini-card";
 import { observer } from "mobx-react";
+import Loading from "../../../../shared/ui/loading";
+import {recommendedProductsState} from "../model/model";
 
 type PropsType = {}
 
 export const Products = observer(({ }: PropsType) => {
-    const state = useStore<DefaultPageStoreType>(state => state.defaultPage);
 
     useEffect(() => {
-        state.loadDefaultProducts()
-    }, [state])
+        recommendedProductsState.loadRecommendedProducts()
+    }, [])
 
-    if (!state.products) {
+    if (!recommendedProductsState.products) {
         return <Loading />
     }
 
     return <div className="products">
         <div className="product-container">
-            {state.products.map(product => <ProductMini {...product} />)}
+            {recommendedProductsState.products.map(product => <ProductMini {...product} />)}
         </div>
     </div>
 })

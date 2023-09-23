@@ -1,9 +1,9 @@
 import "./styles.scss";
-import useBreakpoint from "../../../shared/lib/useBreakpoint";
+import useBreakpoint from "../../../shared/lib/use-breakpoint";
 import { useState } from "react";
-import { TimeTable } from "../../timeTable";
-import { PhoneNumbers } from "../../phoneNumbers";
 import { Sprite } from "../../../shared/ui//sprite";
+import { PhoneNumbers } from "../../phone-numbers";
+import { TimeTable } from "../../time-table";
 
 export function PhoneNumbersLowWidth() { //TODO refuck write HOC to select mobile or desktop component
     const adaptiveComponent = useBreakpoint(<></>);

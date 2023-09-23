@@ -1,9 +1,9 @@
 import "./styles.scss";
-import { SearchTagDto } from "../../../../pages/searchPage/lib/dtos";
-import {Tag} from "./tag";
+import { Tag } from "./tag";
+import {SearchTagType} from "../../../../shared/api/types/search-tag-type";
 
 type PropsType = {
-    tags: SearchTagDto[]
+    tags: SearchTagType[]
 }
 
 export function Tags({ tags }: PropsType) {

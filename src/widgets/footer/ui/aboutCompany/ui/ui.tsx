@@ -1,20 +1,29 @@
-import "./styles.scss"
-import { LinkList, LinkListItem } from "../../../../../shared/ui/linkList"
+import "./styles.scss";
+import {AboutCompanyListItem} from "./aboutCompanyListItem";
 
 export function AboutCompany() {
-    return <LinkList className="about-company" title="Компания">
-        <LinkListItem href="##" >Новости</LinkListItem>
-            <LinkListItem href="##" >Рассрочка</LinkListItem>
-            <LinkListItem href="##" >Как купить</LinkListItem>
-            <LinkListItem href="##" >Доставка</LinkListItem>
-            <LinkListItem href="##" >Контакты</LinkListItem>
-            <LinkListItem href="##" >Клубная Карта</LinkListItem>
-            <LinkListItem href="##" >Договор</LinkListItem>
-            <LinkListItem href="##" >Как купить</LinkListItem>
-            <LinkListItem href="##" >Гарантия</LinkListItem>
-            <LinkListItem href="##" >О нас</LinkListItem>
-            <LinkListItem href="##" >Услуги</LinkListItem>
-            <LinkListItem href="##" >Страхование</LinkListItem>
-            <LinkListItem href="##" >Подарочные сертификаты</LinkListItem>
-    </LinkList>
+    return <div className="about-company">
+        <h2 className="about-company__title">Компания</h2>
+
+        <ul className="about-company-list">
+            <AboutCompanyListItem href="##" >Новости</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Рассрочка</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Как купить</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Доставка</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Контакты</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Клубная Карта</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Договор</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Как купить</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Гарантия</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >О нас</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Услуги</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Страхование</AboutCompanyListItem>
+            <AboutCompanyListItem href="##" >Подарочные сертификаты</AboutCompanyListItem>
+        </ul>
+    </div>
+
+
+
+
+
 }

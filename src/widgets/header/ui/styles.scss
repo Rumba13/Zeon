@@ -40,7 +40,7 @@
 
 @media(max-width:$header-brekpoint-2) {
 
-    //minimaze product-actions and search
+    //minimaze product-details-card-actions and search
     .product-action {
         grid-area: comparison;
 
@@ -77,7 +77,7 @@
 
 @media(max-width:$header-brekpoint-1) {
 
-    //minimaze product-actions and search
+    //minimaze product-details-card-actions and search
     .header {
         grid-template: 1fr / 1fr auto auto auto auto;
         grid-template-areas:

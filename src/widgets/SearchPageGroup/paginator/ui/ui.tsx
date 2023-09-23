@@ -1,13 +1,13 @@
 import "./styles.scss";
-import { useParams } from "react-router-dom";
-import { PaginatorDto } from "../../../../pages/searchPage/lib/dtos";
-import { Pagination as AntPagination} from "antd";
-import { paginationItemRenderCreator } from "./itemRender";
+import {Pagination as AntPagination} from "antd";
+import {paginationItemRenderCreator} from "./itemRender";
 
 type PropsType = {
-    paginator: PaginatorDto
+    pagesCount: number,
+    currentPage: number
 }
 
-export function Pagination({ paginator: { pagesCount,currentPage } }: PropsType) {
-    return <AntPagination className="pagination" pageSize={1} total={pagesCount} defaultCurrent={currentPage} itemRender={paginationItemRenderCreator(pagesCount)} />
+export function Pagination({pagesCount, currentPage}: PropsType) {
+    return <AntPagination className="pagination" pageSize={1} total={pagesCount} defaultCurrent={currentPage}
+                          itemRender={paginationItemRenderCreator(pagesCount)}/>
 }

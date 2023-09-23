@@ -1,0 +1,33 @@
+.about-store {
+    grid-area: about-store;
+
+    & > .about-store__title {
+        font-size: 21px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: white;
+    }
+
+    & > .about-store-list {
+        & .about-store__list-item > .list-item__link {
+            font-size: 15px;
+            line-height: 2;
+            border-bottom: 1px solid var(--text-color);
+            color: var(--text-color);
+            transition: all 0.4s;
+
+            &:hover {
+                border-bottom: 1px solid transparent;
+            }
+        }
+
+        .link-list-item__link {
+            font-size: 15px;
+            line-height: 2;
+            border-bottom: 1px solid var(--text-color);
+            color: var(--text-color);
+            transition: all 0.4s;
+        }
+    }
+
+}

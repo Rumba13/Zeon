@@ -1,12 +1,10 @@
-import { searchPageStore } from '../pages/searchPage';
 import { createContext } from 'react';
-import { defaultPageStore } from '../pages/defaultPage';
-import { productPageStore } from '../pages/productPage';
-import { comparisonCartStore } from '../entities/comparisonCart';
-import { shoppingCartStore } from '../entities/productCart/model/index';
+import { comparisonCartStore } from '../entities/comparison-cart';
+import { shoppingCartStore } from '../entities/product-cart/model';
+import { searchPageStore } from '../pages/search-page';
+import {productPageStore} from "../entities/product-details/product-details-card";
 
 const store = {
-  defaultPage: defaultPageStore,
   productPage: productPageStore,
   searchPage: searchPageStore,
   comparisonCart: comparisonCartStore,
