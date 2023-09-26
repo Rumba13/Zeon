@@ -4,7 +4,7 @@ import { useSearchForm } from "../lib/useSearch";
 import { Formik } from "formik";
 import { useStore } from "../../../../shared/lib/hooks";
 import { SearchForm } from "../../../../features/search/search-form";
-import { FixedSearch } from "../../../../features/search/fixed-search";
+import { FixedSearchForm } from "../../../../features/search/fixed-search-form";
 
 export function Search() {
     const clickableZoneRef = useRef<HTMLInputElement>(null);
@@ -16,7 +16,7 @@ export function Search() {
         {({ }) =>
             <>
                 <SearchForm isFixedSearchOpen={isFixedSearchOpen} openFixedSearch={openFixedSearch} />
-                <FixedSearch closeFixedSearch={closeFixedSearch} openFixedSearch={openFixedSearch} clickableZoneRef={clickableZoneRef} isFixedSearchOpen={isFixedSearchOpen} />
+                <FixedSearchForm closeFixedSearch={closeFixedSearch} openFixedSearch={openFixedSearch} clickableZoneRef={clickableZoneRef} isFixedSearchOpen={isFixedSearchOpen} />
             </>
         }
     </Formik>

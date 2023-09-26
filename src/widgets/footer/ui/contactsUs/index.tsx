@@ -1,5 +1,5 @@
 import "./styles.scss"
-import { Sprite } from "../../../../shared/ui/sprite"
+import { Sprite } from "../../../../shared/ui/sprite/ui"
 import { PaymentMethods } from "./paymentMethods"
 import { formatPhone } from "../../../../entities/phone-numbers"
 import {ContactUsListItem} from "./contact-us-list-item";

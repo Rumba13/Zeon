@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSlickSlider } from "../../../../shared/lib/use-slick-slider";
 import { sliderConfig } from "../lib/sliderConfig"
 import { observer } from "mobx-react";
-import Loading from "../../../../shared/ui/loading";
+import Loading from "../../../../shared/ui/loading/ui";
 import {homeSliderState} from "../model/model";
 
 type PropsType = {}

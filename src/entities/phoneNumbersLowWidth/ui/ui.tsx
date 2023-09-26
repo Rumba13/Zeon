@@ -1,7 +1,7 @@
 import "./styles.scss";
 import useBreakpoint from "../../../shared/lib/use-breakpoint";
 import { useState } from "react";
-import { Sprite } from "../../../shared/ui//sprite";
+import { Sprite } from "../../../shared/ui/sprite/ui";
 import { PhoneNumbers } from "../../phone-numbers";
 import { TimeTable } from "../../time-table";
 

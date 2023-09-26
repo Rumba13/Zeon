@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { Sprite } from "../../../shared/ui/sprite";
+import { Sprite } from "../../../shared/ui/sprite/ui";
 import { observer } from "mobx-react";
 import { useStore } from "../../../shared/lib/hooks";
 

@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { useState } from "react";
-import { Sprite } from "../../../shared/ui/sprite";
+import { Sprite } from "../../../shared/ui/sprite/ui";
 
 export function TimeTable() {
     const defaultOpenedState = document.body.clientWidth < 600;

@@ -1,5 +1,5 @@
 import "./styles.scss"
-import { Sprite } from "../sprite"
+import { Sprite } from "../sprite/ui"
 import { scrollUp } from "../../lib/scroll-up"
 
 export function ScrollUp() {

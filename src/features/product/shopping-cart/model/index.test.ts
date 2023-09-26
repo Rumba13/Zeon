@@ -1,4 +1,4 @@
-import { ShoppingCartStore } from ".";
+import { ShoppingCartStore } from "./index";
 
 test("shopping cart add product-details-card", () => {
     const shoppingCartStore = new ShoppingCartStore();

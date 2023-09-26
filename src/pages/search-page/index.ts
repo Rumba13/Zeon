@@ -1,7 +1,7 @@
 export {
-    searchPageStore,
+    searchState,
     type SearchPageStoreType
-} from "./model/model";
+} from "../../features/search/search/model/model";
 
 export type {
     FiltersType,

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { observer } from "mobx-react";
 import {productCategoriesState} from "../model/model";
-import Loading from "../../../../shared/ui/loading";
+import Loading from "../../../../shared/ui/loading/ui";
 import {ProductSelection} from "./productSelection";
 
 type PropsType = {}

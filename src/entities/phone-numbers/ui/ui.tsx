@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { Sprite } from "../../../shared/ui/sprite";
+import { Sprite } from "../../../shared/ui/sprite/ui";
 import { PhoneNumber } from "./phone-numbers-item";
 
 export function PhoneNumbers() {

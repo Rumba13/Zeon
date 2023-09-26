@@ -1,4 +1,4 @@
-import { Sprite } from "../../../../../shared/ui/sprite";
+import { Sprite } from "../../../../../shared/ui/sprite/ui";
 import "./styles.scss";
 
 export function LeaveReview() {

@@ -1,12 +1,12 @@
 import { createContext } from 'react';
-import { comparisonCartStore } from '../entities/comparison-cart';
+import { comparisonCartStore } from '../features/product/comparison-cart';
 import { shoppingCartStore } from '../entities/product-cart/model';
-import { searchPageStore } from '../pages/search-page';
+import { searchState } from '../pages/search-page';
 import {productPageStore} from "../entities/product-details/product-details-card";
 
 const store = {
   productPage: productPageStore,
-  searchPage: searchPageStore,
+  searchPage: searchState,
   comparisonCart: comparisonCartStore,
   shoppingCart: shoppingCartStore
 }

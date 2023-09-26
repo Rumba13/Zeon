@@ -15,7 +15,7 @@ import {ProductImporter} from "../../importer";
 import {ProductIdType} from "../../../../shared/api/types/product-id-type";
 import {useStore} from "../../../../shared/lib/hooks";
 import {useEffect} from "react";
-import Loading from "../../../../shared/ui/loading";
+import Loading from "../../../../shared/ui/loading/ui";
 import {observer} from "mobx-react";
 import {ProductPageStoreType} from "../model/model";
 

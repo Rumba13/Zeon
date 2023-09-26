@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { Logo } from "../../../shared/ui/logo";
+import { Logo } from "../../../shared/ui/logo/ui";
 import { AboutCompany } from "./aboutCompany";
 import { Disclaimer } from "./disclaimer";
 import { CopyrightAndRules } from "./copyrightAndRules";
