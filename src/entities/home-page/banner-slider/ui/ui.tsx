@@ -1,23 +1,41 @@
 import "./styles.scss";
-import { useEffect } from "react";
-import { useSlickSlider } from "../../../../shared/lib/use-slick-slider";
-import { sliderConfig } from "../lib/sliderConfig"
-import { observer } from "mobx-react";
+import 'swiper/css';
+import "swiper/swiper-bundle.css";
+import {useEffect} from "react";
+import {observer} from "mobx-react";
 import Loading from "../../../../shared/ui/loading/ui";
 import {homeSliderState} from "../model/model";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Pagination, Navigation} from 'swiper/modules';
 
 type PropsType = {}
 
-export const BannerSlider = observer(({ }: PropsType) => {
-    const { renderSliderItems } = useSlickSlider(".advertising-banner-slider", sliderConfig)
+export const BannerSlider = observer(({}: PropsType) => {
 
     useEffect(() => {
         homeSliderState.loadSliderItems();
     }, [])
 
     if (!homeSliderState.sliderItems) {
-        return <Loading />
+        return <Loading/>;
     }
 
-    return <div className="banner-slider">{renderSliderItems(homeSliderState.sliderItems)}</div>
+    return <Swiper
+        className="banner-slider"
+        autoplay={{delay: 3000}}
+        loop={true}
+        direction="horizontal"
+        modules={[Pagination, Navigation]}
+        pagination={{
+            type: "bullets",
+            clickable: true,
+            bulletClass: "dot",
+            bulletActiveClass: "_active",
+            renderBullet(i:number, className:string) {
+                return `<div class=${className}></div>`;
+            },
+        }}
+    >
+        {homeSliderState.sliderItems.map(slide => <SwiperSlide><img src={slide} alt=""/></SwiperSlide>)}
+    </Swiper>
 })

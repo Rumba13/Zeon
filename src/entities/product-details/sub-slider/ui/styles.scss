@@ -1,75 +1,26 @@
 .sub-product-slider {
-    margin: 15px;
+  position: relative;
+  margin: 15px;
 
-    &:hover .slick-arrow {
-        opacity: 1;
+  & .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 12px;
+    border: 1px solid var(--primary-color);
+
+    &:hover {
+      border-color: var(--active-color);
     }
+  }
 
-    &.slick-slider {
-        position: relative;
-    }
 
-    & .slider__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-right: 12px;
-        padding: 10px;
-        border: 1px solid var(--primary-color);
+  & .swiper-wrapper {
+    width: 100%;
+  }
 
-        &:hover {
-            border-color: var(--active-color);
-        }
-    }
-
-    & .slick-track {
-        display: flex;
-        overflow: hidden;
-    }
-
-    & .slick-list {
-        overflow: hidden;
-    }
-
-    & .slick-slide {
-        width: 100%;
-    }
-
-    & .slick-current {
-        border-color: var(--active-color);
-    }
-
-    & .slick-arrow {
-        position: absolute;
-        top: 50%;
-        z-index: 10;
-        opacity: 0;
-        font-size: 0;
-        background-color: transparent;
-        background-image: url("../../../../images/sprite.png");
-        transition: opacity 0.4s;
-
-        &.slick-prev {
-            left: 15px;
-            width: 10px;
-            height: 16px;
-            background-position: 0 -823px;
-
-            &:hover {
-                background-position: 0 -615px;
-            }
-        }
-
-        &.slick-next {
-            right: 15px;
-            width: 10px;
-            height: 16px;
-            background-position: 0 -797px;
-
-            &:hover {
-                background-position: 0 -745px;
-            }
-        }
-    }
+  & .swiper-slide-thumb-active {
+    border-color: var(--active-color);
+  }
 }

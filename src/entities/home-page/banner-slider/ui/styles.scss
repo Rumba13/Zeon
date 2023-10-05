@@ -1,57 +1,46 @@
-.banner-slider {
-    position: relative;
+.swiper.banner-slider {
+  max-height: 340px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+
+  .swiper-wrapper {
+  }
+
+  .swiper-slide {
+    max-height: 100%;
+    width: fit-content;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  & .swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
     display: flex;
-    max-height: 340px;
-    min-height: fit-content;
-    
-    & img {
-        max-height: 100%;
+
+    & > .dot {
+      width: 10px;
+      height: 10px;
+      margin: 5px;
+      border: 1px solid var(--active-color);
+      border-radius: 50%;
+
+      &._active,
+      &:hover {
+        background-color: var(--active-color);
+      }
+
     }
-
-    &  .slider__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 20px;
-    }
-
-    & .slick-dots {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        display: flex !important;
-
-        &>li {
-            width: 10px;
-            height: 10px;
-            margin: 5px;
-            border: 1px solid var(--active-color);
-            border-radius: 50%;
-
-            &.slick-active,
-            &:hover {
-                background-color: var(--active-color);
-            }
-
-
-            & button {
-                font-size: 0;
-            }
-        }
-    }
-
-    & .slick-track {
-        display: flex;
-        max-height: 100%;
-        overflow: hidden;
-    }
-
-    & .slick-list {
-        overflow: hidden;
-    }
-
-    & .slick-slide {
-        width: 100%;
-    }
+  }
 }
+
+

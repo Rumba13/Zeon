@@ -14,49 +14,55 @@ import {ProductTabs} from "../../tabs";
 import {ProductImporter} from "../../importer";
 import {ProductIdType} from "../../../../shared/api/types/product-id-type";
 import {useStore} from "../../../../shared/lib/hooks";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Loading from "../../../../shared/ui/loading/ui";
 import {observer} from "mobx-react";
 import {ProductPageStoreType} from "../model/model";
+import {Swiper} from "swiper";
 
 type PropsType = {
-    productId:ProductIdType
+    productId: ProductIdType
 }
 
-export const ProductDetailsCard = observer(({productId}:PropsType) => {
+export const ProductDetailsCard = observer(({productId}: PropsType) => {
     const state = useStore<ProductPageStoreType>(state => state.productPage)
-    const { product } = state;
+    const {product} = state;
+
+    const [subSlider, setSubSlider] = useState<Swiper>();
+    const [mainSlider, setMainSlider] = useState<Swiper>();
 
     useEffect(() => {
         productId && state.loadProduct(+productId);
     }, [state, productId]);
 
-    if(!productId) {
+    if (!productId) {
         throw new Error("product id isn't provided")
     }
 
     if (!product) {
-        return <Loading />
+        return <Loading/>
     }
 
     return <>
         <div className="product-sliders">{/* app-layout */}
-            <MainProductSlider sliderItems={product.photos} />
-            <SubProductSlider sliderItems={product.photos} />
+            <MainProductSlider subSlider={subSlider} setMainSlider={setMainSlider} items={product.photos}/>
+            <SubProductSlider mainSlider={mainSlider} setSubSlider={setSubSlider} items={product.photos}/>
         </div>
         <div className="product-information"> {/* app-layout */}
-            <ProductTitle className="product-title__title" batch={product.batch} type={product.type} manufacturer={product.manufacturer} />
-            <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch} guaranteeMonths={product.guaranteeMonths} />
-            <Rating rating={product.rating} setRating={state.setRating} />
-            <Delivery />
-            <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth} />
-            <ProductPrices price={product.price} discountPrice={product.discountPrice} />
-            <DiscountOffer />
-            <AddProductToCart variant="full" id={product.id} />
-            <AddProductToComparison variant="full" id={product.id} />
+            <ProductTitle className="product-title__title" batch={product.batch} type={product.type}
+                          manufacturer={product.manufacturer}/>
+            <ManufacturerInfo manufacturer={product.manufacturer} batch={product.batch}
+                              guaranteeMonths={product.guaranteeMonths}/>
+            <Rating rating={product.rating} setRating={state.setRating}/>
+            <Delivery/>
+            <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth}/>
+            <ProductPrices price={product.price} discountPrice={product.discountPrice}/>
+            <DiscountOffer/>
+            <AddProductToCart variant="full" id={product.id}/>
+            <AddProductToComparison variant="full" id={product.id}/>
         </div>
-        <ProductTabs />
-        <ProductImporter />
+        <ProductTabs/>
+        <ProductImporter/>
     </>
 
 })

@@ -1,18 +1,26 @@
 import "./styles.scss";
-import { useSlickSlider } from "../../../../shared/lib/use-slick-slider";
-import { sliderConfig } from "../lib/sliderConfig";
 import ImageNotFoundIcon from "../../../../images/image-not-found.jpg"
-
+import 'swiper/css';
+import {SwiperSlide, Swiper} from "swiper/react";
+import {Controller,Thumbs } from "swiper/modules";
+import 'swiper/css/thumbs';
 type PropsType = {
-    sliderItems: string[]
+    items: string[],
+    setSubSlider: Function,
+    mainSlider: typeof Swiper
 }
 
-export function SubProductSlider({ sliderItems = [ImageNotFoundIcon] }: PropsType) {
-    const { renderSliderItems } = useSlickSlider(".sub-product-details-card-slider", sliderConfig)
+export function SubProductSlider({items = [ImageNotFoundIcon], setSubSlider,mainSlider}: PropsType) {
 
-    function handleClick(index: number) {
-        $(".sub-product-details-card-slider").slick('slickGoTo', index, true);
-    }
-
-    return <div className="sub-product-slider">{renderSliderItems(sliderItems, { onClick: handleClick })}</div>
+    return <Swiper
+        className="sub-product-slider"
+        modules={[Controller,Thumbs ]}
+        onSwiper={setSubSlider}
+        loop={true}
+        slidesPerView={5}
+        slideToClickedSlide={true}
+    speed={1500}
+    >
+        {items.map(slide => <SwiperSlide><img src={slide}/></SwiperSlide>)}
+    </Swiper>
 }

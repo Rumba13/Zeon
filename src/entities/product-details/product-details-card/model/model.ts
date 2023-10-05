@@ -14,7 +14,7 @@ class ProductDetailsStore {
     }
 
     public async loadProduct(id: number) {
-        this.setProduct(await this.productService.loadProduct(id));
+        this.setProduct(await this.productService.loadProduct(id))
     }
     public setRating = async (rating: number) => {
         
