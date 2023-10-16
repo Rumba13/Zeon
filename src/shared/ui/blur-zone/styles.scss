@@ -15,8 +15,9 @@
 .overflow-scroll {
     display: flex;
     flex: 0 1;
+    height: 100%;
     min-height: 100%;
-    overflow: scroll;
+    overflow-x: scroll;
 
     &::-webkit-scrollbar {
         display: none;

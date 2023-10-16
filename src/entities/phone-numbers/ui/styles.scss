@@ -1,6 +1,6 @@
 @import "../../../app/styles/variables.scss";
 
-.phone-numbers {
+.phones {
     display: flex;
     align-self: center;
     grid-area: phoneNumbers;
@@ -8,7 +8,7 @@
     margin-left: 10px;
     overflow-x: auto;
     
-    & > .phone-number {
+    & > .phone {
         margin: 7px;
     }
     
@@ -16,37 +16,17 @@
         margin-right: 5px;
     }
 
-    & > a:nth-child(1)>.sprite {
-        height: 19px;
-        width: 22px;
-    }
-
-    & > a:nth-child(2)>.sprite {
-        height: 16px;
-        width: 10px;
-    }
-
-    & > a:nth-child(3)>.sprite {
-        height: 18px;
-        width: 18px;
-    }
-
-    & > a:nth-child(4)>.sprite {
-        height: 15px;
-        width: 15px;
-    }
-
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-.phone-number {
+.phone {
     display: flex;
     color: black;
     min-width: fit-content;
 
-    & > .phone-number__text {
+    & > .phone__number {
         display: block;
         align-self: center;
         white-space: nowrap;
@@ -58,7 +38,7 @@
         width: 25px;
     }
 
-    &:hover > .phone-number__text {
+    &:hover > .phone__number {
         color: var(--secondary-color);
     }
 }

@@ -1,24 +1,23 @@
-import { useEffect } from "react";
-import { ProductMini } from "../../../../entities/product-mini-card";
-import { observer } from "mobx-react";
+import "./styles.scss"
+import {useEffect} from "react";
+import {ProductMini} from "../../../../entities/product-mini-card";
+import {observer} from "mobx-react";
 import Loading from "../../../../shared/ui/loading/ui";
 import {recommendedProductsState} from "../model/model";
 
 type PropsType = {}
 
-export const Products = observer(({ }: PropsType) => {
+export const Products = observer(({}: PropsType) => {
 
     useEffect(() => {
-        recommendedProductsState.loadRecommendedProducts()
+        recommendedProductsState.loadRecommendedProducts();
     }, [])
 
     if (!recommendedProductsState.products) {
-        return <Loading />
+        return <Loading/>
     }
 
     return <div className="products">
-        <div className="product-container">
-            {recommendedProductsState.products.map(product => <ProductMini {...product} />)}
-        </div>
+        {recommendedProductsState.products.map(product => <ProductMini {...product} />)}
     </div>
 })

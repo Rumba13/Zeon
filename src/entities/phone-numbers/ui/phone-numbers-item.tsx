@@ -6,10 +6,10 @@ type PropsType = {
     icon?:React.ReactNode
 }
 
-export function PhoneNumber({  icon,number }: PropsType) {
-    return <a href={`tel:${number}`} className="phone-number">
+export function Phone({  icon,number }: PropsType) {
+    return <a className="phone" href={`tel:${number}`}>
         {icon}
-        <span className="phone-number__text">{formatPhone(number)}</span>
+        <span className="phone__number">{formatPhone(number)}</span>
     </a>
 }
 

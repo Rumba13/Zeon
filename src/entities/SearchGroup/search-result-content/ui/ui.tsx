@@ -11,7 +11,7 @@ type PropsType = {
 const products: ProductFastSearchResultType[] = [
     {
         id: 112313,
-        title: "Пылесос PUGNA против иллюзий",
+        title: "Пылесос PUGNA против иллюзий sdhaudh hsdh ashdahsahdhadukashud hadhhadauad uhdahduahduhau hdahdu",
         previewImg: "https://gas-kvas.com/uploads/posts/2023-01/1673326120_gas-kvas-com-p-anime-stoni-risunki-6.jpg",
         properties: { 1: "Контейнер для пуджа" },
         inOrder: true,

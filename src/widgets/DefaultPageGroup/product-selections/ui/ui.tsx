@@ -1,3 +1,4 @@
+import "./styles.scss";
 import { useEffect } from "react";
 import { observer } from "mobx-react";
 import {productCategoriesState} from "../model/model";

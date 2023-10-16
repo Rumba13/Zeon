@@ -11,7 +11,6 @@ export function Search() {
     const { openFixedSearch, closeFixedSearch, isFixedSearchOpen } = useSearchForm(clickableZoneRef);
     const { setSearchQuery } = useStore(state => state.searchPage);
 
-
     return <Formik validate={(values) => { setSearchQuery(values.search); return {} }} onSubmit={() => { }} initialValues={{ search: "" }}>
         {({ }) =>
             <>

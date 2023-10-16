@@ -1,6 +1,16 @@
+@import "../../../app/styles/variables";
+
 .aside {
-    grid-area: aside;
-    margin-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+  grid-area: aside;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media(max-width: $medium-breakpoint) {
+  .aside {
+    & .banner, & .mini-news, & .social-networks, & .single-review {
+        display: none;
+    }
+  }
 }

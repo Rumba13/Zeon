@@ -1,63 +1,80 @@
+@import "../../../../app/styles/adaptive-font";
+
 .fixed-search-wrapper {
-   position: fixed;
-   top: 15px;
-   left: 50%;
-   z-index: 100;
-   height: 97vh;
-   display: flex;
-   flex-direction: column;
-   
-   box-sizing: border-box;
-   background-color: white;
-   transform: translate(-50%);
-   box-shadow: 0px 0px 13px 2px rgba(174, 170, 170, 0.25);
-   
-   & .search-results {
-      max-height: 100%;
-      box-sizing: content-box;
-      padding: 20px;
-      padding-right: 0;
-      display: grid;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
+  width: 100%;
+  max-width: var(--content-max-width);
+  box-sizing: border-box;
+  background-color: white;
+  transform: translate(-50%);
+  box-shadow: 0 0 13px 2px rgba(174, 170, 170, 0.25);
 
-      grid-template: auto 4fr 150px / 3fr 7fr;
-
-      grid-template-areas:
+  & .search-results {
+    display: grid;
+    grid-template: auto 4fr 150px / 3fr 7fr;
+    grid-template-areas:
          "search-tips search-tips"
          "product-categories search-results"
-         "view-all-results view-all-results"
-      ;
-   }
+         "view-all-results view-all-results";
 
-   & .view-all-search-results-wrapper {
-      grid-area: view-all-results;
-   }
+    max-height: 100%;
+    box-sizing: content-box;
+    padding: max(10px, min(20px, 3.12vw));
+    padding-right: 0;
+  }
+
+  & .view-all-search-results-wrapper {
+    grid-area: view-all-results;
+  }
 }
 
 .fixed-search {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   width: var(--content-max-width);
-   border: 1px solid #c5c5c5;
-   min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #c5c5c5;
+  min-height: 80px;
 
+  & .icon {
+    height: 22px;
+    margin: 0 24px 0 24px;
+  }
 
-   & .icon {
-      height: 22px;
-      margin: 0 24px 0 24px;
-   }
-
-   & .search__form {
-      font-size: 28px;
-   }
+  & .search__form {
+    @include adaptive-font(12px, 28px, 3.8vw);
+  }
 }
 
+@media(max-width: 700px) {
+  .fixed-search-wrapper .search-results {
 
+    & .product-search-categories { //TODO hide in
+      display: none;
+    }
 
-@media(max-width:1200px) {
+    .search-result-product {
+      grid-template:
+        "img title"
+        "img code"
+        "img ." / auto 1fr;
 
-   //refuck
-   .fixed-search {
-      width: 100%;
-   }
+    }
+
+    & .search-result-product__properties, .search-result-product__delivery {
+      display: none;
+    }
+
+    grid-template:
+         "search-tips" auto
+         "search-results" 4fr
+         "view-all-results" 150px / 100%;
+
+  }
 }

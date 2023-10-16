@@ -53,8 +53,10 @@ export function ProductSearchResult({productId, loadProduct}: PropsType) {
             <ProductPrice className="product-price__price" price={price}/>
             <ProductPrice className="product-price__discount-price" price={discountPrice}/>
             <ProductPriceHint/>
-            <AddProductToCart variant="mini" id={id}/>
-            <AddProductToComparison variant="mini" id={id}/>
+            <div className="buttons">
+                <AddProductToCart variant="mini" id={id}/>
+                <AddProductToComparison variant="mini" id={id}/>
+            </div>
         </div>
     </ShadowOnHover>
 }

@@ -42,7 +42,6 @@ export function ProductSearchCategories({ }: PropsType) {
     const [activeCategoryIndex, setActiveCategoryIndex] = useState<number>(0);
     const [activeProductDataId, setActiveProductDataId] = useState<number>(0);
 
-
     const categoryItemOnClickHandler = (event: any, index: number, dataId: number) => {
         event.preventDefault();
 

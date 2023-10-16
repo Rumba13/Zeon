@@ -1,24 +1,26 @@
 import "./styles.scss";
-import useBreakpoint from "../../../shared/lib/use-breakpoint";
-import { useState } from "react";
-import { Sprite } from "../../../shared/ui/sprite/ui";
-import { PhoneNumbers } from "../../phone-numbers";
-import { TimeTable } from "../../time-table";
+import {useState} from "react";
+import {Sprite} from "../../../shared/ui/sprite/ui";
+import {TimeTable} from "../../time-table";
+import {Phone} from "../../phone-numbers/ui/phone-numbers-item";
+import {PhoneType} from "../../../shared/api/types/phone-type";
 
-export function PhoneNumbersLowWidth() { //TODO refuck write HOC to select mobile or desktop component
-    const adaptiveComponent = useBreakpoint(<></>);
-    const [isPopupOpened, togglePopup] = useState<boolean>(true);
+type PropsType = {
+    phones: PhoneType[]
+}
 
-    adaptiveComponent.addBreakpoint(650,
-        <div className="phone-numbers-low-width">
-            <Sprite onClick={() => togglePopup(!isPopupOpened)} yOffset={-1032} className="phone-numbers-icon" />
+export function PhonesSmallScreen({phones}: PropsType) {
+    const [isPopupOpened, setIsPopupOpened] = useState<boolean>(true);
 
-            <div className={`phone-numbers-low-width-content ${isPopupOpened ? "opened" : ""}`}>
-                <TimeTable />
-                <PhoneNumbers />
+    return <div className="phones-small-screen">
+        <Sprite className="phones-icon" yOffset={-1032} onClick={() => setIsPopupOpened(!isPopupOpened)}/>
+
+        <div className={`content ${isPopupOpened ? "opened" : ""}`}>
+            <TimeTable/>
+
+            <div className="phones">
+                {phones.map(phone => <Phone number={phone.number} icon={phone.icon}/>)}
             </div>
         </div>
-    )
-
-    return adaptiveComponent.getComponent();
+    </div>
 }

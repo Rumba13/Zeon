@@ -1,12 +1,25 @@
 import "./styles.scss";
-import { Sprite } from "../../../shared/ui/sprite/ui";
-import { PhoneNumber } from "./phone-numbers-item";
+import {Sprite} from "../../../shared/ui/sprite/ui";
+import {Phone} from "./phone-numbers-item";
+import {PhonesSmallScreen} from "../../phoneNumbersLowWidth";
+import {useScreenWidth} from "../../../shared/lib/use-screen-width";
+import {PhoneType} from "../../../shared/api/types/phone-type";
 
-export function PhoneNumbers() {
-    return <div className="phone-numbers">
-        <PhoneNumber number="375447300500" icon={<Sprite yOffset={-721} />} />
-        <PhoneNumber number="375255300500" icon={<Sprite yOffset={-354} />} />
-        <PhoneNumber number="375257300500" icon={<Sprite yOffset={-771} />} />
-        <PhoneNumber number="375232300500" icon={<Sprite yOffset={-423} />} />
-    </div>
+const phones: PhoneType[] = [
+    {number: "375447300500", icon: <Sprite yOffset={-721}/>},
+    {number: "375255300500", icon: <Sprite yOffset={-354}/>},
+    {number: "375257300500", icon: <Sprite yOffset={-771}/>},
+    {number: "375232300500", icon: <Sprite yOffset={-423}/>},
+]
+
+export function Phones() {
+    const screenWidth = useScreenWidth();
+
+    if (screenWidth < 650) {
+        return <PhonesSmallScreen phones={phones}/>;
+    } else {
+        return <div className="phones">
+            {phones.map(phone => <Phone number={phone.number} icon={phone.icon}/>)}
+        </div>
+    }
 }

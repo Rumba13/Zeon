@@ -1,1 +1,1 @@
-export {PhoneNumbersLowWidth} from "./ui/ui"
+export {PhonesSmallScreen} from "./ui/ui"

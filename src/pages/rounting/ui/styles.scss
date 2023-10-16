@@ -21,20 +21,6 @@
     & .product-selections {
         grid-area: product-selections;
     }
-
-    & div.products { //TODO fix specificity
-        display: flex;
-        justify-content: center;
-        grid-area: products;
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 38px;
-    }
-    & .product-container {
-        display: flex;
-        justify-content: left; //TODO find way to center products and make them wrap from the left
-        flex-wrap: wrap;
-    }
 }
 
 @media(max-width:850px) {

@@ -1,3 +1,4 @@
+import "./styles.scss";
 import { formatPrice } from "./formatPrice"
 
 type PropsType = {
@@ -6,7 +7,7 @@ type PropsType = {
 }
 
 export function ProductPrice({ price, className }: PropsType) {
-    return <span className={className ?? ""}>
+    return <span className={`price ${className ?? ""}`}>
         {formatPrice(price) + " руб"}
     </span>
 }
