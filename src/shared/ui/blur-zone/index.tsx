@@ -5,9 +5,9 @@ type PropsType = {
     className?: string
 }
 
-export function BlurZone({ children, className = "" }: PropsType) { //TODO REFUCK
-    return <div className={`overflow-scroll-wrapper ${className}`}>
-        <div className="overflow-scroll">
+export function BlurZone({ children, className = "" }: PropsType) {
+    return <div className={`blur-zone ${className}`}>
+        <div className="scroll">
             {children}
         </div>
     </div>

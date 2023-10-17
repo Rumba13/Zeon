@@ -7,12 +7,11 @@ import {ProductIdType} from "../../../../shared/api/types/product-id-type";
 import {ProductSearchResultType} from "../../../../shared/api/types/product-search-result-type";
 import {productFullToProductSearchResult} from "./product-full-to-product-search-result";
 
-class SearchState { //TODO move to features
+class SearchState {
     private searchService: SearchService
     private productService: ProductService;
     public searchTags?: SearchTagType[];
     public productIds: ProductIdType[] = [];
-    public pageTitle?: string;
     public currentPage: number = 1;
     public pagesCount: number = 1;
     public searchQuery: string = "";

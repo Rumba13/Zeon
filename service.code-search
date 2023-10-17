@@ -4,13 +4,13 @@
 
 48 results - 8 files
 
-src\pages\defaultPage\api\search-product-home-page-service.ts:
+src\pages\defaultPage\api\search-product-home-page-advertising-banner-service.ts:
   3  
   4: export class SearchService {
   5      private repository: Repository;
 
 
-src\pages\productPage\api\search-product-home-page-service.ts:
+src\pages\productPage\api\search-product-home-page-advertising-banner-service.ts:
   3  
   4: export class SearchService {
   5      private productPageRepository:Repository
@@ -36,7 +36,7 @@ src\pages\productPage\model\model.ts:
   36  export type { ProductPageStore as ProductPageStoreType };
   37: export const productPageStore = new ProductPageStore(new SearchService(new Repository()));
 
-src\pages\searchPage\api\search-product-home-page-service.ts:
+src\pages\searchPage\api\search-product-home-page-advertising-banner-service.ts:
   3  
   4: export class SearchService {
   5      private repository: Repository;

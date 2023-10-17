@@ -9,7 +9,7 @@ import {useSearchParams} from "react-router-dom";
 import {ProductSearchResults} from "../../../widgets/SearchPageGroup/product-search-results";
 import {SearchPageTitle} from "./search-page-title";
 
-export const SearchPage = observer(() => { //TODO refuck
+export const SearchPage = observer(() => {
     const searchPageState = useStore(state => state.searchPage);
     const [searchParams] = useSearchParams();
     const {searchQuery,productIds, searchTags, pagesCount, currentPage, loadSearchProduct} = searchPageState;
@@ -18,8 +18,8 @@ export const SearchPage = observer(() => { //TODO refuck
     const currentPageFromParams = Number(searchParams.get("page")) || 1;
 
     if (typeof searchQueryFromParams !== "string") {
-        history.pushState(null, "", "/")
-        return <></>
+        history.pushState(null, "", "/404")
+        return <></>;
     }
 
     useEffect(() => {

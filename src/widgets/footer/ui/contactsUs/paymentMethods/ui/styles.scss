@@ -1,23 +1,25 @@
 .payment-methods {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 5px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
 
-    & > img {
-        width: auto;
-    }
-}
+  & > img {
+    width: auto;
+  }
 
-.payment-method__master-cart {
+  & .master-cart {
     height: 50px;
-}
+  }
 
-.payment-method__pay-logo {
+  & .pay-logo {
     align-self: center;
     max-width: 40%;
+  }
+
+  & .alpha-bank-logo {
+    max-width: 40%;
+  }
+
 }
 
-.payment-method__alpha-bank-logo {
-    max-width: 40%;
-}

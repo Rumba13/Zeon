@@ -16,8 +16,6 @@ type PropsType = {
     openFixedSearch: Function,
 }
 
-//TODO add position absolute to fixed-search-form-wrapper insted of fixed-search-form
-
 const searchTipsItems = [{ title: "lerka", href: "https://www.youtube.com/watch?v=GrPZXPdFK6M&t=282s" }, { title: "vlad", href: "https://www.youtube.com/watch?v=l2COvMmFbuI" }];
 
 export function FixedSearchForm({ clickableZoneRef, isFixedSearchOpen, openFixedSearch, closeFixedSearch }: PropsType) {

@@ -1,7 +1,7 @@
 import "./styles.scss";
 import { useEffect, useState } from "react";
 import { Banner } from "../../../../shared/ui/banner";
-import { advertisingBannerService } from "../api/service";
+import { advertisingBannerService } from "../../../../shared/api/advertising-banner-service";
 import { BannerType } from "../../../../shared/api/types/banner-type";
 
 type PropsType = {

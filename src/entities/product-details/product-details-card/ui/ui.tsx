@@ -6,7 +6,6 @@ import {ManufacturerInfo} from "../../manufacturer-info";
 import {Rating} from "../../../rating";
 import {Delivery} from "../../delivery";
 import {ProductOnCredit} from "../../product-on-credit";
-import {ProductPrices} from "../../prices";
 import {DiscountOffer} from "../../cart-offer";
 import {AddProductToCart} from "../../../../features/product/add-to-cart";
 import {AddProductToComparison} from "../../../../features/product/add-to-comparison";
@@ -19,6 +18,7 @@ import Loading from "../../../../shared/ui/loading/ui";
 import {observer} from "mobx-react";
 import {ProductPageStoreType} from "../model/model";
 import {Swiper} from "swiper";
+import {ProductPrice} from "../../../product/product-price";
 
 type PropsType = {
     productId: ProductIdType
@@ -56,7 +56,18 @@ export const ProductDetailsCard = observer(({productId}: PropsType) => {
             <Rating rating={product.rating} setRating={state.setRating}/>
             <Delivery/>
             <ProductOnCredit creditPricePerMonth={product.creditPricePerMonth}/>
-            <ProductPrices price={product.price} discountPrice={product.discountPrice}/>
+
+            <div className="product-prices">
+                <div className="product-price price-with-cart">
+                    <span className="product-price__title">С клубной картой</span>
+                    <ProductPrice className="product-price__price" price={product.discountPrice}/>
+                </div>
+                <div className="product-price price">
+                    <span className="product-price__title">Без клубной карты</span>
+                    <ProductPrice className="product-price__price" price={product.price}/>
+                </div>
+            </div>
+
             <DiscountOffer/>
             <AddProductToCart variant="full" id={product.id}/>
             <AddProductToComparison variant="full" id={product.id}/>

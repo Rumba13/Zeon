@@ -1,1 +1,0 @@
-export {ProductPrices} from "./ui/ui"

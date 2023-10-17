@@ -1,6 +1,5 @@
 import "./styles.scss";
 import {AboutStoreListItem} from "./AboutStoreListItem";
-//TODO remove linklist
 
 export function AboutStore() {
     return <div className="about-store">

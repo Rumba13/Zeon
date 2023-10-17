@@ -1,1 +1,1 @@
-export { AdvertisingBanner } from "./ui"
+export { AdvertisingBanner } from "./ui/ui"

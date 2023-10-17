@@ -1,6 +1,5 @@
-//TODO move to shared/advertising-banner/api
-import { BannerType } from "../../../../shared/api/types/banner-type";
-import { serverConnection } from "../../../../shared/api/server-connection";
+import { BannerType } from "./types/banner-type";
+import { serverConnection } from "./server-connection";
 
 class AdvertisingBannerService {
     constructor() { }
