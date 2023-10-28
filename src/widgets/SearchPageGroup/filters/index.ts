@@ -1,1 +1,1 @@
-export {Filters as SearchFilters} from "./ui/ui"
+export {SearchFilters as SearchFilters} from "./ui/ui"

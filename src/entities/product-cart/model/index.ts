@@ -1,23 +1,27 @@
 import Cookies from "js-cookie";
-import { makeAutoObservable } from "mobx";
+import {makeAutoObservable} from "mobx";
 
 export class ShoppingCartStore {
     public products: number[] = [];
-    public cookieName:string = "cart";
+    public cookieName: string = "cart";
 
     public get productsCount() {
         return this.products.length;
     }
+
     private writeCartInCookie() {
         Cookies.set(this.cookieName, JSON.stringify(this.products));
     }
+
     private readCartFromCookie() {
         this.products = JSON.parse(Cookies.get(this.cookieName) || "[]");
     }
+
     constructor() {
         makeAutoObservable(this);
         this.readCartFromCookie();
     }
+
     public addProduct = (id: number) => {
         this.products.push(id);
         this.writeCartInCookie();
@@ -29,4 +33,4 @@ export class ShoppingCartStore {
     }
 }
 
-export const shoppingCartStore = new ShoppingCartStore();
+export const shoppingCartState = new ShoppingCartStore();

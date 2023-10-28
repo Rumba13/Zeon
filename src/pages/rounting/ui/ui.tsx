@@ -5,7 +5,6 @@ import { ProductPage } from "../../product-details-page"
 import { SearchPage } from "../../search-page"
 import { Route, Routes } from "react-router"
 
-
 export function Routing() {
     return <Routes>
         <Route path="/" element={<HomePage />} />

@@ -1,7 +1,7 @@
 import "./styles.scss"
 import { Sprite } from "../../../../shared/ui/sprite/ui"
 import { PaymentMethods } from "./paymentMethods"
-import { formatPhone } from "../../../../entities/phone-numbers"
+import { formatPhone } from "../../../../entities/phones"
 import {ContactUsListItem} from "./contact-us-list-item";
 
 export function ContactsUs() {

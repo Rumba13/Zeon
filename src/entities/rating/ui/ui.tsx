@@ -7,10 +7,9 @@ type PropsType = {
     rating: number
 }
 
-export function Rating({ rating, setRating: setRatingInState }: PropsType) { //TODO add new rating system made by myself
+export function Rating({rating, setRating: setRatingInState}: PropsType) { //TODO add new rating system made by myself
     const activeStarsRef = React.createRef<HTMLDivElement>();
-
-    const setRating = (rating:number) => setRatingAndUpdateStars(rating, setRatingInState, activeStarsRef);
+    const setRating = (rating: number) => setRatingAndUpdateStars(rating, setRatingInState, activeStarsRef);
 
     useEffect(() => {
         setRating(rating);
@@ -24,7 +23,7 @@ export function Rating({ rating, setRating: setRatingInState }: PropsType) { //T
             <div className="rating__plus" onClick={() => setRating(rating + 1)}>+</div>
         </div>
         <div className="rating-stars">
-            <div ref={activeStarsRef} className="rating-stars-active"></div>
+            <div ref={activeStarsRef} className="active-stars"></div>
         </div>
     </div>
 }

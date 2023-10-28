@@ -1,1 +1,1 @@
-export {Tags as SearchTags} from "./ui/ui"
+export {SearchTags as SearchTags} from "./ui/ui"

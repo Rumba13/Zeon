@@ -1,1 +1,0 @@
-export {PhonesSmallScreen} from "./ui/ui"

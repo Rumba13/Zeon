@@ -1,20 +1,20 @@
 .cart-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--secondary-color);
-    margin-top: 20px;
-    margin-bottom: 5px;
-    background: var(--secondary-color);
-    transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--secondary-color);
+  margin-top: 20px;
+  margin-bottom: 5px;
+  background: var(--secondary-color);
+  transition: all 0.4s;
 
-    & .cart-button__text {
-        font-weight: 700;
-        color: white;
-    }
+  & .cart-button__text {
+    font-weight: 700;
+    color: white;
+  }
 
-    &:hover {
-        border-color: var(--active-color);
-        background-color: var(--active-color);
-    }
+  &:hover {
+    border-color: var(--active-color);
+    background-color: var(--active-color);
+  }
 }

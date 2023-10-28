@@ -1,8 +1,8 @@
 import "./styles.scss";
 import { Search } from "../search";
 import { Logo } from "../../../shared/ui/logo/ui";
-import { ComparisonCart } from "../../../features/product/comparison-cart";
-import { Phones } from "../../../entities/phone-numbers";
+import { ComparisonCart } from "../../../features/comparison-cart";
+import { Phones } from "../../../entities/phones";
 import { ShoppingCart } from "../../../entities/product-cart";
 import { TimeTable } from "../../../entities/time-table";
 import { SubHeader } from "../../sub-header";

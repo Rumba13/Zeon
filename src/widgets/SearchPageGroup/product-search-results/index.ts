@@ -1,1 +1,0 @@
-export {ProductSearchResults} from "./ui/ui"

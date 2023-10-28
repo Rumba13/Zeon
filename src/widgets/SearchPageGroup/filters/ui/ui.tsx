@@ -1,14 +1,14 @@
 import "./styles.scss";
 import { Formik } from "formik";
-import { InOrderCheckBox } from "../inOrderCheckBox";
-import { useStore } from "../../../../shared/lib/hooks";
+import { InOrderCheckBox } from "../../../../entities/product/in-order-check-box";
+import { useStore } from "../../../../shared/lib/use-store";
 import { observer } from "mobx-react";
-import { ArrowRadioButton } from "../arrowRadioButton";
+import { ArrowRadioButton } from "../../../../shared/ui/arrow-radio-button";
 
-export const Filters = observer(() => {
+export const SearchFilters = observer(() => {
     const { sortBy, setSortBy, setSortType } = useStore(state => state.searchPage);
 
-    function setSortTypeFromArrowValue(arrowValue: boolean) { 
+    function setSortTypeFromArrowState(arrowValue: boolean) {
         if (arrowValue) {
             setSortType("asc")
         }
@@ -24,9 +24,9 @@ export const Filters = observer(() => {
         >
             {({ values }) =>
                 <>
-                    <ArrowRadioButton radioGroup="filter" sortBy="price" setSortBy={setSortBy} setStateIsArrowUp={setSortTypeFromArrowValue} currentSortBy={sortBy}  >По цене</ArrowRadioButton>
-                    <ArrowRadioButton radioGroup="filter" sortBy="name" setSortBy={setSortBy} setStateIsArrowUp={setSortTypeFromArrowValue} currentSortBy={sortBy}  >Название</ArrowRadioButton>
-                    <ArrowRadioButton radioGroup="filter" sortBy="popularity" setSortBy={setSortBy} setStateIsArrowUp={setSortTypeFromArrowValue} currentSortBy={sortBy} >Популярность</ArrowRadioButton>
+                    <ArrowRadioButton radioGroup="filter" value="price" setSortBy={setSortBy} setCurrentIsArrowUp={setSortTypeFromArrowState} currentValue={sortBy}  >По цене</ArrowRadioButton>
+                    <ArrowRadioButton radioGroup="filter" value="name" setSortBy={setSortBy} setCurrentIsArrowUp={setSortTypeFromArrowState} currentValue={sortBy}  >Название</ArrowRadioButton>
+                    <ArrowRadioButton radioGroup="filter" value="popularity" setSortBy={setSortBy} setCurrentIsArrowUp={setSortTypeFromArrowState} currentValue={sortBy} >Популярность</ArrowRadioButton>
 
                     <InOrderCheckBox value={values.inOrder} />
                 </>

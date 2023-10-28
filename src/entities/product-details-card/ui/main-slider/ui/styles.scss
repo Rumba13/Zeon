@@ -1,0 +1,66 @@
+.swiper.main-product-slider {
+  border: 1px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+
+  &:hover {
+    & .swiper-button-next {
+      opacity: 1;
+    }
+
+    & .swiper-button-prev {
+      opacity: 1;
+
+    }
+  }
+
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 10px;
+    height: 16px;
+    background-color: transparent;
+    background: url("../../../../../images/sprite.png");
+    transition: opacity 0.4s;
+    opacity: 0;
+  }
+
+
+  & .swiper-button-prev {
+
+    &:after {
+      content: none;
+    }
+
+
+    left: 15px;
+    background-position: 0 -823px;
+
+    &:hover {
+      background-position: 0 -615px;
+    }
+  }
+
+  & .swiper-button-next {
+
+    &:after {
+      content: none;
+    }
+
+    right: 15px;
+
+    background-position: 0 -797px;
+
+    &:hover {
+      background-position: 0 -745px;
+    }
+  }
+}
+
+//slick slider flexbox fix
+* {
+  min-width: 0;
+}

@@ -3,7 +3,7 @@ import "./styles.scss";
 
 type PropsType = {
     children: JSX.Element | JSX.Element[],
-    errorTitle?:string
+    errorTitle?: string
 }
 
 type StateType = {
@@ -14,11 +14,11 @@ export class ErrorBoundary extends React.Component<PropsType, StateType> {
 
     constructor(props: PropsType) {
         super(props);
-        this.state = { hasError: false }
+        this.state = {hasError: false}
     }
 
     static getDerivedStateFromError(error: any) {
-        return { hasError: true };
+        return {hasError: true};
     }
 
     componentDidCatch(error: any, errorInfo: any) {

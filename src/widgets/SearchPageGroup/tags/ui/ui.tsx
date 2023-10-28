@@ -7,7 +7,7 @@ type PropsType = {
     searchTags?: SearchTagType[]
 }
 
-export function Tags({ searchTags }: PropsType) {
+export function SearchTags({ searchTags }: PropsType) {
 
     if(!searchTags) {
         return <Loading />

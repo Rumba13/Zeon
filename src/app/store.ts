@@ -1,14 +1,12 @@
 import { createContext } from 'react';
-import { comparisonCartStore } from '../features/product/comparison-cart';
-import { shoppingCartStore } from '../entities/product-cart/model';
+import { comparisonCartState } from '../features/comparison-cart';
 import { searchState } from '../pages/search-page';
-import {productPageStore} from "../entities/product-details/product-details-card";
+import {productDetailsState} from "../entities/product-details-card";
 
 const store = {
-  productPage: productPageStore,
+  productPage: productDetailsState,
   searchPage: searchState,
-  comparisonCart: comparisonCartStore,
-  shoppingCart: shoppingCartStore
+  comparisonCart: comparisonCartState,
 }
 
 export { store as rootState }

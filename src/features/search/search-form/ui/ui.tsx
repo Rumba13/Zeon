@@ -1,9 +1,9 @@
 import "./styles.scss";
 import {Field} from "formik";
-import BigSearchIcon from "../../../../images/searchBig.png"
-import SearchIcon from "../../../../images/search-icon.svg";
 import {Icon} from "../../../../shared/ui/icon";
 import {useScreenWidth} from "../../../../shared/lib/use-screen-width";
+import BigSearchIcon from "../../../../images/searchBig.png"
+import SearchIcon from "../../../../images/search-icon.svg";
 
 type PropsType = {
     isFixedSearchOpen: boolean,

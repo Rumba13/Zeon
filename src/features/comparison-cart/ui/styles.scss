@@ -1,0 +1,16 @@
+@import "../../../app/styles/variables";
+
+.comparison-cart {
+    grid-area: comparison;
+
+    & .sprite {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media(min-width: $header-brekpoint-2) {
+    .comparison-cart .sprite {
+        display: none;
+    }
+}

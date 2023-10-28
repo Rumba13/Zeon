@@ -1,12 +1,12 @@
-import { BannerType } from "../../api/types/banner-type";
+import {BannerType} from "../../api/types/banner-type";
 import "./styles.scss";
 
 type PropsType = {
-    banner:BannerType
+    banner: BannerType
 }
 
-export function Banner({ banner}: PropsType) {
+export function Banner({banner}: PropsType) {
     return <a href={banner.href} className="banner">
-        <img src={banner.img} alt="" />
+        <img src={banner.img} alt=""/>
     </a>
 }

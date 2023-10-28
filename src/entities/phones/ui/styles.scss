@@ -1,0 +1,24 @@
+@import "../../../app/styles/variables.scss";
+
+.phones {
+    display: flex;
+    align-self: center;
+    grid-area: phoneNumbers;
+    margin-right: 20px;
+    margin-left: 10px;
+    overflow-x: auto;
+    
+    & > .phone {
+        margin: 7px;
+    }
+    
+    & .sprite {
+        margin-right: 5px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+

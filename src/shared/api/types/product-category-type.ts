@@ -1,5 +1,6 @@
 export type ProductCategoryType = {
     href: string,
     title: string,
-    img: string
-}
+    dataId: number,
+    img:string
+} //TODO refuck

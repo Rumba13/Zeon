@@ -1,39 +1,39 @@
 .scroll-up {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: row;
-   height: 100%;
-   max-width: var(--content-max-width);
-   margin: 0 auto;
-   font-size: 14px;
-   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color);
 
-   & .sprite {
-      width: 15px;
-      height: 17px;
-      align-self: center;
-      margin-right: 8px;
-      margin-bottom: -5px;
-   }
+  & .sprite {
+    width: 15px;
+    height: 17px;
+    align-self: center;
+    margin-right: 8px;
+    margin-bottom: -5px;
+  }
 }
 
 .scroll-up-wrapper {
-   grid-area: scrollTop;
-   margin-bottom: 32px;
-   border-bottom: 1px solid rgba(255, 255, 255, 0.0);
-   transition: all 0.4s;
+  grid-area: scrollTop;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+  transition: all 0.4s;
 
-   &:hover > .scroll-up {
-      border-bottom: 0px;
-   }
+  &:hover > .scroll-up {
+    border-bottom: 0px;
+  }
 
-   &:hover {
-      border-bottom: 1px solid var(--border-color);
-      background-color: var(--background-hover-color);
-   }
+  &:hover {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-hover-color);
+  }
 }
 
 .scroll-up__text {
-   color: var(--text-color);
+  color: var(--text-color);
 }

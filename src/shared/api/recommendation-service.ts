@@ -1,8 +1,7 @@
-import {ProductCategoryType} from "./types/product-category-type";
 import {serverConnection} from "./server-connection";
 import {ProductMiniType} from "./types/product-mini-type";
-import {SliderItemType} from "./types/slider-item-type";
 import {BannerType} from "./types/banner-type";
+import {ProductCategoryType} from "./types/product-category-type";
 
 export class RecommendationService {
     constructor() {

@@ -1,0 +1,34 @@
+.home-page {
+  display: grid;
+  grid-template: min-content min-content auto / 2fr 1fr;
+  grid-template-areas:
+        "banner banner"
+        "banner-slider product-selections"
+        "products products";
+  grid-area: content;
+  height: fit-content;
+  margin-left: 20px;
+
+  & .banner {
+    grid-area: banner;
+    margin-bottom: 25px;
+  }
+
+  & .banner-slider {
+    grid-area: banner-slider;
+  }
+
+  & .product-selections {
+    grid-area: product-selections;
+  }
+}
+
+@media(max-width: 850px) {
+  .home-page {
+    grid-template: min-content min-content auto / 100%;
+    grid-template-areas:
+            "banner banner"
+            "banner-slider product-selections"
+            "products products";
+  }
+}

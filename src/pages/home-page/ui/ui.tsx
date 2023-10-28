@@ -1,14 +1,14 @@
 import "./styles.scss";
-import { HomePageProducts } from "../../../widgets/DefaultPageGroup/products";
-import { HomeBanner } from "../../../entities/home-page/banner";
-import { HomePageProductSelections } from "../../../widgets/DefaultPageGroup/product-selections";
-import { BannerSlider } from "../../../entities/home-page/banner-slider";
+import { Products } from "../../../widgets/recommended-products";
+import { HomeBanner } from "../../../entities/HomePageGroup/banner";
+import { ProductSelections } from "../../../widgets/product-categories";
+import { BannerSlider } from "../../../entities/HomePageGroup/banner-slider";
 
 export function HomePage() {
-    return <div className="default-page">
+    return <div className="home-page">
         <HomeBanner/>
         <BannerSlider />
-        <HomePageProductSelections />
-        <HomePageProducts />
+        <ProductSelections />
+        <Products />
     </div>
 }

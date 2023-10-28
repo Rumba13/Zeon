@@ -1,18 +1,18 @@
 .secondary-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    border: 1px solid var(--primary-color);
-    background: transparent;
-    transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  transition: all 0.4s;
 
-    & span {
-        font-weight: 700;
-    }
+  & span {
+    font-weight: 700;
+  }
 
-    &:hover {
-        border-color: var(--active-color);
-    }
+  &:hover {
+    border-color: var(--active-color);
+  }
 }
