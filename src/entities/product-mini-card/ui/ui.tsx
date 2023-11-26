@@ -9,8 +9,8 @@ import {ProductMiniType} from "../../../shared/api/types/product-mini-type";
 
 type PropsType = ProductMiniType;
 
-export function ProductMini({previewImg, discountPrice, id, manufacturer, type, batch}: PropsType) {
-    const hrefToProduct = `/product/${id}`;
+export function ProductMini({previewImg, discountPrice, productId, manufacturer, type, batch}: PropsType) {
+    const hrefToProduct = `/product/${productId}`;
 
     return <div className="product-mini-wrapper">
         <ShadowOnHover className="product-mini">
@@ -20,7 +20,7 @@ export function ProductMini({previewImg, discountPrice, id, manufacturer, type, 
             <ProductPrice className="product-mini__price" price={discountPrice}/>
             <ProductPriceHint className="product-mini__price-hint"/>
             <div className="product-mini__button-wrapper">
-                <AddProductToCart className="product-mini__button" id={id} variant="mini"/>
+                <AddProductToCart className="product-mini__button" id={productId} variant="mini"/>
             </div>
         </ShadowOnHover>
     </div>

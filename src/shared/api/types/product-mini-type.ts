@@ -1,5 +1,5 @@
 export type ProductMiniType = {
-    id: number,
+    productId: number,
     previewImg: string,
     discountPrice: number,
     batch: string
