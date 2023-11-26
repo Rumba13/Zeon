@@ -3,12 +3,15 @@
   margin: 15px;
 
   & .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    height: auto;
+    width: auto;
     margin-right: 12px;
     border: 1px solid var(--primary-color);
+
+    & > img {
+      object-fit: contain;
+      height: 120px;
+    }
 
     &:hover {
       border-color: var(--active-color);
