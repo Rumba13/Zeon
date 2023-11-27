@@ -1,6 +1,6 @@
 import "./styles.scss";
 import { formatCharacteristics } from "./formatCharacteristic";
-import { ProductCharacteristicsType } from "../../../search-product-card/ui/ui";
+import {ProductCharacteristicsType} from "../../../../shared/api/types/product-characteristics-type";
 
 type PropsType = {
     characteristics: ProductCharacteristicsType

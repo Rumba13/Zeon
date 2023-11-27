@@ -2,7 +2,7 @@ import "./styles.scss";
 import { useState } from "react";
 import { Sprite } from "../../sprite/ui";
 import {RadioButton} from "../../radio-button";
-import { SortByType } from "../../../../pages/search-page";
+import {SortByType} from "../../../api/types/filters-type";
 
 type PropsType = {
     radioGroup: string,

@@ -2,18 +2,17 @@ import "./styles.scss";
 import {useRef} from "react";
 import {useSearchForm} from "../lib/useSearch";
 import {Formik} from "formik";
-import {useStore} from "../../../../shared/lib/use-store";
 import {SearchForm} from "../../../../features/search/search-form";
 import {FixedSearchForm} from "../../../../features/search/fixed-search-form";
+import {searchState} from "../../../../features/search/search";
 
 export function Search() {
     const clickableZoneRef = useRef<HTMLInputElement>(null);
     const {openFixedSearch, closeFixedSearch, isFixedSearchOpen} = useSearchForm(clickableZoneRef);
-    const {setSearchQuery} = useStore(state => state.searchPage);
 
     return <Formik validate={
         (values) => {
-            setSearchQuery(values.search);
+            searchState.setSearchQuery(values.search);
             return {}
         }}
                    onSubmit={() => {

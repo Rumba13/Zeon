@@ -17,8 +17,6 @@ export type PropsType = {
     loadProduct: (productId: ProductIdType) => Promise<ProductSearchResultType>
 };
 
-export type ProductCharacteristicsType = Object;
-
 export function SearchProduct({productId, loadProduct}: PropsType) {
     const [product, setProduct] = useState<ProductSearchResultType | undefined>();
 
