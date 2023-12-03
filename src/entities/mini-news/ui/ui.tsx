@@ -1,4 +1,4 @@
-import { miniNewsService } from "../api/service";
+import { newsService } from "../../../shared/api/news-service";
 import "./styles.scss";
 import { useEffect, useState } from "react";
 
@@ -14,8 +14,8 @@ export function MiniNews({ }: PropsType) {
     const [miniNews, setMiniNews] = useState<MiniNewsType | undefined>();
 
     useEffect(() => {
-        miniNewsService.getMiniNews().then(setMiniNews);
-    }, [miniNewsService]);
+        newsService.getMiniNews().then(setMiniNews);
+    }, [newsService]);
 
     if (miniNews === undefined) {
         return <></>

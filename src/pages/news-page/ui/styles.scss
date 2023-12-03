@@ -1,0 +1,7 @@
+.news-page {
+  & h1.news-page__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: max(8px, min(20px, 2.3vw));
+  }
+}
