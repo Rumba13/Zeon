@@ -1,4 +1,4 @@
-import "../styles.scss"
+import "./styles.scss"
 import { formatPhone } from "../formatPhone"
 
 type PropsType = {
